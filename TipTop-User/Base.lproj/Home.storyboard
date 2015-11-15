@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Ifl-6v-M0a">
+            <objects>
+                <viewController storyboardIdentifier="HXHomeViewController" id="yfA-hU-glS" customClass="HXHomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ttn-zF-Cqj"/>
+                        <viewControllerLayoutGuide type="bottom" id="EB3-Zo-RJ4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bDx-wc-qod">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HP-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qXM-zz-kcI">
+                                <rect key="frame" x="80" y="20" width="160" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="PzG-cV-MIQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="iEu-8j-Ixv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HP-HeaderIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rk9-Er-RMH">
+                                <rect key="frame" x="10" y="30" width="30" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="8fW-ER-wfg"/>
+                                    <constraint firstAttribute="width" secondItem="rk9-Er-RMH" secondAttribute="height" multiplier="1:1" id="otC-AT-KXP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HP-LocationOfflineIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hee-vB-6da">
+                                <rect key="frame" x="10" y="80" width="20" height="20"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="R8A-rr-etB"/>
+                                    <constraint firstAttribute="width" secondItem="hee-vB-6da" secondAttribute="height" multiplier="1:1" id="XK6-wZ-V7B"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成都市青羊区家园南街1号 上城" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dr-rJ-FCL">
+                                <rect key="frame" x="30" y="81" width="280" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJH-Fg-jxr">
+                                <rect key="frame" x="50" y="138" width="220" height="220"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HP-CylindricalOfflineIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VDM-k4-brg">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
+                                        <animations/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HP-InnerCircleOfflineIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kb8-88-wl7">
+                                        <rect key="frame" x="25" y="25" width="170" height="170"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="Dqt-yT-k62"/>
+                                            <constraint firstAttribute="width" secondItem="kb8-88-wl7" secondAttribute="height" multiplier="1:1" id="cP0-f4-2Ob"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网站建设" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SO-ua-WJa">
+                                        <rect key="frame" x="66" y="82" width="88" height="26.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.32941176470588235" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商城网站" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1A9-Oz-BqC">
+                                        <rect key="frame" x="78" y="115.5" width="64" height="19.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <color key="textColor" red="0.32941176470588235" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lJH-Fg-jxr" secondAttribute="height" multiplier="1:1" id="7Ne-ZJ-J3i"/>
+                                    <constraint firstItem="VDM-k4-brg" firstAttribute="top" secondItem="lJH-Fg-jxr" secondAttribute="top" id="CX8-F8-q48"/>
+                                    <constraint firstItem="VDM-k4-brg" firstAttribute="leading" secondItem="lJH-Fg-jxr" secondAttribute="leading" id="K90-ou-e9Y"/>
+                                    <constraint firstItem="3SO-ua-WJa" firstAttribute="centerY" secondItem="lJH-Fg-jxr" secondAttribute="centerY" constant="-15" id="KuN-Ht-9qx"/>
+                                    <constraint firstItem="kb8-88-wl7" firstAttribute="centerX" secondItem="lJH-Fg-jxr" secondAttribute="centerX" id="Mkm-I0-XOJ"/>
+                                    <constraint firstItem="1A9-Oz-BqC" firstAttribute="centerX" secondItem="lJH-Fg-jxr" secondAttribute="centerX" id="UBI-gR-yTS"/>
+                                    <constraint firstItem="3SO-ua-WJa" firstAttribute="centerX" secondItem="lJH-Fg-jxr" secondAttribute="centerX" id="ZzW-Hn-GDk"/>
+                                    <constraint firstAttribute="bottom" secondItem="VDM-k4-brg" secondAttribute="bottom" id="dnn-ys-LbA"/>
+                                    <constraint firstItem="1A9-Oz-BqC" firstAttribute="centerY" secondItem="lJH-Fg-jxr" secondAttribute="centerY" constant="15" id="hcu-Je-WFg"/>
+                                    <constraint firstItem="kb8-88-wl7" firstAttribute="centerY" secondItem="lJH-Fg-jxr" secondAttribute="centerY" id="oki-3j-tmd"/>
+                                    <constraint firstAttribute="width" constant="220" id="qyU-z1-eb6"/>
+                                    <constraint firstAttribute="trailing" secondItem="VDM-k4-brg" secondAttribute="trailing" id="vcB-qq-L1c"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收到 0 个需求" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEV-y8-1Xo">
+                                <rect key="frame" x="98" y="398" width="123" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-sb-s11" customClass="HXIBButton">
+                                <rect key="frame" x="10" y="522" width="300" height="36"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.80392156862745101" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="LuO-OP-kSN"/>
+                                </constraints>
+                                <state key="normal" title="抢    单">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.80392156859999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="grabButtonPressed" destination="yfA-hU-glS" eventType="touchUpInside" id="6Pk-M9-xG7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qXM-zz-kcI" firstAttribute="top" secondItem="ttn-zF-Cqj" secondAttribute="bottom" id="1Wn-Rh-4XC"/>
+                            <constraint firstItem="EB3-Zo-RJ4" firstAttribute="top" secondItem="xa3-sb-s11" secondAttribute="bottom" constant="10" id="1XS-fA-2D5"/>
+                            <constraint firstAttribute="trailing" secondItem="3Dr-rJ-FCL" secondAttribute="trailing" constant="10" id="81O-Qx-HmP"/>
+                            <constraint firstItem="MEV-y8-1Xo" firstAttribute="centerX" secondItem="bDx-wc-qod" secondAttribute="centerX" id="9of-XF-ckC"/>
+                            <constraint firstItem="rk9-Er-RMH" firstAttribute="leading" secondItem="bDx-wc-qod" secondAttribute="leading" constant="10" id="EQE-0w-c8G"/>
+                            <constraint firstItem="rk9-Er-RMH" firstAttribute="bottom" secondItem="qXM-zz-kcI" secondAttribute="bottom" id="Ndq-MD-a5r"/>
+                            <constraint firstItem="lJH-Fg-jxr" firstAttribute="centerX" secondItem="bDx-wc-qod" secondAttribute="centerX" id="PuD-Qg-b5A"/>
+                            <constraint firstItem="hee-vB-6da" firstAttribute="top" secondItem="rk9-Er-RMH" secondAttribute="bottom" constant="20" id="V61-T8-ULK"/>
+                            <constraint firstAttribute="trailing" secondItem="xa3-sb-s11" secondAttribute="trailing" constant="10" id="bq4-bf-sSA"/>
+                            <constraint firstItem="3Dr-rJ-FCL" firstAttribute="centerY" secondItem="hee-vB-6da" secondAttribute="centerY" id="cUi-Zs-1cV"/>
+                            <constraint firstItem="qXM-zz-kcI" firstAttribute="centerX" secondItem="bDx-wc-qod" secondAttribute="centerX" id="clL-Ta-eGT"/>
+                            <constraint firstItem="xa3-sb-s11" firstAttribute="leading" secondItem="bDx-wc-qod" secondAttribute="leading" constant="10" id="d4W-Cg-hI6"/>
+                            <constraint firstItem="3Dr-rJ-FCL" firstAttribute="leading" secondItem="hee-vB-6da" secondAttribute="trailing" id="gnj-bt-axd"/>
+                            <constraint firstItem="lJH-Fg-jxr" firstAttribute="top" secondItem="3Dr-rJ-FCL" secondAttribute="bottom" constant="40" id="o87-9w-FFl"/>
+                            <constraint firstItem="hee-vB-6da" firstAttribute="leading" secondItem="rk9-Er-RMH" secondAttribute="leading" id="oB4-DX-8qO"/>
+                            <constraint firstItem="MEV-y8-1Xo" firstAttribute="top" secondItem="lJH-Fg-jxr" secondAttribute="bottom" constant="40" id="t7j-Md-FDt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adviserHeader" destination="rk9-Er-RMH" id="ra1-ay-qml"/>
+                        <outlet property="cylindrical" destination="VDM-k4-brg" id="Qzy-PU-BGq"/>
+                        <outlet property="grabButton" destination="xa3-sb-s11" id="oHW-jC-bbZ"/>
+                        <outlet property="innerCircle" destination="kb8-88-wl7" id="iGh-sv-TsT"/>
+                        <outlet property="locationIcon" destination="hee-vB-6da" id="vYA-WN-lD6"/>
+                        <outlet property="locationLabel" destination="3Dr-rJ-FCL" id="WYK-Ho-kBF"/>
+                        <outlet property="orderTitleLabel" destination="3SO-ua-WJa" id="iCk-79-OUn"/>
+                        <outlet property="promptLabel" destination="MEV-y8-1Xo" id="p9w-as-z10"/>
+                        <outlet property="subTitleLabel" destination="1A9-Oz-BqC" id="UNL-Eg-R5s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1T-Xp-pIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="405"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HP-CylindricalOfflineIcon" width="270" height="270"/>
+        <image name="HP-HeaderIcon" width="21" height="21"/>
+        <image name="HP-InnerCircleOfflineIcon" width="190" height="190"/>
+        <image name="HP-LocationOfflineIcon" width="8" height="11"/>
+        <image name="HP-Logo" width="135" height="26"/>
+    </resources>
+</document>
