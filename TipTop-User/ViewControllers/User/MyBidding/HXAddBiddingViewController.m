@@ -34,7 +34,7 @@ static NSString *CreateBiddingApi   = @"/biding/create";
         _briefIntroductionTextView.text.length &&
         _costsTextField.text.length &&
         _contractAmountTextField.text.length) {
-        [self startCreateBiddingReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
+        [self startCreateBiddingReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                                @"f_cid": _subService.parentID,
                                                                  @"cid": _subService.ID,
                                                                  @"eta": _deliverDateTextField.text,

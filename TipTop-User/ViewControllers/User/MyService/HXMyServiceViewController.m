@@ -14,7 +14,7 @@
 
 #pragma mark - View Controller Life Cycle
 - (void)viewDidLoad {
-    self.loadURL = [DoMain stringByAppendingFormat:@"/h5/agent/service?access_token=%@", [HXUserSession share].adviser.accessToken];
+    self.loadURL = [DoMain stringByAppendingFormat:@"/h5/agent/service?access_token=%@", [HXUserSession share].user.accessToken];
     
     [super viewDidLoad];
 }

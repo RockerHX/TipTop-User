@@ -6,7 +6,7 @@
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import "HXAdviser.h"
+#import "HXUser.h"
 
 typedef NS_ENUM(BOOL, HXUserSessionState) {
     HXUserSessionStateLogout = NO,
@@ -15,13 +15,13 @@ typedef NS_ENUM(BOOL, HXUserSessionState) {
 
 @interface HXUserSession : NSObject
 
-@property (nonnull, nonatomic, strong, readonly) HXAdviser *adviser;
+@property (nonnull, nonatomic, strong, readonly)    HXUser *user;
 @property (nonatomic, assign, readonly) HXUserSessionState  state;
 
 + (nullable instancetype)share;
 
-- (void)updateAdviser:(nullable HXAdviser *)adviser;
-- (void)updateAdviserAvatar:(nullable NSString *)avatarURL;
+- (void)updateUser:(nullable HXUser *)user;
+- (void)updateUserAvatar:(nullable NSString *)avatarURL;
 - (void)logout;
 
 @end

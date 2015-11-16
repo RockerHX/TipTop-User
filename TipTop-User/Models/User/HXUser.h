@@ -1,5 +1,5 @@
 //
-//  HXAdviser.h
+//  HXUser.h
 //  TipTop-User
 //
 //  Created by ShiCang on 15/10/7.
@@ -8,7 +8,7 @@
 
 #import <MJExtension/MJExtension.h>
 
-@interface HXAdviser : NSObject
+@interface HXUser : NSObject
 
 @property (nonatomic, strong)  NSString *uid;
 @property (nonatomic, strong)  NSString *avatar;

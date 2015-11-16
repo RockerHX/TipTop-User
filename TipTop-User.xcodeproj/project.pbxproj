@@ -37,7 +37,7 @@
 		485FE8821BF8E1CC00654279 /* HXReservationOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE78F1BF8E1CC00654279 /* HXReservationOrder.m */; };
 		485FE8831BF8E1CC00654279 /* HXOnlinePayDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7921BF8E1CC00654279 /* HXOnlinePayDetail.m */; };
 		485FE8841BF8E1CC00654279 /* HXOnlinePayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7941BF8E1CC00654279 /* HXOnlinePayOrder.m */; };
-		485FE8851BF8E1CC00654279 /* HXAdviser.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7971BF8E1CC00654279 /* HXAdviser.m */; };
+		485FE8851BF8E1CC00654279 /* HXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7971BF8E1CC00654279 /* HXUser.m */; };
 		485FE8861BF8E1CC00654279 /* HXCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7991BF8E1CC00654279 /* HXCase.m */; };
 		485FE8871BF8E1CC00654279 /* HXProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE79B1BF8E1CC00654279 /* HXProfile.m */; };
 		485FE8881BF8E1CC00654279 /* HXUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE79D1BF8E1CC00654279 /* HXUserSession.m */; };
@@ -196,8 +196,8 @@
 		485FE7921BF8E1CC00654279 /* HXOnlinePayDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetail.m; sourceTree = "<group>"; };
 		485FE7931BF8E1CC00654279 /* HXOnlinePayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayOrder.h; sourceTree = "<group>"; };
 		485FE7941BF8E1CC00654279 /* HXOnlinePayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayOrder.m; sourceTree = "<group>"; };
-		485FE7961BF8E1CC00654279 /* HXAdviser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXAdviser.h; sourceTree = "<group>"; };
-		485FE7971BF8E1CC00654279 /* HXAdviser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXAdviser.m; sourceTree = "<group>"; };
+		485FE7961BF8E1CC00654279 /* HXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXUser.h; sourceTree = "<group>"; };
+		485FE7971BF8E1CC00654279 /* HXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXUser.m; sourceTree = "<group>"; };
 		485FE7981BF8E1CC00654279 /* HXCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCase.h; sourceTree = "<group>"; };
 		485FE7991BF8E1CC00654279 /* HXCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCase.m; sourceTree = "<group>"; };
 		485FE79A1BF8E1CC00654279 /* HXProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfile.h; sourceTree = "<group>"; };
@@ -621,8 +621,8 @@
 		485FE7951BF8E1CC00654279 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				485FE7961BF8E1CC00654279 /* HXAdviser.h */,
-				485FE7971BF8E1CC00654279 /* HXAdviser.m */,
+				485FE7961BF8E1CC00654279 /* HXUser.h */,
+				485FE7971BF8E1CC00654279 /* HXUser.m */,
 				485FE7981BF8E1CC00654279 /* HXCase.h */,
 				485FE7991BF8E1CC00654279 /* HXCase.m */,
 				485FE79A1BF8E1CC00654279 /* HXProfile.h */,
@@ -1365,7 +1365,7 @@
 				485FE8CB1BF8E1CC00654279 /* HXCaseCardCell.m in Sources */,
 				485FE8961BF8E1CC00654279 /* HXLoginViewController.m in Sources */,
 				485FE8B21BF8E1CC00654279 /* HXReservationDetailViewModel.m in Sources */,
-				485FE8851BF8E1CC00654279 /* HXAdviser.m in Sources */,
+				485FE8851BF8E1CC00654279 /* HXUser.m in Sources */,
 				485FE8911BF8E1CC00654279 /* HXMainViewController.m in Sources */,
 				485FE8BF1BF8E1CC00654279 /* HXBiddingCell.m in Sources */,
 				485FE88E1BF8E1CC00654279 /* HXLoginRequset.m in Sources */,

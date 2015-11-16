@@ -10,19 +10,19 @@
 
 static NSString *LoginApi = @"/session/login";
 
-@implementation HXAdviser (HXLoginRequset)
+@implementation HXUser (HXLoginRequset)
 
 + (AFHTTPRequestOperation *)loginWithParameters:(NSDictionary *)parameters
-                                        success:(void(^)(HXApiResponse *response, HXAdviser *adviser))success
+                                        success:(void(^)(HXApiResponse *response, HXUser *user))success
                                         failure:(void(^)(HXApiResponse *response))failure
 {
     return [HXAppApiRequest requestPOSTMethodsWithAPI:[HXApi apiURLWithApi:LoginApi] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         HXApiResponse *response = [HXApiResponse responseWithStatusCode:operation.response.statusCode
                                                               errorCode:[responseObject[@"error_code"] integerValue]
                                                                 message:responseObject[@"tip"]];
-        HXAdviser *adviser = [HXAdviser mj_objectWithKeyValues:responseObject[@"data"]];
+        HXUser *user = [HXUser mj_objectWithKeyValues:responseObject[@"data"]];
         if (success) {
-            success(response, adviser);
+            success(response, user);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         HXApiResponse *response = [HXApiResponse responseWithStatusCode:operation.response.statusCode

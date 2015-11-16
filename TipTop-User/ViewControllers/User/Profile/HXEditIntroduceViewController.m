@@ -45,7 +45,7 @@ static NSString *UpdateIntroduceApi = @"/profile/about";
 #pragma mark - Event Response
 - (IBAction)saveButtonPressed {
     if (_textView.text.length) {
-        [self startUpdateIntroduceReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
+        [self startUpdateIntroduceReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                                  @"about": _textView.text}];
     }
 }

@@ -98,7 +98,7 @@ static NSString *DeleteRemarkApi    = @"/order/remarkDelete";
 }
 
 - (void)sendOrder {
-    [self startSendOrderReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
+    [self startSendOrderReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                           @"id": _orderID}];
 }
 
@@ -123,7 +123,7 @@ static NSString *DeleteRemarkApi    = @"/order/remarkDelete";
 }
 
 - (void)startDeleteRemarkRequestWithRemark:(HXReservationDetailRemark *)remark {
-    NSDictionary *parameters = @{@"access_token": [HXUserSession share].adviser.accessToken,
+    NSDictionary *parameters = @{@"access_token": [HXUserSession share].user.accessToken,
                                            @"id": remark.ID};
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -235,7 +235,7 @@ static NSString *DeletePrompt = @"删除";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     HXRemarkDetailViewController *remarkDetailViewController = [HXRemarkDetailViewController instance];
-    remarkDetailViewController.loadURL = [DoMain stringByAppendingFormat:@"/h5/agent/order/remark?id=%@&access_token=%@", ((HXReservationDetailRemark *)_viewModel.remarks[indexPath.row - _viewModel.regularRow]).ID, [HXUserSession share].adviser.accessToken];
+    remarkDetailViewController.loadURL = [DoMain stringByAppendingFormat:@"/h5/agent/order/remark?id=%@&access_token=%@", ((HXReservationDetailRemark *)_viewModel.remarks[indexPath.row - _viewModel.regularRow]).ID, [HXUserSession share].user.accessToken];
     [self.navigationController pushViewController:remarkDetailViewController animated:YES];
 }
 

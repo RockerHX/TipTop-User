@@ -113,7 +113,7 @@ static NSString *NewOrderEvent = @"new_order";
             break;
         }
         case HXHomePageConnectStateOffline: {
-            [self adviserOffline];
+            [self userOffline];
             break;
         }
     }
@@ -138,7 +138,7 @@ static NSString *NewOrderEvent = @"new_order";
     _grabButton.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
-- (void)adviserOffline {
+- (void)userOffline {
     self.view.backgroundColor = UIColorWithRGBA(219.0f, 212.0f, 212.0f, 1.0f);
     
     _locationIcon.image = [UIImage imageNamed:@"HP-LocationOfflineIcon"];

@@ -1,6 +1,6 @@
 //
 //  HXUserViewController.m
-//  TipTop-Adviser
+//  TipTop-User
 //
 //  Created by ShiCang on 15/10/5.
 //  Copyright © 2015年 Outsourcing. All rights reserved.
@@ -86,14 +86,14 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
 
 #pragma mark - Private Methods
 - (void)updateUserInfo {
-    HXAdviser *adviser = [HXUserSession share].adviser;
-    [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:adviser.avatar]];
-    _nameLabel.text = adviser.realName;
-    _mobileLabel.text = adviser.mobile;
+    HXUser *user = [HXUserSession share].user;
+    [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:user.avatar]];
+    _nameLabel.text = user.realName;
+    _mobileLabel.text = user.mobile;
 }
 
 - (void)startUploadImageReuqestWithImage:(UIImage *)image {
-    [self startUploadImageReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken}
+    [self startUploadImageReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken}
                                           image: image];
 }
 
@@ -109,7 +109,7 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
         NSInteger errorCode = [responseObject[@"error_code"] integerValue];
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
             NSString *headerFile = responseObject[@"data"][@"img"];
-            [strongSelf startUpdateUserHeaderRequestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
+            [strongSelf startUpdateUserHeaderRequestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                                      @"avatar": headerFile}];
         }
     } failure:^(AFHTTPRequestOperation *operation,NSError *error) {
@@ -125,7 +125,7 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
         NSInteger errorCode = [responseObject[@"error_code"] integerValue];
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
             NSString *imageURL = responseObject[@"data"][@"avatar"];
-            [[HXUserSession share] updateAdviserAvatar:imageURL];
+            [[HXUserSession share] updateUserAvatar:imageURL];
             [strongSelf updateUserInfo];
         }
         [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];

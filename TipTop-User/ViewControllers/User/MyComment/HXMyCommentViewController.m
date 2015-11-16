@@ -40,7 +40,7 @@ static NSString *CommentListApi = @"/review";
 
 #pragma mark - Public Methods
 - (void)loadNewData {
-    [self startCommentListReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken}];
+    [self startCommentListReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken}];
 }
 
 #pragma mark - Private Methods

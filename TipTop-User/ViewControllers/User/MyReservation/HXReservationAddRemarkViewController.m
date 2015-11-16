@@ -55,7 +55,7 @@ static NSString *TextViewPrompt = @"请输入备注事件";
 - (void)createRemark {
     if (_textView.text.length) {
         [_textView resignFirstResponder];
-        [self startCreateRemarkReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
+        [self startCreateRemarkReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                                  @"id": _orderID,
                                                         @"remark_time": _dateLabel.text,
                                                             @"content": (_textView.text ?: @"")}];

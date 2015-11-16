@@ -10,7 +10,7 @@
 
 @interface HXHomeViewController : HXPanGestureViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *adviserHeader;
+@property (weak, nonatomic) IBOutlet UIImageView *userHeader;
 @property (weak, nonatomic) IBOutlet UIImageView *locationIcon;
 @property (weak, nonatomic) IBOutlet     UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *cylindrical;

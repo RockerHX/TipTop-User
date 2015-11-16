@@ -95,7 +95,7 @@ static NSString *BiddingListApi   = @"/biding";
 }
 
 - (void)startBiddingListRequestWithype:(HXBiddingSelectedType)type {
-    NSMutableDictionary *mutableDictionary = @{@"access_token": [HXUserSession share].adviser.accessToken}.mutableCopy;
+    NSMutableDictionary *mutableDictionary = @{@"access_token": [HXUserSession share].user.accessToken}.mutableCopy;
     switch (type) {
         case HXBiddingSelectedTypePending: {
             [mutableDictionary setValue:@"pending" forKey:@"status"];
@@ -151,7 +151,7 @@ static NSString *BiddingListApi   = @"/biding";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     HXBidding *bidding = _dataList[indexPath.row];
-    NSString *url = [DoMain stringByAppendingFormat:@"/h5/agent/biding/view?id=%@&access_token=%@", bidding.ID, [HXUserSession share].adviser.accessToken];
+    NSString *url = [DoMain stringByAppendingFormat:@"/h5/agent/biding/view?id=%@&access_token=%@", bidding.ID, [HXUserSession share].user.accessToken];
     HXBiddingDetailViewController *detailViewController = [HXBiddingDetailViewController instance];
     detailViewController.loadURL = url;
     [self.navigationController pushViewController:detailViewController animated:YES];

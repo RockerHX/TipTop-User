@@ -75,7 +75,7 @@ static NSInteger RegularRow = 2;
 #pragma mark - Public Methods
 - (void)request:(void (^)(void))completed {
     _completedBlock = completed;
-    [self startOrderDetailReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
+    [self startOrderDetailReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                             @"id": _orderID}];
 }
 

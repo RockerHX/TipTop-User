@@ -34,7 +34,7 @@ static NSString *OrderListApi = @"/profile/password";
     
     if (oldPassWord.length && passWord.length && confirmPassWord.length) {
         if ([passWord isEqualToString:confirmPassWord]) {
-            [self startChangePassWordRequest:@{@"access_token": [HXUserSession share].adviser.accessToken,
+            [self startChangePassWordRequest:@{@"access_token": [HXUserSession share].user.accessToken,
                                                @"old_password": oldPassWord,
                                                    @"password": confirmPassWord}];
         }

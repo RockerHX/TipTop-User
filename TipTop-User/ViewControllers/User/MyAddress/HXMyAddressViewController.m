@@ -76,7 +76,7 @@ static NSString *UpdateLocationApi = @"/profile/location";
 
 - (IBAction)enterButtonPressed {
     if (_location.latitude && _location.longitude && _address) {
-        [self startUpdateAddressReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
+        [self startUpdateAddressReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                                  @"lat": @(_location.latitude).stringValue,
                                                                  @"lng": @(_location.longitude).stringValue,
                                                              @"address": _address}];

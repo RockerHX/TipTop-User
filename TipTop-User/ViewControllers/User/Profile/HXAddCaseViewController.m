@@ -57,7 +57,7 @@ static NSString *UpdateCaseApi = @"/case/update";
         if (_contentIntroduceTextView.text.length &&
             _caseNameTextField.text.length &&
             _caseIntroduceTextView.text.length) {
-            NSMutableDictionary *parameters = @{@"access_token": [HXUserSession share].adviser.accessToken,
+            NSMutableDictionary *parameters = @{@"access_token": [HXUserSession share].user.accessToken,
                                                           @"id": _selectedCase.ID,
                                                  @"description": _contentIntroduceTextView.text,
                                                        @"title": _caseNameTextField.text,
@@ -73,7 +73,7 @@ static NSString *UpdateCaseApi = @"/case/update";
             _imageFile.length &&
             _caseIntroduceTextView.text.length) {
             [self startCreateCaseReuqestWithApi:CreateCaseApi
-                                     parameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
+                                     parameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                    @"description": _contentIntroduceTextView.text,
                                                          @"title": _caseNameTextField.text,
                                                          @"image": _imageFile,
@@ -98,7 +98,7 @@ static NSString *UpdateCaseApi = @"/case/update";
 }
 
 - (void)startUploadImageReuqest {
-    [self startUploadImageReuqestWithParameters:@{@"access_token":[HXUserSession share].adviser.accessToken}
+    [self startUploadImageReuqestWithParameters:@{@"access_token":[HXUserSession share].user.accessToken}
                                                             image:[_caseImageButton imageForState:UIControlStateNormal]];
 }
 

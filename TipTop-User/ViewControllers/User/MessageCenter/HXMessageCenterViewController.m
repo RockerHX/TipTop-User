@@ -52,7 +52,7 @@ static NSString *MessageListApi = @"/notification/category";
 
 #pragma mark - Public Methods
 - (void)loadNewData {
-    [self startMessageListReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
+    [self startMessageListReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                            @"app": @"agent"}];
 }
 

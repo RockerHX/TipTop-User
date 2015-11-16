@@ -1,14 +1,14 @@
 //
-//  HXAdviser.m
+//  HXUser.m
 //  TipTop-User
 //
 //  Created by ShiCang on 15/10/7.
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import "HXAdviser.h"
+#import "HXUser.h"
 
-@implementation HXAdviser
+@implementation HXUser
 
 MJCodingImplementation
 

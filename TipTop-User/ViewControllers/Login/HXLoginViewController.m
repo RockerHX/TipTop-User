@@ -64,10 +64,10 @@
     __weak __typeof__(self)weakSelf = self;
     NSDictionary *parameters = @{@"mobile": _staffIDTextField.text,
                                @"password": _passwordTextField.text};
-    [HXAdviser loginWithParameters:parameters success:^(HXApiResponse *response, HXAdviser *adviser) {
+    [HXUser loginWithParameters:parameters success:^(HXApiResponse *response, HXUser *user) {
         __strong __typeof__(self)strongSelf = weakSelf;
         if (response.errorCode == HXAppApiRequestErrorCodeNoError) {
-            [[HXUserSession share] updateAdviser:adviser];
+            [[HXUserSession share] updateUser:user];
             if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(loginViewControllerLoginSuccess:)]) {
                 [strongSelf.delegate loginViewControllerLoginSuccess:strongSelf];
             }

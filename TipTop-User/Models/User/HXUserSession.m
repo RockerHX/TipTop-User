@@ -9,7 +9,7 @@
 #import "HXUserSession.h"
 
 
-static NSString *FilePath = @"/adviser.data";
+static NSString *FilePath = @"/user.data";
 
 static HXUserSession *session = nil;
 
@@ -35,8 +35,8 @@ static HXUserSession *session = nil;
 
 #pragma mark - Setter And Getter
 - (HXUserSessionState)state {
-    if (_adviser.uid && _adviser.accessToken) {
-        NSDate *expired = [NSDate dateWithTimeIntervalSince1970:_adviser.tokenExpired];
+    if (_user.uid && _user.accessToken) {
+        NSDate *expired = [NSDate dateWithTimeIntervalSince1970:_user.tokenExpired];
         NSDate *now = [NSDate date];
         NSTimeInterval interval = [now timeIntervalSinceDate:expired];
         if (interval > 0) {
@@ -50,29 +50,29 @@ static HXUserSession *session = nil;
 }
 
 #pragma mark - Public Methods
-- (void)updateAdviser:(nullable HXAdviser *)adviser {
-    _adviser = adviser;
+- (void)updateUser:(nullable HXUser *)user {
+    _user = user;
     [self archive];
 }
 
-- (void)updateAdviserAvatar:(nullable NSString *)avatarURL {
-    _adviser.avatar = avatarURL;
+- (void)updateUserAvatar:(nullable NSString *)avatarURL {
+    _user.avatar = avatarURL;
     [self archive];
 }
 
 - (void)logout {
-    [self updateAdviser:[HXAdviser new]];
+    [self updateUser:[HXUser new]];
 }
 
 #pragma mark - Private Methods
 - (void)archive {
     NSString *file = [NSTemporaryDirectory() stringByAppendingPathComponent:FilePath];
-    [NSKeyedArchiver archiveRootObject:_adviser toFile:file];
+    [NSKeyedArchiver archiveRootObject:_user toFile:file];
 }
 
 - (void)unArchive {
     NSString *file = [NSTemporaryDirectory() stringByAppendingPathComponent:FilePath];
-    _adviser = [NSKeyedUnarchiver unarchiveObjectWithFile:file];
+    _user = [NSKeyedUnarchiver unarchiveObjectWithFile:file];
 }
 
 @end

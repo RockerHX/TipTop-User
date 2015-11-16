@@ -7,12 +7,12 @@
 //
 
 #import "HXAppApiRequest.h"
-#import "HXAdviser.h"
+#import "HXUser.h"
 
-@interface HXAdviser (HXLoginRequset)
+@interface HXUser (HXLoginRequset)
 
 + (AFHTTPRequestOperation *)loginWithParameters:(NSDictionary *)parameters
-                                        success:(void(^)(HXApiResponse *response, HXAdviser *adviser))success
+                                        success:(void(^)(HXApiResponse *response, HXUser *user))success
                                         failure:(void(^)(HXApiResponse *response))failure;
 
 @end
