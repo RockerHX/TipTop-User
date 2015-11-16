@@ -53,7 +53,6 @@
 		485FE8921BF8E1CC00654279 /* HXPanGestureNavgaitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7B81BF8E1CC00654279 /* HXPanGestureNavgaitionController.m */; };
 		485FE8931BF8E1CC00654279 /* HXPanGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7BA1BF8E1CC00654279 /* HXPanGestureViewController.m */; };
 		485FE8941BF8E1CC00654279 /* HXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7BC1BF8E1CC00654279 /* HXWebViewController.m */; };
-		485FE8951BF8E1CC00654279 /* HXForgotPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7BF1BF8E1CC00654279 /* HXForgotPWViewController.m */; };
 		485FE8961BF8E1CC00654279 /* HXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7C11BF8E1CC00654279 /* HXLoginViewController.m */; };
 		485FE8971BF8E1CC00654279 /* UIViewController+HXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7C31BF8E1CC00654279 /* UIViewController+HXClass.m */; };
 		485FE8981BF8E1CC00654279 /* HXUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7C61BF8E1CC00654279 /* HXUserViewController.m */; };
@@ -115,7 +114,9 @@
 		485FE8D01BF8E1CC00654279 /* HXProfileNoContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8541BF8E1CC00654279 /* HXProfileNoContentCell.m */; };
 		485FE8D11BF8E1CC00654279 /* HXProfileSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8561BF8E1CC00654279 /* HXProfileSelectedCell.m */; };
 		485FE8D21BF8E1CC00654279 /* HXWorkCircuitOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8591BF8E1CC00654279 /* HXWorkCircuitOrderCell.m */; };
-		488D0E391BFA372E0068D47C /* HXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E381BFA372E0068D47C /* HXRegisterViewController.m */; };
+		488D0E401BFA3C170068D47C /* HXForgotPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */; };
+		488D0E411BFA3C170068D47C /* HXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */; };
+		488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */; };
 		48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54111BF8E88A00CFD7AD /* Login.storyboard */; };
 		48EE54161BF8E8D000CFD7AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54141BF8E8D000CFD7AD /* Home.storyboard */; };
 		48EE542B1BF8E8DC00CFD7AD /* MessageCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */; };
@@ -227,8 +228,6 @@
 		485FE7BA1BF8E1CC00654279 /* HXPanGestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPanGestureViewController.m; sourceTree = "<group>"; };
 		485FE7BB1BF8E1CC00654279 /* HXWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWebViewController.h; sourceTree = "<group>"; };
 		485FE7BC1BF8E1CC00654279 /* HXWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWebViewController.m; sourceTree = "<group>"; };
-		485FE7BE1BF8E1CC00654279 /* HXForgotPWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXForgotPWViewController.h; sourceTree = "<group>"; };
-		485FE7BF1BF8E1CC00654279 /* HXForgotPWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXForgotPWViewController.m; sourceTree = "<group>"; };
 		485FE7C01BF8E1CC00654279 /* HXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXLoginViewController.h; sourceTree = "<group>"; };
 		485FE7C11BF8E1CC00654279 /* HXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXLoginViewController.m; sourceTree = "<group>"; };
 		485FE7C21BF8E1CC00654279 /* UIViewController+HXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HXClass.h"; sourceTree = "<group>"; };
@@ -349,8 +348,12 @@
 		485FE8561BF8E1CC00654279 /* HXProfileSelectedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileSelectedCell.m; sourceTree = "<group>"; };
 		485FE8581BF8E1CC00654279 /* HXWorkCircuitOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWorkCircuitOrderCell.h; sourceTree = "<group>"; };
 		485FE8591BF8E1CC00654279 /* HXWorkCircuitOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWorkCircuitOrderCell.m; sourceTree = "<group>"; };
-		488D0E371BFA372E0068D47C /* HXRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRegisterViewController.h; sourceTree = "<group>"; };
-		488D0E381BFA372E0068D47C /* HXRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRegisterViewController.m; sourceTree = "<group>"; };
+		488D0E3B1BFA3C170068D47C /* HXForgotPWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXForgotPWViewController.h; sourceTree = "<group>"; };
+		488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXForgotPWViewController.m; sourceTree = "<group>"; };
+		488D0E3E1BFA3C170068D47C /* HXRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRegisterViewController.h; sourceTree = "<group>"; };
+		488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRegisterViewController.m; sourceTree = "<group>"; };
+		488D0E421BFA3C4E0068D47C /* HXServiceTermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceTermsViewController.h; sourceTree = "<group>"; };
+		488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceTermsViewController.m; sourceTree = "<group>"; };
 		48D74F721BC4CA100000863D /* TipTop-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TipTop-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EE54121BF8E88A00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Login.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54151BF8E8D000CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Home.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -714,12 +717,10 @@
 		485FE7BD1BF8E1CC00654279 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				488D0E3A1BFA3C170068D47C /* ForgotPW */,
+				488D0E3D1BFA3C170068D47C /* Register */,
 				485FE7C01BF8E1CC00654279 /* HXLoginViewController.h */,
 				485FE7C11BF8E1CC00654279 /* HXLoginViewController.m */,
-				485FE7BE1BF8E1CC00654279 /* HXForgotPWViewController.h */,
-				485FE7BF1BF8E1CC00654279 /* HXForgotPWViewController.m */,
-				488D0E371BFA372E0068D47C /* HXRegisterViewController.h */,
-				488D0E381BFA372E0068D47C /* HXRegisterViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1139,6 +1140,26 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		488D0E3A1BFA3C170068D47C /* ForgotPW */ = {
+			isa = PBXGroup;
+			children = (
+				488D0E3B1BFA3C170068D47C /* HXForgotPWViewController.h */,
+				488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */,
+			);
+			path = ForgotPW;
+			sourceTree = "<group>";
+		};
+		488D0E3D1BFA3C170068D47C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				488D0E3E1BFA3C170068D47C /* HXRegisterViewController.h */,
+				488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */,
+				488D0E421BFA3C4E0068D47C /* HXServiceTermsViewController.h */,
+				488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		48D74F691BC4CA100000863D = {
 			isa = PBXGroup;
 			children = (
@@ -1326,6 +1347,7 @@
 				485FE8841BF8E1CC00654279 /* HXOnlinePayOrder.m in Sources */,
 				485FE88C1BF8E1CC00654279 /* HXAppApiRequest.m in Sources */,
 				485FE8901BF8E1CC00654279 /* HXListViewController.m in Sources */,
+				488D0E401BFA3C170068D47C /* HXForgotPWViewController.m in Sources */,
 				485FE8831BF8E1CC00654279 /* HXOnlinePayDetail.m in Sources */,
 				485FE8D01BF8E1CC00654279 /* HXProfileNoContentCell.m in Sources */,
 				485FE89C1BF8E1CC00654279 /* HXMyAddressViewController.m in Sources */,
@@ -1349,7 +1371,7 @@
 				485FE88E1BF8E1CC00654279 /* HXLoginRequset.m in Sources */,
 				485FE8741BF8E1CC00654279 /* HXLocationManager.m in Sources */,
 				485FE8871BF8E1CC00654279 /* HXProfile.m in Sources */,
-				488D0E391BFA372E0068D47C /* HXRegisterViewController.m in Sources */,
+				488D0E411BFA3C170068D47C /* HXRegisterViewController.m in Sources */,
 				485FE8801BF8E1CC00654279 /* HXMessageList.m in Sources */,
 				485FE8CE1BF8E1CC00654279 /* HXProfileHeaderCell.m in Sources */,
 				485FE85A1BF8E1CC00654279 /* AppDelegate.mm in Sources */,
@@ -1373,10 +1395,10 @@
 				485FE89E1BF8E1CC00654279 /* HXBiddingDetailViewController.m in Sources */,
 				485FE8941BF8E1CC00654279 /* HXWebViewController.m in Sources */,
 				485FE8D21BF8E1CC00654279 /* HXWorkCircuitOrderCell.m in Sources */,
+				488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */,
 				485FE8821BF8E1CC00654279 /* HXReservationOrder.m in Sources */,
 				485FE8921BF8E1CC00654279 /* HXPanGestureNavgaitionController.m in Sources */,
 				485FE89B1BF8E1CC00654279 /* HXMessageListViewController.m in Sources */,
-				485FE8951BF8E1CC00654279 /* HXForgotPWViewController.m in Sources */,
 				485FE8891BF8E1CC00654279 /* HXWorkCircuitOrder.m in Sources */,
 				485FE8991BF8E1CC00654279 /* HXMessageCenterViewController.m in Sources */,
 				485FE8A21BF8E1CC00654279 /* HXMyReservationListViewController.m in Sources */,

@@ -561,6 +561,9 @@
                                     <state key="normal" title="《顶呱呱注册服务条款》">
                                         <color key="titleColor" red="0.98823529409999999" green="0.5450980392" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <segue destination="Yxg-Dj-PeN" kind="push" id="8RT-rP-4zi"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <animations/>
@@ -765,6 +768,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sU-jI-feF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="638" y="1157"/>
+        </scene>
+        <!--服务条款-->
+        <scene sceneID="KVz-3j-NNh">
+            <objects>
+                <viewController storyboardIdentifier="HXServiceTermsViewController" id="Yxg-Dj-PeN" customClass="HXServiceTermsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rhk-qN-Ahq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ea4-2u-KnS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zfh-oe-fad">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVM-E4-Tyt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Yxg-Dj-PeN" id="Oi7-dM-agb"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FVM-E4-Tyt" firstAttribute="top" secondItem="rhk-qN-Ahq" secondAttribute="bottom" id="Av7-sD-LGm"/>
+                            <constraint firstAttribute="trailing" secondItem="FVM-E4-Tyt" secondAttribute="trailing" id="FWz-vv-ujY"/>
+                            <constraint firstItem="FVM-E4-Tyt" firstAttribute="leading" secondItem="zfh-oe-fad" secondAttribute="leading" id="HaV-Yg-phd"/>
+                            <constraint firstItem="Ea4-2u-KnS" firstAttribute="top" secondItem="FVM-E4-Tyt" secondAttribute="bottom" id="bCf-3m-qgd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="服务条款" id="qCz-dU-34X"/>
+                    <connections>
+                        <outlet property="webView" destination="FVM-E4-Tyt" id="zLN-kw-O4r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aL-T8-Uyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="1157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mx0-i2-91C">
