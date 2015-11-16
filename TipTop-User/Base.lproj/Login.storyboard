@@ -124,11 +124,12 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pQ-Y3-TBO">
-                                <rect key="frame" x="110" y="518" width="100" height="30"/>
+                                <rect key="frame" x="203" y="352" width="87" height="27"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KW-sR-z7C">
-                                        <rect key="frame" x="32" y="0.0" width="68" height="30"/>
+                                        <rect key="frame" x="32" y="0.0" width="55" height="27"/>
                                         <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="忘记密码?">
                                             <color key="titleColor" red="0.14901960784313725" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -138,7 +139,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="L-ForgotPasswordIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hfC-CI-lYF">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="-2" width="30" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="0wp-wP-pIy"/>
@@ -157,20 +158,30 @@
                                     <constraint firstItem="2KW-sR-z7C" firstAttribute="centerY" secondItem="5pQ-Y3-TBO" secondAttribute="centerY" id="n6y-pX-WBU"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyY-QU-EXB">
+                                <rect key="frame" x="97" y="531" width="126" height="29"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="没有账号？立即注册">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.5450980392" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="297-yv-ChU" firstAttribute="leading" secondItem="iGl-Vi-7KO" secondAttribute="leading" constant="30" id="3vL-gD-5dj"/>
+                            <constraint firstItem="5pQ-Y3-TBO" firstAttribute="top" secondItem="xUS-gb-mad" secondAttribute="bottom" constant="8" id="4SC-JE-O5B"/>
+                            <constraint firstItem="5pQ-Y3-TBO" firstAttribute="trailing" secondItem="xUS-gb-mad" secondAttribute="trailing" id="7XE-ao-mT4"/>
                             <constraint firstItem="Eal-Fi-c0U" firstAttribute="centerX" secondItem="297-yv-ChU" secondAttribute="centerX" id="8Ka-4a-hf3"/>
                             <constraint firstAttribute="trailing" secondItem="297-yv-ChU" secondAttribute="trailing" constant="30" id="CY8-91-fnR"/>
-                            <constraint firstItem="5pQ-Y3-TBO" firstAttribute="centerX" secondItem="iGl-Vi-7KO" secondAttribute="centerX" id="F2y-Uf-1jZ"/>
+                            <constraint firstItem="aC8-Li-CJk" firstAttribute="top" secondItem="yyY-QU-EXB" secondAttribute="bottom" constant="8" id="Egt-PL-fj2"/>
                             <constraint firstItem="Eal-Fi-c0U" firstAttribute="width" secondItem="297-yv-ChU" secondAttribute="width" id="J5m-jI-324"/>
                             <constraint firstItem="Eal-Fi-c0U" firstAttribute="top" secondItem="297-yv-ChU" secondAttribute="bottom" constant="40" id="LjF-gv-JFg"/>
                             <constraint firstItem="xUS-gb-mad" firstAttribute="width" secondItem="G15-7q-LgV" secondAttribute="width" id="M0k-oD-A9W"/>
                             <constraint firstItem="297-yv-ChU" firstAttribute="centerX" secondItem="iGl-Vi-7KO" secondAttribute="centerX" id="OPt-Yn-Pc0"/>
                             <constraint firstItem="G15-7q-LgV" firstAttribute="height" secondItem="Eal-Fi-c0U" secondAttribute="height" id="SKo-M7-UUt"/>
-                            <constraint firstItem="aC8-Li-CJk" firstAttribute="top" secondItem="5pQ-Y3-TBO" secondAttribute="bottom" constant="20" id="cHU-qA-rVq"/>
+                            <constraint firstItem="yyY-QU-EXB" firstAttribute="centerX" secondItem="iGl-Vi-7KO" secondAttribute="centerX" id="UeB-rY-cOC"/>
                             <constraint firstItem="297-yv-ChU" firstAttribute="top" secondItem="pFm-Mq-m1G" secondAttribute="bottom" constant="30" id="cri-c5-Ztd"/>
                             <constraint firstItem="xUS-gb-mad" firstAttribute="top" secondItem="G15-7q-LgV" secondAttribute="bottom" constant="20" id="g1F-Cm-hfv"/>
                             <constraint firstItem="G15-7q-LgV" firstAttribute="centerX" secondItem="Eal-Fi-c0U" secondAttribute="centerX" id="hER-9e-kLG"/>
