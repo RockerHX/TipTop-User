@@ -117,6 +117,7 @@
 		488D0E401BFA3C170068D47C /* HXForgotPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */; };
 		488D0E411BFA3C170068D47C /* HXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */; };
 		488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */; };
+		48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BD52741BFA430900613F19 /* HXFeedBackViewController.m */; };
 		48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54111BF8E88A00CFD7AD /* Login.storyboard */; };
 		48EE54161BF8E8D000CFD7AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54141BF8E8D000CFD7AD /* Home.storyboard */; };
 		48EE542B1BF8E8DC00CFD7AD /* MessageCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */; };
@@ -354,6 +355,8 @@
 		488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRegisterViewController.m; sourceTree = "<group>"; };
 		488D0E421BFA3C4E0068D47C /* HXServiceTermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceTermsViewController.h; sourceTree = "<group>"; };
 		488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceTermsViewController.m; sourceTree = "<group>"; };
+		48BD52731BFA430900613F19 /* HXFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXFeedBackViewController.h; sourceTree = "<group>"; };
+		48BD52741BFA430900613F19 /* HXFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXFeedBackViewController.m; sourceTree = "<group>"; };
 		48D74F721BC4CA100000863D /* TipTop-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TipTop-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EE54121BF8E88A00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Login.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54151BF8E8D000CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Home.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -841,14 +844,16 @@
 		485FE7F51BF8E1CC00654279 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				485FE7F61BF8E1CC00654279 /* HXAboutViewController.h */,
-				485FE7F71BF8E1CC00654279 /* HXAboutViewController.m */,
-				485FE7F81BF8E1CC00654279 /* HXChangePassWordViewController.h */,
-				485FE7F91BF8E1CC00654279 /* HXChangePassWordViewController.m */,
 				485FE7FA1BF8E1CC00654279 /* HXSettingViewController.h */,
 				485FE7FB1BF8E1CC00654279 /* HXSettingViewController.m */,
+				485FE7F81BF8E1CC00654279 /* HXChangePassWordViewController.h */,
+				485FE7F91BF8E1CC00654279 /* HXChangePassWordViewController.m */,
 				485FE7FC1BF8E1CC00654279 /* HXUseExplanationViewController.h */,
 				485FE7FD1BF8E1CC00654279 /* HXUseExplanationViewController.m */,
+				48BD52731BFA430900613F19 /* HXFeedBackViewController.h */,
+				48BD52741BFA430900613F19 /* HXFeedBackViewController.m */,
+				485FE7F61BF8E1CC00654279 /* HXAboutViewController.h */,
+				485FE7F71BF8E1CC00654279 /* HXAboutViewController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1386,6 +1391,7 @@
 				485FE8BE1BF8E1CC00654279 /* HXMessageListCell.m in Sources */,
 				485FE8B71BF8E1CC00654279 /* BRPlaceholderTextView.m in Sources */,
 				485FE8A01BF8E1CC00654279 /* HXMyBiddingViewController.m in Sources */,
+				48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */,
 				485FE8C61BF8E1CC00654279 /* HXMyReservationCell.m in Sources */,
 				485FE8C71BF8E1CC00654279 /* HXOnlinePayDetailClientCell.m in Sources */,
 				485FE8A51BF8E1CC00654279 /* HXReservationDetailViewController.m in Sources */,
