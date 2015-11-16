@@ -62,8 +62,8 @@
 - (void)startLoginRequest {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     __weak __typeof__(self)weakSelf = self;
-    NSDictionary *parameters = @{@"staff_id": _staffIDTextField.text,
-                                 @"password": _passwordTextField.text};
+    NSDictionary *parameters = @{@"mobile": _staffIDTextField.text,
+                               @"password": _passwordTextField.text};
     [HXAdviser loginWithParameters:parameters success:^(HXApiResponse *response, HXAdviser *adviser) {
         __strong __typeof__(self)strongSelf = weakSelf;
         if (response.errorCode == HXAppApiRequestErrorCodeNoError) {

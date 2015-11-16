@@ -16,7 +16,7 @@ NSString *const ImageDoMain = @"http://";
 
 #pragma mark - Api Path
 NSString *const CommonApiPath   = @"/yl_dgg/commonApi";
-NSString *const V1ApiPath       = @"/yl_dgg/agentApi";
+NSString *const V1ApiPath       = @"/yl_dgg/clientApi";
 NSString *const V2ApiPath       = @"";
 NSString *const ImagePath       = @"";
 

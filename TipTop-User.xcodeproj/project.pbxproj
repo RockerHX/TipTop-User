@@ -711,10 +711,10 @@
 		485FE7BD1BF8E1CC00654279 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				485FE7BE1BF8E1CC00654279 /* HXForgotPWViewController.h */,
-				485FE7BF1BF8E1CC00654279 /* HXForgotPWViewController.m */,
 				485FE7C01BF8E1CC00654279 /* HXLoginViewController.h */,
 				485FE7C11BF8E1CC00654279 /* HXLoginViewController.m */,
+				485FE7BE1BF8E1CC00654279 /* HXForgotPWViewController.h */,
+				485FE7BF1BF8E1CC00654279 /* HXForgotPWViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
