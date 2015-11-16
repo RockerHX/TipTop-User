@@ -722,8 +722,8 @@
 		485FE7C41BF8E1CC00654279 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				485FE7C51BF8E1CC00654279 /* HXUserViewController.h */,
-				485FE7C61BF8E1CC00654279 /* HXUserViewController.m */,
+				485FE7EE1BF8E1CC00654279 /* Profile */,
+				485FE7F51BF8E1CC00654279 /* Setting */,
 				485FE7C71BF8E1CC00654279 /* MessageCenter */,
 				485FE7CE1BF8E1CC00654279 /* MyAddress */,
 				485FE7D11BF8E1CC00654279 /* MyBidding */,
@@ -731,9 +731,9 @@
 				485FE7DD1BF8E1CC00654279 /* MyReservation */,
 				485FE7E61BF8E1CC00654279 /* MyService */,
 				485FE7E91BF8E1CC00654279 /* OnlinePay */,
-				485FE7EE1BF8E1CC00654279 /* Profile */,
-				485FE7F51BF8E1CC00654279 /* Setting */,
 				485FE7FE1BF8E1CC00654279 /* WorkCircuit */,
+				485FE7C51BF8E1CC00654279 /* HXUserViewController.h */,
+				485FE7C61BF8E1CC00654279 /* HXUserViewController.m */,
 			);
 			path = User;
 			sourceTree = "<group>";

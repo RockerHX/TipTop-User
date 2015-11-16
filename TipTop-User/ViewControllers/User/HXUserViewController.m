@@ -1,6 +1,6 @@
 //
 //  HXUserViewController.m
-//  TipTop-User
+//  TipTop-Adviser
 //
 //  Created by ShiCang on 15/10/5.
 //  Copyright © 2015年 Outsourcing. All rights reserved.
@@ -94,7 +94,7 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
 
 - (void)startUploadImageReuqestWithImage:(UIImage *)image {
     [self startUploadImageReuqestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken}
-                                                            image: image];
+                                          image: image];
 }
 
 - (void)startUploadImageReuqestWithParameters:(NSDictionary *)parameters image:(UIImage *)image {
@@ -110,8 +110,7 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
             NSString *headerFile = responseObject[@"data"][@"img"];
             [strongSelf startUpdateUserHeaderRequestWithParameters:@{@"access_token": [HXUserSession share].adviser.accessToken,
-                                                                           @"avatar": headerFile}
-                                                          imageURL:responseObject[@"data"][@"img_url"]];
+                                                                     @"avatar": headerFile}];
         }
     } failure:^(AFHTTPRequestOperation *operation,NSError *error) {
         __strong __typeof__(self)strongSelf = weakSelf;
@@ -119,12 +118,13 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
     }];
 }
 
-- (void)startUpdateUserHeaderRequestWithParameters:(NSDictionary *)parameters imageURL:(NSString *)imageURL {
+- (void)startUpdateUserHeaderRequestWithParameters:(NSDictionary *)parameters {
     __weak __typeof__(self)weakSelf = self;
     [HXAppApiRequest requestPOSTMethodsWithAPI:[HXApi apiURLWithApi:UpdateUserHeaderApi] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         __strong __typeof__(self)strongSelf = weakSelf;
         NSInteger errorCode = [responseObject[@"error_code"] integerValue];
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
+            NSString *imageURL = responseObject[@"data"][@"avatar"];
             [[HXUserSession share] updateAdviserAvatar:imageURL];
             [strongSelf updateUserInfo];
         }
