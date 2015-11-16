@@ -13,7 +13,7 @@
 #import "MBProgressHUD.h"
 
 
-static NSString *CaptchaApi = @"/session/captcha";
+static NSString *CaptchaApi = @"/session/regCaptcha";
 static NSString *RegisterApi = @"/session/reg";
 
 @interface HXRegisterViewController ()
