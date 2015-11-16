@@ -12,7 +12,6 @@
 
 @interface HXForgotPWViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet          UITextField *staffIDTextField;
 @property (weak, nonatomic) IBOutlet          UITextField *mobileTextField;
 @property (weak, nonatomic) IBOutlet HXSecurityCodeButton *captchaButton;
 @property (weak, nonatomic) IBOutlet          UITextField *captchaTextField;

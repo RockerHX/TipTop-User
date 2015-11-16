@@ -34,8 +34,7 @@ static NSString *ForgotPassWordApi = @"/session/forgotPwd";
     __weak __typeof__(self)weakSelf = self;
     [_captchaButton start:^{
         __strong __typeof__(self)strongSelf = weakSelf;
-        [strongSelf startMessageCodeRequestWithParameters:@{@"staff_id": _staffIDTextField.text,
-                                                              @"mobile": _mobileTextField.text}];
+        [strongSelf startMessageCodeRequestWithParameters:@{@"mobile": _mobileTextField.text}];
     } complete:nil];
 }
 
@@ -49,12 +48,14 @@ static NSString *ForgotPassWordApi = @"/session/forgotPwd";
 }
 
 - (IBAction)enterButtonPressed {
-    if (_staffIDTextField.text.length && _mobileTextField.text.length && _captchaTextField.text.length && _passWordTextField.text.length && _confirmTextField.text.length) {
+    if (_mobileTextField.text.length &&
+        _captchaTextField.text.length &&
+        _passWordTextField.text.length &&
+        _confirmTextField.text.length) {
         if ([_confirmTextField.text isEqualToString:_passWordTextField.text]) {
-            [self startForgotPassWordRequestWithParameters:@{@"staff_id": _staffIDTextField.text,
-                                                               @"mobile": _mobileTextField.text,
-                                                              @"captcha": _captchaTextField.text,
-                                                             @"password": _passWordTextField.text}];
+            [self startForgotPassWordRequestWithParameters:@{@"mobile": _mobileTextField.text,
+                                                            @"captcha": _captchaTextField.text,
+                                                           @"password": _passWordTextField.text}];
         }
     }
 }
