@@ -24,11 +24,11 @@ typedef NS_ENUM(NSUInteger, HXMenuRow) {
     HXMenuRowMyReservation = 0,
     HXMenuRowOnlinePay     = 1,
     HXMenuRowWorkCircuit   = 2,
-    HXMenuRowMyBidding     = 4,
-    HXMenuRowMyService     = 5,
-    HXMenuRowMyComment     = 7,
+    HXMenuRowMall          = 4,
+    HXMenuRowRecruitment   = 5,
+    HXMenuRowFeedBack      = 7,
     HXMenuRowMessageCenter = 8,
-    HXMenuRowMyAddress     = 9
+    HXMenuRowServicePhone  = 9
 };
 
 
@@ -152,24 +152,24 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
                 navigationController = [HXWorkCircuitListViewController navigationControllerInstance];
                 break;
             }
-            case HXMenuRowMyBidding: {
-                navigationController = [HXMyBiddingViewController navigationControllerInstance];
+            case HXMenuRowMall: {
+//                navigationController = [HXMyBiddingViewController navigationControllerInstance];
                 break;
             }
-            case HXMenuRowMyService: {
-                navigationController = [HXMyServiceViewController navigationControllerInstance];
+            case HXMenuRowRecruitment: {
+//                navigationController = [HXMyServiceViewController navigationControllerInstance];
                 break;
             }
-            case HXMenuRowMyComment: {
-                navigationController = [HXMessageCenterViewController navigationControllerInstance];
+            case HXMenuRowFeedBack: {
+//                navigationController = [HXMessageCenterViewController navigationControllerInstance];
                 break;
             }
             case HXMenuRowMessageCenter: {
-                navigationController = [HXMyCommentViewController navigationControllerInstance];
+//                navigationController = [HXMyCommentViewController navigationControllerInstance];
                 break;
             }
-            case HXMenuRowMyAddress: {
-                navigationController = [HXMyAddressViewController navigationControllerInstance];
+            case HXMenuRowServicePhone: {
+//                navigationController = [HXMyAddressViewController navigationControllerInstance];
                 break;
             }
         }

@@ -283,14 +283,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-BiddingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8vF-tc-gNS">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-MallIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8vF-tc-gNS">
                                                     <rect key="frame" x="20" y="0.0" width="44" height="44"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="8vF-tc-gNS" secondAttribute="height" multiplier="1:1" id="pll-HN-YS8"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的招标" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI0-VV-4lq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商城" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI0-VV-4lq">
                                                     <rect key="frame" x="74" y="0.0" width="246" height="44"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -319,14 +319,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-ServiceIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0Vx-iu-ohm">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-RecruitmentIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0Vx-iu-ohm">
                                                     <rect key="frame" x="20" y="0.0" width="44" height="44"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="0Vx-iu-ohm" secondAttribute="height" multiplier="1:1" id="5fE-W4-lFz"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的服务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTZ-ul-w7P">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合作招聘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTZ-ul-w7P">
                                                     <rect key="frame" x="74" y="0.0" width="246" height="44"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -392,14 +392,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-ServiceIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cts-H9-PCb">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-FeedBackIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cts-H9-PCb">
                                                     <rect key="frame" x="20" y="0.0" width="44" height="44"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="cts-H9-PCb" secondAttribute="height" multiplier="1:1" id="cbV-H3-sdu"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消息中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXX-bv-VsF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="意见反馈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXX-bv-VsF">
                                                     <rect key="frame" x="74" y="0.0" width="246" height="44"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -428,14 +428,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-CommentIcon" translatesAutoresizingMaskIntoConstraints="NO" id="XxG-rr-F9O">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-MessageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="XxG-rr-F9O">
                                                     <rect key="frame" x="20" y="0.0" width="44" height="44"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="XxG-rr-F9O" secondAttribute="height" multiplier="1:1" id="xY6-1z-eps"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fho-Dd-c0Z">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消息中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fho-Dd-c0Z">
                                                     <rect key="frame" x="74" y="0.0" width="246" height="44"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -464,14 +464,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-AddressIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tsG-uF-f5i">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UC-ServicePhoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tsG-uF-f5i">
                                                     <rect key="frame" x="20" y="0.0" width="44" height="44"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="tsG-uF-f5i" secondAttribute="height" multiplier="1:1" id="53S-28-Uya"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvZ-ut-Va9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvZ-ut-Va9">
                                                     <rect key="frame" x="74" y="0.0" width="246" height="44"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1462,14 +1462,15 @@
         <image name="C-StarIcon" width="16" height="16"/>
         <image name="C-UnStarIcon" width="16" height="16"/>
         <image name="UC-AddImageIcon" width="80" height="80"/>
-        <image name="UC-AddressIcon" width="23" height="23"/>
-        <image name="UC-BiddingIcon" width="23" height="23"/>
-        <image name="UC-CommentIcon" width="23" height="23"/>
         <image name="UC-EditIcon" width="23" height="23"/>
+        <image name="UC-FeedBackIcon" width="23" height="23"/>
         <image name="UC-HeaderIcon" width="80" height="80"/>
+        <image name="UC-MallIcon" width="23" height="23"/>
+        <image name="UC-MessageIcon" width="23" height="23"/>
         <image name="UC-PayIcon" width="23" height="23"/>
+        <image name="UC-RecruitmentIcon" width="23" height="23"/>
         <image name="UC-ReservationIcon" width="23" height="23"/>
-        <image name="UC-ServiceIcon" width="23" height="23"/>
+        <image name="UC-ServicePhoneIcon" width="23" height="23"/>
         <image name="UC-SettingIcon" width="23" height="23"/>
         <image name="UC-WorkCircuitIcon" width="23" height="23"/>
         <image name="UCP-AddIcon-S" width="23" height="23"/>
