@@ -47,7 +47,7 @@
         <!--Pan Gesture Navgaition Controller-->
         <scene sceneID="yK0-n6-yAj">
             <objects>
-                <navigationController storyboardIdentifier="HXMyServiceNavigationController" id="gUi-Qn-v4c" customClass="HXPanGestureNavgaitionController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HXRecruitmentNavigationController" id="gUi-Qn-v4c" customClass="HXPanGestureNavgaitionController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hdo-57-e9a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

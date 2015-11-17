@@ -20,7 +20,7 @@
 
 #pragma mark - Setter And Getter
 - (NSString *)navigationControllerIdentifier {
-    return @"HXMyServiceNavigationController";
+    return @"HXRecruitmentNavigationController";
 }
 
 - (HXStoryBoardName)storyBoardName {
