@@ -14,8 +14,8 @@
 #import "HXWorkCircuitListViewController.h"
 #import "HXMallViewController.h"
 #import "HXRecruitmentViewController.h"
+#import "HXFeedBackViewController.h"
 #import "HXMessageCenterViewController.h"
-#import "HXMyCommentViewController.h"
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
 #import "UIAlertView+BlocksKit.h"
@@ -161,11 +161,11 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
                 break;
             }
             case HXMenuRowFeedBack: {
-//                navigationController = [HXMessageCenterViewController navigationControllerInstance];
+                navigationController = [HXFeedBackViewController navigationControllerInstance];
                 break;
             }
             case HXMenuRowMessageCenter: {
-//                navigationController = [HXMyCommentViewController navigationControllerInstance];
+                navigationController = [HXMessageCenterViewController navigationControllerInstance];
                 break;
             }
             case HXMenuRowServicePhone: {

@@ -499,10 +499,27 @@
             </objects>
             <point key="canvasLocation" x="425" y="378"/>
         </scene>
-        <!--Feed Back View Controller-->
+        <!--Pan Gesture Navgaition Controller-->
+        <scene sceneID="g5a-rK-Sr0">
+            <objects>
+                <navigationController storyboardIdentifier="HXFeedBackNavigationController" id="1qc-JO-9Yd" customClass="HXPanGestureNavgaitionController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A78-tI-b0r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iPy-2J-AHk" kind="relationship" relationship="rootViewController" id="Nlu-0b-t5d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHV-NT-aZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="378"/>
+        </scene>
+        <!--意见反馈-->
         <scene sceneID="gig-Fh-KjG">
             <objects>
-                <viewController storyboardIdentifier="HXFeedBackViewController" id="iPy-2J-AHk" customClass="HXFeedBackViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HXFeedBackViewController" automaticallyAdjustsScrollViewInsets="NO" id="iPy-2J-AHk" customClass="HXFeedBackViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6D-bb-wec"/>
                         <viewControllerLayoutGuide type="bottom" id="s2F-Bt-y08"/>
@@ -511,31 +528,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHh-qX-IWY">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TW0-Eh-B0g">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
-                                    <outlet property="delegate" destination="iPy-2J-AHk" id="73M-SP-rZj"/>
+                                    <outlet property="delegate" destination="iPy-2J-AHk" id="NLG-nA-0Et"/>
                                 </connections>
                             </webView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IHh-qX-IWY" firstAttribute="top" secondItem="N6D-bb-wec" secondAttribute="bottom" id="6sy-x2-NxE"/>
-                            <constraint firstItem="s2F-Bt-y08" firstAttribute="top" secondItem="IHh-qX-IWY" secondAttribute="bottom" id="C6H-lk-cKO"/>
-                            <constraint firstAttribute="trailing" secondItem="IHh-qX-IWY" secondAttribute="trailing" id="kiP-BC-3Op"/>
-                            <constraint firstItem="IHh-qX-IWY" firstAttribute="leading" secondItem="VVQ-fC-aXQ" secondAttribute="leading" id="o0j-Bu-L8i"/>
+                            <constraint firstItem="TW0-Eh-B0g" firstAttribute="top" secondItem="N6D-bb-wec" secondAttribute="bottom" id="5XS-9X-3bL"/>
+                            <constraint firstAttribute="trailing" secondItem="TW0-Eh-B0g" secondAttribute="trailing" id="Bw5-4g-cMi"/>
+                            <constraint firstItem="TW0-Eh-B0g" firstAttribute="leading" secondItem="VVQ-fC-aXQ" secondAttribute="leading" id="Yx4-Dq-acg"/>
+                            <constraint firstItem="s2F-Bt-y08" firstAttribute="top" secondItem="TW0-Eh-B0g" secondAttribute="bottom" id="eYM-1D-EDe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="意见反馈" id="elH-rd-JET"/>
                     <connections>
-                        <outlet property="webView" destination="IHh-qX-IWY" id="UUK-d0-xtI"/>
+                        <outlet property="webView" destination="TW0-Eh-B0g" id="Awx-S3-JTb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fng-Op-0pB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="425" y="1050"/>
+            <point key="canvasLocation" x="1287" y="378"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="TLw-H7-P4m">
@@ -573,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1V-nD-MeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853" y="1050"/>
+            <point key="canvasLocation" x="425" y="1050"/>
         </scene>
         <!--Use Explanation View Controller-->
         <scene sceneID="Dpx-Ml-wfe">

@@ -7,11 +7,19 @@
 //
 
 #import "HXUseExplanationViewController.h"
+#import "HXApi.h"
 
 @interface HXUseExplanationViewController ()
 @end
 
 @implementation HXUseExplanationViewController
+
+#pragma mark - View Controller Life Cycle
+- (void)viewDidLoad {
+    self.loadURL = [DoMain stringByAppendingFormat:@"/h5/page?key=agent_help"];
+    
+    [super viewDidLoad];
+}
 
 #pragma mark - Setter And Getter
 - (HXStoryBoardName)storyBoardName {
