@@ -53,8 +53,8 @@
             storyBoardName = @"WorkCircuit";
             break;
         }
-        case HXStoryBoardNameMyBidding: {
-            storyBoardName = @"MyBidding";
+        case HXStoryBoardNameMall: {
+            storyBoardName = @"Mall";
             break;
         }
         case HXStoryBoardNameRecruitment: {

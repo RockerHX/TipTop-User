@@ -59,10 +59,6 @@
 		485FE8991BF8E1CC00654279 /* HXMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7C91BF8E1CC00654279 /* HXMessageCenterViewController.m */; };
 		485FE89A1BF8E1CC00654279 /* HXMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7CB1BF8E1CC00654279 /* HXMessageDetailViewController.m */; };
 		485FE89B1BF8E1CC00654279 /* HXMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7CD1BF8E1CC00654279 /* HXMessageListViewController.m */; };
-		485FE89D1BF8E1CC00654279 /* HXAddBiddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7D31BF8E1CC00654279 /* HXAddBiddingViewController.m */; };
-		485FE89E1BF8E1CC00654279 /* HXBiddingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7D51BF8E1CC00654279 /* HXBiddingDetailViewController.m */; };
-		485FE89F1BF8E1CC00654279 /* HXBiddingServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7D71BF8E1CC00654279 /* HXBiddingServiceViewController.m */; };
-		485FE8A01BF8E1CC00654279 /* HXMyBiddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7D91BF8E1CC00654279 /* HXMyBiddingViewController.m */; };
 		485FE8A11BF8E1CC00654279 /* HXMyCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7DC1BF8E1CC00654279 /* HXMyCommentViewController.m */; };
 		485FE8A21BF8E1CC00654279 /* HXMyReservationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7DF1BF8E1CC00654279 /* HXMyReservationListViewController.m */; };
 		485FE8A31BF8E1CC00654279 /* HXRemarkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7E11BF8E1CC00654279 /* HXRemarkDetailViewController.m */; };
@@ -117,10 +113,11 @@
 		488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */; };
 		48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BD52741BFA430900613F19 /* HXFeedBackViewController.m */; };
 		48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */; };
+		48D72F781BFB94EF006BA8C3 /* Mall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D72F761BFB94EF006BA8C3 /* Mall.storyboard */; };
+		48D72F7C1BFB952F006BA8C3 /* HXMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F7B1BFB952F006BA8C3 /* HXMallViewController.m */; };
 		48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54111BF8E88A00CFD7AD /* Login.storyboard */; };
 		48EE54161BF8E8D000CFD7AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54141BF8E8D000CFD7AD /* Home.storyboard */; };
 		48EE542B1BF8E8DC00CFD7AD /* MessageCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */; };
-		48EE542D1BF8E8DC00CFD7AD /* MyBidding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE541B1BF8E8DC00CFD7AD /* MyBidding.storyboard */; };
 		48EE542E1BF8E8DC00CFD7AD /* MyComment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE541D1BF8E8DC00CFD7AD /* MyComment.storyboard */; };
 		48EE542F1BF8E8DC00CFD7AD /* MyReservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE541F1BF8E8DC00CFD7AD /* MyReservation.storyboard */; };
 		48EE54301BF8E8DC00CFD7AD /* Recruitment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54211BF8E8DC00CFD7AD /* Recruitment.storyboard */; };
@@ -239,14 +236,6 @@
 		485FE7CB1BF8E1CC00654279 /* HXMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessageDetailViewController.m; sourceTree = "<group>"; };
 		485FE7CC1BF8E1CC00654279 /* HXMessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMessageListViewController.h; sourceTree = "<group>"; };
 		485FE7CD1BF8E1CC00654279 /* HXMessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessageListViewController.m; sourceTree = "<group>"; };
-		485FE7D21BF8E1CC00654279 /* HXAddBiddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXAddBiddingViewController.h; sourceTree = "<group>"; };
-		485FE7D31BF8E1CC00654279 /* HXAddBiddingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXAddBiddingViewController.m; sourceTree = "<group>"; };
-		485FE7D41BF8E1CC00654279 /* HXBiddingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBiddingDetailViewController.h; sourceTree = "<group>"; };
-		485FE7D51BF8E1CC00654279 /* HXBiddingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBiddingDetailViewController.m; sourceTree = "<group>"; };
-		485FE7D61BF8E1CC00654279 /* HXBiddingServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBiddingServiceViewController.h; sourceTree = "<group>"; };
-		485FE7D71BF8E1CC00654279 /* HXBiddingServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXBiddingServiceViewController.m; sourceTree = "<group>"; };
-		485FE7D81BF8E1CC00654279 /* HXMyBiddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMyBiddingViewController.h; sourceTree = "<group>"; };
-		485FE7D91BF8E1CC00654279 /* HXMyBiddingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMyBiddingViewController.m; sourceTree = "<group>"; };
 		485FE7DB1BF8E1CC00654279 /* HXMyCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMyCommentViewController.h; sourceTree = "<group>"; };
 		485FE7DC1BF8E1CC00654279 /* HXMyCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMyCommentViewController.m; sourceTree = "<group>"; };
 		485FE7DE1BF8E1CC00654279 /* HXMyReservationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMyReservationListViewController.h; sourceTree = "<group>"; };
@@ -353,11 +342,13 @@
 		48BD52741BFA430900613F19 /* HXFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXFeedBackViewController.m; sourceTree = "<group>"; };
 		48D72F6F1BFB9154006BA8C3 /* HXRecruitmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRecruitmentViewController.h; sourceTree = "<group>"; };
 		48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRecruitmentViewController.m; sourceTree = "<group>"; };
+		48D72F771BFB94EF006BA8C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Mall.storyboard"; sourceTree = SOURCE_ROOT; };
+		48D72F7A1BFB952F006BA8C3 /* HXMallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMallViewController.h; sourceTree = "<group>"; };
+		48D72F7B1BFB952F006BA8C3 /* HXMallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMallViewController.m; sourceTree = "<group>"; };
 		48D74F721BC4CA100000863D /* TipTop-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TipTop-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EE54121BF8E88A00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Login.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54151BF8E8D000CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Home.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54181BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MessageCenter.storyboard"; sourceTree = SOURCE_ROOT; };
-		48EE541C1BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyBidding.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE541E1BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyComment.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54201BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyReservation.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54221BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Recruitment.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -415,8 +406,8 @@
 				48EE541F1BF8E8DC00CFD7AD /* MyReservation.storyboard */,
 				48EE54231BF8E8DC00CFD7AD /* OnlinePay.storyboard */,
 				48EE54291BF8E8DC00CFD7AD /* WorkCircuit.storyboard */,
-				48EE541B1BF8E8DC00CFD7AD /* MyBidding.storyboard */,
 				48EE541D1BF8E8DC00CFD7AD /* MyComment.storyboard */,
+				48D72F761BFB94EF006BA8C3 /* Mall.storyboard */,
 				48EE54211BF8E8DC00CFD7AD /* Recruitment.storyboard */,
 				48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */,
 			);
@@ -730,8 +721,8 @@
 				485FE7DD1BF8E1CC00654279 /* MyReservation */,
 				485FE7E91BF8E1CC00654279 /* OnlinePay */,
 				485FE7FE1BF8E1CC00654279 /* WorkCircuit */,
-				485FE7D11BF8E1CC00654279 /* MyBidding */,
 				485FE7DA1BF8E1CC00654279 /* MyComment */,
+				48D72F791BFB952F006BA8C3 /* Mall */,
 				48D72F6E1BFB9154006BA8C3 /* Recruitment */,
 				485FE7C71BF8E1CC00654279 /* MessageCenter */,
 				485FE7C51BF8E1CC00654279 /* HXUserViewController.h */,
@@ -751,21 +742,6 @@
 				485FE7CD1BF8E1CC00654279 /* HXMessageListViewController.m */,
 			);
 			path = MessageCenter;
-			sourceTree = "<group>";
-		};
-		485FE7D11BF8E1CC00654279 /* MyBidding */ = {
-			isa = PBXGroup;
-			children = (
-				485FE7D21BF8E1CC00654279 /* HXAddBiddingViewController.h */,
-				485FE7D31BF8E1CC00654279 /* HXAddBiddingViewController.m */,
-				485FE7D41BF8E1CC00654279 /* HXBiddingDetailViewController.h */,
-				485FE7D51BF8E1CC00654279 /* HXBiddingDetailViewController.m */,
-				485FE7D61BF8E1CC00654279 /* HXBiddingServiceViewController.h */,
-				485FE7D71BF8E1CC00654279 /* HXBiddingServiceViewController.m */,
-				485FE7D81BF8E1CC00654279 /* HXMyBiddingViewController.h */,
-				485FE7D91BF8E1CC00654279 /* HXMyBiddingViewController.m */,
-			);
-			path = MyBidding;
 			sourceTree = "<group>";
 		};
 		485FE7DA1BF8E1CC00654279 /* MyComment */ = {
@@ -1149,6 +1125,15 @@
 			path = Recruitment;
 			sourceTree = "<group>";
 		};
+		48D72F791BFB952F006BA8C3 /* Mall */ = {
+			isa = PBXGroup;
+			children = (
+				48D72F7A1BFB952F006BA8C3 /* HXMallViewController.h */,
+				48D72F7B1BFB952F006BA8C3 /* HXMallViewController.m */,
+			);
+			path = Mall;
+			sourceTree = "<group>";
+		};
 		48D74F691BC4CA100000863D = {
 			isa = PBXGroup;
 			children = (
@@ -1238,6 +1223,7 @@
 				485FE8B91BF8E1CC00654279 /* HXOrderAlertCell.xib in Resources */,
 				48EE542B1BF8E8DC00CFD7AD /* MessageCenter.storyboard in Resources */,
 				48EE54341BF8E8DC00CFD7AD /* WorkCircuit.storyboard in Resources */,
+				48D72F781BFB94EF006BA8C3 /* Mall.storyboard in Resources */,
 				485FE8BB1BF8E1CC00654279 /* HXOrderAlertView.xib in Resources */,
 				48EE54161BF8E8D000CFD7AD /* Home.storyboard in Resources */,
 				48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */,
@@ -1250,7 +1236,6 @@
 				48EE54331BF8E8DC00CFD7AD /* User.storyboard in Resources */,
 				48EE542E1BF8E8DC00CFD7AD /* MyComment.storyboard in Resources */,
 				48EE54301BF8E8DC00CFD7AD /* Recruitment.storyboard in Resources */,
-				48EE542D1BF8E8DC00CFD7AD /* MyBidding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1341,7 +1326,7 @@
 				485FE8751BF8E1CC00654279 /* HXStoryBoardManager.m in Sources */,
 				485FE8781BF8E1CC00654279 /* HXVersion.m in Sources */,
 				485FE8C01BF8E1CC00654279 /* HXBiddingServiceCell.m in Sources */,
-				485FE89D1BF8E1CC00654279 /* HXAddBiddingViewController.m in Sources */,
+				48D72F7C1BFB952F006BA8C3 /* HXMallViewController.m in Sources */,
 				485FE86B1BF8E1CC00654279 /* HXTextView.m in Sources */,
 				485FE8701BF8E1CC00654279 /* HXIBImageView.m in Sources */,
 				485FE86E1BF8E1CC00654279 /* UIView+HXIBnspectable.m in Sources */,
@@ -1372,7 +1357,6 @@
 				485FE8BE1BF8E1CC00654279 /* HXMessageListCell.m in Sources */,
 				48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */,
 				485FE8B71BF8E1CC00654279 /* BRPlaceholderTextView.m in Sources */,
-				485FE8A01BF8E1CC00654279 /* HXMyBiddingViewController.m in Sources */,
 				48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */,
 				485FE8C61BF8E1CC00654279 /* HXMyReservationCell.m in Sources */,
 				485FE8C71BF8E1CC00654279 /* HXOnlinePayDetailClientCell.m in Sources */,
@@ -1380,7 +1364,6 @@
 				485FE8B61BF8E1CC00654279 /* HXStarView.m in Sources */,
 				485FE8711BF8E1CC00654279 /* HXIBLabel.m in Sources */,
 				485FE87B1BF8E1CC00654279 /* HXBidding.m in Sources */,
-				485FE89E1BF8E1CC00654279 /* HXBiddingDetailViewController.m in Sources */,
 				485FE8941BF8E1CC00654279 /* HXWebViewController.m in Sources */,
 				485FE8D21BF8E1CC00654279 /* HXWorkCircuitOrderCell.m in Sources */,
 				488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */,
@@ -1404,7 +1387,6 @@
 				485FE8C91BF8E1CC00654279 /* HXOnlinePayOrderCell.m in Sources */,
 				485FE8A31BF8E1CC00654279 /* HXRemarkDetailViewController.m in Sources */,
 				485FE8811BF8E1CC00654279 /* HXReservationDetail.m in Sources */,
-				485FE89F1BF8E1CC00654279 /* HXBiddingServiceViewController.m in Sources */,
 				485FE87F1BF8E1CC00654279 /* HXMessage.m in Sources */,
 				485FE8CF1BF8E1CC00654279 /* HXProfileIntroduceCell.m in Sources */,
 				485FE88A1BF8E1CC00654279 /* HXApi.m in Sources */,
@@ -1436,6 +1418,14 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		48D72F761BFB94EF006BA8C3 /* Mall.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48D72F771BFB94EF006BA8C3 /* Base */,
+			);
+			name = Mall.storyboard;
+			sourceTree = "<group>";
+		};
 		48EE54111BF8E88A00CFD7AD /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1458,14 +1448,6 @@
 				48EE54181BF8E8DC00CFD7AD /* Base */,
 			);
 			name = MessageCenter.storyboard;
-			sourceTree = "<group>";
-		};
-		48EE541B1BF8E8DC00CFD7AD /* MyBidding.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				48EE541C1BF8E8DC00CFD7AD /* Base */,
-			);
-			name = MyBidding.storyboard;
 			sourceTree = "<group>";
 		};
 		48EE541D1BF8E8DC00CFD7AD /* MyComment.storyboard */ = {
