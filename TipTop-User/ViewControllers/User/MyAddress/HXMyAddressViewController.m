@@ -89,7 +89,7 @@ static NSString *UpdateLocationApi = @"/profile/location";
 }
 
 - (HXStoryBoardName)storyBoardName {
-    return HXStoryBoardNameMyAddress;
+    return HXStoryBoardNameServicePhone;
 }
 
 #pragma mark - Private Methods

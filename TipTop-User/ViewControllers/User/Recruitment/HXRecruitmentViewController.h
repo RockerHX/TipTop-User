@@ -1,5 +1,5 @@
 //
-//  HXMyServiceViewController.h
+//  HXRecruitmentViewController.h
 //  TipTop-User
 //
 //  Created by ShiCang on 15/10/18.
@@ -8,6 +8,6 @@
 
 #import "HXWebViewController.h"
 
-@interface HXMyServiceViewController : HXWebViewController
+@interface HXRecruitmentViewController : HXWebViewController
 
 @end

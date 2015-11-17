@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--我的服务-->
+        <!--合作招聘-->
         <scene sceneID="BMj-ee-aBA">
             <objects>
-                <viewController storyboardIdentifier="HXMyServiceViewController" id="Dgr-xF-6qf" customClass="HXMyServiceViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HXRecruitmentViewController" id="Dgr-xF-6qf" customClass="HXRecruitmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kNw-TH-arr"/>
                         <viewControllerLayoutGuide type="bottom" id="S1Y-BV-d5K"/>
@@ -21,6 +21,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Dgr-xF-6qf" id="BBO-mz-4PT"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <animations/>
@@ -32,7 +35,7 @@
                             <constraint firstItem="HAO-nx-bvt" firstAttribute="top" secondItem="kNw-TH-arr" secondAttribute="bottom" id="pRa-Dr-qMT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="我的服务" id="R19-8U-rOo"/>
+                    <navigationItem key="navigationItem" title="合作招聘" id="R19-8U-rOo"/>
                     <connections>
                         <outlet property="webView" destination="HAO-nx-bvt" id="Znd-IE-fyI"/>
                     </connections>

@@ -57,19 +57,19 @@
             storyBoardName = @"MyBidding";
             break;
         }
-        case HXStoryBoardNameMyService: {
-            storyBoardName = @"MyService";
-            break;
-        }
-        case HXStoryBoardNameMessageCenter: {
-            storyBoardName = @"MessageCenter";
+        case HXStoryBoardNameRecruitment: {
+            storyBoardName = @"Recruitment";
             break;
         }
         case HXStoryBoardNameMyComment: {
             storyBoardName = @"MyComment";
             break;
         }
-        case HXStoryBoardNameMyAddress: {
+        case HXStoryBoardNameMessageCenter: {
+            storyBoardName = @"MessageCenter";
+            break;
+        }
+        case HXStoryBoardNameServicePhone: {
             storyBoardName = @"MyAddress";
             break;
         }

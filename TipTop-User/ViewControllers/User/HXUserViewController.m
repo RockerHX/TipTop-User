@@ -13,7 +13,7 @@
 #import "HXOnlinePayListViewController.h"
 #import "HXWorkCircuitListViewController.h"
 #import "HXMyBiddingViewController.h"
-#import "HXMyServiceViewController.h"
+#import "HXRecruitmentViewController.h"
 #import "HXMessageCenterViewController.h"
 #import "HXMyCommentViewController.h"
 #import "HXMyAddressViewController.h"
@@ -157,7 +157,7 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
                 break;
             }
             case HXMenuRowRecruitment: {
-//                navigationController = [HXMyServiceViewController navigationControllerInstance];
+                navigationController = [HXRecruitmentViewController navigationControllerInstance];
                 break;
             }
             case HXMenuRowFeedBack: {

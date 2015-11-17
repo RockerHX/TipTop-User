@@ -69,7 +69,6 @@
 		485FE8A31BF8E1CC00654279 /* HXRemarkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7E11BF8E1CC00654279 /* HXRemarkDetailViewController.m */; };
 		485FE8A41BF8E1CC00654279 /* HXReservationAddRemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7E31BF8E1CC00654279 /* HXReservationAddRemarkViewController.m */; };
 		485FE8A51BF8E1CC00654279 /* HXReservationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7E51BF8E1CC00654279 /* HXReservationDetailViewController.m */; };
-		485FE8A61BF8E1CC00654279 /* HXMyServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7E81BF8E1CC00654279 /* HXMyServiceViewController.m */; };
 		485FE8A71BF8E1CC00654279 /* HXOnlinePayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7EB1BF8E1CC00654279 /* HXOnlinePayDetailViewController.m */; };
 		485FE8A81BF8E1CC00654279 /* HXOnlinePayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7ED1BF8E1CC00654279 /* HXOnlinePayListViewController.m */; };
 		485FE8A91BF8E1CC00654279 /* HXAddCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7F01BF8E1CC00654279 /* HXAddCaseViewController.m */; };
@@ -118,6 +117,7 @@
 		488D0E411BFA3C170068D47C /* HXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */; };
 		488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */; };
 		48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BD52741BFA430900613F19 /* HXFeedBackViewController.m */; };
+		48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */; };
 		48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54111BF8E88A00CFD7AD /* Login.storyboard */; };
 		48EE54161BF8E8D000CFD7AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54141BF8E8D000CFD7AD /* Home.storyboard */; };
 		48EE542B1BF8E8DC00CFD7AD /* MessageCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */; };
@@ -125,7 +125,7 @@
 		48EE542D1BF8E8DC00CFD7AD /* MyBidding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE541B1BF8E8DC00CFD7AD /* MyBidding.storyboard */; };
 		48EE542E1BF8E8DC00CFD7AD /* MyComment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE541D1BF8E8DC00CFD7AD /* MyComment.storyboard */; };
 		48EE542F1BF8E8DC00CFD7AD /* MyReservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE541F1BF8E8DC00CFD7AD /* MyReservation.storyboard */; };
-		48EE54301BF8E8DC00CFD7AD /* MyService.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54211BF8E8DC00CFD7AD /* MyService.storyboard */; };
+		48EE54301BF8E8DC00CFD7AD /* Recruitment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54211BF8E8DC00CFD7AD /* Recruitment.storyboard */; };
 		48EE54311BF8E8DC00CFD7AD /* OnlinePay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54231BF8E8DC00CFD7AD /* OnlinePay.storyboard */; };
 		48EE54321BF8E8DC00CFD7AD /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54251BF8E8DC00CFD7AD /* Setting.storyboard */; };
 		48EE54331BF8E8DC00CFD7AD /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54271BF8E8DC00CFD7AD /* User.storyboard */; };
@@ -261,8 +261,6 @@
 		485FE7E31BF8E1CC00654279 /* HXReservationAddRemarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXReservationAddRemarkViewController.m; sourceTree = "<group>"; };
 		485FE7E41BF8E1CC00654279 /* HXReservationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXReservationDetailViewController.h; sourceTree = "<group>"; };
 		485FE7E51BF8E1CC00654279 /* HXReservationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXReservationDetailViewController.m; sourceTree = "<group>"; };
-		485FE7E71BF8E1CC00654279 /* HXMyServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMyServiceViewController.h; sourceTree = "<group>"; };
-		485FE7E81BF8E1CC00654279 /* HXMyServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMyServiceViewController.m; sourceTree = "<group>"; };
 		485FE7EA1BF8E1CC00654279 /* HXOnlinePayDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayDetailViewController.h; sourceTree = "<group>"; };
 		485FE7EB1BF8E1CC00654279 /* HXOnlinePayDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetailViewController.m; sourceTree = "<group>"; };
 		485FE7EC1BF8E1CC00654279 /* HXOnlinePayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayListViewController.h; sourceTree = "<group>"; };
@@ -357,6 +355,8 @@
 		488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceTermsViewController.m; sourceTree = "<group>"; };
 		48BD52731BFA430900613F19 /* HXFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXFeedBackViewController.h; sourceTree = "<group>"; };
 		48BD52741BFA430900613F19 /* HXFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXFeedBackViewController.m; sourceTree = "<group>"; };
+		48D72F6F1BFB9154006BA8C3 /* HXRecruitmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRecruitmentViewController.h; sourceTree = "<group>"; };
+		48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRecruitmentViewController.m; sourceTree = "<group>"; };
 		48D74F721BC4CA100000863D /* TipTop-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TipTop-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EE54121BF8E88A00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Login.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54151BF8E8D000CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Home.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -365,7 +365,7 @@
 		48EE541C1BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyBidding.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE541E1BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyComment.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54201BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyReservation.storyboard"; sourceTree = SOURCE_ROOT; };
-		48EE54221BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyService.storyboard"; sourceTree = SOURCE_ROOT; };
+		48EE54221BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Recruitment.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54241BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/OnlinePay.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54261BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Setting.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54281BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/User.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -417,14 +417,14 @@
 			children = (
 				48EE54271BF8E8DC00CFD7AD /* User.storyboard */,
 				48EE54251BF8E8DC00CFD7AD /* Setting.storyboard */,
-				48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */,
-				48EE54191BF8E8DC00CFD7AD /* MyAddress.storyboard */,
-				48EE541B1BF8E8DC00CFD7AD /* MyBidding.storyboard */,
-				48EE541D1BF8E8DC00CFD7AD /* MyComment.storyboard */,
 				48EE541F1BF8E8DC00CFD7AD /* MyReservation.storyboard */,
-				48EE54211BF8E8DC00CFD7AD /* MyService.storyboard */,
 				48EE54231BF8E8DC00CFD7AD /* OnlinePay.storyboard */,
 				48EE54291BF8E8DC00CFD7AD /* WorkCircuit.storyboard */,
+				48EE541B1BF8E8DC00CFD7AD /* MyBidding.storyboard */,
+				48EE541D1BF8E8DC00CFD7AD /* MyComment.storyboard */,
+				48EE54211BF8E8DC00CFD7AD /* Recruitment.storyboard */,
+				48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */,
+				48EE54191BF8E8DC00CFD7AD /* MyAddress.storyboard */,
 			);
 			name = User;
 			path = "../TipTop-Adviser";
@@ -733,14 +733,14 @@
 			children = (
 				485FE7EE1BF8E1CC00654279 /* Profile */,
 				485FE7F51BF8E1CC00654279 /* Setting */,
-				485FE7C71BF8E1CC00654279 /* MessageCenter */,
-				485FE7CE1BF8E1CC00654279 /* MyAddress */,
-				485FE7D11BF8E1CC00654279 /* MyBidding */,
-				485FE7DA1BF8E1CC00654279 /* MyComment */,
 				485FE7DD1BF8E1CC00654279 /* MyReservation */,
-				485FE7E61BF8E1CC00654279 /* MyService */,
 				485FE7E91BF8E1CC00654279 /* OnlinePay */,
 				485FE7FE1BF8E1CC00654279 /* WorkCircuit */,
+				485FE7D11BF8E1CC00654279 /* MyBidding */,
+				485FE7DA1BF8E1CC00654279 /* MyComment */,
+				48D72F6E1BFB9154006BA8C3 /* Recruitment */,
+				485FE7C71BF8E1CC00654279 /* MessageCenter */,
+				485FE7CE1BF8E1CC00654279 /* MyAddress */,
 				485FE7C51BF8E1CC00654279 /* HXUserViewController.h */,
 				485FE7C61BF8E1CC00654279 /* HXUserViewController.m */,
 			);
@@ -806,15 +806,6 @@
 				485FE7E51BF8E1CC00654279 /* HXReservationDetailViewController.m */,
 			);
 			path = MyReservation;
-			sourceTree = "<group>";
-		};
-		485FE7E61BF8E1CC00654279 /* MyService */ = {
-			isa = PBXGroup;
-			children = (
-				485FE7E71BF8E1CC00654279 /* HXMyServiceViewController.h */,
-				485FE7E81BF8E1CC00654279 /* HXMyServiceViewController.m */,
-			);
-			path = MyService;
 			sourceTree = "<group>";
 		};
 		485FE7E91BF8E1CC00654279 /* OnlinePay */ = {
@@ -1165,6 +1156,15 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		48D72F6E1BFB9154006BA8C3 /* Recruitment */ = {
+			isa = PBXGroup;
+			children = (
+				48D72F6F1BFB9154006BA8C3 /* HXRecruitmentViewController.h */,
+				48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */,
+			);
+			path = Recruitment;
+			sourceTree = "<group>";
+		};
 		48D74F691BC4CA100000863D = {
 			isa = PBXGroup;
 			children = (
@@ -1266,7 +1266,7 @@
 				48EE542F1BF8E8DC00CFD7AD /* MyReservation.storyboard in Resources */,
 				48EE54331BF8E8DC00CFD7AD /* User.storyboard in Resources */,
 				48EE542E1BF8E8DC00CFD7AD /* MyComment.storyboard in Resources */,
-				48EE54301BF8E8DC00CFD7AD /* MyService.storyboard in Resources */,
+				48EE54301BF8E8DC00CFD7AD /* Recruitment.storyboard in Resources */,
 				48EE542D1BF8E8DC00CFD7AD /* MyBidding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1326,7 +1326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				485FE8A61BF8E1CC00654279 /* HXMyServiceViewController.m in Sources */,
 				485FE8C41BF8E1CC00654279 /* HXReservationDetailPromptCell.m in Sources */,
 				485FE8AA1BF8E1CC00654279 /* HXEditIntroduceViewController.m in Sources */,
 				485FE8C21BF8E1CC00654279 /* HXReservationDetailClientCell.m in Sources */,
@@ -1389,6 +1388,7 @@
 				485FE8AD1BF8E1CC00654279 /* HXChangePassWordViewController.m in Sources */,
 				485FE8C31BF8E1CC00654279 /* HXReservationDetailInfoCell.m in Sources */,
 				485FE8BE1BF8E1CC00654279 /* HXMessageListCell.m in Sources */,
+				48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */,
 				485FE8B71BF8E1CC00654279 /* BRPlaceholderTextView.m in Sources */,
 				485FE8A01BF8E1CC00654279 /* HXMyBiddingViewController.m in Sources */,
 				48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */,
@@ -1510,12 +1510,12 @@
 			name = MyReservation.storyboard;
 			sourceTree = "<group>";
 		};
-		48EE54211BF8E8DC00CFD7AD /* MyService.storyboard */ = {
+		48EE54211BF8E8DC00CFD7AD /* Recruitment.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				48EE54221BF8E8DC00CFD7AD /* Base */,
 			);
-			name = MyService.storyboard;
+			name = Recruitment.storyboard;
 			sourceTree = "<group>";
 		};
 		48EE54231BF8E8DC00CFD7AD /* OnlinePay.storyboard */ = {

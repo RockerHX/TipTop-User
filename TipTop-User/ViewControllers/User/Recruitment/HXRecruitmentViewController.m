@@ -1,20 +1,19 @@
 //
-//  HXMyServiceViewController.m
+//  HXRecruitmentViewController.m
 //  TipTop-User
 //
 //  Created by ShiCang on 15/10/18.
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import "HXMyServiceViewController.h"
+#import "HXRecruitmentViewController.h"
 #import "HXApi.h"
-#import "HXUserSession.h"
 
-@implementation HXMyServiceViewController
+@implementation HXRecruitmentViewController
 
 #pragma mark - View Controller Life Cycle
 - (void)viewDidLoad {
-    self.loadURL = [DoMain stringByAppendingFormat:@"/h5/agent/service?access_token=%@", [HXUserSession share].user.accessToken];
+    self.loadURL = [DoMain stringByAppendingFormat:@"/h5/page?key=join_us"];
     
     [super viewDidLoad];
 }
@@ -25,7 +24,7 @@
 }
 
 - (HXStoryBoardName)storyBoardName {
-    return HXStoryBoardNameMyService;
+    return HXStoryBoardNameRecruitment;
 }
 
 @end
