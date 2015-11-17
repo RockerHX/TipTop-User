@@ -16,9 +16,9 @@
 #import "HXRecruitmentViewController.h"
 #import "HXMessageCenterViewController.h"
 #import "HXMyCommentViewController.h"
-#import "HXMyAddressViewController.h"
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
+#import "UIAlertView+BlocksKit.h"
 
 typedef NS_ENUM(NSUInteger, HXMenuRow) {
     HXMenuRowMyReservation = 0,
@@ -169,7 +169,17 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
                 break;
             }
             case HXMenuRowServicePhone: {
-//                navigationController = [HXMyAddressViewController navigationControllerInstance];
+                [UIAlertView bk_showAlertViewWithTitle:@"拨打服务电话？"
+                                               message:@"400-962540"
+                                     cancelButtonTitle:@"拨打"
+                                     otherButtonTitles:@[@"取消"]
+                                               handler:
+                 ^(UIAlertView *alertView, NSInteger buttonIndex) {
+                     if (buttonIndex == alertView.cancelButtonIndex) {
+                         ;
+                     }
+                 }];
+                return;
                 break;
             }
         }

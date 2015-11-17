@@ -59,7 +59,6 @@
 		485FE8991BF8E1CC00654279 /* HXMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7C91BF8E1CC00654279 /* HXMessageCenterViewController.m */; };
 		485FE89A1BF8E1CC00654279 /* HXMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7CB1BF8E1CC00654279 /* HXMessageDetailViewController.m */; };
 		485FE89B1BF8E1CC00654279 /* HXMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7CD1BF8E1CC00654279 /* HXMessageListViewController.m */; };
-		485FE89C1BF8E1CC00654279 /* HXMyAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7D01BF8E1CC00654279 /* HXMyAddressViewController.m */; };
 		485FE89D1BF8E1CC00654279 /* HXAddBiddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7D31BF8E1CC00654279 /* HXAddBiddingViewController.m */; };
 		485FE89E1BF8E1CC00654279 /* HXBiddingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7D51BF8E1CC00654279 /* HXBiddingDetailViewController.m */; };
 		485FE89F1BF8E1CC00654279 /* HXBiddingServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7D71BF8E1CC00654279 /* HXBiddingServiceViewController.m */; };
@@ -121,7 +120,6 @@
 		48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54111BF8E88A00CFD7AD /* Login.storyboard */; };
 		48EE54161BF8E8D000CFD7AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54141BF8E8D000CFD7AD /* Home.storyboard */; };
 		48EE542B1BF8E8DC00CFD7AD /* MessageCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */; };
-		48EE542C1BF8E8DC00CFD7AD /* MyAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54191BF8E8DC00CFD7AD /* MyAddress.storyboard */; };
 		48EE542D1BF8E8DC00CFD7AD /* MyBidding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE541B1BF8E8DC00CFD7AD /* MyBidding.storyboard */; };
 		48EE542E1BF8E8DC00CFD7AD /* MyComment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE541D1BF8E8DC00CFD7AD /* MyComment.storyboard */; };
 		48EE542F1BF8E8DC00CFD7AD /* MyReservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE541F1BF8E8DC00CFD7AD /* MyReservation.storyboard */; };
@@ -241,8 +239,6 @@
 		485FE7CB1BF8E1CC00654279 /* HXMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessageDetailViewController.m; sourceTree = "<group>"; };
 		485FE7CC1BF8E1CC00654279 /* HXMessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMessageListViewController.h; sourceTree = "<group>"; };
 		485FE7CD1BF8E1CC00654279 /* HXMessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMessageListViewController.m; sourceTree = "<group>"; };
-		485FE7CF1BF8E1CC00654279 /* HXMyAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMyAddressViewController.h; sourceTree = "<group>"; };
-		485FE7D01BF8E1CC00654279 /* HXMyAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMyAddressViewController.m; sourceTree = "<group>"; };
 		485FE7D21BF8E1CC00654279 /* HXAddBiddingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXAddBiddingViewController.h; sourceTree = "<group>"; };
 		485FE7D31BF8E1CC00654279 /* HXAddBiddingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXAddBiddingViewController.m; sourceTree = "<group>"; };
 		485FE7D41BF8E1CC00654279 /* HXBiddingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBiddingDetailViewController.h; sourceTree = "<group>"; };
@@ -361,7 +357,6 @@
 		48EE54121BF8E88A00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Login.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54151BF8E8D000CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Home.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54181BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MessageCenter.storyboard"; sourceTree = SOURCE_ROOT; };
-		48EE541A1BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyAddress.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE541C1BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyBidding.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE541E1BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyComment.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54201BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MyReservation.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -424,7 +419,6 @@
 				48EE541D1BF8E8DC00CFD7AD /* MyComment.storyboard */,
 				48EE54211BF8E8DC00CFD7AD /* Recruitment.storyboard */,
 				48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */,
-				48EE54191BF8E8DC00CFD7AD /* MyAddress.storyboard */,
 			);
 			name = User;
 			path = "../TipTop-Adviser";
@@ -740,7 +734,6 @@
 				485FE7DA1BF8E1CC00654279 /* MyComment */,
 				48D72F6E1BFB9154006BA8C3 /* Recruitment */,
 				485FE7C71BF8E1CC00654279 /* MessageCenter */,
-				485FE7CE1BF8E1CC00654279 /* MyAddress */,
 				485FE7C51BF8E1CC00654279 /* HXUserViewController.h */,
 				485FE7C61BF8E1CC00654279 /* HXUserViewController.m */,
 			);
@@ -758,15 +751,6 @@
 				485FE7CD1BF8E1CC00654279 /* HXMessageListViewController.m */,
 			);
 			path = MessageCenter;
-			sourceTree = "<group>";
-		};
-		485FE7CE1BF8E1CC00654279 /* MyAddress */ = {
-			isa = PBXGroup;
-			children = (
-				485FE7CF1BF8E1CC00654279 /* HXMyAddressViewController.h */,
-				485FE7D01BF8E1CC00654279 /* HXMyAddressViewController.m */,
-			);
-			path = MyAddress;
 			sourceTree = "<group>";
 		};
 		485FE7D11BF8E1CC00654279 /* MyBidding */ = {
@@ -1260,7 +1244,6 @@
 				484F677F1BF8EA3900B0ABC1 /* Main.storyboard in Resources */,
 				485FE85B1BF8E1CC00654279 /* Assets.xcassets in Resources */,
 				48EE54311BF8E8DC00CFD7AD /* OnlinePay.storyboard in Resources */,
-				48EE542C1BF8E8DC00CFD7AD /* MyAddress.storyboard in Resources */,
 				484F677E1BF8EA3900B0ABC1 /* LaunchScreen.storyboard in Resources */,
 				48EE54321BF8E8DC00CFD7AD /* Setting.storyboard in Resources */,
 				48EE542F1BF8E8DC00CFD7AD /* MyReservation.storyboard in Resources */,
@@ -1354,7 +1337,6 @@
 				488D0E401BFA3C170068D47C /* HXForgotPWViewController.m in Sources */,
 				485FE8831BF8E1CC00654279 /* HXOnlinePayDetail.m in Sources */,
 				485FE8D01BF8E1CC00654279 /* HXProfileNoContentCell.m in Sources */,
-				485FE89C1BF8E1CC00654279 /* HXMyAddressViewController.m in Sources */,
 				485FE86C1BF8E1CC00654279 /* UIButton+HXIBnspectable.m in Sources */,
 				485FE8751BF8E1CC00654279 /* HXStoryBoardManager.m in Sources */,
 				485FE8781BF8E1CC00654279 /* HXVersion.m in Sources */,
@@ -1476,14 +1458,6 @@
 				48EE54181BF8E8DC00CFD7AD /* Base */,
 			);
 			name = MessageCenter.storyboard;
-			sourceTree = "<group>";
-		};
-		48EE54191BF8E8DC00CFD7AD /* MyAddress.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				48EE541A1BF8E8DC00CFD7AD /* Base */,
-			);
-			name = MyAddress.storyboard;
 			sourceTree = "<group>";
 		};
 		48EE541B1BF8E8DC00CFD7AD /* MyBidding.storyboard */ = {

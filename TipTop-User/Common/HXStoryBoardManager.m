@@ -69,10 +69,6 @@
             storyBoardName = @"MessageCenter";
             break;
         }
-        case HXStoryBoardNameServicePhone: {
-            storyBoardName = @"MyAddress";
-            break;
-        }
     }
     return storyBoardName;
 }
