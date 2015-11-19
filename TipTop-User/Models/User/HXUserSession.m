@@ -9,7 +9,8 @@
 #import "HXUserSession.h"
 
 
-static NSString *FilePath = @"/user.data";
+static NSString *UserFilePath = @"/user.data";
+static NSString *ProfileFilePath = @"/profile.data";
 
 static HXUserSession *session = nil;
 
@@ -28,7 +29,8 @@ static HXUserSession *session = nil;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self unArchive];
+        [self unArchiveUser];
+        [self unArchiveProfile];
     }
     return self;
 }
@@ -52,27 +54,51 @@ static HXUserSession *session = nil;
 #pragma mark - Public Methods
 - (void)updateUser:(nullable HXUser *)user {
     _user = user;
-    [self archive];
+    [self archiveUser];
+}
+
+- (void)updateProfile:(nullable HXProfile *)profile {
+    _profile = profile;
+    [self archiveProfile];
 }
 
 - (void)updateUserAvatar:(nullable NSString *)avatarURL {
     _user.avatar = avatarURL;
-    [self archive];
+    _profile.avatar = avatarURL;
+    [self archiveUser];
+    [self archiveProfile];
 }
 
 - (void)logout {
     [self updateUser:[HXUser new]];
+    [self updateProfile:[HXProfile new]];
 }
 
 #pragma mark - Private Methods
-- (void)archive {
-    NSString *file = [NSTemporaryDirectory() stringByAppendingPathComponent:FilePath];
-    [NSKeyedArchiver archiveRootObject:_user toFile:file];
+- (void)archiveWithObject:(id)object filePath:(NSString *)filePath {
+    NSString *file = [NSTemporaryDirectory() stringByAppendingPathComponent:filePath];
+    [NSKeyedArchiver archiveRootObject:object toFile:file];
 }
 
-- (void)unArchive {
-    NSString *file = [NSTemporaryDirectory() stringByAppendingPathComponent:FilePath];
-    _user = [NSKeyedUnarchiver unarchiveObjectWithFile:file];
+- (id)unArchiveWithFilePath:(NSString *)filePath {
+    NSString *file = [NSTemporaryDirectory() stringByAppendingPathComponent:filePath];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:file];
+}
+
+- (void)archiveUser {
+    [self archiveWithObject:_user filePath:UserFilePath];
+}
+
+- (void)unArchiveUser {
+    _user = [self unArchiveWithFilePath:UserFilePath];
+}
+
+- (void)archiveProfile {
+    [self archiveWithObject:_user filePath:ProfileFilePath];
+}
+
+- (void)unArchiveProfile {
+    _profile = [self unArchiveWithFilePath:ProfileFilePath];
 }
 
 @end

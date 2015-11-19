@@ -62,8 +62,6 @@
 		485FE8A51BF8E1CC00654279 /* HXReservationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7E51BF8E1CC00654279 /* HXReservationDetailViewController.m */; };
 		485FE8A71BF8E1CC00654279 /* HXOnlinePayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7EB1BF8E1CC00654279 /* HXOnlinePayDetailViewController.m */; };
 		485FE8A81BF8E1CC00654279 /* HXOnlinePayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7ED1BF8E1CC00654279 /* HXOnlinePayListViewController.m */; };
-		485FE8A91BF8E1CC00654279 /* HXAddCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7F01BF8E1CC00654279 /* HXAddCaseViewController.m */; };
-		485FE8AA1BF8E1CC00654279 /* HXEditIntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7F21BF8E1CC00654279 /* HXEditIntroduceViewController.m */; };
 		485FE8AB1BF8E1CC00654279 /* HXProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7F41BF8E1CC00654279 /* HXProfileViewController.m */; };
 		485FE8AC1BF8E1CC00654279 /* HXAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7F71BF8E1CC00654279 /* HXAboutViewController.m */; };
 		485FE8AD1BF8E1CC00654279 /* HXChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7F91BF8E1CC00654279 /* HXChangePassWordViewController.m */; };
@@ -73,7 +71,6 @@
 		485FE8B11BF8E1CC00654279 /* HXWorkCircuitListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8021BF8E1CC00654279 /* HXWorkCircuitListViewController.m */; };
 		485FE8B21BF8E1CC00654279 /* HXReservationDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8071BF8E1CC00654279 /* HXReservationDetailViewModel.m */; };
 		485FE8B31BF8E1CC00654279 /* HXOnlinePayDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE80A1BF8E1CC00654279 /* HXOnlinePayDetailViewModel.m */; };
-		485FE8B41BF8E1CC00654279 /* HXProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE80D1BF8E1CC00654279 /* HXProfileViewModel.m */; };
 		485FE8B61BF8E1CC00654279 /* HXStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8161BF8E1CC00654279 /* HXStarView.m */; };
 		485FE8B71BF8E1CC00654279 /* BRPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8191BF8E1CC00654279 /* BRPlaceholderTextView.m */; };
 		485FE8B81BF8E1CC00654279 /* HXOrderAlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE81D1BF8E1CC00654279 /* HXOrderAlertCell.m */; };
@@ -100,6 +97,7 @@
 		485FE8D01BF8E1CC00654279 /* HXProfileNoContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8541BF8E1CC00654279 /* HXProfileNoContentCell.m */; };
 		485FE8D11BF8E1CC00654279 /* HXProfileSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8561BF8E1CC00654279 /* HXProfileSelectedCell.m */; };
 		485FE8D21BF8E1CC00654279 /* HXWorkCircuitOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8591BF8E1CC00654279 /* HXWorkCircuitOrderCell.m */; };
+		4873314E1BFE2D3A00260D5B /* HXProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873314D1BFE2D3A00260D5B /* HXProfileViewModel.m */; };
 		488D0E401BFA3C170068D47C /* HXForgotPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */; };
 		488D0E411BFA3C170068D47C /* HXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */; };
 		488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */; };
@@ -233,10 +231,6 @@
 		485FE7EB1BF8E1CC00654279 /* HXOnlinePayDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetailViewController.m; sourceTree = "<group>"; };
 		485FE7EC1BF8E1CC00654279 /* HXOnlinePayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayListViewController.h; sourceTree = "<group>"; };
 		485FE7ED1BF8E1CC00654279 /* HXOnlinePayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayListViewController.m; sourceTree = "<group>"; };
-		485FE7EF1BF8E1CC00654279 /* HXAddCaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXAddCaseViewController.h; sourceTree = "<group>"; };
-		485FE7F01BF8E1CC00654279 /* HXAddCaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXAddCaseViewController.m; sourceTree = "<group>"; };
-		485FE7F11BF8E1CC00654279 /* HXEditIntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXEditIntroduceViewController.h; sourceTree = "<group>"; };
-		485FE7F21BF8E1CC00654279 /* HXEditIntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXEditIntroduceViewController.m; sourceTree = "<group>"; };
 		485FE7F31BF8E1CC00654279 /* HXProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfileViewController.h; sourceTree = "<group>"; };
 		485FE7F41BF8E1CC00654279 /* HXProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileViewController.m; sourceTree = "<group>"; };
 		485FE7F61BF8E1CC00654279 /* HXAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXAboutViewController.h; sourceTree = "<group>"; };
@@ -255,8 +249,6 @@
 		485FE8071BF8E1CC00654279 /* HXReservationDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXReservationDetailViewModel.m; sourceTree = "<group>"; };
 		485FE8091BF8E1CC00654279 /* HXOnlinePayDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayDetailViewModel.h; sourceTree = "<group>"; };
 		485FE80A1BF8E1CC00654279 /* HXOnlinePayDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetailViewModel.m; sourceTree = "<group>"; };
-		485FE80C1BF8E1CC00654279 /* HXProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfileViewModel.h; sourceTree = "<group>"; };
-		485FE80D1BF8E1CC00654279 /* HXProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileViewModel.m; sourceTree = "<group>"; };
 		485FE8151BF8E1CC00654279 /* HXStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXStarView.h; sourceTree = "<group>"; };
 		485FE8161BF8E1CC00654279 /* HXStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXStarView.m; sourceTree = "<group>"; };
 		485FE8181BF8E1CC00654279 /* BRPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPlaceholderTextView.h; sourceTree = "<group>"; };
@@ -307,6 +299,8 @@
 		485FE8561BF8E1CC00654279 /* HXProfileSelectedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileSelectedCell.m; sourceTree = "<group>"; };
 		485FE8581BF8E1CC00654279 /* HXWorkCircuitOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWorkCircuitOrderCell.h; sourceTree = "<group>"; };
 		485FE8591BF8E1CC00654279 /* HXWorkCircuitOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWorkCircuitOrderCell.m; sourceTree = "<group>"; };
+		4873314C1BFE2D3A00260D5B /* HXProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfileViewModel.h; sourceTree = "<group>"; };
+		4873314D1BFE2D3A00260D5B /* HXProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileViewModel.m; sourceTree = "<group>"; };
 		488D0E3B1BFA3C170068D47C /* HXForgotPWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXForgotPWViewController.h; sourceTree = "<group>"; };
 		488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXForgotPWViewController.m; sourceTree = "<group>"; };
 		488D0E3E1BFA3C170068D47C /* HXRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRegisterViewController.h; sourceTree = "<group>"; };
@@ -723,10 +717,6 @@
 		485FE7EE1BF8E1CC00654279 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				485FE7EF1BF8E1CC00654279 /* HXAddCaseViewController.h */,
-				485FE7F01BF8E1CC00654279 /* HXAddCaseViewController.m */,
-				485FE7F11BF8E1CC00654279 /* HXEditIntroduceViewController.h */,
-				485FE7F21BF8E1CC00654279 /* HXEditIntroduceViewController.m */,
 				485FE7F31BF8E1CC00654279 /* HXProfileViewController.h */,
 				485FE7F41BF8E1CC00654279 /* HXProfileViewController.m */,
 			);
@@ -764,7 +754,7 @@
 		485FE8031BF8E1CC00654279 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				485FE80B1BF8E1CC00654279 /* Profile */,
+				4873314B1BFE2D3A00260D5B /* Profile */,
 				485FE8051BF8E1CC00654279 /* MyReservation */,
 				485FE8081BF8E1CC00654279 /* OnlinePay */,
 				485FE80E1BF8E1CC00654279 /* WorkCircuit */,
@@ -788,15 +778,6 @@
 				485FE80A1BF8E1CC00654279 /* HXOnlinePayDetailViewModel.m */,
 			);
 			path = OnlinePay;
-			sourceTree = "<group>";
-		};
-		485FE80B1BF8E1CC00654279 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				485FE80C1BF8E1CC00654279 /* HXProfileViewModel.h */,
-				485FE80D1BF8E1CC00654279 /* HXProfileViewModel.m */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		485FE80E1BF8E1CC00654279 /* WorkCircuit */ = {
@@ -1005,6 +986,15 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		4873314B1BFE2D3A00260D5B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4873314C1BFE2D3A00260D5B /* HXProfileViewModel.h */,
+				4873314D1BFE2D3A00260D5B /* HXProfileViewModel.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		488D0E3A1BFA3C170068D47C /* ForgotPW */ = {
 			isa = PBXGroup;
 			children = (
@@ -1203,10 +1193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				485FE8C41BF8E1CC00654279 /* HXReservationDetailPromptCell.m in Sources */,
-				485FE8AA1BF8E1CC00654279 /* HXEditIntroduceViewController.m in Sources */,
 				485FE8C21BF8E1CC00654279 /* HXReservationDetailClientCell.m in Sources */,
 				485FE8CD1BF8E1CC00654279 /* HXProfileEditCell.m in Sources */,
-				485FE8A91BF8E1CC00654279 /* HXAddCaseViewController.m in Sources */,
 				485FE8A41BF8E1CC00654279 /* HXReservationAddRemarkViewController.m in Sources */,
 				485FE8861BF8E1CC00654279 /* HXCase.m in Sources */,
 				485FE8BD1BF8E1CC00654279 /* HXMessageCell.m in Sources */,
@@ -1237,7 +1225,6 @@
 				485FE8701BF8E1CC00654279 /* HXIBImageView.m in Sources */,
 				485FE86E1BF8E1CC00654279 /* UIView+HXIBnspectable.m in Sources */,
 				485FE8BC1BF8E1CC00654279 /* HXSecurityCodeButton.m in Sources */,
-				485FE8B41BF8E1CC00654279 /* HXProfileViewModel.m in Sources */,
 				485FE8B31BF8E1CC00654279 /* HXOnlinePayDetailViewModel.m in Sources */,
 				485FE8CB1BF8E1CC00654279 /* HXCaseCardCell.m in Sources */,
 				485FE8961BF8E1CC00654279 /* HXLoginViewController.m in Sources */,
@@ -1273,6 +1260,7 @@
 				485FE8821BF8E1CC00654279 /* HXReservationOrder.m in Sources */,
 				485FE8921BF8E1CC00654279 /* HXPanGestureNavgaitionController.m in Sources */,
 				485FE89B1BF8E1CC00654279 /* HXMessageListViewController.m in Sources */,
+				4873314E1BFE2D3A00260D5B /* HXProfileViewModel.m in Sources */,
 				485FE8891BF8E1CC00654279 /* HXWorkCircuitOrder.m in Sources */,
 				485FE8991BF8E1CC00654279 /* HXMessageCenterViewController.m in Sources */,
 				485FE8A21BF8E1CC00654279 /* HXMyReservationListViewController.m in Sources */,

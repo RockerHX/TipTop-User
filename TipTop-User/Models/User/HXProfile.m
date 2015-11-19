@@ -12,9 +12,7 @@
 
 + (NSDictionary *)replacedKeyFromPropertyName {
     return @{@"ID": @"id",
-       @"realName": @"real_name",
-         @"goodAt": @"good_at",
-      @"introduce": @"about"};
+       @"realName": @"real_name"};
 }
 
 @end

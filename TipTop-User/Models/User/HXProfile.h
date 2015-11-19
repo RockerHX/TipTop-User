@@ -10,14 +10,15 @@
 
 @interface HXProfile : NSObject
 
+@property (nonatomic, assign) NSInteger  credit;
 @property (nonatomic, assign)  NSString *ID;
+@property (nonatomic, strong)  NSString *avatar;
+@property (nonatomic, strong)  NSString *number;
+@property (nonatomic, strong)  NSString *company;
+@property (nonatomic, strong)  NSString *displayId;
+@property (nonatomic, strong)  NSString *industry;
 @property (nonatomic, strong)  NSString *mobile;
 @property (nonatomic, strong)  NSString *realName;
-@property (nonatomic, strong)  NSString *avatar;
-@property (nonatomic, strong)  NSString *goodAt;
-@property (nonatomic, strong)  NSString *introduce;
-
-@property (nonatomic, assign) NSInteger  good;
-@property (nonatomic, assign) NSInteger  star;
+@property (nonatomic, strong)  NSString *wechat;
 
 @end

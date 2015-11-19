@@ -10,4 +10,14 @@
 
 @interface HXProfileViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
+@property (weak, nonatomic) IBOutlet     UILabel *numberLabel;
+@property (weak, nonatomic) IBOutlet     UILabel *integralLabel;
+@property (weak, nonatomic) IBOutlet UITextField *companyTextField;
+@property (weak, nonatomic) IBOutlet UITextField *industryTextField;
+@property (weak, nonatomic) IBOutlet UITextField *moblieTextField;
+@property (weak, nonatomic) IBOutlet UITextField *weiChatTextField;
+
+- (IBAction)saveButtonPressed;
+
 @end

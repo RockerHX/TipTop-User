@@ -7,6 +7,7 @@
 //
 
 #import "HXUser.h"
+#import "HXProfile.h"
 
 typedef NS_ENUM(BOOL, HXUserSessionState) {
     HXUserSessionStateLogout = NO,
@@ -16,11 +17,13 @@ typedef NS_ENUM(BOOL, HXUserSessionState) {
 @interface HXUserSession : NSObject
 
 @property (nonnull, nonatomic, strong, readonly)    HXUser *user;
+@property (nonnull, nonatomic, strong, readonly) HXProfile *profile;
 @property (nonatomic, assign, readonly) HXUserSessionState  state;
 
 + (nullable instancetype)share;
 
 - (void)updateUser:(nullable HXUser *)user;
+- (void)updateProfile:(nullable HXProfile *)profile;
 - (void)updateUserAvatar:(nullable NSString *)avatarURL;
 - (void)logout;
 
