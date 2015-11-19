@@ -31,11 +31,7 @@ typedef NS_ENUM(NSUInteger, HXMenuRow) {
     HXMenuRowServicePhone  = 9
 };
 
-
-static NSString *UploadImageApi = @"/upload";
-static NSString *UpdateUserHeaderApi = @"/profile/avatar";
-
-@interface HXUserViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface HXUserViewController ()
 @end
 
 @implementation HXUserViewController
@@ -56,20 +52,12 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
 
 #pragma mark - Config Methods
 - (void)initConfig {
-    
 }
 
 - (void)viewConfig {
 }
 
 #pragma mark - Event Response
-- (IBAction)userHeaderPressed {
-    UIImagePickerController *imagePickerViewController = [[UIImagePickerController alloc] init];
-    imagePickerViewController.delegate = self;
-    imagePickerViewController.allowsEditing = YES;
-    [self presentViewController:imagePickerViewController animated:YES completion:nil];
-}
-
 - (IBAction)settingButtonPressed {
     if (_delegate && [_delegate respondsToSelector:@selector(userCenterShouldHiddenAndShowViewController:)]) {
         UINavigationController *settingNavigationController = [HXSettingViewController navigationControllerInstance];
@@ -90,49 +78,6 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
     [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:user.avatar]];
     _nameLabel.text = user.realName;
     _mobileLabel.text = user.mobile;
-}
-
-- (void)startUploadImageReuqestWithImage:(UIImage *)image {
-    [self startUploadImageReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken}
-                                          image: image];
-}
-
-- (void)startUploadImageReuqestWithParameters:(NSDictionary *)parameters image:(UIImage *)image {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    __weak __typeof__(self)weakSelf = self;
-    
-    NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
-    [[HXApiRequest manager] POST:[HXApi apiURLWithApi:UploadImageApi] parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:imageData name:@"file" fileName:@"temp.jpg" mimeType:@"image/jpg"];
-    } success:^(AFHTTPRequestOperation *operation,id responseObject) {
-        __strong __typeof__(self)strongSelf = weakSelf;
-        NSInteger errorCode = [responseObject[@"error_code"] integerValue];
-        if (HXAppApiRequestErrorCodeNoError == errorCode) {
-            NSString *headerFile = responseObject[@"data"][@"img"];
-            [strongSelf startUpdateUserHeaderRequestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
-                                                                     @"avatar": headerFile}];
-        }
-    } failure:^(AFHTTPRequestOperation *operation,NSError *error) {
-        __strong __typeof__(self)strongSelf = weakSelf;
-        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
-    }];
-}
-
-- (void)startUpdateUserHeaderRequestWithParameters:(NSDictionary *)parameters {
-    __weak __typeof__(self)weakSelf = self;
-    [HXAppApiRequest requestPOSTMethodsWithAPI:[HXApi apiURLWithApi:UpdateUserHeaderApi] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        __strong __typeof__(self)strongSelf = weakSelf;
-        NSInteger errorCode = [responseObject[@"error_code"] integerValue];
-        if (HXAppApiRequestErrorCodeNoError == errorCode) {
-            NSString *imageURL = responseObject[@"data"][@"avatar"];
-            [[HXUserSession share] updateUserAvatar:imageURL];
-            [strongSelf updateUserInfo];
-        }
-        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        __strong __typeof__(self)strongSelf = weakSelf;
-        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
-    }];
 }
 
 #pragma mark - Table View Delegate Methods
@@ -185,17 +130,6 @@ static NSString *UpdateUserHeaderApi = @"/profile/avatar";
         }
         [_delegate userCenterShouldHiddenAndShowViewController:navigationController];
     }
-}
-
-#pragma mark - UIImagePickerControllerDelegate Methods
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    UIImage *image = info[UIImagePickerControllerEditedImage];
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    [self startUploadImageReuqestWithImage:image];
-}
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -22,7 +22,6 @@
 @property (weak, nonatomic) IBOutlet     UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet     UILabel *mobileLabel;
 
-- (IBAction)userHeaderPressed;
 - (IBAction)settingButtonPressed;
 - (IBAction)editButtonPressed;
 
