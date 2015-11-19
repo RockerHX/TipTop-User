@@ -31,7 +31,7 @@
 
 #pragma mark - Public Methods
 - (void)displayWithViewModel:(HXProfileViewModel *)viewModel {
-    _contentLabel.text = viewModel.selectType ? viewModel.selectedCase.caseIntroduce : viewModel.profile.introduce;
+//    _contentLabel.text = viewModel.selectType ? viewModel.selectedCase.caseIntroduce : viewModel.profile.introduce;
 }
 
 @end

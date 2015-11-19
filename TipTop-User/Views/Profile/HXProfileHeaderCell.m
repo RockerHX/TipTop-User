@@ -35,11 +35,11 @@
 - (void)displayWithViewModel:(HXProfileViewModel *)viewModel {
     HXProfile *profile = viewModel.profile;
     [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:profile.avatar]];
-    _nameLabel.text = profile.realName;
-    _starView.value = profile.star;
-    _mobileLabel.text = profile.mobile;
-    _goodCountLabel.text = @(profile.good).stringValue;
-    _goodAtLabel.text = profile.goodAt;
+//    _nameLabel.text = profile.realName;
+//    _starView.value = profile.star;
+//    _mobileLabel.text = profile.mobile;
+//    _goodCountLabel.text = @(profile.good).stringValue;
+//    _goodAtLabel.text = profile.goodAt;
 }
 
 @end
