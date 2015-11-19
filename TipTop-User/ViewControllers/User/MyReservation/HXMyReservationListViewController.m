@@ -16,7 +16,7 @@
 static NSString *OrderListApi   = @"/Order";
 static NSString *SendOrderApi   = @"/order/confirm";
 
-@interface HXMyReservationListViewController () <HXMyReservationCellDelegate>
+@interface HXMyReservationListViewController ()
 @end
 
 @implementation HXMyReservationListViewController

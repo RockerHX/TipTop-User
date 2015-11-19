@@ -10,9 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "DateTools.h"
 
-@implementation HXMyReservationCell {
-    HXReservationOrder *_order;
-}
+@implementation HXMyReservationCell
 
 #pragma mark - Init Methods
 - (void)awakeFromNib {
@@ -27,30 +25,15 @@
 }
 
 - (void)viewConfig {
-    _avatarImageView.layer.cornerRadius = _avatarImageView.frame.size.height/2;
-}
-
-#pragma mark - Event Response
-- (void)phoneButonPressed {
-    if (_delegate && [_delegate respondsToSelector:@selector(orderCell:shouldCallPhone:)]) {
-        [_delegate orderCell:self shouldCallPhone:_order.clientMobile];
-    }
-}
-
-- (IBAction)sendButonPressed {
-    if (_delegate && [_delegate respondsToSelector:@selector(orderCell:shouldSendOrder:)]) {
-        [_delegate orderCell:self shouldSendOrder:_order.ID];
-    }
 }
 
 #pragma mark - Public Methods
 - (void)displayWithOrder:(HXReservationOrder *)order {
-    _order = order;
-    
-    _dateLabel.text = [[NSDate dateWithTimeIntervalSince1970:order.createTime] formattedDateWithFormat:@"yyyy-MM-dd hh:mm"];
-    _orderNameLabel.text = order.cate;
-    _nameLabel.text = order.clientName;
-    [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:order.clientAvatar]];
+    [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:order.agentAvatar]];
+    _nameLabel.text = order.agentName;
+    _moblieLabel.text = order.agentMobile;
+    _serviceNameLabel.text = order.cate;
+//    _gootCountLabel.text = order.;
 }
 
 @end

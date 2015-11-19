@@ -10,28 +10,13 @@
 #import "HXReservationOrder.h"
 
 
-@class HXMyReservationCell;
-
-@protocol HXMyReservationCellDelegate <NSObject>
-
-@optional
-- (void)orderCell:(HXMyReservationCell *)cell shouldCallPhone:(NSString *)phoneNumber;
-- (void)orderCell:(HXMyReservationCell *)cell shouldSendOrder:(NSString *)orderID;
-
-@end
-
 @interface HXMyReservationCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet      id  <HXMyReservationCellDelegate>delegate;
-
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *orderNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
-
-- (IBAction)phoneButonPressed;
-- (IBAction)sendButonPressed;
+@property (weak, nonatomic) IBOutlet     UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet     UILabel *moblieLabel;
+@property (weak, nonatomic) IBOutlet     UILabel *serviceNameLabel;
+@property (weak, nonatomic) IBOutlet     UILabel *gootCountLabel;
 
 - (void)displayWithOrder:(HXReservationOrder *)order;
 

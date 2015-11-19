@@ -11,15 +11,13 @@
 @interface HXReservationOrder : NSObject
 
 @property (nonatomic, assign)      BOOL  isComplete;
-@property (nonatomic, assign) NSInteger  completeTime;
-@property (nonatomic, assign) NSInteger  createTime;
-@property (nonatomic, assign) NSInteger  money;
+@property (nonatomic, assign) NSInteger  createDate;
 @property (nonatomic, strong)  NSString *ID;
 @property (nonatomic, strong)  NSString *displayID;
 @property (nonatomic, strong)  NSString *cate;
 @property (nonatomic, strong)  NSString *subCate;
-@property (nonatomic, strong)  NSString *clientName;
-@property (nonatomic, strong)  NSString *clientMobile;
-@property (nonatomic, strong)  NSString *clientAvatar;
+@property (nonatomic, strong)  NSString *agentName;
+@property (nonatomic, strong)  NSString *agentMobile;
+@property (nonatomic, strong)  NSString *agentAvatar;
 
 @end
