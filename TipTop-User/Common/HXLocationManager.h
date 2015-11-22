@@ -24,7 +24,7 @@
  *  @param success 获取成功的回调
  *  @param failure 获取失败的回调
  */
-- (void)getLocationSuccess:(void(^)(BMKUserLocation *userLocation, NSString *latitude, NSString *longitude))success
+- (void)getLocationSuccess:(void(^)(BMKUserLocation *userLocation, NSString *latitude, NSString *longtitude))success
                    failure:(void(^)(NSString *latitude, NSString *longitude, NSError *error))failure;
 
 @end
