@@ -10,7 +10,6 @@
 #import "MJRefresh.h"
 
 @interface HXListViewController ()
-
 @end
 
 @implementation HXListViewController
@@ -30,7 +29,6 @@
 }
 
 - (void)viewConfig {
-    
 }
 
 #pragma mark - Public Methods
