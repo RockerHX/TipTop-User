@@ -12,7 +12,7 @@ static NSString *SelectedThemeKey = @"SelectedTheme";
 
 @implementation HXThemeManager
 
-@synthesize theme = _theme;
+@synthesize themeStyle = _themeStyle;
 @synthesize themeColor = _themeColor;
 
 #pragma mark - Init Methods
@@ -25,25 +25,14 @@ static NSString *SelectedThemeKey = @"SelectedTheme";
     return manager;
 }
 
-#pragma mark - Public Methods
-- (void)applyTheme {
-    [[NSUserDefaults standardUserDefaults] setValue:@(_theme) forKey:SelectedThemeKey];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:self.themeColor];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],
-                                                                      NSFontAttributeName:[UIFont systemFontOfSize:21.0f]}];
-}
-
 #pragma mark - Setter And Getter
-- (HXTheme)theme {
-    HXTheme theme = [[[NSUserDefaults standardUserDefaults] valueForKey:SelectedThemeKey] integerValue];
+- (HXThemeStyle)theme {
+    HXThemeStyle theme = [[[NSUserDefaults standardUserDefaults] valueForKey:SelectedThemeKey] integerValue];
     return theme;
 }
 
-- (void)setTheme:(HXTheme)theme {
-    _theme = theme;
+- (void)setTheme:(HXThemeStyle)theme {
+    _themeStyle = theme;
     [self applyTheme];
 }
 
@@ -52,17 +41,32 @@ static NSString *SelectedThemeKey = @"SelectedTheme";
 }
 
 - (UIColor *)themeColor {
+    return [self themeColorWithStyle:_themeStyle];
+}
+
+#pragma mark - Public Methods
+- (void)applyTheme {
+    [[NSUserDefaults standardUserDefaults] setValue:@(_themeStyle) forKey:SelectedThemeKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setBarTintColor:self.themeColor];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],
+                                                                      NSFontAttributeName:[UIFont systemFontOfSize:20.0f]}];
+}
+
+- (UIColor *)themeColorWithStyle:(HXThemeStyle)themeStyle {
     UIColor *color = nil;
-    switch (_theme) {
-        case HXThemeOrange: {
+    switch (themeStyle) {
+        case HXThemeStyleOrange: {
             color = [UIColor colorWithRed:252.0f/255.0f green:139.0f/255.0f blue:69.0f/255.0f alpha:1.0f];
             break;
         }
-        case HXThemeDark: {
+        case HXThemeStyleDark: {
             color = [UIColor colorWithRed:242.0f/255.0f green:101.0f/255.0f blue:34.0f/255.0f alpha:1.0f];
             break;
         }
-        case HXThemeGraphical: {
+        case HXThemeStyleGraphical: {
             color = [UIColor colorWithRed:10.0f/255.0f green:10.0f/255.0f blue:10.0f/255.0f alpha:1.0f];
             break;
         }

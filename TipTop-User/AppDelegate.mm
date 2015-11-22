@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [HXThemeManager share].theme = HXThemeOrange;
+    [HXThemeManager share].themeStyle = HXThemeStyleDefault;
     
     
 #pragma mark - Baidu Map SDK

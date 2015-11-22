@@ -8,20 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, HXTheme) {
-    HXThemeDefault,
-    HXThemeOrange,
-    HXThemeDark,
-    HXThemeGraphical
+typedef NS_ENUM(NSUInteger, HXThemeStyle) {
+    HXThemeStyleDefault,
+    HXThemeStyleOrange,
+    HXThemeStyleDark,
+    HXThemeStyleGraphical
 };
 
 @interface HXThemeManager : NSObject
 
-@property (nonatomic, assign) HXTheme  theme;
-@property (nonatomic, strong) UIColor *themeColor;
+@property (nonatomic, assign) HXThemeStyle  themeStyle;
+@property (nonatomic, strong)      UIColor *themeColor;
 
 + (instancetype)share;
 
 - (void)applyTheme;
+- (UIColor *)themeColorWithStyle:(HXThemeStyle)themeStyle;
 
 @end

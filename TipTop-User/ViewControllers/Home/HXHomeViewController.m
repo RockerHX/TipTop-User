@@ -120,7 +120,7 @@ static NSString *NewOrderEvent = @"new_order";
 }
 
 - (void)adviseOnline {
-    self.view.backgroundColor = [HXThemeManager share].themeColor;
+    self.view.backgroundColor = [[HXThemeManager share] themeColorWithStyle:HXThemeStyleOrange];
     
     _locationIcon.image = [UIImage imageNamed:@"HP-LocationOnlineIcon"];
     
