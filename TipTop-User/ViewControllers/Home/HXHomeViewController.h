@@ -6,21 +6,16 @@
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import "HXPanGestureViewController.h"
+#import "UIViewController+HXClass.h"
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
 
-@interface HXHomeViewController : HXPanGestureViewController
+@interface HXHomeViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *userHeader;
-@property (weak, nonatomic) IBOutlet UIImageView *locationIcon;
-@property (weak, nonatomic) IBOutlet     UILabel *locationLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *cylindrical;
-@property (weak, nonatomic) IBOutlet UIImageView *innerCircle;
-@property (weak, nonatomic) IBOutlet     UILabel *orderTitleLabel;
-@property (weak, nonatomic) IBOutlet     UILabel *subTitleLabel;
-@property (weak, nonatomic) IBOutlet     UILabel *promptLabel;
-@property (weak, nonatomic) IBOutlet    UIButton *grabButton;
+@property (weak, nonatomic) IBOutlet BMKMapView *mapView;
 
-- (IBAction)grabButtonPressed;
+- (IBAction)callButtonPressed;
+- (IBAction)avatarButtonPressed;
+- (IBAction)categoryButtonPressed;
 
 - (void)openSocket;
 

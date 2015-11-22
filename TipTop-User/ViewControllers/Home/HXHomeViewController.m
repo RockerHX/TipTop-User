@@ -7,12 +7,15 @@
 //
 
 #import "HXHomeViewController.h"
-#import "HXSocketManager.h"
+#import <REFrostedViewController/REFrostedViewController.h>
 #import "MBProgressHUD.h"
-#import "UIConstants.h"
-#import "HXOrderAlertView.h"
-#import "UIAlertView+BlocksKit.h"
-#import "HXThemeManager.h"
+#import "HXSocketManager.h"
+#import "HXLocationManager.h"
+#import "HXAppApiRequest.h"
+#import "HXAdviser.h"
+
+
+static NSString *AgentNearbyApi       = @"/agent/nearby";
 
 typedef NS_ENUM(NSUInteger, HXHomePageConnectState) {
     HXHomePageConnectStateOnline,
@@ -21,14 +24,31 @@ typedef NS_ENUM(NSUInteger, HXHomePageConnectState) {
 
 static NSString *NewOrderEvent = @"new_order";
 
-@interface HXHomeViewController ()
+@interface HXHomeViewController () <BMKMapViewDelegate>
 @end
 
 @implementation HXHomeViewController {
-    HXNewOrder *_newOrder;
+    NSTimer *_timer;
+    CLLocationCoordinate2D _location;
+    NSArray *_advisers;
 }
 
 #pragma mark - View Controller Life Cycle
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [_mapView viewWillAppear];
+    _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [_mapView viewWillDisappear];
+    _mapView.delegate = nil; // 不用时，置nil
+    [_timer invalidate];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,11 +58,20 @@ static NSString *NewOrderEvent = @"new_order";
 
 #pragma mark - Config Methods
 - (void)initConfig {
+    [self displayUserLocation];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(displayUserLocation) userInfo:nil repeats:YES];
 }
 
 - (void)viewConfig {
-    _orderTitleLabel.text = @"暂无需求";
-    _subTitleLabel.text = @"等待发单";
+    [self configMap];
+}
+
+- (void)configMap {
+    // 配置百度地图
+    _mapView.buildingsEnabled  = YES;                       // 允许双指上下滑动展示3D建筑
+    _mapView.showsUserLocation = YES;                       // 显示定位图层
+    _mapView.userTrackingMode  = BMKUserTrackingModeFollow; // 定位跟随模式
+    _mapView.zoomLevel         = 15.0f;                     // 500米比例尺
 }
 
 - (void)openSocket {
@@ -76,10 +105,15 @@ static NSString *NewOrderEvent = @"new_order";
 }
 
 #pragma mark - Event Response
-- (void)grabButtonPressed {
-    [HXOrderAlertView showWithNewOrder:_newOrder hanlde:^(HXNewOrder *newOrder) {
-        NSLog(@"handle");
-    }];
+- (IBAction)callButtonPressed {
+}
+
+- (IBAction)avatarButtonPressed {
+    [self.frostedViewController presentMenuViewController];
+}
+
+- (IBAction)categoryButtonPressed {
+    
 }
 
 #pragma mark - Private Methods
@@ -90,83 +124,93 @@ static NSString *NewOrderEvent = @"new_order";
 }
 
 - (void)hanleEventWithReceiveData:(NSDictionary *)receiveData {
-    NSInteger errorCode = [receiveData[@"error"] integerValue];
-    if (!errorCode) {
-        NSString *event = receiveData[@"event"];
-        NSString *extra = receiveData[@"extra"];
-        if ([event isEqualToString:NewOrderEvent]) {
-            _newOrder = [HXNewOrder mj_objectWithKeyValues:extra];
-            [self displayWithNewOrder:_newOrder];
-        } else if ([event isEqualToString:@""]) {
-            
-        }
-    } else {
-        NSString *message = receiveData[@"msg"];
-        [UIAlertView bk_showAlertViewWithTitle:@"温馨提示"
-                                       message:message
-                             cancelButtonTitle:@"确定"
-                             otherButtonTitles:nil
-                                       handler:nil];
-    }
-}
-
-- (void)displayWithNewOrder:(HXNewOrder *)newOrder {
-    _orderTitleLabel.text = newOrder.cate;
-    _subTitleLabel.text = newOrder.subCate;
-    _promptLabel.text = @"收到 1 个需求";
+//    NSInteger errorCode = [receiveData[@"error"] integerValue];
+//    if (!errorCode) {
+//        NSString *event = receiveData[@"event"];
+//        NSString *extra = receiveData[@"extra"];
+//        if ([event isEqualToString:NewOrderEvent]) {
+//        } else if ([event isEqualToString:@""]) {
+//            
+//        }
+//    } else {
+//    }
 }
 
 - (void)displayWithConnectSatae:(HXHomePageConnectState)state {
     switch (state) {
         case HXHomePageConnectStateOnline: {
-            [self adviseOnline];
             break;
         }
         case HXHomePageConnectStateOffline: {
-            [self userOffline];
             break;
         }
     }
 }
 
-- (void)adviseOnline {
-    self.view.backgroundColor = [[HXThemeManager share] themeColorWithStyle:HXThemeStyleOrange];
-    
-    _locationIcon.image = [UIImage imageNamed:@"HP-LocationOnlineIcon"];
-    
-    UIColor *textColor = [UIColor whiteColor];
-    _locationLabel.textColor = textColor;
-    _promptLabel.textColor = textColor;
-    _orderTitleLabel.textColor = textColor;
-    _subTitleLabel.textColor = textColor;
-    
-    _cylindrical.image = [UIImage imageNamed:@"HP-CylindricalOnlineIcon"];
-    _innerCircle.image = [UIImage imageNamed:@"HP-InnerCircleOnlineIcon"];
-    
-    _grabButton.enabled = YES;
-    _grabButton.backgroundColor = self.view.backgroundColor;
-    _grabButton.layer.borderColor = [UIColor whiteColor].CGColor;
+- (void)displayUserLocation {
+    __weak __typeof__(self)weakSelf = self;
+    [[HXLocationManager share] getLocationSuccess:
+     ^(BMKUserLocation *userLocation, NSString *latitude, NSString *longtitude){
+        __strong __typeof__(self)strongSelf = weakSelf;
+        strongSelf->_location = userLocation.location.coordinate;
+        [strongSelf->_mapView updateLocationData:userLocation];     // 根据坐标在地图上显示位置
+         [strongSelf starGetAgentNearbyRequestWithParameters:@{@"cid": @"1",
+                                                               @"lat": latitude,
+                                                               @"lng": longtitude}];
+    } failure:^(NSString *latitude, NSString *longitude, NSError *error) {
+    }];
 }
 
-- (void)userOffline {
-    self.view.backgroundColor = UIColorWithRGBA(219.0f, 212.0f, 212.0f, 1.0f);
-    
-    _locationIcon.image = [UIImage imageNamed:@"HP-LocationOfflineIcon"];
-    
-    UIColor *textColor = [UIColor lightGrayColor];
-    _locationLabel.textColor = textColor;
-    _promptLabel.textColor = textColor;
-    
-    UIColor *titleColor = UIColorWithRGBA(84.0f, 71.0f, 71.0f, 1.0f);
-    _orderTitleLabel.textColor = titleColor;
-    _subTitleLabel.textColor = titleColor;
-    
-    _cylindrical.image = [UIImage imageNamed:@"HP-CylindricalOfflineIcon"];
-    _innerCircle.image = [UIImage imageNamed:@"HP-InnerCircleOFFlineIcon"];
-    
-    _grabButton.enabled = NO;
-    _grabButton.backgroundColor = UIColorWithRGBA(205.0f, 199.0f, 199.0f, 1.0f);
-    _grabButton.layer.borderColor = _grabButton.backgroundColor.CGColor;
+- (void)starGetAgentNearbyRequestWithParameters:(NSDictionary *)parameters {
+    __weak __typeof__(self)weakSelf = self;
+    [HXAppApiRequest requestGETMethodsWithAPI:[HXApi apiURLWithApi:AgentNearbyApi] parameters:parameters success:^(AFHTTPRequestOperation *operation,id responseObject) {
+        __strong __typeof__(self)strongSelf = weakSelf;
+        NSInteger errorCode = [responseObject[@"error_code"] integerValue];
+        if (HXAppApiRequestErrorCodeNoError == errorCode) {
+            [strongSelf handleAdvisersWithDatas:responseObject[@"data"]];
+        }
+        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+    } failure:^(AFHTTPRequestOperation *operation,NSError *error) {
+        __strong __typeof__(self)strongSelf = weakSelf;
+        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+    }];
 }
+
+- (void)handleAdvisersWithDatas:(NSArray *)datas {
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:datas.count];
+    for (NSDictionary *data in datas) {
+        HXAdviser *adviser = [HXAdviser mj_objectWithKeyValues:data];
+        [mutableArray addObject:adviser];
+    }
+    _advisers = [mutableArray copy];
+    
+    [self handleAnnotationWithAdvisers:_advisers];
+}
+
+
+- (void)handleAnnotationWithAdvisers:(NSArray *)advisers {
+    NSMutableArray *annotations = [NSMutableArray arrayWithCapacity:advisers.count];
+    for (HXAdviser *adviser in advisers) {
+        BMKPointAnnotation *annotation = [[BMKPointAnnotation alloc] init];
+        CLLocationCoordinate2D coor;
+        coor.latitude = [adviser.latitude doubleValue];
+        coor.longitude = [adviser.longtitude doubleValue];
+        annotation.coordinate = coor;
+        annotation.title = adviser.realName;
+        [annotations addObject:annotation];
+    }
+    [self showAnnotationWithAnnotation:[annotations copy]];
+}
+
+- (void)showAnnotationWithAnnotation:(NSArray *)annotations {
+    [_mapView addAnnotations:annotations];
+}
+
+#pragma mark - Baidu MapView Delegate Methods
+//- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
+//    BMKAnnotationView *annotationView = [[BMKAnnotationView alloc] init];
+////    annotationView.annotation =
+//    return annotationView;
+//}
 
 @end
