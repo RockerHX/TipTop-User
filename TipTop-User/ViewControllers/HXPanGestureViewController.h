@@ -6,7 +6,7 @@
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "UIViewController+HXClass.h"
 
 @interface HXPanGestureViewController : UIViewController
 
