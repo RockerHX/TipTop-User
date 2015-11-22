@@ -163,7 +163,16 @@
                             <outlet property="delegate" destination="EFk-0l-Nnh" id="6yd-fU-jYp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="在线支付" id="LHp-6z-Bad"/>
+                    <navigationItem key="navigationItem" title="在线支付" id="LHp-6z-Bad">
+                        <barButtonItem key="rightBarButtonItem" id="Q1s-kM-DrQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="eoj-rh-lIA">
+                                <rect key="frame" x="246" y="10" width="58" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" image="OP-TransfersIcon"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W62-Jg-OFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -406,5 +415,6 @@
         <image name="MR-UserIcon" width="17" height="18"/>
         <image name="MRD-ClientIcon" width="16" height="15"/>
         <image name="MRD-InfoIcon" width="16" height="15"/>
+        <image name="OP-TransfersIcon" width="58" height="23"/>
     </resources>
 </document>
