@@ -21,6 +21,7 @@
 @property (nonatomic, strong)  NSString *agentName;
 @property (nonatomic, strong)  NSString *agentMobile;
 @property (nonatomic, strong)  NSString *agentAvatar;
+@property (nonatomic, assign) NSInteger  agentStar;
 @property (nonatomic, strong)  NSString *address;
 
 @end

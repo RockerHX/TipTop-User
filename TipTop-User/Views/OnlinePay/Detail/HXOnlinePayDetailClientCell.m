@@ -17,7 +17,7 @@
 #pragma mark - Public Methods
 - (void)displayWithDetailOrder:(HXOnlinePayDetailOrder *)order {
     _clientNameLabel.text = order.agentName;
-//    _starView.startValue = order;
+    _starView.value = order.agentStar;
     _serviceContent.text = [NSString stringWithFormat:@"%@（%@）", order.cate, order.subCate];
     [_clientHeader sd_setImageWithURL:[NSURL URLWithString:order.agentAvatar]];
 }

@@ -17,6 +17,7 @@
       @"agentName": @"agent_name",
     @"agentAvatar": @"agent_avatar",
     @"agentMobile": @"agent_mobile",
+      @"agentStar": @"agent_star",
      @"isComplete": @"is_complete",
    @"completeTime": @"complete_time",
      @"createTime": @"create_time"};
