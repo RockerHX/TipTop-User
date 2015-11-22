@@ -13,6 +13,7 @@
 #import "HXLocationManager.h"
 #import "HXAppApiRequest.h"
 #import "HXAdviser.h"
+#import "HXMapPaoPaoView.h"
 
 
 static NSString *AgentNearbyApi       = @"/agent/nearby";
@@ -28,9 +29,10 @@ static NSString *NewOrderEvent = @"new_order";
 @end
 
 @implementation HXHomeViewController {
-    NSTimer *_timer;
     CLLocationCoordinate2D _location;
     NSArray *_advisers;
+    
+    BMKAnnotationView *_selectedAnnotationView;
 }
 
 #pragma mark - View Controller Life Cycle
@@ -46,7 +48,6 @@ static NSString *NewOrderEvent = @"new_order";
     
     [_mapView viewWillDisappear];
     _mapView.delegate = nil; // 不用时，置nil
-    [_timer invalidate];
 }
 
 - (void)viewDidLoad {
@@ -59,7 +60,6 @@ static NSString *NewOrderEvent = @"new_order";
 #pragma mark - Config Methods
 - (void)initConfig {
     [self displayUserLocation];
-    _timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(displayUserLocation) userInfo:nil repeats:YES];
 }
 
 - (void)viewConfig {
@@ -207,10 +207,22 @@ static NSString *NewOrderEvent = @"new_order";
 }
 
 #pragma mark - Baidu MapView Delegate Methods
-//- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
-//    BMKAnnotationView *annotationView = [[BMKAnnotationView alloc] init];
-////    annotationView.annotation =
-//    return annotationView;
-//}
+static NSString *annotationIdentifier = @"annotationIdentifier";
+- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
+    BMKAnnotationView *annotationView = [[BMKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
+    annotationView.image = [UIImage imageNamed:@"HP-PinIcon-O"];
+    return annotationView;
+}
+
+- (void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view {
+    if ([NSStringFromClass([view class]) isEqualToString:NSStringFromClass([BMKAnnotationView class])]) {
+        _selectedAnnotationView.image = [UIImage imageNamed:@"HP-PinIcon-O"];
+        view.image = [UIImage imageNamed:@"HP-PinIcon-B"];
+        HXMapPaoPaoView *paopaoView = [HXMapPaoPaoView instance];
+        BMKActionPaopaoView *actionPaopaoView = [[BMKActionPaopaoView alloc] initWithCustomView:paopaoView];
+        view.paopaoView = actionPaopaoView;
+        _selectedAnnotationView = view;
+    }
+}
 
 @end

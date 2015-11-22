@@ -99,6 +99,8 @@
 		485FE8D21BF8E1CC00654279 /* HXWorkCircuitOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8591BF8E1CC00654279 /* HXWorkCircuitOrderCell.m */; };
 		48668C4D1C01C0F300F4F4FC /* HXOnlinePayDetailMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48668C4C1C01C0F300F4F4FC /* HXOnlinePayDetailMoneyCell.m */; };
 		48668C501C02040800F4F4FC /* HXAdviser.m in Sources */ = {isa = PBXBuildFile; fileRef = 48668C4F1C02040800F4F4FC /* HXAdviser.m */; };
+		48668C531C020D1700F4F4FC /* HXMapPaoPaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48668C521C020D1700F4F4FC /* HXMapPaoPaoView.m */; };
+		48668C551C020D2900F4F4FC /* HXMapPaoPaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48668C541C020D2900F4F4FC /* HXMapPaoPaoView.xib */; };
 		4873314E1BFE2D3A00260D5B /* HXProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4873314D1BFE2D3A00260D5B /* HXProfileViewModel.m */; };
 		488D0E401BFA3C170068D47C /* HXForgotPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */; };
 		488D0E411BFA3C170068D47C /* HXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */; };
@@ -305,6 +307,9 @@
 		48668C4C1C01C0F300F4F4FC /* HXOnlinePayDetailMoneyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetailMoneyCell.m; sourceTree = "<group>"; };
 		48668C4E1C02040800F4F4FC /* HXAdviser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXAdviser.h; sourceTree = "<group>"; };
 		48668C4F1C02040800F4F4FC /* HXAdviser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXAdviser.m; sourceTree = "<group>"; };
+		48668C511C020D1700F4F4FC /* HXMapPaoPaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMapPaoPaoView.h; sourceTree = "<group>"; };
+		48668C521C020D1700F4F4FC /* HXMapPaoPaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMapPaoPaoView.m; sourceTree = "<group>"; };
+		48668C541C020D2900F4F4FC /* HXMapPaoPaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMapPaoPaoView.xib; sourceTree = "<group>"; };
 		4873314C1BFE2D3A00260D5B /* HXProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfileViewModel.h; sourceTree = "<group>"; };
 		4873314D1BFE2D3A00260D5B /* HXProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileViewModel.m; sourceTree = "<group>"; };
 		488D0E3B1BFA3C170068D47C /* HXForgotPWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXForgotPWViewController.h; sourceTree = "<group>"; };
@@ -841,6 +846,9 @@
 			isa = PBXGroup;
 			children = (
 				485FE81B1BF8E1CC00654279 /* OrderAlert */,
+				48668C511C020D1700F4F4FC /* HXMapPaoPaoView.h */,
+				48668C521C020D1700F4F4FC /* HXMapPaoPaoView.m */,
+				48668C541C020D2900F4F4FC /* HXMapPaoPaoView.xib */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -848,12 +856,12 @@
 		485FE81B1BF8E1CC00654279 /* OrderAlert */ = {
 			isa = PBXGroup;
 			children = (
-				485FE81C1BF8E1CC00654279 /* HXOrderAlertCell.h */,
-				485FE81D1BF8E1CC00654279 /* HXOrderAlertCell.m */,
-				485FE81E1BF8E1CC00654279 /* HXOrderAlertCell.xib */,
 				485FE81F1BF8E1CC00654279 /* HXOrderAlertView.h */,
 				485FE8201BF8E1CC00654279 /* HXOrderAlertView.m */,
 				485FE8211BF8E1CC00654279 /* HXOrderAlertView.xib */,
+				485FE81C1BF8E1CC00654279 /* HXOrderAlertCell.h */,
+				485FE81D1BF8E1CC00654279 /* HXOrderAlertCell.m */,
+				485FE81E1BF8E1CC00654279 /* HXOrderAlertCell.xib */,
 			);
 			path = OrderAlert;
 			sourceTree = "<group>";
@@ -1142,6 +1150,7 @@
 				484F677E1BF8EA3900B0ABC1 /* LaunchScreen.storyboard in Resources */,
 				48EE54321BF8E8DC00CFD7AD /* Setting.storyboard in Resources */,
 				48EE542F1BF8E8DC00CFD7AD /* MyReservation.storyboard in Resources */,
+				48668C551C020D2900F4F4FC /* HXMapPaoPaoView.xib in Resources */,
 				48EE54331BF8E8DC00CFD7AD /* User.storyboard in Resources */,
 				48EE54301BF8E8DC00CFD7AD /* Recruitment.storyboard in Resources */,
 			);
@@ -1264,6 +1273,7 @@
 				485FE8C71BF8E1CC00654279 /* HXOnlinePayDetailClientCell.m in Sources */,
 				485FE8A51BF8E1CC00654279 /* HXReservationDetailViewController.m in Sources */,
 				485FE8B61BF8E1CC00654279 /* HXStarView.m in Sources */,
+				48668C531C020D1700F4F4FC /* HXMapPaoPaoView.m in Sources */,
 				485FE8711BF8E1CC00654279 /* HXIBLabel.m in Sources */,
 				485FE8941BF8E1CC00654279 /* HXWebViewController.m in Sources */,
 				485FE8D21BF8E1CC00654279 /* HXWorkCircuitOrderCell.m in Sources */,
