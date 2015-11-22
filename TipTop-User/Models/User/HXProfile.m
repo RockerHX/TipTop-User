@@ -10,6 +10,8 @@
 
 @implementation HXProfile
 
+MJCodingImplementation
+
 + (NSDictionary *)replacedKeyFromPropertyName {
     return @{@"ID": @"id",
        @"realName": @"real_name"};
