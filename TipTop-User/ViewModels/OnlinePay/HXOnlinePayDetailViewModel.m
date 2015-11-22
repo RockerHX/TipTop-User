@@ -38,39 +38,25 @@ static NSString *OrderDetailApi = @"/order/view";
 }
 
 #pragma mark - Setter And Getter
-- (CGFloat)infoHeight {
+- (CGFloat)orderHeight {
     return _detail ? 116.0f : 0.0f;
 }
 
-- (CGFloat)promptHeight {
-    return _detail ? 36.0f : 0.0f;
+- (CGFloat)adviserHeight {
+    return _detail ? 110.0f : 0.0f;
+}
+
+- (CGFloat)moneyHeight {
+    return _detail ? 44.0f : 0.0f;
 }
 
 static NSInteger RegularRow = 2;
 - (NSInteger)rows {
-//    return (_detail ? (RegularRow + (_remarks.count ? (_remarks.count + 1) : 0)) : 0);
-    return _detail ? 2 : 0;
+    return _detail ? 3 : 0;
 }
 
 - (NSInteger)regularRow {
     return RegularRow + 1;
-}
-
-- (NSArray *)rowTypes {
-    NSArray *remarks = _remarks;
-    if (remarks.count) {
-        NSMutableArray *array = [NSMutableArray arrayWithArray:_rowTypes];
-        [array addObject:@(HXDetailCellRowPrompt)];
-        for (NSInteger index = 0; index < remarks.count; index ++) {
-            [array addObject:@(HXDetailCellRowRemark)];
-        }
-        _rowTypes = [array copy];
-    }
-    return _rowTypes;
-}
-
-- (NSArray *)remarks {
-    return _remarks;
 }
 
 #pragma mark - Public Methods
@@ -94,8 +80,9 @@ static NSInteger RegularRow = 2;
 #pragma mark - Private Methods
 
 - (void)setupRowTypes {
-    _rowTypes = @[@(HXDetailCellRowInfo),
-                  @(HXDetailCellRowClient)];
+    _rowTypes = @[@(HXDetailCellRowOrder),
+                  @(HXDetailCellRowClient),
+                  @(HXDetailCellRowMoeny)];
 }
 
 - (void)startOrderDetailReuqestWithParameters:(NSDictionary *)parameters {

@@ -1,15 +1,15 @@
 //
-//  HXOnlinePayDetailInfoCell.m
+//  HXOnlinePayDetailOrderCell.m
 //  TipTop-User
 //
 //  Created by ShiCang on 15/10/25.
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import "HXOnlinePayDetailInfoCell.h"
+#import "HXOnlinePayDetailOrderCell.h"
 #import "HXOnlinePayDetailViewModel.h"
 
-@implementation HXOnlinePayDetailInfoCell
+@implementation HXOnlinePayDetailOrderCell
 
 #pragma mark - Public Methods
 - (void)displayWithDetailViewModel:(HXOnlinePayDetailViewModel *)viewModel {

@@ -6,15 +6,17 @@
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import "UITableView+FDTemplateLayoutCell.h"
+#import <UIKit/UIKit.h>
 
 @class HXOnlinePayDetailOrder;
+@class HXStarView;
 
 @interface HXOnlinePayDetailClientCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *clientHeader;
 @property (weak, nonatomic) IBOutlet     UILabel *clientNameLabel;
-@property (weak, nonatomic) IBOutlet     UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet  HXStarView *starView;
+@property (weak, nonatomic) IBOutlet     UILabel *serviceContent;
 
 - (void)displayWithDetailOrder:(HXOnlinePayDetailOrder *)order;
 

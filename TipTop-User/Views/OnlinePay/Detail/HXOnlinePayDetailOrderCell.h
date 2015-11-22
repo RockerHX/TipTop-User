@@ -1,5 +1,5 @@
 //
-//  HXOnlinePayDetailInfoCell.h
+//  HXOnlinePayDetailOrderCell.h
 //  TipTop-User
 //
 //  Created by ShiCang on 15/10/25.
@@ -10,7 +10,7 @@
 
 @class HXOnlinePayDetailViewModel;
 
-@interface HXOnlinePayDetailInfoCell : UITableViewCell
+@interface HXOnlinePayDetailOrderCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderNumberLabel;

@@ -9,8 +9,9 @@
 #import "HXOnlinePayDetailViewController.h"
 #import "HXOnlinePayDetailViewModel.h"
 #import "MJRefresh.h"
-#import "HXOnlinePayDetailInfoCell.h"
+#import "HXOnlinePayDetailOrderCell.h"
 #import "HXOnlinePayDetailClientCell.h"
+#import "HXOnlinePayDetailMoneyCell.h"
 #import "UIAlertView+BlocksKit.h"
 
 @interface HXOnlinePayDetailViewController ()
@@ -46,7 +47,7 @@
 
 #pragma mark - Event Response
 - (void)phoneButonPressed {
-    NSString *moblie = _viewModel.detail.order.clientMobile;
+    NSString *moblie = _viewModel.detail.order.agentMobile;
     [UIAlertView bk_showAlertViewWithTitle:@"是否拨打电话？"
                                    message:moblie
                          cancelButtonTitle:@"拨打"
@@ -82,9 +83,9 @@
     UITableViewCell *cell = nil;
     HXDetailCellRow rowType = [_viewModel.rowTypes[indexPath.row] integerValue];
     switch (rowType) {
-        case HXDetailCellRowInfo: {
-            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXOnlinePayDetailInfoCell class]) forIndexPath:indexPath];
-            [(HXOnlinePayDetailInfoCell *)cell displayWithDetailViewModel:_viewModel];
+        case HXDetailCellRowOrder: {
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXOnlinePayDetailOrderCell class]) forIndexPath:indexPath];
+            [(HXOnlinePayDetailOrderCell *)cell displayWithDetailViewModel:_viewModel];
             break;
         }
         case HXDetailCellRowClient: {
@@ -92,44 +93,31 @@
             [(HXOnlinePayDetailClientCell *)cell displayWithDetailOrder:_viewModel.detail.order];
             break;
         }
-        case HXDetailCellRowPrompt: {
+        case HXDetailCellRowMoeny: {
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXOnlinePayDetailMoneyCell class]) forIndexPath:indexPath];
+            [(HXOnlinePayDetailMoneyCell *)cell displayWithDetailOrder:_viewModel.detail.order];
             break;
-        }
-        case HXDetailCellRowRemark: {
             break;
         }
     }
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (indexPath.row >= _viewModel.regularRow) ? YES : NO;
-}
-
 #pragma mark - Table View Delegete Methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = 0.0f;
-    HXDetailCellRow row = [_viewModel.rowTypes[indexPath.row] integerValue];
-    __weak __typeof__(self)weakSelf = self;
-    switch (row) {
-        case HXDetailCellRowInfo: {
-            height = _viewModel.infoHeight;
+    HXDetailCellRow rowType = [_viewModel.rowTypes[indexPath.row] integerValue];
+    switch (rowType) {
+        case HXDetailCellRowOrder: {
+            height = _viewModel.orderHeight;
             break;
         }
         case HXDetailCellRowClient: {
-            height = [tableView fd_heightForCellWithIdentifier:NSStringFromClass([HXOnlinePayDetailClientCell class])
-                                              cacheByIndexPath:indexPath
-                                                 configuration:
-                      ^(HXOnlinePayDetailClientCell *cell) {
-                          __strong __typeof__(self)strongSelf = weakSelf;
-                          [cell displayWithDetailOrder:strongSelf->_viewModel.detail.order];
-                      }];
+            height = _viewModel.adviserHeight;
             break;
         }
-        case HXDetailCellRowPrompt: {
-            break;
-        }
-        case HXDetailCellRowRemark: {
+        case HXDetailCellRowMoeny: {
+            height = _viewModel.moneyHeight;
             break;
         }
     }
