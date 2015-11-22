@@ -73,8 +73,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0.0f, 0.0f, 36.0f, 36.0f);
     button.imageEdgeInsets = UIEdgeInsetsMake(0.0f, -16.0f, 0.0f, 0.0f);
-    [button setShowsTouchWhenHighlighted:YES];
-    [button setImage:[UIImage imageNamed:@"C-MenuBackIcon"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"C-BackIcon"] forState:UIControlStateNormal];
     if(navigationController.viewControllers.count == 1) { // not the root controller - show back button instead
         [button addTarget:self action:@selector(showMenuButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     } else {
