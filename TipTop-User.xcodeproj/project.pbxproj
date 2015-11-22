@@ -532,10 +532,10 @@
 		485FE78B1BF8E1CC00654279 /* MyReservation */ = {
 			isa = PBXGroup;
 			children = (
-				485FE78C1BF8E1CC00654279 /* HXReservationDetail.h */,
-				485FE78D1BF8E1CC00654279 /* HXReservationDetail.m */,
 				485FE78E1BF8E1CC00654279 /* HXReservationOrder.h */,
 				485FE78F1BF8E1CC00654279 /* HXReservationOrder.m */,
+				485FE78C1BF8E1CC00654279 /* HXReservationDetail.h */,
+				485FE78D1BF8E1CC00654279 /* HXReservationDetail.m */,
 			);
 			path = MyReservation;
 			sourceTree = "<group>";
@@ -543,10 +543,10 @@
 		485FE7901BF8E1CC00654279 /* OnlinePay */ = {
 			isa = PBXGroup;
 			children = (
-				485FE7911BF8E1CC00654279 /* HXOnlinePayDetail.h */,
-				485FE7921BF8E1CC00654279 /* HXOnlinePayDetail.m */,
 				485FE7931BF8E1CC00654279 /* HXOnlinePayOrder.h */,
 				485FE7941BF8E1CC00654279 /* HXOnlinePayOrder.m */,
+				485FE7911BF8E1CC00654279 /* HXOnlinePayDetail.h */,
+				485FE7921BF8E1CC00654279 /* HXOnlinePayDetail.m */,
 			);
 			path = OnlinePay;
 			sourceTree = "<group>";
