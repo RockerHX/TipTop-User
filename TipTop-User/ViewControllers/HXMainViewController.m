@@ -37,8 +37,7 @@
 }
 
 - (void)setupAppStructure {
-    self.contentViewController = [HXStoryBoardManager viewControllerWithClass:[HXHomeViewController class]
-                                                               storyBoardName:HXStoryBoardNameHome];
+    self.contentViewController = [HXHomeViewController navigationControllerInstance];
     HXUserViewController *userViewController = [HXStoryBoardManager viewControllerWithClass:[HXUserViewController class]
                                                                              storyBoardName:HXStoryBoardNameUser];
     userViewController.delegate = self;
@@ -58,8 +57,8 @@
 
 #pragma mark - Private Methods
 - (void)showHomePageViewController {
-    HXHomeViewController *homePageViewController = (HXHomeViewController *)self.contentViewController;
-    [homePageViewController openSocket];
+//    HXHomeViewController *homePageViewController = (HXHomeViewController *)self.contentViewController;
+//    [homePageViewController openSocket];
 }
 
 #pragma mark - HXLoginViewControllerDelegate Methods

@@ -65,6 +65,16 @@ static NSString *NewOrderEvent = @"new_order";
     }];
 }
 
+
+#pragma mark - Setter And Getter
+- (NSString *)navigationControllerIdentifier {
+    return @"HXHomePageNavigationController";
+}
+
+- (HXStoryBoardName)storyBoardName {
+    return HXStoryBoardNameHome;
+}
+
 #pragma mark - Event Response
 - (void)grabButtonPressed {
     [HXOrderAlertView showWithNewOrder:_newOrder hanlde:^(HXNewOrder *newOrder) {

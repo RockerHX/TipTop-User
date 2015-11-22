@@ -6,9 +6,9 @@
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import "HXPanGestureViewController.h"
+#import "UIViewController+HXClass.h"
 
-@interface HXHomeViewController : HXPanGestureViewController
+@interface HXHomeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *userHeader;
 @property (weak, nonatomic) IBOutlet UIImageView *locationIcon;
