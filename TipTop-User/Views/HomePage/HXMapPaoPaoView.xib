@@ -9,11 +9,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HXMapPaoPaoView">
-            <rect key="frame" x="0.0" y="0.0" width="155" height="65.5"/>
+            <rect key="frame" x="0.0" y="0.0" width="163" height="73"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HP-PaopaoBG" translatesAutoresizingMaskIntoConstraints="NO" id="mE9-6k-9Sw">
+                    <rect key="frame" x="0.0" y="0.5" width="163" height="72.5"/>
+                    <animations/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0vF-Du-MdA" customClass="HXIBImageView">
-                    <rect key="frame" x="10" y="13" width="40" height="40"/>
+                    <rect key="frame" x="10" y="10.5" width="40" height="40"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="8ce-MH-J66"/>
@@ -26,7 +30,7 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-hv-hBz" customClass="HXStarView">
-                    <rect key="frame" x="58" y="37" width="80" height="16"/>
+                    <rect key="frame" x="58" y="34.5" width="80" height="16"/>
                     <subviews>
                         <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkf-Zl-aEM">
                             <rect key="frame" x="0.0" y="0.0" width="15" height="16"/>
@@ -119,7 +123,7 @@
                     </connections>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顾问" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STx-oT-KhD">
-                    <rect key="frame" x="58" y="12.5" width="32" height="19.5"/>
+                    <rect key="frame" x="58" y="10.5" width="32" height="19.5"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -127,13 +131,17 @@
                 </label>
             </subviews>
             <animations/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="mE9-6k-9Sw" secondAttribute="trailing" id="41k-iP-ZJf"/>
                 <constraint firstItem="0vF-Du-MdA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="EoD-8g-3A9"/>
                 <constraint firstItem="STx-oT-KhD" firstAttribute="leading" secondItem="0vF-Du-MdA" secondAttribute="trailing" constant="8" id="JAo-A0-ScQ"/>
-                <constraint firstItem="0vF-Du-MdA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KOE-T4-rwK"/>
+                <constraint firstItem="0vF-Du-MdA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-6" id="KOE-T4-rwK"/>
                 <constraint firstItem="STx-oT-KhD" firstAttribute="top" secondItem="0vF-Du-MdA" secondAttribute="top" id="UuG-Ej-A7W"/>
+                <constraint firstItem="mE9-6k-9Sw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="brL-cX-Fjo"/>
+                <constraint firstAttribute="bottom" secondItem="mE9-6k-9Sw" secondAttribute="bottom" id="n9v-mh-d3z"/>
                 <constraint firstItem="dQ2-hv-hBz" firstAttribute="bottom" secondItem="0vF-Du-MdA" secondAttribute="bottom" id="nEz-IN-Rfa"/>
+                <constraint firstItem="mE9-6k-9Sw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rO8-RV-Ae9"/>
                 <constraint firstItem="dQ2-hv-hBz" firstAttribute="leading" secondItem="0vF-Du-MdA" secondAttribute="trailing" constant="8" id="y9E-mg-afR"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -143,11 +151,12 @@
                 <outlet property="nameLabel" destination="STx-oT-KhD" id="3vl-GI-vsW"/>
                 <outlet property="starView" destination="dQ2-hv-hBz" id="c3l-Bc-F31"/>
             </connections>
-            <point key="canvasLocation" x="111.5" y="139.75"/>
+            <point key="canvasLocation" x="115.5" y="143.5"/>
         </view>
     </objects>
     <resources>
         <image name="C-StarIcon" width="16" height="16"/>
         <image name="C-UnStarIcon" width="16" height="16"/>
+        <image name="HP-PaopaoBG" width="113" height="57"/>
     </resources>
 </document>

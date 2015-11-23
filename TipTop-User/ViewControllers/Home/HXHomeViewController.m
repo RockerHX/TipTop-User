@@ -206,22 +206,45 @@ static NSString *NewOrderEvent = @"new_order";
     [_mapView addAnnotations:annotations];
 }
 
+- (void)displayAnnotationView:(BMKAnnotationView *)annotationView {
+    NSArray *subViews = annotationView.paopaoView.subviews;
+    HXMapPaoPaoView *paopaoView = nil;
+    for (UIView *subView in subViews) {
+        if ([subView isKindOfClass:[HXMapPaoPaoView class]]) {
+            paopaoView = (HXMapPaoPaoView *)subView;
+            break;
+        }
+    }
+    [paopaoView displayWithAdviser:[self adviserWithAnnotation:annotationView.annotation]];
+}
+
+- (HXAdviser *)adviserWithAnnotation:(id <BMKAnnotation>)annotation {
+    HXAdviser *adviser = nil;
+    for (adviser in _advisers) {
+        if ([adviser.realName isEqualToString:annotation.title]) {
+            return adviser;
+        }
+    }
+    return adviser;
+}
+
 #pragma mark - Baidu MapView Delegate Methods
 static NSString *annotationIdentifier = @"annotationIdentifier";
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
     BMKAnnotationView *annotationView = [[BMKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
+    HXMapPaoPaoView *paopaoView = [HXMapPaoPaoView instance];
+    BMKActionPaopaoView *actionPaopaoView = [[BMKActionPaopaoView alloc] initWithCustomView:paopaoView];
+    annotationView.paopaoView = actionPaopaoView;
     annotationView.image = [UIImage imageNamed:@"HP-PinIcon-O"];
     return annotationView;
 }
 
 - (void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view {
+    _selectedAnnotationView.image = [UIImage imageNamed:@"HP-PinIcon-O"];
     if ([NSStringFromClass([view class]) isEqualToString:NSStringFromClass([BMKAnnotationView class])]) {
-        _selectedAnnotationView.image = [UIImage imageNamed:@"HP-PinIcon-O"];
         view.image = [UIImage imageNamed:@"HP-PinIcon-B"];
-        HXMapPaoPaoView *paopaoView = [HXMapPaoPaoView instance];
-        BMKActionPaopaoView *actionPaopaoView = [[BMKActionPaopaoView alloc] initWithCustomView:paopaoView];
-        view.paopaoView = actionPaopaoView;
         _selectedAnnotationView = view;
+        [self displayAnnotationView:view];
     }
 }
 
