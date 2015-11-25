@@ -10,7 +10,7 @@
 
 @implementation HXOnlinePayOrder
 
-+ (NSDictionary *)replacedKeyFromPropertyName {
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
       @"displayID": @"display_id",
         @"subCate": @"sub_cate",

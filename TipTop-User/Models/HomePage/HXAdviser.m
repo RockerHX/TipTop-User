@@ -11,7 +11,7 @@
 @implementation HXAdviser
 
 #pragma mark - Class Methods
-+ (NSDictionary *)replacedKeyFromPropertyName {
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
        @"realName": @"real_name",
        @"latitude": @"lat",

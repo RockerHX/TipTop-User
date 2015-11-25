@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482B1CA31C05F59900D65D5D /* HXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CA21C05F59900D65D5D /* HXCategory.m */; };
 		484F677E1BF8EA3900B0ABC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677A1BF8EA3900B0ABC1 /* LaunchScreen.storyboard */; };
 		484F677F1BF8EA3900B0ABC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677C1BF8EA3900B0ABC1 /* Main.storyboard */; };
 		485FE85A1BF8E1CC00654279 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7301BF8E1CC00654279 /* AppDelegate.mm */; };
@@ -124,6 +125,8 @@
 /* Begin PBXFileReference section */
 		3803C0C663CA56A618B7F012 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		44B5E3197A35822D8DB4F522 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		482B1CA11C05F59900D65D5D /* HXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCategory.h; sourceTree = "<group>"; };
+		482B1CA21C05F59900D65D5D /* HXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCategory.m; sourceTree = "<group>"; };
 		484F677B1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484F677D1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		485FE72F1BF8E1CC00654279 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -527,6 +530,8 @@
 				485FE7851BF8E1CC00654279 /* HXNewOrder.m */,
 				48668C4E1C02040800F4F4FC /* HXAdviser.h */,
 				48668C4F1C02040800F4F4FC /* HXAdviser.m */,
+				482B1CA11C05F59900D65D5D /* HXCategory.h */,
+				482B1CA21C05F59900D65D5D /* HXCategory.m */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -1248,6 +1253,7 @@
 				485FE8CB1BF8E1CC00654279 /* HXCaseCardCell.m in Sources */,
 				485FE8961BF8E1CC00654279 /* HXLoginViewController.m in Sources */,
 				485FE8B21BF8E1CC00654279 /* HXReservationDetailViewModel.m in Sources */,
+				482B1CA31C05F59900D65D5D /* HXCategory.m in Sources */,
 				485FE8851BF8E1CC00654279 /* HXUser.m in Sources */,
 				485FE8911BF8E1CC00654279 /* HXMainViewController.m in Sources */,
 				485FE88E1BF8E1CC00654279 /* HXLoginRequset.m in Sources */,
@@ -1497,14 +1503,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Peng Zhao (G4W426PT4Y)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "TipTop-User/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yunlinker.dingguagua-user";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunlinker.dingguaguauser;
 				PRODUCT_NAME = "TipTop-User";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "bbbe5d39-0317-47f7-845a-8534e156a7d7";
 			};
 			name = Debug;
 		};
@@ -1514,14 +1520,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Peng Zhao (G4W426PT4Y)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "TipTop-User/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yunlinker.dingguagua-user";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunlinker.dingguaguauser;
 				PRODUCT_NAME = "TipTop-User";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "bbbe5d39-0317-47f7-845a-8534e156a7d7";
 			};
 			name = Release;
 		};

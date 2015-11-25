@@ -10,7 +10,7 @@
 
 @implementation HXCase
 
-+ (NSDictionary *)replacedKeyFromPropertyName {
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
      return @{@"ID": @"id",
 @"contentIntroduce": @"description",
    @"caseIntroduce": @"content",

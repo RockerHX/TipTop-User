@@ -10,7 +10,7 @@
 
 @implementation HXMessage
 
-+ (NSDictionary *)replacedKeyFromPropertyName{
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
      @"createDate": @"create_time"};
 }

@@ -10,7 +10,7 @@
 
 @implementation HXOnlinePayDetailOrder
 
-+ (NSDictionary *)replacedKeyFromPropertyName {
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
       @"displayID": @"display_id",
         @"subCate": @"sub_cate",
@@ -27,7 +27,7 @@
 
 @implementation HXOnlinePayDetailRemark
 
-+ (NSDictionary *)replacedKeyFromPropertyName {
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
        @"markTime": @"mark_time",
      @"createTime": @"create_time"};
@@ -37,7 +37,7 @@
 
 @implementation HXOnlinePayDetail
 
-+ (NSDictionary *)objectClassInArray {
++ (NSDictionary *)mj_objectClassInArray {
     return @{@"remarks": @"HXOnlinePayDetailRemark"};
 }
 

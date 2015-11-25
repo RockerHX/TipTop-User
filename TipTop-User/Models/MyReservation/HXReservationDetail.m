@@ -10,7 +10,7 @@
 
 @implementation HXReservationDetailOrder
 
-+ (NSDictionary *)replacedKeyFromPropertyName {
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
       @"displayID": @"display_id",
         @"subCate": @"sub_cate",
@@ -26,7 +26,7 @@
 
 @implementation HXReservationDetailRemark
 
-+ (NSDictionary *)replacedKeyFromPropertyName {
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
        @"markTime": @"mark_time",
      @"createTime": @"create_time"};
@@ -36,7 +36,7 @@
 
 @implementation HXReservationDetail
 
-+ (NSDictionary *)objectClassInArray {
++ (NSDictionary *)mj_objectClassInArray {
     return @{@"remarks": @"HXReservationDetailRemark"};
 }
 

@@ -11,7 +11,7 @@
 @implementation HXNewOrder
 
 #pragma mark - Class Methods
-+ (NSDictionary *)replacedKeyFromPropertyName {
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
         @"subCate": @"sub_cate"};
 }
