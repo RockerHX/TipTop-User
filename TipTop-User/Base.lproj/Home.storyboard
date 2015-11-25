@@ -37,18 +37,56 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKb-5Q-whb">
                                 <rect key="frame" x="0.0" y="384" width="320" height="120"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOR-0Q-YJR">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOR-0Q-YJR" customClass="HXHomePageCategoryView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UU3-Av-ynl" customClass="iCarousel">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="hOR-0Q-YJR" id="aYx-Fb-nHB"/>
+                                                    <outlet property="delegate" destination="hOR-0Q-YJR" id="jF2-Jw-SxJ"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="CNB-JD-Jm8"/>
+                                            <constraint firstItem="UU3-Av-ynl" firstAttribute="leading" secondItem="hOR-0Q-YJR" secondAttribute="leading" id="TfT-xY-T2v"/>
+                                            <constraint firstItem="UU3-Av-ynl" firstAttribute="top" secondItem="hOR-0Q-YJR" secondAttribute="top" id="ezM-sG-Wi7"/>
+                                            <constraint firstAttribute="bottom" secondItem="UU3-Av-ynl" secondAttribute="bottom" id="h4L-iT-SnN"/>
+                                            <constraint firstAttribute="trailing" secondItem="UU3-Av-ynl" secondAttribute="trailing" id="jjt-n5-hY4"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="carousel" destination="UU3-Av-ynl" id="G5W-qg-jhw"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWf-Yd-Z2t">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWf-Yd-Z2t" customClass="HXHomePageSubCategoryView">
                                         <rect key="frame" x="0.0" y="40" width="320" height="30"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5SD-BC-KmB" customClass="iCarousel">
+                                                <rect key="frame" x="4" y="4" width="312" height="22"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="zWf-Yd-Z2t" id="vIS-ws-3wE"/>
+                                                    <outlet property="delegate" destination="zWf-Yd-Z2t" id="DAS-WZ-bBR"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="5SD-BC-KmB" firstAttribute="leading" secondItem="zWf-Yd-Z2t" secondAttribute="leading" constant="4" id="6Gy-xD-hA3"/>
+                                            <constraint firstItem="5SD-BC-KmB" firstAttribute="top" secondItem="zWf-Yd-Z2t" secondAttribute="top" constant="4" id="HRj-IR-Iqp"/>
+                                            <constraint firstAttribute="trailing" secondItem="5SD-BC-KmB" secondAttribute="trailing" constant="4" id="LYT-xA-sRq"/>
+                                            <constraint firstAttribute="bottom" secondItem="5SD-BC-KmB" secondAttribute="bottom" constant="4" id="Pff-kW-SuX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="carousel" destination="5SD-BC-KmB" id="uaY-LR-wSx"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9CE-FZ-ZYR">
                                         <rect key="frame" x="0.0" y="70" width="320" height="50"/>
@@ -156,7 +194,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="categoryView" destination="hOR-0Q-YJR" id="3Hj-pP-umq"/>
                         <outlet property="mapView" destination="392-ZY-cNd" id="chY-vr-p39"/>
+                        <outlet property="subCategoryView" destination="zWf-Yd-Z2t" id="j5Q-pX-FGZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1T-Xp-pIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -165,7 +205,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HP-CallButtonIcon" width="532" height="66"/>
+        <image name="HP-CallButtonIcon" width="355" height="44"/>
         <image name="HP-CategoryIcon" width="15" height="12"/>
         <image name="HP-HeaderIcon" width="25" height="25"/>
         <image name="HP-Logo" width="135" height="26"/>

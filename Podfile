@@ -15,6 +15,7 @@ pod 'SocketRocket'
 pod 'MBProgressHUD'
 pod 'MJRefresh'
 pod 'UITableView+FDTemplateLayoutCell'
+pod 'iCarousel'
 
 pod 'REFrostedViewController'
 

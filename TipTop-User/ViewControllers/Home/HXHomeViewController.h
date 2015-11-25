@@ -9,9 +9,14 @@
 #import "UIViewController+HXClass.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 
+@class HXHomePageCategoryView;
+@class HXHomePageSubCategoryView;
+
 @interface HXHomeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet BMKMapView *mapView;
+@property (weak, nonatomic) IBOutlet HXHomePageCategoryView *categoryView;
+@property (weak, nonatomic) IBOutlet HXHomePageSubCategoryView *subCategoryView;
 
 - (IBAction)callButtonPressed;
 - (IBAction)avatarButtonPressed;

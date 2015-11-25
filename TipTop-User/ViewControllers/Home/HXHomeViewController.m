@@ -15,6 +15,8 @@
 #import "HXAdviser.h"
 #import "HXMapPaoPaoView.h"
 #import "HXCategoryManager.h"
+#import "HXHomePageCategoryView.h"
+#import "HXHomePageSubCategoryView.h"
 
 
 static NSString *AgentNearbyApi       = @"/agent/nearby";
@@ -68,7 +70,7 @@ static NSString *NewOrderEvent = @"new_order";
     [categoryManager fetchCategories:^(BOOL compeleted) {
         __strong __typeof__(self)strongSelf = weakSelf;
         if (compeleted) {
-            categoryManager;
+//            strongSelf.categoryView.items = categoryManager.categories;
         }
         [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
     }];

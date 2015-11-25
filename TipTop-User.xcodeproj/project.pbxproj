@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		482B1CA31C05F59900D65D5D /* HXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CA21C05F59900D65D5D /* HXCategory.m */; };
 		482B1CA61C05F8BA00D65D5D /* HXCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CA51C05F8BA00D65D5D /* HXCategoryManager.m */; };
+		482B1CA91C060BAC00D65D5D /* HXHomePageCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CA81C060BAC00D65D5D /* HXHomePageCategoryView.m */; };
+		482B1CAC1C060BB900D65D5D /* HXHomePageSubCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CAB1C060BB900D65D5D /* HXHomePageSubCategoryView.m */; };
+		482B1CAF1C0613AF00D65D5D /* HXHomePageCategoryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CAE1C0613AF00D65D5D /* HXHomePageCategoryItemView.m */; };
+		482B1CB11C0613BB00D65D5D /* HXHomePageCategoryItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482B1CB01C0613BB00D65D5D /* HXHomePageCategoryItemView.xib */; };
 		484F677E1BF8EA3900B0ABC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677A1BF8EA3900B0ABC1 /* LaunchScreen.storyboard */; };
 		484F677F1BF8EA3900B0ABC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677C1BF8EA3900B0ABC1 /* Main.storyboard */; };
 		485FE85A1BF8E1CC00654279 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7301BF8E1CC00654279 /* AppDelegate.mm */; };
@@ -130,6 +134,13 @@
 		482B1CA21C05F59900D65D5D /* HXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCategory.m; sourceTree = "<group>"; };
 		482B1CA41C05F8BA00D65D5D /* HXCategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCategoryManager.h; sourceTree = "<group>"; };
 		482B1CA51C05F8BA00D65D5D /* HXCategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCategoryManager.m; sourceTree = "<group>"; };
+		482B1CA71C060BAC00D65D5D /* HXHomePageCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXHomePageCategoryView.h; sourceTree = "<group>"; };
+		482B1CA81C060BAC00D65D5D /* HXHomePageCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHomePageCategoryView.m; sourceTree = "<group>"; };
+		482B1CAA1C060BB900D65D5D /* HXHomePageSubCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXHomePageSubCategoryView.h; sourceTree = "<group>"; };
+		482B1CAB1C060BB900D65D5D /* HXHomePageSubCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHomePageSubCategoryView.m; sourceTree = "<group>"; };
+		482B1CAD1C0613AF00D65D5D /* HXHomePageCategoryItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXHomePageCategoryItemView.h; sourceTree = "<group>"; };
+		482B1CAE1C0613AF00D65D5D /* HXHomePageCategoryItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHomePageCategoryItemView.m; sourceTree = "<group>"; };
+		482B1CB01C0613BB00D65D5D /* HXHomePageCategoryItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXHomePageCategoryItemView.xib; sourceTree = "<group>"; };
 		484F677B1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484F677D1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		485FE72F1BF8E1CC00654279 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -859,6 +870,13 @@
 				48668C511C020D1700F4F4FC /* HXMapPaoPaoView.h */,
 				48668C521C020D1700F4F4FC /* HXMapPaoPaoView.m */,
 				48668C541C020D2900F4F4FC /* HXMapPaoPaoView.xib */,
+				482B1CA71C060BAC00D65D5D /* HXHomePageCategoryView.h */,
+				482B1CA81C060BAC00D65D5D /* HXHomePageCategoryView.m */,
+				482B1CAA1C060BB900D65D5D /* HXHomePageSubCategoryView.h */,
+				482B1CAB1C060BB900D65D5D /* HXHomePageSubCategoryView.m */,
+				482B1CAD1C0613AF00D65D5D /* HXHomePageCategoryItemView.h */,
+				482B1CAE1C0613AF00D65D5D /* HXHomePageCategoryItemView.m */,
+				482B1CB01C0613BB00D65D5D /* HXHomePageCategoryItemView.xib */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -1156,6 +1174,7 @@
 				48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */,
 				484F677F1BF8EA3900B0ABC1 /* Main.storyboard in Resources */,
 				485FE85B1BF8E1CC00654279 /* Assets.xcassets in Resources */,
+				482B1CB11C0613BB00D65D5D /* HXHomePageCategoryItemView.xib in Resources */,
 				48EE54311BF8E8DC00CFD7AD /* OnlinePay.storyboard in Resources */,
 				484F677E1BF8EA3900B0ABC1 /* LaunchScreen.storyboard in Resources */,
 				48EE54321BF8E8DC00CFD7AD /* Setting.storyboard in Resources */,
@@ -1225,6 +1244,7 @@
 				485FE8C21BF8E1CC00654279 /* HXReservationDetailClientCell.m in Sources */,
 				485FE8CD1BF8E1CC00654279 /* HXProfileEditCell.m in Sources */,
 				485FE8A41BF8E1CC00654279 /* HXReservationAddRemarkViewController.m in Sources */,
+				482B1CA91C060BAC00D65D5D /* HXHomePageCategoryView.m in Sources */,
 				485FE8861BF8E1CC00654279 /* HXCase.m in Sources */,
 				485FE8BD1BF8E1CC00654279 /* HXMessageCell.m in Sources */,
 				485FE8BA1BF8E1CC00654279 /* HXOrderAlertView.m in Sources */,
@@ -1273,6 +1293,7 @@
 				485FE8771BF8E1CC00654279 /* HXAppConstants.m in Sources */,
 				485FE8A81BF8E1CC00654279 /* HXOnlinePayListViewController.m in Sources */,
 				485FE88D1BF8E1CC00654279 /* HXSocketManager.m in Sources */,
+				482B1CAF1C0613AF00D65D5D /* HXHomePageCategoryItemView.m in Sources */,
 				48668C4D1C01C0F300F4F4FC /* HXOnlinePayDetailMoneyCell.m in Sources */,
 				485FE8AD1BF8E1CC00654279 /* HXChangePassWordViewController.m in Sources */,
 				485FE8C31BF8E1CC00654279 /* HXReservationDetailInfoCell.m in Sources */,
@@ -1315,6 +1336,7 @@
 				485FE88A1BF8E1CC00654279 /* HXApi.m in Sources */,
 				485FE8731BF8E1CC00654279 /* HXIBnsepectableManager.m in Sources */,
 				485FE8981BF8E1CC00654279 /* HXUserViewController.m in Sources */,
+				482B1CAC1C060BB900D65D5D /* HXHomePageSubCategoryView.m in Sources */,
 				485FE89A1BF8E1CC00654279 /* HXMessageDetailViewController.m in Sources */,
 				485FE88B1BF8E1CC00654279 /* HXApiRequest.m in Sources */,
 				485FE8B81BF8E1CC00654279 /* HXOrderAlertCell.m in Sources */,
