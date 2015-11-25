@@ -14,6 +14,7 @@
 #import "HXAppApiRequest.h"
 #import "HXAdviser.h"
 #import "HXMapPaoPaoView.h"
+#import "HXCategoryManager.h"
 
 
 static NSString *AgentNearbyApi       = @"/agent/nearby";
@@ -60,6 +61,17 @@ static NSString *NewOrderEvent = @"new_order";
 #pragma mark - Config Methods
 - (void)initConfig {
     [self displayUserLocation];
+    
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    __weak __typeof__(self)weakSelf = self;
+    HXCategoryManager *categoryManager = [HXCategoryManager share];
+    [categoryManager fetchCategories:^(BOOL compeleted) {
+        __strong __typeof__(self)strongSelf = weakSelf;
+        if (compeleted) {
+            categoryManager;
+        }
+        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+    }];
 }
 
 - (void)viewConfig {

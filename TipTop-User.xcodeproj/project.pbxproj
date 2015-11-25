@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		482B1CA31C05F59900D65D5D /* HXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CA21C05F59900D65D5D /* HXCategory.m */; };
+		482B1CA61C05F8BA00D65D5D /* HXCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CA51C05F8BA00D65D5D /* HXCategoryManager.m */; };
 		484F677E1BF8EA3900B0ABC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677A1BF8EA3900B0ABC1 /* LaunchScreen.storyboard */; };
 		484F677F1BF8EA3900B0ABC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677C1BF8EA3900B0ABC1 /* Main.storyboard */; };
 		485FE85A1BF8E1CC00654279 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7301BF8E1CC00654279 /* AppDelegate.mm */; };
@@ -127,6 +128,8 @@
 		44B5E3197A35822D8DB4F522 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		482B1CA11C05F59900D65D5D /* HXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCategory.h; sourceTree = "<group>"; };
 		482B1CA21C05F59900D65D5D /* HXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCategory.m; sourceTree = "<group>"; };
+		482B1CA41C05F8BA00D65D5D /* HXCategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCategoryManager.h; sourceTree = "<group>"; };
+		482B1CA51C05F8BA00D65D5D /* HXCategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCategoryManager.m; sourceTree = "<group>"; };
 		484F677B1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484F677D1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		485FE72F1BF8E1CC00654279 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -532,6 +535,8 @@
 				48668C4F1C02040800F4F4FC /* HXAdviser.m */,
 				482B1CA11C05F59900D65D5D /* HXCategory.h */,
 				482B1CA21C05F59900D65D5D /* HXCategory.m */,
+				482B1CA41C05F8BA00D65D5D /* HXCategoryManager.h */,
+				482B1CA51C05F8BA00D65D5D /* HXCategoryManager.m */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -1273,6 +1278,7 @@
 				485FE8C31BF8E1CC00654279 /* HXReservationDetailInfoCell.m in Sources */,
 				485FE8BE1BF8E1CC00654279 /* HXMessageListCell.m in Sources */,
 				48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */,
+				482B1CA61C05F8BA00D65D5D /* HXCategoryManager.m in Sources */,
 				485FE8B71BF8E1CC00654279 /* BRPlaceholderTextView.m in Sources */,
 				48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */,
 				485FE8C61BF8E1CC00654279 /* HXMyReservationCell.m in Sources */,
