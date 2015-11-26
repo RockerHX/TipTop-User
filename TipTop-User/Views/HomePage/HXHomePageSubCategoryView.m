@@ -7,8 +7,7 @@
 //
 
 #import "HXHomePageSubCategoryView.h"
-#import "HXHomePageCategoryItemView.h"
-#import "HXCategory.h"
+#import "HXHomePageCategoryCell.h"
 
 @implementation HXHomePageSubCategoryView
 
@@ -23,8 +22,6 @@
 #pragma mark - Config Methods
 #pragma mark - Config Methods
 - (void)initConfig {
-    _carousel.type = iCarouselTypeLinear;
-    _carousel.pagingEnabled = YES;
 }
 
 - (void)viewConfig {
@@ -36,56 +33,38 @@
 #pragma mark - Setter And Getter
 - (void)setItems:(NSArray *)items {
     _items = items;
-    [_carousel reloadData];
+    [_collectionView reloadData];
 }
 
-#pragma mark - iCarousel Data Source Methods
-- (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
-    //return the total number of items in the carousel
+#pragma mark - Collection View Data Source Methods
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [_items count];
 }
 
-- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
-    HXHomePageCategoryItemView *itemView = nil;
-    //create new view if no view is available for recycling
-    if (!view){
-        view = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, carousel.frame.size.width, carousel.frame.size.height)];
-        itemView = [[HXHomePageCategoryItemView alloc] initWithFrame:view.bounds];
-        itemView.tag = 1;
-        [view addSubview:itemView];
-    } else {
-        //get a reference to the label in the recycled view
-        itemView = (HXHomePageCategoryItemView *)[view viewWithTag:1];
-    }
-    
-    if ((_items.count) && (index < _items.count)) {
-        itemView.titleLabel.text = _items[index].name;
-    }
-    
-    return view;
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    HXHomePageCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([HXHomePageCategoryCell class]) forIndexPath:indexPath];
+    HXCategoryItem *subCategory = _items[indexPath.row];
+    [cell displayWithSubCategory:subCategory];
+    return cell;
 }
 
-#pragma mark - iCarousel Delegate Methods
-- (CGFloat)carousel:(__unused iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value {
-    switch (option) {
-        case iCarouselOptionSpacing: {
-            //add a bit of spacing between the item views
-            return value * 1.02f;
-            break;
-        }
-        default: {
-            return value;
-        }
+#pragma mark - Collection View Delegate Methods
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat width = 40.0f;
+    NSString *name = _items[indexPath.row].name;
+    if (name.length == 3) {
+        width = 50.0f;
+    } else if (name.length == 4) {
+        width = 65.0f;
+    } else if (name.length == 5) {
+        width = 75.0f;
     }
+    return CGSizeMake(width, 20.0f);
 }
 
-- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
-    if (_items.count) {
-    }
-}
-
-- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel {
-    if (_items.count) {
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (_delegate && [_delegate respondsToSelector:@selector(subCategoryViewDidSelected:)]) {
+        [_delegate subCategoryViewDidSelected:_items[indexPath.row].ID];
     }
 }
 

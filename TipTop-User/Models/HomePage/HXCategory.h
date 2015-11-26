@@ -26,6 +26,6 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *shortName;
 
-@property (nonatomic, strong) NSArray<HXCategoryItem *> *sub;
+@property (nonatomic, strong) NSArray<HXCategoryItem *> *subItems;
 
 @end

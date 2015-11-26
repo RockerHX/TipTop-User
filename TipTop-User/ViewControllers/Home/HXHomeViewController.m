@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, HXHomePageConnectState) {
 
 static NSString *NewOrderEvent = @"new_order";
 
-@interface HXHomeViewController () <BMKMapViewDelegate>
+@interface HXHomeViewController () <BMKMapViewDelegate, HXHomePageCategoryViewDelegate, HXHomePageSubCategoryViewDelegate>
 @end
 
 @implementation HXHomeViewController {
@@ -62,15 +62,15 @@ static NSString *NewOrderEvent = @"new_order";
 
 #pragma mark - Config Methods
 - (void)initConfig {
-    [self displayUserLocation];
+    [self displayUserLocationWithID:@"0"];
     
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     __weak __typeof__(self)weakSelf = self;
     HXCategoryManager *categoryManager = [HXCategoryManager share];
-    [categoryManager fetchCategories:^(BOOL compeleted) {
+    [categoryManager fetchCategories:^(NSArray<HXCategory *> * _Nullable categories, BOOL compeleted) {
         __strong __typeof__(self)strongSelf = weakSelf;
         if (compeleted) {
-//            strongSelf.categoryView.items = categoryManager.categories;
+            strongSelf.categoryView.items = categories;
         }
         [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
     }];
@@ -161,14 +161,14 @@ static NSString *NewOrderEvent = @"new_order";
     }
 }
 
-- (void)displayUserLocation {
+- (void)displayUserLocationWithID:(NSString *)ID {
     __weak __typeof__(self)weakSelf = self;
     [[HXLocationManager share] getLocationSuccess:
      ^(BMKUserLocation *userLocation, NSString *latitude, NSString *longtitude){
         __strong __typeof__(self)strongSelf = weakSelf;
         strongSelf->_location = userLocation.location.coordinate;
         [strongSelf->_mapView updateLocationData:userLocation];     // 根据坐标在地图上显示位置
-         [strongSelf starGetAgentNearbyRequestWithParameters:@{@"cid": @"1",
+         [strongSelf starGetAgentNearbyRequestWithParameters:@{@"cid": ID,
                                                                @"lat": latitude,
                                                                @"lng": longtitude}];
     } failure:^(NSString *latitude, NSString *longitude, NSError *error) {
@@ -260,6 +260,16 @@ static NSString *annotationIdentifier = @"annotationIdentifier";
         _selectedAnnotationView = view;
         [self displayAnnotationView:view];
     }
+}
+
+#pragma mark - HXHomePageCategoryViewDelegate Methods
+- (void)categoryViewDidSelected:(NSArray *)subItems {
+    _subCategoryView.items = subItems;
+}
+
+#pragma mark - HXHomePageSubCategoryViewDelegate Methods
+- (void)subCategoryViewDidSelected:(NSString *)subID {
+    [self displayUserLocationWithID:subID];
 }
 
 @end

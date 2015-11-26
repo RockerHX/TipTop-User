@@ -5,11 +5,33 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1
+        },
+        "cap-insets" : {
+          "right" : 26,
+          "left" : 28
+        }
+      },
       "idiom" : "universal",
       "filename" : "HP-CategorySelectedBG@2x.png",
       "scale" : "2x"
     },
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1
+        },
+        "cap-insets" : {
+          "right" : 39,
+          "left" : 42
+        }
+      },
       "idiom" : "universal",
       "filename" : "HP-CategorySelectedBG@3x.png",
       "scale" : "3x"

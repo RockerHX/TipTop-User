@@ -6,13 +6,21 @@
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import <iCarousel/iCarousel.h>
+#import <UIKit/UIKit.h>
 
 @class HXCategory;
 
-@interface HXHomePageCategoryView : UIView <iCarouselDelegate, iCarouselDataSource>
+@protocol HXHomePageCategoryViewDelegate <NSObject>
 
-@property (weak, nonatomic) IBOutlet iCarousel *carousel;
+@optional
+- (void)categoryViewDidSelected:(NSArray *)subItems;
+
+@end
+
+@interface HXHomePageCategoryView : UIView <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (weak, nonatomic) IBOutlet               id  <HXHomePageCategoryViewDelegate>delegate;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic, strong) NSArray<HXCategory *> *items;
 

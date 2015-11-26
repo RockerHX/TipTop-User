@@ -14,6 +14,6 @@
 
 + (nonnull instancetype)share;
 
-- (void)fetchCategories:(nullable void(^)(BOOL compeleted))compeleted;
+- (void)fetchCategories:(nullable void(^)(NSArray<HXCategory *> * _Nullable categories, BOOL compeleted))compeleted;
 
 @end

@@ -9,7 +9,7 @@
 #import "HXCategoryManager.h"
 #import "HXAppApiRequest.h"
 
-typedef void(^BLOCK)(BOOL compeleted);
+typedef void(^BLOCK)(NSArray<HXCategory *> * _Nullable categories, BOOL compeleted);
 
 static NSString *CategoriesDataPath = @"/categories.data";
 
@@ -31,7 +31,7 @@ static HXCategoryManager *manager = nil;
 }
 
 #pragma mark - Private Methods
-- (void)fetchCategories:(nullable void(^)(BOOL compeleted))compeleted {
+- (void)fetchCategories:(nullable void(^)(NSArray<HXCategory *> * _Nullable categories, BOOL compeleted))compeleted {
     _block = compeleted;
     [self startCategoriesRequest];
 }
@@ -50,14 +50,14 @@ static HXCategoryManager *manager = nil;
             }
             strongSelf.categories = [mutableArray copy];
             if (strongSelf->_block) {
-                strongSelf->_block(YES);
+                strongSelf->_block(strongSelf.categories, YES);
             }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         __strong __typeof__(self)strongSelf = weakSelf;
         strongSelf.categories = nil;
         if (strongSelf->_block) {
-            strongSelf->_block(NO);
+            strongSelf->_block(strongSelf.categories, YES);
         }
     }];}
 

@@ -30,11 +30,12 @@ MJCodingImplementation
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
       @"shortName": @"short_name",
-     @"iconActive": @"icon_active"};
+     @"iconActive": @"icon_active",
+       @"subItems": @"sub"};
 }
 
 + (NSDictionary *)mj_objectClassInArray {
-    return @{@"sub": @"HXCategoryItem"};
+    return @{@"subItems": @"HXCategoryItem"};
 }
 
 @end
