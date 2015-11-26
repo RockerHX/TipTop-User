@@ -1531,14 +1531,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Peng Zhao (G4W426PT4Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "TipTop-User/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunlinker.dingguaguauser;
 				PRODUCT_NAME = "TipTop-User";
-				PROVISIONING_PROFILE = "bbbe5d39-0317-47f7-845a-8534e156a7d7";
+				PROVISIONING_PROFILE = "ba987143-a230-4921-a2f2-713b542b4b88";
 			};
 			name = Debug;
 		};
@@ -1555,7 +1555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunlinker.dingguaguauser;
 				PRODUCT_NAME = "TipTop-User";
-				PROVISIONING_PROFILE = "bbbe5d39-0317-47f7-845a-8534e156a7d7";
+				PROVISIONING_PROFILE = "ba987143-a230-4921-a2f2-713b542b4b88";
 			};
 			name = Release;
 		};
