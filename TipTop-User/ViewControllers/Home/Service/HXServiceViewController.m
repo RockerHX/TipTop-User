@@ -12,6 +12,7 @@
 #import "HXSubServiceCell.h"
 #import "HXCategoryManager.h"
 #import "UIAlertView+BlocksKit.h"
+#import "HXNormalServiceListViewController.h"
 
 @interface HXServiceViewController ()
 @end
@@ -35,15 +36,13 @@
 }
 
 - (void)viewConfig {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0.0f, 0.0f, 36.0f, 36.0f);
-    button.imageEdgeInsets = UIEdgeInsetsMake(0.0f, -16.0f, 0.0f, 0.0f);
-    [button setImage:[UIImage imageNamed:@"C-BackIcon"] forState:UIControlStateNormal];
-    [button addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
 #pragma mark - Event Response
+- (IBAction)backButtonPressed {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)hotCallButtonPressed {
     [UIAlertView bk_showAlertViewWithTitle:@"拨打24小时热线？"
                                    message:@"400-962540"
@@ -92,7 +91,8 @@
     } else if ([tableView isEqual:_subServiceTableView]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         _subServiceSelectedIndex = indexPath.row;
-        
+        HXNormalServiceListViewController *normalServiceListViewController = [HXNormalServiceListViewController instance];
+        [self.navigationController pushViewController:normalServiceListViewController animated:YES];
     }
 }
 

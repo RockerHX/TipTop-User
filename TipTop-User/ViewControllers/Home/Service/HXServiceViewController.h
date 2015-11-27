@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *serviceTableView;
 @property (weak, nonatomic) IBOutlet UITableView *subServiceTableView;
 
+- (IBAction)backButtonPressed;
 - (IBAction)hotCallButtonPressed;
 
 @end

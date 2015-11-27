@@ -106,6 +106,8 @@
 		487D7AE51C08A04100B11A35 /* HXServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D7AE41C08A04100B11A35 /* HXServiceViewController.m */; };
 		487D7AEB1C08A07E00B11A35 /* HXServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D7AE81C08A07E00B11A35 /* HXServiceCell.m */; };
 		487D7AEC1C08A07E00B11A35 /* HXSubServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D7AEA1C08A07E00B11A35 /* HXSubServiceCell.m */; };
+		487D7AEF1C08BA8100B11A35 /* HXNormalServiceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D7AEE1C08BA8100B11A35 /* HXNormalServiceListViewController.m */; };
+		487D7AF21C08BEE100B11A35 /* HXServiceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D7AF11C08BEE100B11A35 /* HXServiceListViewController.m */; };
 		488D0E401BFA3C170068D47C /* HXForgotPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */; };
 		488D0E411BFA3C170068D47C /* HXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */; };
 		488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */; };
@@ -326,6 +328,10 @@
 		487D7AE81C08A07E00B11A35 /* HXServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceCell.m; sourceTree = "<group>"; };
 		487D7AE91C08A07E00B11A35 /* HXSubServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXSubServiceCell.h; sourceTree = "<group>"; };
 		487D7AEA1C08A07E00B11A35 /* HXSubServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXSubServiceCell.m; sourceTree = "<group>"; };
+		487D7AED1C08BA8100B11A35 /* HXNormalServiceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNormalServiceListViewController.h; sourceTree = "<group>"; };
+		487D7AEE1C08BA8100B11A35 /* HXNormalServiceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNormalServiceListViewController.m; sourceTree = "<group>"; };
+		487D7AF01C08BEE100B11A35 /* HXServiceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceListViewController.h; sourceTree = "<group>"; };
+		487D7AF11C08BEE100B11A35 /* HXServiceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceListViewController.m; sourceTree = "<group>"; };
 		488D0E3B1BFA3C170068D47C /* HXForgotPWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXForgotPWViewController.h; sourceTree = "<group>"; };
 		488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXForgotPWViewController.m; sourceTree = "<group>"; };
 		488D0E3E1BFA3C170068D47C /* HXRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRegisterViewController.h; sourceTree = "<group>"; };
@@ -1030,6 +1036,10 @@
 			children = (
 				487D7AE31C08A04100B11A35 /* HXServiceViewController.h */,
 				487D7AE41C08A04100B11A35 /* HXServiceViewController.m */,
+				487D7AF01C08BEE100B11A35 /* HXServiceListViewController.h */,
+				487D7AF11C08BEE100B11A35 /* HXServiceListViewController.m */,
+				487D7AED1C08BA8100B11A35 /* HXNormalServiceListViewController.h */,
+				487D7AEE1C08BA8100B11A35 /* HXNormalServiceListViewController.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1318,6 +1328,7 @@
 				485FE8921BF8E1CC00654279 /* HXPanGestureNavgaitionController.m in Sources */,
 				485FE89B1BF8E1CC00654279 /* HXMessageListViewController.m in Sources */,
 				4873314E1BFE2D3A00260D5B /* HXProfileViewModel.m in Sources */,
+				487D7AEF1C08BA8100B11A35 /* HXNormalServiceListViewController.m in Sources */,
 				485FE8891BF8E1CC00654279 /* HXWorkCircuitOrder.m in Sources */,
 				485FE8991BF8E1CC00654279 /* HXMessageCenterViewController.m in Sources */,
 				485FE8A21BF8E1CC00654279 /* HXMyReservationListViewController.m in Sources */,
@@ -1330,6 +1341,7 @@
 				485FE8B11BF8E1CC00654279 /* HXWorkCircuitListViewController.m in Sources */,
 				485FE8721BF8E1CC00654279 /* HXIBView.m in Sources */,
 				485FE8AF1BF8E1CC00654279 /* HXUseExplanationViewController.m in Sources */,
+				487D7AF21C08BEE100B11A35 /* HXServiceListViewController.m in Sources */,
 				485FE86F1BF8E1CC00654279 /* HXIBButton.m in Sources */,
 				485FE8C91BF8E1CC00654279 /* HXOnlinePayOrderCell.m in Sources */,
 				485FE8A31BF8E1CC00654279 /* HXRemarkDetailViewController.m in Sources */,
