@@ -8,13 +8,20 @@
 
 #import "MJExtension.h"
 
+typedef NS_ENUM(NSUInteger, HXCategoryListType) {
+    HXCategoryListTypeNormal,
+    HXCategoryListTypeDesigner,
+    HXCategoryListTypeCase,
+    HXCategoryListTypeHouseSale
+};
+
 
 @interface HXCategoryItem : NSObject
 
-@property (nonatomic, strong)  NSString *ID;
-@property (nonatomic, strong)  NSString *name;
-@property (nonatomic, strong)  NSString *shortName;
-@property (nonatomic, assign) NSInteger  listType;
+@property (nonatomic, strong)           NSString *ID;
+@property (nonatomic, strong)           NSString *name;
+@property (nonatomic, strong)           NSString *shortName;
+@property (nonatomic, assign) HXCategoryListType  listType;
 
 @end
 
