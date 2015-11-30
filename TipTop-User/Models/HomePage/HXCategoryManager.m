@@ -59,6 +59,7 @@ static HXCategoryManager *manager = nil;
         if (strongSelf->_block) {
             strongSelf->_block(strongSelf.categories, YES);
         }
-    }];}
+    }];
+}
 
 @end
