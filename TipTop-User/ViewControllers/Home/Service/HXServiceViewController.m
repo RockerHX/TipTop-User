@@ -77,7 +77,6 @@
         return cell;
     } else if ([tableView isEqual:_subServiceTableView]) {
         HXSubServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXSubServiceCell class]) forIndexPath:indexPath];
-        [cell displayWithSubService:(categories[_serviceSelectedIndex]).subItems[indexPath.row]];
         [cell displayWithSubService:categories[_serviceSelectedIndex].subItems[indexPath.row]];
         return cell;
     }
@@ -92,7 +91,9 @@
     } else if ([tableView isEqual:_subServiceTableView]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         _subServiceSelectedIndex = indexPath.row;
+        NSArray<HXCategory *> *categories = [HXCategoryManager share].categories;
         HXNormalServiceListViewController *normalServiceListViewController = [HXNormalServiceListViewController instance];
+        normalServiceListViewController.cid = categories[_serviceSelectedIndex].ID;
         [self.navigationController pushViewController:normalServiceListViewController animated:YES];
     }
 }

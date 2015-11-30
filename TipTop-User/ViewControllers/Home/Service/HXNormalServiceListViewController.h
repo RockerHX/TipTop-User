@@ -10,7 +10,13 @@
 
 @interface HXNormalServiceListViewController : HXServiceListViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet      UIView *listContentView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (weak, nonatomic) IBOutlet UILabel *leftLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rightLabel;
+
+@property (nonatomic, copy) NSString *cid;
 
 - (IBAction)leftButtonPressed;
 - (IBAction)rightButtonPressed;
