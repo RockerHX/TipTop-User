@@ -78,6 +78,7 @@
     } else if ([tableView isEqual:_subServiceTableView]) {
         HXSubServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXSubServiceCell class]) forIndexPath:indexPath];
         [cell displayWithSubService:(categories[_serviceSelectedIndex]).subItems[indexPath.row]];
+        [cell displayWithSubService:categories[_serviceSelectedIndex].subItems[indexPath.row]];
         return cell;
     }
     return nil;
