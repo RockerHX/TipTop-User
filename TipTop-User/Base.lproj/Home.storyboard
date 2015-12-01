@@ -671,12 +671,18 @@
                                             <constraint firstItem="sGP-61-khv" firstAttribute="leading" secondItem="V2J-xH-d2Z" secondAttribute="leading" id="zaG-V4-Y41"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Wx-oZ-m75">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Wx-oZ-m75">
                                         <rect key="frame" x="0.0" y="40" width="320" height="468"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="lsy-yo-34D">
+                                            <rect key="frame" x="0.0" y="138" width="320" height="1"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="110" id="KCy-Qa-gDP">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HXNormalAdviserCell" rowHeight="110" id="KCy-Qa-gDP" customClass="HXNormalAdviserCell">
                                                 <rect key="frame" x="0.0" y="28" width="320" height="110"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KCy-Qa-gDP" id="jAi-IK-5on">
@@ -691,7 +697,7 @@
                                                                 <constraint firstAttribute="width" secondItem="Yb8-BW-tfg" secondAttribute="height" multiplier="1:1" id="u1g-uX-KnZ"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="35"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
@@ -810,7 +816,7 @@
                                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="服务：" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c6-im-I2t">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="服务：" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="219" translatesAutoresizingMaskIntoConstraints="NO" id="1c6-im-I2t">
                                                             <rect key="frame" x="93" y="46" width="219" height="17"/>
                                                             <animations/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -876,6 +882,14 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <animations/>
+                                                <connections>
+                                                    <outlet property="avatar" destination="Yb8-BW-tfg" id="zo1-e6-f0g"/>
+                                                    <outlet property="goodCountLabel" destination="BEN-Cn-skf" id="Qr1-1W-0yV"/>
+                                                    <outlet property="moblieLabel" destination="ilx-LI-Dc2" id="hka-Ci-X8e"/>
+                                                    <outlet property="nameLabel" destination="JUv-qt-GD2" id="ycC-0v-owG"/>
+                                                    <outlet property="serviceLabel" destination="1c6-im-I2t" id="5Fd-ML-cTF"/>
+                                                    <outlet property="starView" destination="TdS-qc-IP5" id="zKg-Dj-AAd"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>

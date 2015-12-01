@@ -12,6 +12,7 @@
 #import "HXAppApiRequest.h"
 #import "MJRefresh.h"
 #import "HXNormalAdviser.h"
+#import "HXNormalAdviserCell.h"
 
 static NSString *ListApi = @"/agent";
 
@@ -138,6 +139,7 @@ static NSString *ListApi = @"/agent";
 }
 
 - (void)handleAdvisers:(NSArray *)datas {
+    [_normalAdvisers removeAllObjects];
     for (NSDictionary *data in datas) {
         HXNormalAdviser *normalAdviser = [HXNormalAdviser mj_objectWithKeyValues:data];
         if (normalAdviser) {
@@ -148,24 +150,26 @@ static NSString *ListApi = @"/agent";
 
 #pragma mark - Table View Data Source Methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return _normalAdvisers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSArray<HXCategory *> *categories = [HXCategoryManager share].categories;
-//    if ([tableView isEqual:_serviceTableView]) {
-//        HXServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXServiceCell class]) forIndexPath:indexPath];
-//        [cell displayWithService:categories[indexPath.row]];
-//        return cell;
-//    } else if ([tableView isEqual:_subServiceTableView]) {
-//        HXSubServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXSubServiceCell class]) forIndexPath:indexPath];
-//        [cell displayWithSubService:(categories[_serviceSelectedIndex]).subItems[indexPath.row]];
-//        return cell;
-//    }
-    return nil;
+    HXNormalAdviserCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXNormalAdviserCell class]) forIndexPath:indexPath];
+    [cell displayWithNormalAdviser:_normalAdvisers[indexPath.row]];
+    return cell;
 }
 
 #pragma mark - Table View Delegete Methods
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = 0.0f;
+    __weak __typeof__(self)weakSelf = self;
+    height = [tableView fd_heightForCellWithIdentifier:NSStringFromClass([HXNormalAdviserCell class]) cacheByIndexPath:indexPath configuration:^(HXNormalAdviserCell *cell) {
+        __strong __typeof__(self)strongSelf = weakSelf;
+        [cell displayWithNormalAdviser:strongSelf->_normalAdvisers[indexPath.row]];
+    }];
+    return height;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
