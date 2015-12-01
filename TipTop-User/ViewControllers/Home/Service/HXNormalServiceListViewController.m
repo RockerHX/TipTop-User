@@ -13,6 +13,7 @@
 #import "MJRefresh.h"
 #import "HXNormalAdviser.h"
 #import "HXNormalAdviserCell.h"
+#import "MBProgressHUD.h"
 
 static NSString *ListApi = @"/agent";
 
@@ -119,6 +120,7 @@ static NSString *ListApi = @"/agent";
     if (_secondFilter.key.length) {
         [parameters setValue:_secondFilter.value forKey:_secondFilter.key];
     }
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self startFilterRequestWithParameters:parameters.copy];
 }
 
@@ -130,10 +132,12 @@ static NSString *ListApi = @"/agent";
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
             [strongSelf handleAdvisers:responseObject[@"data"][@"list"]];
             [strongSelf.tableView reloadData];
-            [strongSelf endLoad];
         }
+        [strongSelf endLoad];
+        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         __strong __typeof__(self)strongSelf = weakSelf;
+        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
         [strongSelf endLoad];
     }];
 }
