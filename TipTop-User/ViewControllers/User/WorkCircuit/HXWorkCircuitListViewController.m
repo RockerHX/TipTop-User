@@ -67,8 +67,8 @@ static NSString *OrderListApi = @"/Order";
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
             [strongSelf handleOrdersData:responseObject[@"data"][@"list"]];
             [strongSelf.tableView reloadData];
-            [strongSelf endLoad];
         }
+        [strongSelf endLoad];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     }];
 }

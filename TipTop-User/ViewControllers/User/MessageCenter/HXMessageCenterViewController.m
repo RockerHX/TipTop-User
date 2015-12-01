@@ -65,8 +65,8 @@ static NSString *MessageListApi = @"/notification/category";
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
             [strongSelf handleOrdersData:responseObject[@"data"]];
             [strongSelf.tableView reloadData];
-            [strongSelf endLoad];
         }
+        [strongSelf endLoad];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         __strong __typeof__(self)strongSelf = weakSelf;
         [strongSelf endLoad];
