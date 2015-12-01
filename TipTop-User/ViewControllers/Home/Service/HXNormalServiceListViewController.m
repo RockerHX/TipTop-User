@@ -39,6 +39,8 @@ static NSString *ListApi = @"/agent";
 
 #pragma mark - Config Methods
 - (void)initConfig {
+    [super initConfig];
+    
     _normalAdvisers = @[].mutableCopy;
     
     _firstFilter = [[HXFilterItem alloc] init];
@@ -49,6 +51,8 @@ static NSString *ListApi = @"/agent";
 }
 
 - (void)viewConfig {
+    [super viewConfig];
+    
     _filterMenu = [[REMenu alloc] init];
     _filterMenu.highlightedBackgroundColor = [UIColor colorWithRed:0.784 green:0.780 blue:0.804 alpha:1.000];
     _filterMenu.highlightedSeparatorColor = [UIColor clearColor];

@@ -19,7 +19,6 @@
 
 @implementation HXServiceViewController {
     NSInteger _serviceSelectedIndex;
-    NSInteger _subServiceSelectedIndex;
 }
 
 #pragma mark - View Controller Life Cycle
@@ -90,10 +89,10 @@
         [_subServiceTableView reloadData];
     } else if ([tableView isEqual:_subServiceTableView]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        _subServiceSelectedIndex = indexPath.row;
-        NSArray<HXCategory *> *categories = [HXCategoryManager share].categories;
+        HXCategory *category = [HXCategoryManager share].categories[_serviceSelectedIndex];
         HXNormalServiceListViewController *normalServiceListViewController = [HXNormalServiceListViewController instance];
-        normalServiceListViewController.cid = categories[_serviceSelectedIndex].ID;
+        normalServiceListViewController.listType = category.subItems[indexPath.row].listType;
+        normalServiceListViewController.cid = category.ID;
         [self.navigationController pushViewController:normalServiceListViewController animated:YES];
     }
 }

@@ -19,4 +19,7 @@
 
 - (IBAction)mapBackButtonPressed;
 
+- (void)initConfig;
+- (void)viewConfig;
+
 @end
