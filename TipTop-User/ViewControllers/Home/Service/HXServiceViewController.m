@@ -93,15 +93,12 @@
         HXCategory *category = [HXCategoryManager share].categories[_serviceSelectedIndex];
         HXCategoryListType listType = category.subItems[indexPath.row].listType;
         switch (listType) {
-            case HXCategoryListTypeNormal: {
+            case HXCategoryListTypeNormal:
+            case HXCategoryListTypeDesigner: {
                 HXNormalServiceListViewController *normalServiceListViewController = [HXNormalServiceListViewController instance];
                 normalServiceListViewController.listType = listType;
                 normalServiceListViewController.cid = category.ID;
                 viewController = normalServiceListViewController;
-                break;
-            }
-            case HXCategoryListTypeDesigner: {
-                ;
                 break;
             }
             case HXCategoryListTypeCase: {

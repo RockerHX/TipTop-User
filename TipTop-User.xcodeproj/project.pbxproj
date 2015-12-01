@@ -17,6 +17,7 @@
 		484D39561C0CCDF200B66B85 /* HXFilterListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D39541C0CCDF200B66B85 /* HXFilterListManager.m */; };
 		484D395A1C0CCE4500B66B85 /* HXNormalAdviser.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D39591C0CCE4500B66B85 /* HXNormalAdviser.m */; };
 		484D395D1C0DD91100B66B85 /* HXNormalAdviserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D395C1C0DD91100B66B85 /* HXNormalAdviserCell.m */; };
+		484D39601C0DE78500B66B85 /* HXServiceDesingerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D395F1C0DE78500B66B85 /* HXServiceDesingerCell.m */; };
 		484F677E1BF8EA3900B0ABC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677A1BF8EA3900B0ABC1 /* LaunchScreen.storyboard */; };
 		484F677F1BF8EA3900B0ABC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677C1BF8EA3900B0ABC1 /* Main.storyboard */; };
 		485FE85A1BF8E1CC00654279 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7301BF8E1CC00654279 /* AppDelegate.mm */; };
@@ -155,6 +156,8 @@
 		484D39591C0CCE4500B66B85 /* HXNormalAdviser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNormalAdviser.m; sourceTree = "<group>"; };
 		484D395B1C0DD91100B66B85 /* HXNormalAdviserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNormalAdviserCell.h; sourceTree = "<group>"; };
 		484D395C1C0DD91100B66B85 /* HXNormalAdviserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNormalAdviserCell.m; sourceTree = "<group>"; };
+		484D395E1C0DE78500B66B85 /* HXServiceDesingerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceDesingerCell.h; sourceTree = "<group>"; };
+		484D395F1C0DE78500B66B85 /* HXServiceDesingerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceDesingerCell.m; sourceTree = "<group>"; };
 		484F677B1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484F677D1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		485FE72F1BF8E1CC00654279 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1100,6 +1103,8 @@
 				487D7AEA1C08A07E00B11A35 /* HXSubServiceCell.m */,
 				484D395B1C0DD91100B66B85 /* HXNormalAdviserCell.h */,
 				484D395C1C0DD91100B66B85 /* HXNormalAdviserCell.m */,
+				484D395E1C0DE78500B66B85 /* HXServiceDesingerCell.h */,
+				484D395F1C0DE78500B66B85 /* HXServiceDesingerCell.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1375,6 +1380,7 @@
 				485FE8711BF8E1CC00654279 /* HXIBLabel.m in Sources */,
 				485FE8941BF8E1CC00654279 /* HXWebViewController.m in Sources */,
 				485FE8D21BF8E1CC00654279 /* HXWorkCircuitOrderCell.m in Sources */,
+				484D39601C0DE78500B66B85 /* HXServiceDesingerCell.m in Sources */,
 				488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */,
 				484D395A1C0CCE4500B66B85 /* HXNormalAdviser.m in Sources */,
 				485FE8821BF8E1CC00654279 /* HXReservationOrder.m in Sources */,

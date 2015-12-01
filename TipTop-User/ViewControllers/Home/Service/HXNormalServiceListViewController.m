@@ -13,6 +13,7 @@
 #import "MJRefresh.h"
 #import "HXNormalAdviser.h"
 #import "HXNormalAdviserCell.h"
+#import "HXServiceDesingerCell.h"
 #import "MBProgressHUD.h"
 
 static NSString *ListApi = @"/agent";
@@ -162,13 +163,21 @@ static NSString *ListApi = @"/agent";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HXNormalAdviserCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXNormalAdviserCell class]) forIndexPath:indexPath];
+    if (self.listType == HXCategoryListTypeNormal) {
+        HXNormalAdviserCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXNormalAdviserCell class]) forIndexPath:indexPath];
+        [cell displayWithNormalAdviser:_normalAdvisers[indexPath.row]];
+        return cell;
+    }
+    HXServiceDesingerCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXServiceDesingerCell class]) forIndexPath:indexPath];
     [cell displayWithNormalAdviser:_normalAdvisers[indexPath.row]];
     return cell;
 }
 
 #pragma mark - Table View Delegete Methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.listType == HXCategoryListTypeDesigner) {
+        return 110.0f;
+    }
     CGFloat height = 0.0f;
     __weak __typeof__(self)weakSelf = self;
     height = [tableView fd_heightForCellWithIdentifier:NSStringFromClass([HXNormalAdviserCell class]) cacheByIndexPath:indexPath configuration:^(HXNormalAdviserCell *cell) {
