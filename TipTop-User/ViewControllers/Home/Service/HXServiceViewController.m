@@ -89,11 +89,34 @@
         [_subServiceTableView reloadData];
     } else if ([tableView isEqual:_subServiceTableView]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        UIViewController *viewController = nil;
         HXCategory *category = [HXCategoryManager share].categories[_serviceSelectedIndex];
-        HXNormalServiceListViewController *normalServiceListViewController = [HXNormalServiceListViewController instance];
-        normalServiceListViewController.listType = category.subItems[indexPath.row].listType;
-        normalServiceListViewController.cid = category.ID;
-        [self.navigationController pushViewController:normalServiceListViewController animated:YES];
+        HXCategoryListType listType = category.subItems[indexPath.row].listType;
+        switch (listType) {
+            case HXCategoryListTypeNormal: {
+                HXNormalServiceListViewController *normalServiceListViewController = [HXNormalServiceListViewController instance];
+                normalServiceListViewController.listType = listType;
+                normalServiceListViewController.cid = category.ID;
+                viewController = normalServiceListViewController;
+                break;
+            }
+            case HXCategoryListTypeDesigner: {
+                ;
+                break;
+            }
+            case HXCategoryListTypeCase: {
+                ;
+                break;
+            }
+            case HXCategoryListTypeHouseSale: {
+                ;
+                break;
+            }
+        }
+        if (!viewController) {
+            return;
+        }
+        [self.navigationController pushViewController:viewController animated:YES];
     }
 }
 

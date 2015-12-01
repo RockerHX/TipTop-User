@@ -9,7 +9,7 @@
 #import "MJExtension.h"
 
 typedef NS_ENUM(NSUInteger, HXCategoryListType) {
-    HXCategoryListTypeNormal,
+    HXCategoryListTypeNormal = 1,
     HXCategoryListTypeDesigner,
     HXCategoryListTypeCase,
     HXCategoryListTypeHouseSale
