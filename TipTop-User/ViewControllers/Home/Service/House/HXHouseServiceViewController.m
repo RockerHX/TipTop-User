@@ -11,7 +11,6 @@
 #import "REMenu.h"
 #import "HXAppApiRequest.h"
 #import "MJRefresh.h"
-#import "HXNormalAdviser.h"
 #import "HXServiceHouseCell.h"
 #import "MBProgressHUD.h"
 #import "HXHouseDetailViewController.h"
@@ -49,8 +48,8 @@ static NSString *ListApi = @"/agent/houseSale";
     _secondFilter = [[HXFilterItem alloc] init];
     _thirdFilter = [[HXFilterItem alloc] init];
     [[HXFilterListManager share] fetchFilterList:nil];
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    [self.tableView.mj_header beginRefreshing];
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    [_tableView.mj_header beginRefreshing];
 }
 
 - (void)viewConfig {

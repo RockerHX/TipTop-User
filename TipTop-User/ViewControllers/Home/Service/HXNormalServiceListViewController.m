@@ -47,8 +47,8 @@ static NSString *ListApi = @"/agent";
     _firstFilter = [[HXFilterItem alloc] init];
     _secondFilter = [[HXFilterItem alloc] init];
     [[HXFilterListManager share] fetchFilterList:nil];
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    [self.tableView.mj_header beginRefreshing];
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    [_tableView.mj_header beginRefreshing];
 }
 
 - (void)viewConfig {
