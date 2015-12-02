@@ -155,6 +155,11 @@ static NSString *ListApi = @"/agent";
             [_normalAdvisers addObject:normalAdviser];
         }
     }
+    [self updateUI];
+}
+
+- (void)updateUI {
+    self.countLabel.text = @(_normalAdvisers.count).stringValue;
 }
 
 #pragma mark - Table View Data Source Methods
@@ -190,6 +195,5 @@ static NSString *ListApi = @"/agent";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 @end
