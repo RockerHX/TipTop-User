@@ -74,15 +74,19 @@ static NSString *ListApi = @"/agent";
 
 #pragma mark - Event Response
 - (IBAction)leftButtonPressed {
-    if (!_filterMenu.isOpen) {
-        [self showFilterMenuWithItem:[[HXFilterListManager share].filterList.normal firstObject]];
-    }
+    __weak __typeof__(self)weakSelf = self;
+    [_filterMenu closeWithCompletion:^{
+        __strong __typeof__(self)strongSelf = weakSelf;
+        [strongSelf showFilterMenuWithItem:[[HXFilterListManager share].filterList.normal firstObject]];
+    }];
 }
 
 - (IBAction)rightButtonPressed {
-    if (!_filterMenu.isOpen) {
-        [self showFilterMenuWithItem:[[HXFilterListManager share].filterList.normal lastObject]];
-    }
+    __weak __typeof__(self)weakSelf = self;
+    [_filterMenu closeWithCompletion:^{
+        __strong __typeof__(self)strongSelf = weakSelf;
+        [strongSelf showFilterMenuWithItem:[[HXFilterListManager share].filterList.normal lastObject]];
+    }];
 }
 
 #pragma mark - Private Methods
