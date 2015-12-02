@@ -1,12 +1,12 @@
 //
-//  HXCaseServiceViewController.m
+//  HXServiceCaseViewController.m
 //  TipTop-User
 //
 //  Created by ShiCang on 15/12/3.
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import "HXCaseServiceViewController.h"
+#import "HXServiceCaseViewController.h"
 #import "HXAppApiRequest.h"
 #import "MJRefresh.h"
 #import "HXServiceCaseCell.h"
@@ -15,10 +15,10 @@
 
 static NSString *ListApi = @"/agent/houseDesign";
 
-@interface HXCaseServiceViewController ()
+@interface HXServiceCaseViewController ()
 @end
 
-@implementation HXCaseServiceViewController {
+@implementation HXServiceCaseViewController {
     NSMutableArray<HXServiceCase *> *_cases;
 }
 

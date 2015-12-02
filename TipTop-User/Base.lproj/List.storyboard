@@ -1037,7 +1037,7 @@
         <!--案例列表-->
         <scene sceneID="e4D-Fq-h7h">
             <objects>
-                <viewController storyboardIdentifier="HXCaseServiceViewController" id="iJF-Zj-dsD" userLabel="案例列表" customClass="HXCaseServiceViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HXServiceCaseViewController" id="iJF-Zj-dsD" userLabel="案例列表" customClass="HXServiceCaseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QN6-ty-4Ob"/>
                         <viewControllerLayoutGuide type="bottom" id="rSj-Em-8z4"/>

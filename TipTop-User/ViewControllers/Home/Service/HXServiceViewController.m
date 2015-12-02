@@ -13,7 +13,7 @@
 #import "HXCategoryManager.h"
 #import "UIAlertView+BlocksKit.h"
 #import "HXNormalServiceListViewController.h"
-#import "HXCaseServiceViewController.h"
+#import "HXServiceCaseViewController.h"
 #import "HXServiceHouseViewController.h"
 
 @interface HXServiceViewController ()
@@ -102,7 +102,7 @@
                 break;
             }
             case HXCategoryListTypeCase: {
-                HXCaseServiceViewController *serviceCaseViewController = [HXCaseServiceViewController instance];
+                HXServiceCaseViewController *serviceCaseViewController = [HXServiceCaseViewController instance];
                 viewController = serviceCaseViewController;
                 break;
             }
