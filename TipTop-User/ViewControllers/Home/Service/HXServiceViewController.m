@@ -13,6 +13,7 @@
 #import "HXCategoryManager.h"
 #import "UIAlertView+BlocksKit.h"
 #import "HXNormalServiceListViewController.h"
+#import "HXCaseServiceViewController.h"
 #import "HXHouseServiceViewController.h"
 
 @interface HXServiceViewController ()
@@ -90,33 +91,32 @@
         [_subServiceTableView reloadData];
     } else if ([tableView isEqual:_subServiceTableView]) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        UIViewController *viewController = nil;
+        HXServiceListViewController *viewController = nil;
         HXCategory *category = [HXCategoryManager share].categories[_serviceSelectedIndex];
         HXCategoryListType listType = category.subItems[indexPath.row].listType;
         switch (listType) {
             case HXCategoryListTypeNormal:
             case HXCategoryListTypeDesigner: {
                 HXNormalServiceListViewController *normalServiceListViewController = [HXNormalServiceListViewController instance];
-                normalServiceListViewController.listType = listType;
-                normalServiceListViewController.cid = category.ID;
                 viewController = normalServiceListViewController;
                 break;
             }
             case HXCategoryListTypeCase: {
-                ;
+                HXCaseServiceViewController *serviceCaseViewController = [HXCaseServiceViewController instance];
+                viewController = serviceCaseViewController;
                 break;
             }
             case HXCategoryListTypeHouseSale: {
-                HXHouseServiceViewController *normalServiceListViewController = [HXHouseServiceViewController instance];
-                normalServiceListViewController.listType = listType;
-                normalServiceListViewController.cid = category.ID;
-                viewController = normalServiceListViewController;
+                HXHouseServiceViewController *serviceHouseViewController = [HXHouseServiceViewController instance];
+                viewController = serviceHouseViewController;
                 break;
             }
         }
         if (!viewController) {
             return;
         }
+        viewController.listType = listType;
+        viewController.cid = category.ID;
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
