@@ -16,8 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *leftLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightLabel;
 
-@property (nonatomic, copy) NSString *cid;
-
 - (IBAction)leftButtonPressed;
 - (IBAction)rightButtonPressed;
 

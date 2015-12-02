@@ -15,7 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countPromptLabel;
 
-@property (nonatomic, assign) HXCategoryListType listType;
+@property (nonatomic, assign) HXCategoryListType  listType;
+@property (nonatomic, copy)             NSString *cid;
 
 - (IBAction)mapBackButtonPressed;
 

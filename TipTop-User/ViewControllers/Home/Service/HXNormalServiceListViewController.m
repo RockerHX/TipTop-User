@@ -87,7 +87,7 @@ static NSString *ListApi = @"/agent";
 
 #pragma mark - Private Methods
 - (void)loadNewData {
-    [self startFilterRequestWithParameters:@{@"cid": _cid}];
+    [self startFilterRequestWithParameters:@{@"cid": self.cid}];
 }
 
 - (void)endLoad {
@@ -118,7 +118,7 @@ static NSString *ListApi = @"/agent";
         _secondFilter.key = key;
         _secondFilter.value = value;
     }
-    NSMutableDictionary *parameters =@{@"cid": _cid}.mutableCopy;
+    NSMutableDictionary *parameters =@{@"cid": self.cid}.mutableCopy;
     if (_firstFilter.key.length) {
         [parameters setValue:_firstFilter.value forKey:_firstFilter.key];
     }
