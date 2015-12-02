@@ -108,7 +108,6 @@ static NSString *NewOrderEvent = @"new_order";
     }];
 }
 
-
 #pragma mark - Setter And Getter
 - (NSString *)navigationControllerIdentifier {
     return @"HXHomePageNavigationController";

@@ -33,6 +33,10 @@
             storyBoardName = @"Home";
             break;
         }
+        case HXStoryBoardNameList: {
+            storyBoardName = @"List";
+            break;
+        }
         case HXStoryBoardNameUser: {
             storyBoardName = @"User";
             break;

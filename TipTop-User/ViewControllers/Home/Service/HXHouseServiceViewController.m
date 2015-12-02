@@ -68,11 +68,6 @@ static NSString *ListApi = @"/agent/houseSale";
     _filterMenu.font = [UIFont systemFontOfSize:16.0f];
 }
 
-#pragma mark - Setter And Getter
-- (HXStoryBoardName)storyBoardName {
-    return HXStoryBoardNameHome;
-}
-
 #pragma mark - Event Response
 - (IBAction)leftButtonPressed {
     __weak __typeof__(self)weakSelf = self;

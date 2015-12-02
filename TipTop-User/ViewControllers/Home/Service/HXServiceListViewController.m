@@ -21,6 +21,11 @@
     [self viewConfig];
 }
 
+#pragma mark - Setter And Getter
+- (HXStoryBoardName)storyBoardName {
+    return HXStoryBoardNameList;
+}
+
 #pragma mark - Config Methods
 - (void)initConfig {
     switch (_listType) {
