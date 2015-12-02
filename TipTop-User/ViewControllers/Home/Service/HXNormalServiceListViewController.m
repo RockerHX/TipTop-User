@@ -135,7 +135,7 @@ static NSString *ListApi = @"/agent";
 
 - (void)startFilterRequestWithParameters:(NSDictionary *)parameter {
     __weak __typeof__(self)weakSelf = self;
-    [HXAppApiRequest requestGETMethodsWithAPI:[HXApi apiURLWithApi:ListApi] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [HXAppApiRequest requestGETMethodsWithAPI:[HXApi apiURLWithApi:ListApi] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
         __strong __typeof__(self)strongSelf = weakSelf;
         NSInteger errorCode = [responseObject[@"error_code"] integerValue];
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
