@@ -14,7 +14,7 @@
 #import "UIAlertView+BlocksKit.h"
 #import "HXNormalServiceListViewController.h"
 #import "HXCaseServiceViewController.h"
-#import "HXHouseServiceViewController.h"
+#import "HXServiceHouseViewController.h"
 
 @interface HXServiceViewController ()
 @end
@@ -107,7 +107,7 @@
                 break;
             }
             case HXCategoryListTypeHouseSale: {
-                HXHouseServiceViewController *serviceHouseViewController = [HXHouseServiceViewController instance];
+                HXServiceHouseViewController *serviceHouseViewController = [HXServiceHouseViewController instance];
                 viewController = serviceHouseViewController;
                 break;
             }

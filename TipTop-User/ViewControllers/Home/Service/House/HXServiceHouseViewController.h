@@ -1,5 +1,5 @@
 //
-//  HXHouseServiceViewController.h
+//  HXServiceHouseViewController.h
 //  TipTop-User
 //
 //  Created by ShiCang on 15/12/2.
@@ -8,7 +8,7 @@
 
 #import "HXServiceListViewController.h"
 
-@interface HXHouseServiceViewController : HXServiceListViewController <UITableViewDataSource, UITableViewDelegate>
+@interface HXServiceHouseViewController : HXServiceListViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet      UIView *listContentView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

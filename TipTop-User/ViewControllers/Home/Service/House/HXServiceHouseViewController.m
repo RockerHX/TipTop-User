@@ -1,12 +1,12 @@
 //
-//  HXHouseServiceViewController.m
+//  HXServiceHouseViewController.m
 //  TipTop-User
 //
 //  Created by ShiCang on 15/12/2.
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import "HXHouseServiceViewController.h"
+#import "HXServiceHouseViewController.h"
 #import "HXFilterListManager.h"
 #import "REMenu.h"
 #import "HXAppApiRequest.h"
@@ -17,10 +17,10 @@
 
 static NSString *ListApi = @"/agent/houseSale";
 
-@interface HXHouseServiceViewController ()
+@interface HXServiceHouseViewController ()
 @end
 
-@implementation HXHouseServiceViewController {
+@implementation HXServiceHouseViewController {
     NSMutableArray<HXServiceHouse *> *_houses;
     
     HXFilterItem *_firstFilter;

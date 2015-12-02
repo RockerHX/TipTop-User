@@ -662,7 +662,7 @@
         <!--房源列表-->
         <scene sceneID="L9O-n5-Pah">
             <objects>
-                <viewController storyboardIdentifier="HXHouseServiceViewController" id="eJw-VV-lxD" userLabel="房源列表" customClass="HXHouseServiceViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HXServiceHouseViewController" id="eJw-VV-lxD" userLabel="房源列表" customClass="HXServiceHouseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FY6-Vd-HLW"/>
                         <viewControllerLayoutGuide type="bottom" id="gcZ-I3-YGf"/>

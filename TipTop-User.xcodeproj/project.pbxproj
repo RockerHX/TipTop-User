@@ -120,7 +120,7 @@
 		48BAC53E1C0F424A00C41CDD /* HXServiceHouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC53D1C0F424A00C41CDD /* HXServiceHouseCell.m */; };
 		48BAC5421C0F46AD00C41CDD /* HXServiceHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC5411C0F46AD00C41CDD /* HXServiceHouse.m */; };
 		48BAC5471C0F50B500C41CDD /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BAC5451C0F50B500C41CDD /* List.storyboard */; };
-		48BAC54B1C0F52BE00C41CDD /* HXHouseServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC54A1C0F52BE00C41CDD /* HXHouseServiceViewController.m */; };
+		48BAC54B1C0F52BE00C41CDD /* HXServiceHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC54A1C0F52BE00C41CDD /* HXServiceHouseViewController.m */; };
 		48BAC54E1C0F52F200C41CDD /* HXHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC54D1C0F52F200C41CDD /* HXHouseDetailViewController.m */; };
 		48BAC5521C0F591800C41CDD /* HXCaseServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC5511C0F591800C41CDD /* HXCaseServiceViewController.m */; };
 		48BAC5561C0F5ACD00C41CDD /* HXServiceCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC5551C0F5ACD00C41CDD /* HXServiceCase.m */; };
@@ -369,8 +369,8 @@
 		48BAC5401C0F46AD00C41CDD /* HXServiceHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceHouse.h; sourceTree = "<group>"; };
 		48BAC5411C0F46AD00C41CDD /* HXServiceHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceHouse.m; sourceTree = "<group>"; };
 		48BAC5461C0F50B500C41CDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/List.storyboard"; sourceTree = SOURCE_ROOT; };
-		48BAC5491C0F52BE00C41CDD /* HXHouseServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXHouseServiceViewController.h; sourceTree = "<group>"; };
-		48BAC54A1C0F52BE00C41CDD /* HXHouseServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHouseServiceViewController.m; sourceTree = "<group>"; };
+		48BAC5491C0F52BE00C41CDD /* HXServiceHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceHouseViewController.h; sourceTree = "<group>"; };
+		48BAC54A1C0F52BE00C41CDD /* HXServiceHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceHouseViewController.m; sourceTree = "<group>"; };
 		48BAC54C1C0F52F200C41CDD /* HXHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXHouseDetailViewController.h; sourceTree = "<group>"; };
 		48BAC54D1C0F52F200C41CDD /* HXHouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHouseDetailViewController.m; sourceTree = "<group>"; };
 		48BAC5501C0F591800C41CDD /* HXCaseServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCaseServiceViewController.h; sourceTree = "<group>"; };
@@ -1172,8 +1172,8 @@
 		48BAC5481C0F52AC00C41CDD /* House */ = {
 			isa = PBXGroup;
 			children = (
-				48BAC5491C0F52BE00C41CDD /* HXHouseServiceViewController.h */,
-				48BAC54A1C0F52BE00C41CDD /* HXHouseServiceViewController.m */,
+				48BAC5491C0F52BE00C41CDD /* HXServiceHouseViewController.h */,
+				48BAC54A1C0F52BE00C41CDD /* HXServiceHouseViewController.m */,
 				48BAC54C1C0F52F200C41CDD /* HXHouseDetailViewController.h */,
 				48BAC54D1C0F52F200C41CDD /* HXHouseDetailViewController.m */,
 			);
@@ -1444,7 +1444,7 @@
 				485FE8881BF8E1CC00654279 /* HXUserSession.m in Sources */,
 				485FE87A1BF8E1CC00654279 /* main.m in Sources */,
 				485FE8771BF8E1CC00654279 /* HXAppConstants.m in Sources */,
-				48BAC54B1C0F52BE00C41CDD /* HXHouseServiceViewController.m in Sources */,
+				48BAC54B1C0F52BE00C41CDD /* HXServiceHouseViewController.m in Sources */,
 				485FE8A81BF8E1CC00654279 /* HXOnlinePayListViewController.m in Sources */,
 				485FE88D1BF8E1CC00654279 /* HXSocketManager.m in Sources */,
 				482B1CAF1C0613AF00D65D5D /* HXHomePageCategoryCell.m in Sources */,
