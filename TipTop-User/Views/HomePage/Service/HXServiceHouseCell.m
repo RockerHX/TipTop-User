@@ -17,7 +17,7 @@
     _nameLabel.text = house.title;
     _contentLabel.text = house.address;
     _sizeLabel.text = [NSString stringWithFormat:@"%@平米", @(house.area).stringValue];
-    _priceLabel.text = [@(house.money).stringValue stringByAppendingString:house.unit];
+    _priceLabel.text = [@(house.money/10000).stringValue stringByAppendingString:house.unit];
 }
 
 @end
