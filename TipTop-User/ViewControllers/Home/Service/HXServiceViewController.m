@@ -13,6 +13,7 @@
 #import "HXCategoryManager.h"
 #import "UIAlertView+BlocksKit.h"
 #import "HXNormalServiceListViewController.h"
+#import "HXHouseServiceViewController.h"
 
 @interface HXServiceViewController ()
 @end
@@ -106,7 +107,10 @@
                 break;
             }
             case HXCategoryListTypeHouseSale: {
-                ;
+                HXHouseServiceViewController *normalServiceListViewController = [HXHouseServiceViewController instance];
+                normalServiceListViewController.listType = listType;
+                normalServiceListViewController.cid = category.ID;
+                viewController = normalServiceListViewController;
                 break;
             }
         }

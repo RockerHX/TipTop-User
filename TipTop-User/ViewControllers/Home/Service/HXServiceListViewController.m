@@ -40,10 +40,11 @@
         }
         case HXCategoryListTypeHouseSale: {
             self.title = @"找房源";
+            _promptLabel.text = @"当前房源共有";
+            _countPromptLabel.text = @"户";
             break;
         }
     }
-    
 }
 
 - (void)viewConfig {
