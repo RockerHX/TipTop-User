@@ -25,6 +25,7 @@ static NSString *ListApi = @"/agent/houseSale";
     
     HXFilterItem *_firstFilter;
     HXFilterItem *_secondFilter;
+    HXFilterItem *_thirdFilter;
     
     REMenu *_filterMenu;
 }
@@ -45,6 +46,7 @@ static NSString *ListApi = @"/agent/houseSale";
     
     _firstFilter = [[HXFilterItem alloc] init];
     _secondFilter = [[HXFilterItem alloc] init];
+    _thirdFilter = [[HXFilterItem alloc] init];
     [[HXFilterListManager share] fetchFilterList:nil];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     [self.tableView.mj_header beginRefreshing];
@@ -73,20 +75,32 @@ static NSString *ListApi = @"/agent/houseSale";
 
 #pragma mark - Event Response
 - (IBAction)leftButtonPressed {
-    if (!_filterMenu.isOpen) {
-        [self showFilterMenuWithItem:[[HXFilterListManager share].filterList.house firstObject]];
-    }
+    __weak __typeof__(self)weakSelf = self;
+    [_filterMenu closeWithCompletion:^{
+        __strong __typeof__(self)strongSelf = weakSelf;
+        [strongSelf showFilterMenuWithItem:[HXFilterListManager share].filterList.house[0]];
+    }];
+}
+
+- (IBAction)centerButtonPressed {
+    __weak __typeof__(self)weakSelf = self;
+    [_filterMenu closeWithCompletion:^{
+        __strong __typeof__(self)strongSelf = weakSelf;
+        [strongSelf showFilterMenuWithItem:[HXFilterListManager share].filterList.house[1]];
+    }];
 }
 
 - (IBAction)rightButtonPressed {
-    if (!_filterMenu.isOpen) {
-        [self showFilterMenuWithItem:[[HXFilterListManager share].filterList.house lastObject]];
-    }
+    __weak __typeof__(self)weakSelf = self;
+    [_filterMenu closeWithCompletion:^{
+        __strong __typeof__(self)strongSelf = weakSelf;
+        [strongSelf showFilterMenuWithItem:[HXFilterListManager share].filterList.house[2]];
+    }];
 }
 
 #pragma mark - Private Methods
 - (void)loadNewData {
-    [self startFilterRequestWithParameters:@{@"cid": _cid}];
+    [self startFilterRequestWithParameters:@{@"cid": self.cid}];
 }
 
 - (void)endLoad {
@@ -116,13 +130,19 @@ static NSString *ListApi = @"/agent/houseSale";
     } else if (!_secondFilter.key || [_secondFilter.key isEqualToString:key]) {
         _secondFilter.key = key;
         _secondFilter.value = value;
+    } else if (!_thirdFilter.key || [_thirdFilter.key isEqualToString:key]) {
+        _thirdFilter.key = key;
+        _thirdFilter.value = value;
     }
-    NSMutableDictionary *parameters =@{@"cid": _cid}.mutableCopy;
+    NSMutableDictionary *parameters =@{@"cid": self.cid}.mutableCopy;
     if (_firstFilter.key.length) {
         [parameters setValue:_firstFilter.value forKey:_firstFilter.key];
     }
     if (_secondFilter.key.length) {
         [parameters setValue:_secondFilter.value forKey:_secondFilter.key];
+    }
+    if (_thirdFilter.key.length) {
+        [parameters setValue:_thirdFilter.value forKey:_thirdFilter.key];
     }
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self startFilterRequestWithParameters:parameters.copy];
@@ -130,7 +150,7 @@ static NSString *ListApi = @"/agent/houseSale";
 
 - (void)startFilterRequestWithParameters:(NSDictionary *)parameter {
     __weak __typeof__(self)weakSelf = self;
-    [HXAppApiRequest requestGETMethodsWithAPI:[HXApi apiURLWithApi:ListApi] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [HXAppApiRequest requestGETMethodsWithAPI:[HXApi apiURLWithApi:ListApi] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
         __strong __typeof__(self)strongSelf = weakSelf;
         NSInteger errorCode = [responseObject[@"error_code"] integerValue];
         if (HXAppApiRequestErrorCodeNoError == errorCode) {

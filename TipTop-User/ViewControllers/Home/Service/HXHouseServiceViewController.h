@@ -14,11 +14,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet UILabel *leftLabel;
+@property (weak, nonatomic) IBOutlet UILabel *centerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightLabel;
 
-@property (nonatomic, copy) NSString *cid;
-
 - (IBAction)leftButtonPressed;
+- (IBAction)centerButtonPressed;
 - (IBAction)rightButtonPressed;
 
 @end
