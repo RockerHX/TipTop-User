@@ -10,7 +10,7 @@
 #import "HXAppApiRequest.h"
 #import "MJRefresh.h"
 #import "HXServiceCaseCell.h"
-#import "HXHouseDetailViewController.h"
+#import "HXServiceCaseDetailViewController.h"
 #import "UIConstants.h"
 
 static NSString *ListApi = @"/agent/houseDesign";
@@ -102,7 +102,7 @@ static NSString *ListApi = @"/agent/houseDesign";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    HXHouseDetailViewController *detailViewController = [HXHouseDetailViewController instance];
+    HXServiceCaseDetailViewController *detailViewController = [HXServiceCaseDetailViewController instance];
     detailViewController.hid = _cases[indexPath.row].ID;
     [self.navigationController pushViewController:detailViewController animated:YES];
 }

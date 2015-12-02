@@ -1202,6 +1202,45 @@
             </objects>
             <point key="canvasLocation" x="1500" y="383"/>
         </scene>
+        <!--案例详情-->
+        <scene sceneID="oDW-ez-bpc">
+            <objects>
+                <viewController storyboardIdentifier="HXServiceCaseDetailViewController" id="AiB-c5-36Y" userLabel="案例详情" customClass="HXServiceCaseDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MhD-he-naB"/>
+                        <viewControllerLayoutGuide type="bottom" id="GN4-IH-uhf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hmS-9j-qyG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwl-V7-oa1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AiB-c5-36Y" id="uEx-ux-Snu"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vwl-V7-oa1" secondAttribute="trailing" id="6FF-Gs-Fqg"/>
+                            <constraint firstItem="GN4-IH-uhf" firstAttribute="top" secondItem="vwl-V7-oa1" secondAttribute="bottom" id="Awf-N9-dZ1"/>
+                            <constraint firstItem="vwl-V7-oa1" firstAttribute="top" secondItem="MhD-he-naB" secondAttribute="bottom" id="BYA-Yw-niO"/>
+                            <constraint firstItem="vwl-V7-oa1" firstAttribute="leading" secondItem="hmS-9j-qyG" secondAttribute="leading" id="V1p-9X-QWe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="案例详情" id="6tf-zt-bex"/>
+                    <connections>
+                        <outlet property="webView" destination="vwl-V7-oa1" id="aEi-s4-tQh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7e-aL-P5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="1033"/>
+        </scene>
     </scenes>
     <resources>
         <image name="C-StarIcon" width="16" height="16"/>
