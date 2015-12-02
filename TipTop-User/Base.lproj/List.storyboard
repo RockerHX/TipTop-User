@@ -995,6 +995,45 @@
             </objects>
             <point key="canvasLocation" x="1113" y="383"/>
         </scene>
+        <!--房源详情-->
+        <scene sceneID="DC7-v7-8ef">
+            <objects>
+                <viewController storyboardIdentifier="HXHouseDetailViewController" id="fl0-on-FHo" userLabel="房源详情" customClass="HXHouseDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OJb-Wy-Xk5"/>
+                        <viewControllerLayoutGuide type="bottom" id="g39-Mu-XBV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nKU-t6-oDn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-2e-XCE">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fl0-on-FHo" id="BV5-tt-fui"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ngb-2e-XCE" firstAttribute="leading" secondItem="nKU-t6-oDn" secondAttribute="leading" id="FKJ-oA-qqJ"/>
+                            <constraint firstItem="Ngb-2e-XCE" firstAttribute="top" secondItem="OJb-Wy-Xk5" secondAttribute="bottom" id="dds-Cw-boK"/>
+                            <constraint firstItem="g39-Mu-XBV" firstAttribute="top" secondItem="Ngb-2e-XCE" secondAttribute="bottom" id="gNL-7f-s75"/>
+                            <constraint firstAttribute="trailing" secondItem="Ngb-2e-XCE" secondAttribute="trailing" id="qnm-yV-4bR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="房源详情" id="489-rh-Du9"/>
+                    <connections>
+                        <outlet property="webView" destination="Ngb-2e-XCE" id="qXu-op-wyf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8j-P4-WCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="1033"/>
+        </scene>
     </scenes>
     <resources>
         <image name="C-StarIcon" width="16" height="16"/>

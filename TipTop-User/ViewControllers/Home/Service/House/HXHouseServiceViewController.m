@@ -14,6 +14,7 @@
 #import "HXNormalAdviser.h"
 #import "HXServiceHouseCell.h"
 #import "MBProgressHUD.h"
+#import "HXHouseDetailViewController.h"
 
 static NSString *ListApi = @"/agent/houseSale";
 
@@ -21,7 +22,7 @@ static NSString *ListApi = @"/agent/houseSale";
 @end
 
 @implementation HXHouseServiceViewController {
-    NSMutableArray *_houses;
+    NSMutableArray<HXServiceHouse *> *_houses;
     
     HXFilterItem *_firstFilter;
     HXFilterItem *_secondFilter;
@@ -190,6 +191,9 @@ static NSString *ListApi = @"/agent/houseSale";
 #pragma mark - Table View Delegete Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HXHouseDetailViewController *detailViewController = [HXHouseDetailViewController instance];
+    detailViewController.hid = _houses[indexPath.row].ID;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end
