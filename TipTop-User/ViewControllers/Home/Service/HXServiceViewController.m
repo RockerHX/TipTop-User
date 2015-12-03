@@ -12,7 +12,8 @@
 #import "HXSubServiceCell.h"
 #import "HXCategoryManager.h"
 #import "UIAlertView+BlocksKit.h"
-#import "HXNormalServiceListViewController.h"
+#import "HXServiceNormalViewController.h"
+#import "HXServiceDesignerViewController.h"
 #import "HXServiceCaseViewController.h"
 #import "HXServiceHouseViewController.h"
 
@@ -95,10 +96,14 @@
         HXCategory *category = [HXCategoryManager share].categories[_serviceSelectedIndex];
         HXCategoryListType listType = category.subItems[indexPath.row].listType;
         switch (listType) {
-            case HXCategoryListTypeNormal:
-            case HXCategoryListTypeDesigner: {
-                HXNormalServiceListViewController *normalServiceListViewController = [HXNormalServiceListViewController instance];
+            case HXCategoryListTypeNormal: {
+                HXServiceNormalViewController *normalServiceListViewController = [HXServiceNormalViewController instance];
                 viewController = normalServiceListViewController;
+                break;
+            }
+            case HXCategoryListTypeDesigner: {
+                HXServiceDesignerViewController *serviceDesignerViewController = [HXServiceDesignerViewController instance];
+                viewController = serviceDesignerViewController;
                 break;
             }
             case HXCategoryListTypeCase: {

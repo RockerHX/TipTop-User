@@ -1,5 +1,5 @@
 //
-//  HXNormalServiceListViewController.h
+//  HXServiceNormalViewController.h
 //  TipTop-User
 //
 //  Created by ShiCang on 15/11/28.
@@ -8,7 +8,7 @@
 
 #import "HXServiceListViewController.h"
 
-@interface HXNormalServiceListViewController : HXServiceListViewController <UITableViewDataSource, UITableViewDelegate>
+@interface HXServiceNormalViewController : HXServiceListViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet      UIView *listContentView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
