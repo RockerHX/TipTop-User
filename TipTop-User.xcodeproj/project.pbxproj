@@ -16,8 +16,6 @@
 		484D39551C0CCDF200B66B85 /* HXFilterList.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D39521C0CCDF200B66B85 /* HXFilterList.m */; };
 		484D39561C0CCDF200B66B85 /* HXFilterListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D39541C0CCDF200B66B85 /* HXFilterListManager.m */; };
 		484D395A1C0CCE4500B66B85 /* HXNormalAdviser.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D39591C0CCE4500B66B85 /* HXNormalAdviser.m */; };
-		484D395D1C0DD91100B66B85 /* HXNormalAdviserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D395C1C0DD91100B66B85 /* HXNormalAdviserCell.m */; };
-		484D39601C0DE78500B66B85 /* HXServiceDesingerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D395F1C0DE78500B66B85 /* HXServiceDesingerCell.m */; };
 		484F677E1BF8EA3900B0ABC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677A1BF8EA3900B0ABC1 /* LaunchScreen.storyboard */; };
 		484F677F1BF8EA3900B0ABC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484F677C1BF8EA3900B0ABC1 /* Main.storyboard */; };
 		485FE85A1BF8E1CC00654279 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7301BF8E1CC00654279 /* AppDelegate.mm */; };
@@ -116,6 +114,8 @@
 		488D0E401BFA3C170068D47C /* HXForgotPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3C1BFA3C170068D47C /* HXForgotPWViewController.m */; };
 		488D0E411BFA3C170068D47C /* HXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */; };
 		488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */; };
+		48A2E6201C10940900483FD6 /* HXNormalAdviserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E61D1C10940900483FD6 /* HXNormalAdviserCell.m */; };
+		48A2E6211C10940900483FD6 /* HXServiceDesingerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E61F1C10940900483FD6 /* HXServiceDesingerCell.m */; };
 		48BAC5421C0F46AD00C41CDD /* HXServiceHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC5411C0F46AD00C41CDD /* HXServiceHouse.m */; };
 		48BAC5471C0F50B500C41CDD /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BAC5451C0F50B500C41CDD /* List.storyboard */; };
 		48BAC54B1C0F52BE00C41CDD /* HXServiceHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC54A1C0F52BE00C41CDD /* HXServiceHouseViewController.m */; };
@@ -164,10 +164,6 @@
 		484D39541C0CCDF200B66B85 /* HXFilterListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXFilterListManager.m; sourceTree = "<group>"; };
 		484D39581C0CCE4500B66B85 /* HXNormalAdviser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNormalAdviser.h; sourceTree = "<group>"; };
 		484D39591C0CCE4500B66B85 /* HXNormalAdviser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNormalAdviser.m; sourceTree = "<group>"; };
-		484D395B1C0DD91100B66B85 /* HXNormalAdviserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNormalAdviserCell.h; sourceTree = "<group>"; };
-		484D395C1C0DD91100B66B85 /* HXNormalAdviserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNormalAdviserCell.m; sourceTree = "<group>"; };
-		484D395E1C0DE78500B66B85 /* HXServiceDesingerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceDesingerCell.h; sourceTree = "<group>"; };
-		484D395F1C0DE78500B66B85 /* HXServiceDesingerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceDesingerCell.m; sourceTree = "<group>"; };
 		484F677B1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484F677D1BF8EA3900B0ABC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		485FE72F1BF8E1CC00654279 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -364,6 +360,10 @@
 		488D0E3F1BFA3C170068D47C /* HXRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRegisterViewController.m; sourceTree = "<group>"; };
 		488D0E421BFA3C4E0068D47C /* HXServiceTermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceTermsViewController.h; sourceTree = "<group>"; };
 		488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceTermsViewController.m; sourceTree = "<group>"; };
+		48A2E61C1C10940900483FD6 /* HXNormalAdviserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNormalAdviserCell.h; sourceTree = "<group>"; };
+		48A2E61D1C10940900483FD6 /* HXNormalAdviserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNormalAdviserCell.m; sourceTree = "<group>"; };
+		48A2E61E1C10940900483FD6 /* HXServiceDesingerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceDesingerCell.h; sourceTree = "<group>"; };
+		48A2E61F1C10940900483FD6 /* HXServiceDesingerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceDesingerCell.m; sourceTree = "<group>"; };
 		48BAC5401C0F46AD00C41CDD /* HXServiceHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXServiceHouse.h; sourceTree = "<group>"; };
 		48BAC5411C0F46AD00C41CDD /* HXServiceHouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceHouse.m; sourceTree = "<group>"; };
 		48BAC5461C0F50B500C41CDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/List.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -1131,16 +1131,13 @@
 		487D7AE61C08A05B00B11A35 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				48A2E61A1C10940900483FD6 /* Normal */,
 				48BAC55B1C0F624E00C41CDD /* House */,
 				48BAC5571C0F5B2200C41CDD /* Case */,
 				487D7AE71C08A07E00B11A35 /* HXServiceCell.h */,
 				487D7AE81C08A07E00B11A35 /* HXServiceCell.m */,
 				487D7AE91C08A07E00B11A35 /* HXSubServiceCell.h */,
 				487D7AEA1C08A07E00B11A35 /* HXSubServiceCell.m */,
-				484D395B1C0DD91100B66B85 /* HXNormalAdviserCell.h */,
-				484D395C1C0DD91100B66B85 /* HXNormalAdviserCell.m */,
-				484D395E1C0DE78500B66B85 /* HXServiceDesingerCell.h */,
-				484D395F1C0DE78500B66B85 /* HXServiceDesingerCell.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1163,6 +1160,25 @@
 				488D0E431BFA3C4E0068D47C /* HXServiceTermsViewController.m */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		48A2E61A1C10940900483FD6 /* Normal */ = {
+			isa = PBXGroup;
+			children = (
+				48A2E61B1C10940900483FD6 /* Detail */,
+				48A2E61C1C10940900483FD6 /* HXNormalAdviserCell.h */,
+				48A2E61D1C10940900483FD6 /* HXNormalAdviserCell.m */,
+				48A2E61E1C10940900483FD6 /* HXServiceDesingerCell.h */,
+				48A2E61F1C10940900483FD6 /* HXServiceDesingerCell.m */,
+			);
+			path = Normal;
+			sourceTree = "<group>";
+		};
+		48A2E61B1C10940900483FD6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		48BAC53F1C0F469400C41CDD /* House */ = {
@@ -1462,6 +1478,7 @@
 				485FE8B31BF8E1CC00654279 /* HXOnlinePayDetailViewModel.m in Sources */,
 				485FE8CB1BF8E1CC00654279 /* HXCaseCardCell.m in Sources */,
 				487D7AE51C08A04100B11A35 /* HXServiceViewController.m in Sources */,
+				48A2E6211C10940900483FD6 /* HXServiceDesingerCell.m in Sources */,
 				485FE8961BF8E1CC00654279 /* HXLoginViewController.m in Sources */,
 				485FE8B21BF8E1CC00654279 /* HXReservationDetailViewModel.m in Sources */,
 				482B1CA31C05F59900D65D5D /* HXCategory.m in Sources */,
@@ -1502,15 +1519,14 @@
 				485FE8941BF8E1CC00654279 /* HXWebViewController.m in Sources */,
 				485FE8D21BF8E1CC00654279 /* HXWorkCircuitOrderCell.m in Sources */,
 				CDDF2F4D1C0FEE790011B109 /* HXServiceNormalViewController.m in Sources */,
-				484D39601C0DE78500B66B85 /* HXServiceDesingerCell.m in Sources */,
 				488D0E441BFA3C4E0068D47C /* HXServiceTermsViewController.m in Sources */,
 				484D395A1C0CCE4500B66B85 /* HXNormalAdviser.m in Sources */,
 				485FE8821BF8E1CC00654279 /* HXReservationOrder.m in Sources */,
 				485FE8921BF8E1CC00654279 /* HXPanGestureNavgaitionController.m in Sources */,
 				485FE89B1BF8E1CC00654279 /* HXMessageListViewController.m in Sources */,
 				4873314E1BFE2D3A00260D5B /* HXProfileViewModel.m in Sources */,
+				48A2E6201C10940900483FD6 /* HXNormalAdviserCell.m in Sources */,
 				485FE8891BF8E1CC00654279 /* HXWorkCircuitOrder.m in Sources */,
-				484D395D1C0DD91100B66B85 /* HXNormalAdviserCell.m in Sources */,
 				485FE8991BF8E1CC00654279 /* HXMessageCenterViewController.m in Sources */,
 				485FE8A21BF8E1CC00654279 /* HXMyReservationListViewController.m in Sources */,
 				485FE8761BF8E1CC00654279 /* HXThemeManager.m in Sources */,
