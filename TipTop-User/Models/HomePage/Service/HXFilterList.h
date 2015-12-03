@@ -17,8 +17,8 @@
 
 @interface HXFilterListItem : NSObject
 
-@property (nonatomic, strong)     NSString *key;
-@property (nonatomic, strong) NSDictionary *data;
+@property (nonatomic, strong)                 NSString *key;
+@property (nonatomic, strong)  NSArray<HXFilterItem *> *data;
 
 @end
 

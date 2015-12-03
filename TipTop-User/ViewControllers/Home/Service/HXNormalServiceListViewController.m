@@ -95,16 +95,14 @@ static NSString *ListApi = @"/agent";
 
 - (void)showFilterMenuWithItem:(HXFilterListItem *)listItem {
     NSMutableArray *items = @[].mutableCopy;
-    NSDictionary *filterData = listItem.data;
     __weak __typeof__(self)weakSelf = self;
-    [filterData.allValues enumerateObjectsUsingBlock:
-     ^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-         __strong __typeof__(self)strongSelf = weakSelf;
-         REMenuItem *item = [[REMenuItem alloc] initWithTitle:obj image:nil highlightedImage:nil action:^(REMenuItem *item) {
-             [strongSelf filterDidSelectedWithKey:listItem.key value:filterData.allKeys[idx]];
-         }];
-         [items addObject:item];
-     }];
+    [listItem.data enumerateObjectsUsingBlock:^(HXFilterItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        __strong __typeof__(self)strongSelf = weakSelf;
+        REMenuItem *item = [[REMenuItem alloc] initWithTitle:obj.value image:nil highlightedImage:nil action:^(REMenuItem *item) {
+            [strongSelf filterDidSelectedWithKey:listItem.key value:obj.key];
+        }];
+        [items addObject:item];
+    }];
     _filterMenu.items = [items copy];
     [_filterMenu showInView:_listContentView];
 }

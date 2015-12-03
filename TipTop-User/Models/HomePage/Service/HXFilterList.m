@@ -12,6 +12,11 @@
 @end
 
 @implementation HXFilterListItem
+
++ (NSDictionary *)mj_objectClassInArray {
+    return @{@"data": @"HXFilterItem"};
+}
+
 @end
 
 @implementation HXFilterList
