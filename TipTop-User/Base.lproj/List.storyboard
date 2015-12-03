@@ -1508,7 +1508,7 @@
             </objects>
             <point key="canvasLocation" x="726" y="383"/>
         </scene>
-        <!--Normal Service Detail View Controller-->
+        <!--Delegate-->
         <scene sceneID="8ip-Ak-u1O">
             <objects>
                 <tableViewController storyboardIdentifier="HXNormalServiceDetailViewController" id="a3p-WC-McG" customClass="HXNormalServiceDetailViewController" sceneMemberID="viewController">
@@ -1677,6 +1677,9 @@
                                             <rect key="frame" x="258" y="98" width="54" height="22"/>
                                             <animations/>
                                             <state key="normal" image="SND-CallIcon"/>
+                                            <connections>
+                                                <action selector="callButtonPressed" destination="XxX-ZO-qoK" eventType="touchUpInside" id="OUS-dg-dK4"/>
+                                            </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpH-Wg-ujb">
                                             <rect key="frame" x="15" y="139.5" width="305" height="0.5"/>
@@ -1726,6 +1729,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="avatar" destination="xP4-tc-h4Q" id="yQk-2x-Noz"/>
+                                    <outlet property="delegate" destination="a3p-WC-McG" id="JWS-ec-3Az"/>
                                     <outlet property="goodCountLabel" destination="mSK-IB-yRF" id="A29-PH-WGW"/>
                                     <outlet property="moblieLabel" destination="8N0-4F-dq1" id="eE9-6r-ZwY"/>
                                     <outlet property="nameLabel" destination="uOY-0l-DoV" id="sjf-sZ-2PB"/>
@@ -1899,6 +1903,9 @@
                                             <rect key="frame" x="258" y="71" width="54" height="22"/>
                                             <animations/>
                                             <state key="normal" image="SND-CallIcon"/>
+                                            <connections>
+                                                <action selector="callButtonPressed" destination="7oG-Mq-JE4" eventType="touchUpInside" id="OU6-CC-RNK"/>
+                                            </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRC-Yv-PUN">
                                             <rect key="frame" x="15" y="109.5" width="305" height="0.5"/>
@@ -1939,6 +1946,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="avatar" destination="UIr-Ji-i09" id="BXg-tx-qRh"/>
+                                    <outlet property="delegate" destination="a3p-WC-McG" id="LZo-lU-CdA"/>
                                     <outlet property="goodCountLabel" destination="UYH-wr-D1f" id="xpq-PT-Bj5"/>
                                     <outlet property="moblieLabel" destination="W4W-ko-mKp" id="40h-LE-Zyu"/>
                                     <outlet property="nameLabel" destination="QaA-Pi-Csl" id="8Q4-E0-2mO"/>
@@ -2190,6 +2198,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="collectionView" destination="UIF-p6-ep6" id="PNa-Yz-NUU"/>
+                                    <outlet property="delegate" destination="a3p-WC-McG" id="7Wv-tx-l7Z"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HXDetailCaseContentCell" id="7OA-MZ-ESY" customClass="HXDetailCaseContentCell">
@@ -2216,6 +2225,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="contentLabel" destination="S8v-0V-TQ9" id="8rN-0f-RbQ"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HXDetialMoreAdvisoryCell" rowHeight="50" id="jcn-kl-ALo" customClass="HXDetialMoreAdvisoryCell">
                                 <rect key="frame" x="0.0" y="776" width="320" height="50"/>
@@ -2518,15 +2530,15 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好评 ）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gid-sN-l7o">
-                                            <rect key="frame" x="106" y="16" width="46" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJC-FX-2Gr">
+                                            <rect key="frame" x="78" y="16" width="28" height="17"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJC-FX-2Gr">
-                                            <rect key="frame" x="78" y="16" width="28" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好评 ）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gid-sN-l7o">
+                                            <rect key="frame" x="106" y="16" width="46" height="17"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -2551,6 +2563,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="commentCountLabel" destination="qJC-FX-2Gr" id="quf-KY-Gwx"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HXDetailCommentCell" rowHeight="60" id="kIs-6s-aPz" customClass="HXDetailCommentCell">
                                 <rect key="frame" x="0.0" y="986" width="320" height="60"/>

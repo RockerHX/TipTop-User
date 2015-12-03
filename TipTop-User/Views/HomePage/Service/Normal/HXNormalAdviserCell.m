@@ -27,6 +27,13 @@
 }
 
 - (void)viewConfig {
+    if (_delegate && [_delegate respondsToSelector:@selector(normalAdviserCellTakeCall:)]) {
+        [_delegate normalAdviserCellTakeCall:self];
+    }
+}
+
+#pragma mark - Event Response
+- (IBAction)callButtonPressed {
     
 }
 

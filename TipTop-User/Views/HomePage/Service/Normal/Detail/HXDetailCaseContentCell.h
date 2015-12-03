@@ -6,8 +6,8 @@
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HXServiceDetialContentCell.h"
 
-@interface HXDetailCaseContentCell : UITableViewCell
+@interface HXDetailCaseContentCell : HXServiceDetialContentCell
 
 @end

@@ -10,4 +10,6 @@
 
 @interface HXDetailMoreCommentCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *commentCountLabel;
+
 @end

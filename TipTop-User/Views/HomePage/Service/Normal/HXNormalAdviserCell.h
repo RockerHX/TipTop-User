@@ -10,8 +10,18 @@
 #import "HXNormalAdviser.h"
 
 @class HXStarView;
+@class HXNormalAdviserCell;
+
+@protocol HXNormalAdviserCellDelegate <NSObject>
+
+@optional
+- (void)normalAdviserCellTakeCall:(HXNormalAdviserCell *)cell;
+
+@end
 
 @interface HXNormalAdviserCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet          id  <HXNormalAdviserCellDelegate>delegate;
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
 @property (weak, nonatomic) IBOutlet     UILabel *nameLabel;
@@ -19,6 +29,8 @@
 @property (weak, nonatomic) IBOutlet     UILabel *goodCountLabel;
 @property (weak, nonatomic) IBOutlet     UILabel *serviceLabel;
 @property (weak, nonatomic) IBOutlet     UILabel *moblieLabel;
+
+- (IBAction)callButtonPressed;
 
 - (void)displayWithNormalAdviser:(HXNormalAdviser *)adviser;
 
