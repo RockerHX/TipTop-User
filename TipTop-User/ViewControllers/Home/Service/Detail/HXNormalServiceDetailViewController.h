@@ -16,5 +16,6 @@
 @property (nonatomic, copy)             NSString *cid;
 
 - (IBAction)backButtonPressed;
+- (IBAction)reserveButtonPressed;
 
 @end

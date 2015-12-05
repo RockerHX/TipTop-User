@@ -7,6 +7,7 @@
 //
 
 #import "HXNormalServiceDetailViewController.h"
+#import "MJRefresh.h"
 #import "HXNormalDetailAdviserCell.h"
 #import "HXServiceDetailDesingerCell.h"
 #import "HXServiceDetialContentCell.h"
@@ -19,9 +20,14 @@
 #import "HXDetailCommentPromptCell.h"
 #import "HXDetailCommentCell.h"
 #import "HXHomePageAdviserDetialViewModel.h"
-#import "MJRefresh.h"
 #import "HXMoreAdvisersViewController.h"
 #import "UIAlertView+BlocksKit.h"
+#import "HXAppApiRequest.h"
+#import "MBProgressHUD.h"
+#import "HXUserSession.h"
+
+
+static NSString *ReserveApi = @"/order/create";
 
 @interface HXNormalServiceDetailViewController () <HXNormalAdviserCellDelegate, HXDetailCaseCardCellDelegate>
 @end
@@ -58,13 +64,39 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma mark - 
+- (IBAction)reserveButtonPressed {
+    [self startReserveRequestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
+                                                  @"agent_id": _aid,
+                                                       @"cid": _cid}];
+}
+
+#pragma mark - Private Methods
 - (void)loadNewData {
     __weak __typeof__(self)weakSelf = self;
     [_viewModel requestWithID:_aid cid:_cid completed:^{
         __strong __typeof__(self)strongSelf = weakSelf;
         [strongSelf.tableView reloadData];
         [strongSelf.tableView.mj_header endRefreshing];
+    }];
+}
+
+- (void)startReserveRequestWithParameters:(NSDictionary *)parameters {
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    __weak __typeof__(self)weakSelf = self;
+    [HXAppApiRequest requestPOSTMethodsWithAPI:[HXApi apiURLWithApi:ReserveApi] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        __strong __typeof__(self)strongSelf = weakSelf;
+        NSInteger errorCode = [responseObject[@"error_code"] integerValue];
+        if (HXAppApiRequestErrorCodeNoError == errorCode) {
+            [UIAlertView bk_showAlertViewWithTitle:@"预约成功，售后顾问会和您联系！"
+                                           message:nil
+                                 cancelButtonTitle:@"确定"
+                                 otherButtonTitles:nil
+                                           handler:nil];
+        }
+        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        __strong __typeof__(self)strongSelf = weakSelf;
+        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
     }];
 }
 
