@@ -20,6 +20,7 @@
 #import "HXDetailCommentCell.h"
 #import "HXHomePageAdviserDetialViewModel.h"
 #import "MJRefresh.h"
+#import "HXMoreAdvisersViewController.h"
 
 @interface HXNormalServiceDetailViewController () <HXDetailCaseCardCellDelegate>
 @end
@@ -203,11 +204,16 @@
     HXHomePageAdviserDetialCellRow row = ((NSNumber *)_viewModel.rowTypes[indexPath.row]).integerValue;
     switch (row) {
         case HXHomePageAdviserDetialCellRowAdvisoryMore: {
-            ;
+            HXMoreAdvisersViewController *moreAdviserViewController = [HXMoreAdvisersViewController instance];
+            moreAdviserViewController.cid = _cid;
+            [self.navigationController pushViewController:moreAdviserViewController animated:YES];
             break;
         }
         case HXHomePageAdviserDetialCellRowAdvisoryAdviser: {
-            ;
+            HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
+            detailViewController.cid = _cid;
+            detailViewController.aid = _aid;
+            [self.navigationController pushViewController:detailViewController animated:YES];
             break;
         }
         default: {
