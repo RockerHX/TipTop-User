@@ -879,10 +879,10 @@
 		485FE7FE1BF8E1CC00654279 /* WorkCircuit */ = {
 			isa = PBXGroup;
 			children = (
-				485FE7FF1BF8E1CC00654279 /* HXWorkCircuitDetailViewController.h */,
-				485FE8001BF8E1CC00654279 /* HXWorkCircuitDetailViewController.m */,
 				485FE8011BF8E1CC00654279 /* HXWorkCircuitListViewController.h */,
 				485FE8021BF8E1CC00654279 /* HXWorkCircuitListViewController.m */,
+				485FE7FF1BF8E1CC00654279 /* HXWorkCircuitDetailViewController.h */,
+				485FE8001BF8E1CC00654279 /* HXWorkCircuitDetailViewController.m */,
 			);
 			path = WorkCircuit;
 			sourceTree = "<group>";

@@ -10,4 +10,6 @@
 
 @interface HXWorkCircuitDetailViewController : HXWebViewController
 
+@property (nonatomic, copy) NSString *ID;
+
 @end

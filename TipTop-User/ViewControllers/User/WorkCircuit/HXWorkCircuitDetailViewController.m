@@ -7,6 +7,8 @@
 //
 
 #import "HXWorkCircuitDetailViewController.h"
+#import "HXApi.h"
+#import "HXUserSession.h"
 
 @interface HXWorkCircuitDetailViewController ()
 @end
@@ -15,6 +17,8 @@
 
 #pragma mark - View Controller Life Cycle
 - (void)viewDidLoad {
+    self.loadURL = [DoMain stringByAppendingFormat:@"/h5/client/order/view?access_token=%@&id=%@", [HXUserSession share].user.accessToken, _ID];
+    
     [super viewDidLoad];
 }
 

@@ -14,9 +14,9 @@
     return @{@"ID": @"id",
       @"displayID": @"display_id",
         @"subCate": @"sub_cate",
-     @"clientName": @"client_name",
-   @"clientAvatar": @"client_avatar",
-   @"clientMobile": @"client_mobile",
+      @"agentName": @"agent_name",
+    @"agentAvatar": @"agent_avatar",
+    @"agentMobile": @"agent_mobile",
      @"isComplete": @"is_complete",
    @"completeTime": @"complete_time",
      @"createTime": @"create_time"};

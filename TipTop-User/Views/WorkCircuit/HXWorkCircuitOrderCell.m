@@ -34,7 +34,7 @@
 #pragma mark - Event Response
 - (void)phoneButonPressed {
     if (_delegate && [_delegate respondsToSelector:@selector(orderCell:shouldCallPhone:)]) {
-        [_delegate orderCell:self shouldCallPhone:_order.clientMobile];
+        [_delegate orderCell:self shouldCallPhone:_order.agentMobile];
     }
 }
 
@@ -45,9 +45,9 @@
     _dateLabel.text = [[NSDate dateWithTimeIntervalSince1970:order.createTime] formattedDateWithFormat:@"yyyy-MM-dd hh:mm"];
     _orderNumberLabel.text = order.displayID;
     _orderNameLabel.text = order.cate;
-    _nameLabel.text = order.clientName;
+    _nameLabel.text = order.agentName;
     _finishedIcon.hidden = !order.isComplete;
-    [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:order.clientAvatar]];
+    [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:order.agentAvatar]];
 }
 
 @end
