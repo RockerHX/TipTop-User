@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOm-ca-YgN">
-                                            <rect key="frame" x="0.0" y="0.5" width="320" height="169.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
@@ -80,9 +80,13 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkP-Es-w9F">
-                                            <rect key="frame" x="267" y="73.5" width="33" height="33"/>
+                                            <rect key="frame" x="220" y="76.5" width="80" height="27"/>
                                             <animations/>
-                                            <state key="normal" image="MR-PhoneIcon"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="hkP-Es-w9F" secondAttribute="height" multiplier="3:1" id="6pk-3B-kGA"/>
+                                                <constraint firstAttribute="width" constant="80" id="S8J-HJ-eXE"/>
+                                            </constraints>
+                                            <state key="normal" image="OP-CallIcon"/>
                                             <connections>
                                                 <action selector="phoneButonPressed" destination="6LP-1N-VsP" eventType="touchUpInside" id="XRR-Ja-Soz"/>
                                             </connections>
@@ -571,6 +575,7 @@
         <image name="MR-TimeIcon" width="17" height="18"/>
         <image name="MR-UserIcon" width="17" height="18"/>
         <image name="MRD-ClientIcon" width="16" height="15"/>
+        <image name="OP-CallIcon" width="119" height="38"/>
         <image name="OP-OrderIcon" width="17" height="18"/>
         <image name="OP-TransfersIcon" width="58" height="23"/>
         <image name="OPD-MoneyIcon" width="16" height="16"/>
