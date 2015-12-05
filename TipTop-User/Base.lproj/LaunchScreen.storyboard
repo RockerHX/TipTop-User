@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,30 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="L-LaunchBG" translatesAutoresizingMaskIntoConstraints="NO" id="zn0-I9-0mJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="L-LaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-Xu-bfW">
+                                <rect key="frame" x="78" y="136" width="163" height="91"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="Yjt-Wx-Eds"/>
+                                    <constraint firstAttribute="width" constant="163" id="qNp-wr-it6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zn0-I9-0mJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Kq6-WE-w8h"/>
+                            <constraint firstItem="zn0-I9-0mJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="RZo-df-3vz"/>
+                            <constraint firstItem="nbe-Xu-bfW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SNz-G4-L94"/>
+                            <constraint firstItem="nbe-Xu-bfW" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.8" id="W7d-ma-CZG"/>
+                            <constraint firstAttribute="trailing" secondItem="zn0-I9-0mJ" secondAttribute="trailing" id="eHL-ZZ-Ve1"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zn0-I9-0mJ" secondAttribute="bottom" id="xvR-WR-3X2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,4 +48,8 @@
             <point key="canvasLocation" x="28.266666666666666" y="355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="L-LaunchBG" width="375" height="667"/>
+        <image name="L-LaunchLogo" width="163" height="91"/>
+    </resources>
 </document>
