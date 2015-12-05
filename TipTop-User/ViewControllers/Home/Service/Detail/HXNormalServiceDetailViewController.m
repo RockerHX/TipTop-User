@@ -21,8 +21,9 @@
 #import "HXHomePageAdviserDetialViewModel.h"
 #import "MJRefresh.h"
 #import "HXMoreAdvisersViewController.h"
+#import "UIAlertView+BlocksKit.h"
 
-@interface HXNormalServiceDetailViewController () <HXDetailCaseCardCellDelegate>
+@interface HXNormalServiceDetailViewController () <HXNormalAdviserCellDelegate, HXDetailCaseCardCellDelegate>
 @end
 
 @implementation HXNormalServiceDetailViewController {
@@ -220,6 +221,22 @@
             break;
         }
     }
+}
+
+#pragma mark - HXNormalAdviserCellDelegate Methods
+- (void)normalAdviserCellTakeCall:(HXNormalAdviserCell *)cell {
+    NSString *phoneNumber = _viewModel.adviser.mobile;
+    [UIAlertView bk_showAlertViewWithTitle:@"确定拨打"
+                                   message:phoneNumber
+                         cancelButtonTitle:@"确定"
+                         otherButtonTitles:@[@"取消"]
+                                   handler:
+     ^(UIAlertView *alertView, NSInteger buttonIndex) {
+         if (buttonIndex == alertView.cancelButtonIndex) {
+             NSString *mobile = [[NSString alloc] initWithFormat:@"tel:%@", phoneNumber];
+             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mobile]];
+         }
+     }];
 }
 
 #pragma mark - HXDetailCaseCardCellDelegate Methods
