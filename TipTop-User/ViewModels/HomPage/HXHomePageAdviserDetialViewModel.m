@@ -60,7 +60,7 @@ static NSString *CommentsApi = @"/agent/review";
 }
 
 - (NSInteger)regularRow {
-    return 7;
+    return _cases.count ? 7 : 4;
 }
 
 - (NSInteger)rows {
