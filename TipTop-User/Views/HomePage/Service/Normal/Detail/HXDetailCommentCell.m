@@ -7,17 +7,28 @@
 //
 
 #import "HXDetailCommentCell.h"
+#import "UIConstants.h"
+#import "HXComment.h"
+#import "HXStarView.h"
+#import "DateTools.h"
 
 @implementation HXDetailCommentCell
 
+#pragma mark - Init Methods
 - (void)awakeFromNib {
-    // Initialization code
+    [self initConfig];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+#pragma mark - Config Methods
+- (void)initConfig {
+    _contentLabel.preferredMaxLayoutWidth = SCREEN_WIDTH - 23.0f;
+}
 
-    // Configure the view for the selected state
+#pragma mark - Public Methods
+- (void)displayWithComment:(HXComment *)comment {
+    _starView.value = comment.star;
+    _dateLabel.text = [[NSDate dateWithTimeIntervalSince1970:comment.createDate] formattedDateWithFormat:@"yyyy-MM-dd hh:mm"];
+    _contentLabel.text = comment.content;
 }
 
 @end

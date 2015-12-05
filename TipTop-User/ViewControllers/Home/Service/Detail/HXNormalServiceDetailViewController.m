@@ -16,7 +16,7 @@
 #import "HXDetailCaseContentCell.h"
 #import "HXDetialMoreAdvisoryCell.h"
 #import "HXNormalAdviserCell.h"
-#import "HXDetailMoreCommentCell.h"
+#import "HXDetailCommentPromptCell.h"
 #import "HXDetailCommentCell.h"
 #import "HXHomePageAdviserDetialViewModel.h"
 #import "MJRefresh.h"
@@ -111,19 +111,22 @@
             break;
         }
         case HXHomePageAdviserDetialCellRowAdvisoryMore: {
-            ;
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXDetialMoreAdvisoryCell class]) forIndexPath:indexPath];
             break;
         }
         case HXHomePageAdviserDetialCellRowAdvisoryAdviser: {
-            ;
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXNormalAdviserCell class]) forIndexPath:indexPath];
+            [(HXNormalAdviserCell *)cell displayWithNormalAdviser:_viewModel.advisoryAdvisers[indexPath.row - _viewModel.regularRow]];
             break;
         }
         case HXHomePageAdviserDetialCellRowCommentPrompt: {
-            ;
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXDetailCommentPromptCell class]) forIndexPath:indexPath];
+            ((HXDetailCommentPromptCell *)cell).commentCountLabel.text = @(_viewModel.comments.count).stringValue;
             break;
         }
         case HXHomePageAdviserDetialCellRowComment: {
-            ;
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXDetailCommentCell class]) forIndexPath:indexPath];
+            [(HXDetailCommentCell *)cell displayWithComment:_viewModel.comments[indexPath.row - _viewModel.exceptCommentRow]];
             break;
         }
     }
@@ -174,19 +177,21 @@
             break;
         }
         case HXHomePageAdviserDetialCellRowAdvisoryMore: {
-            ;
+            height = _viewModel.advisoryMoreHeight;
             break;
         }
         case HXHomePageAdviserDetialCellRowAdvisoryAdviser: {
-            ;
+            height = _viewModel.advisoryAdviserHeight;
             break;
         }
         case HXHomePageAdviserDetialCellRowCommentPrompt: {
-            ;
+            height = _viewModel.commentPromptHeight;
             break;
         }
         case HXHomePageAdviserDetialCellRowComment: {
-            ;
+            height = [tableView fd_heightForCellWithIdentifier:NSStringFromClass([HXDetailCommentCell class]) cacheByIndexPath:indexPath configuration:^(HXDetailCommentCell *cell) {
+                [cell displayWithComment:_viewModel.comments[indexPath.row - _viewModel.exceptCommentRow]];
+            }];
             break;
         }
     }
@@ -195,6 +200,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HXHomePageAdviserDetialCellRow row = ((NSNumber *)_viewModel.rowTypes[indexPath.row]).integerValue;
+    switch (row) {
+        case HXHomePageAdviserDetialCellRowAdvisoryMore: {
+            ;
+            break;
+        }
+        case HXHomePageAdviserDetialCellRowAdvisoryAdviser: {
+            ;
+            break;
+        }
+        default: {
+            break;
+        }
+    }
 }
 
 #pragma mark - HXDetailCaseCardCellDelegate Methods

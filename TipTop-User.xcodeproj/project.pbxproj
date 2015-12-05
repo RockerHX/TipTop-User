@@ -114,7 +114,7 @@
 		48A2E6361C1097A200483FD6 /* HXDetailCaseCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E6351C1097A200483FD6 /* HXDetailCaseCardCell.m */; };
 		48A2E63A1C10986700483FD6 /* HXNormalServiceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E6391C10986700483FD6 /* HXNormalServiceDetailViewController.m */; };
 		48A2E63D1C10999700483FD6 /* HXDetialMoreAdvisoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E63C1C10999700483FD6 /* HXDetialMoreAdvisoryCell.m */; };
-		48A2E6401C109A0400483FD6 /* HXDetailMoreCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E63F1C109A0400483FD6 /* HXDetailMoreCommentCell.m */; };
+		48A2E6401C109A0400483FD6 /* HXDetailCommentPromptCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E63F1C109A0400483FD6 /* HXDetailCommentPromptCell.m */; };
 		48A2E6431C109A1D00483FD6 /* HXDetailCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E6421C109A1D00483FD6 /* HXDetailCommentCell.m */; };
 		48A2E6461C109AEF00483FD6 /* HXDetailCaseContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E6451C109AEF00483FD6 /* HXDetailCaseContentCell.m */; };
 		48A2E64A1C10A53B00483FD6 /* HXCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A2E6491C10A53B00483FD6 /* HXCase.m */; };
@@ -130,6 +130,7 @@
 		48BAC5611C0F62B600C41CDD /* HXServiceCaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC5601C0F62B600C41CDD /* HXServiceCaseDetailViewController.m */; };
 		48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BD52741BFA430900613F19 /* HXFeedBackViewController.m */; };
 		48C187BE1C129AE30067B817 /* HXCaseCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C187BD1C129AE30067B817 /* HXCaseCardCollectionViewCell.m */; };
+		48C187C11C12B9170067B817 /* HXComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C187C01C12B9170067B817 /* HXComment.m */; };
 		48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */; };
 		48D72F781BFB94EF006BA8C3 /* Mall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D72F761BFB94EF006BA8C3 /* Mall.storyboard */; };
 		48D72F7C1BFB952F006BA8C3 /* HXMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F7B1BFB952F006BA8C3 /* HXMallViewController.m */; };
@@ -364,8 +365,8 @@
 		48A2E6391C10986700483FD6 /* HXNormalServiceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNormalServiceDetailViewController.m; sourceTree = "<group>"; };
 		48A2E63B1C10999700483FD6 /* HXDetialMoreAdvisoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDetialMoreAdvisoryCell.h; sourceTree = "<group>"; };
 		48A2E63C1C10999700483FD6 /* HXDetialMoreAdvisoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDetialMoreAdvisoryCell.m; sourceTree = "<group>"; };
-		48A2E63E1C109A0400483FD6 /* HXDetailMoreCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDetailMoreCommentCell.h; sourceTree = "<group>"; };
-		48A2E63F1C109A0400483FD6 /* HXDetailMoreCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDetailMoreCommentCell.m; sourceTree = "<group>"; };
+		48A2E63E1C109A0400483FD6 /* HXDetailCommentPromptCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDetailCommentPromptCell.h; sourceTree = "<group>"; };
+		48A2E63F1C109A0400483FD6 /* HXDetailCommentPromptCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDetailCommentPromptCell.m; sourceTree = "<group>"; };
 		48A2E6411C109A1D00483FD6 /* HXDetailCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDetailCommentCell.h; sourceTree = "<group>"; };
 		48A2E6421C109A1D00483FD6 /* HXDetailCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDetailCommentCell.m; sourceTree = "<group>"; };
 		48A2E6441C109AEF00483FD6 /* HXDetailCaseContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDetailCaseContentCell.h; sourceTree = "<group>"; };
@@ -395,6 +396,8 @@
 		48BD52741BFA430900613F19 /* HXFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXFeedBackViewController.m; sourceTree = "<group>"; };
 		48C187BC1C129AE30067B817 /* HXCaseCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCaseCardCollectionViewCell.h; sourceTree = "<group>"; };
 		48C187BD1C129AE30067B817 /* HXCaseCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCaseCardCollectionViewCell.m; sourceTree = "<group>"; };
+		48C187BF1C12B9170067B817 /* HXComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXComment.h; sourceTree = "<group>"; };
+		48C187C01C12B9170067B817 /* HXComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXComment.m; sourceTree = "<group>"; };
 		48D72F6F1BFB9154006BA8C3 /* HXRecruitmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRecruitmentViewController.h; sourceTree = "<group>"; };
 		48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRecruitmentViewController.m; sourceTree = "<group>"; };
 		48D72F771BFB94EF006BA8C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Mall.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -1165,8 +1168,8 @@
 				48A2E6451C109AEF00483FD6 /* HXDetailCaseContentCell.m */,
 				48A2E63B1C10999700483FD6 /* HXDetialMoreAdvisoryCell.h */,
 				48A2E63C1C10999700483FD6 /* HXDetialMoreAdvisoryCell.m */,
-				48A2E63E1C109A0400483FD6 /* HXDetailMoreCommentCell.h */,
-				48A2E63F1C109A0400483FD6 /* HXDetailMoreCommentCell.m */,
+				48A2E63E1C109A0400483FD6 /* HXDetailCommentPromptCell.h */,
+				48A2E63F1C109A0400483FD6 /* HXDetailCommentPromptCell.m */,
 				48A2E6411C109A1D00483FD6 /* HXDetailCommentCell.h */,
 				48A2E6421C109A1D00483FD6 /* HXDetailCommentCell.m */,
 			);
@@ -1187,6 +1190,8 @@
 			children = (
 				48A2E6481C10A53B00483FD6 /* HXCase.h */,
 				48A2E6491C10A53B00483FD6 /* HXCase.m */,
+				48C187BF1C12B9170067B817 /* HXComment.h */,
+				48C187C01C12B9170067B817 /* HXComment.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -1534,6 +1539,7 @@
 				485FE8C31BF8E1CC00654279 /* HXReservationDetailInfoCell.m in Sources */,
 				485FE8BE1BF8E1CC00654279 /* HXMessageListCell.m in Sources */,
 				48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */,
+				48C187C11C12B9170067B817 /* HXComment.m in Sources */,
 				482B1CA61C05F8BA00D65D5D /* HXCategoryManager.m in Sources */,
 				485FE8B71BF8E1CC00654279 /* BRPlaceholderTextView.m in Sources */,
 				48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */,
@@ -1553,7 +1559,7 @@
 				484D395A1C0CCE4500B66B85 /* HXNormalAdviser.m in Sources */,
 				48A2E64E1C10A6B400483FD6 /* HXHomePageAdviserDetialViewModel.m in Sources */,
 				485FE8821BF8E1CC00654279 /* HXReservationOrder.m in Sources */,
-				48A2E6401C109A0400483FD6 /* HXDetailMoreCommentCell.m in Sources */,
+				48A2E6401C109A0400483FD6 /* HXDetailCommentPromptCell.m in Sources */,
 				485FE8921BF8E1CC00654279 /* HXPanGestureNavgaitionController.m in Sources */,
 				48A2E6241C10944A00483FD6 /* HXNormalDetailAdviserCell.m in Sources */,
 				48A2E6361C1097A200483FD6 /* HXDetailCaseCardCell.m in Sources */,

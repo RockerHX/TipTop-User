@@ -1,5 +1,5 @@
 //
-//  HXDetailMoreCommentCell.h
+//  HXDetailCommentPromptCell.h
 //  TipTop-User
 //
 //  Created by ShiCang on 15/12/3.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HXDetailMoreCommentCell : UITableViewCell
+@interface HXDetailCommentPromptCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *commentCountLabel;
 
