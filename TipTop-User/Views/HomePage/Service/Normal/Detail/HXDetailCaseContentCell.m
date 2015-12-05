@@ -7,17 +7,18 @@
 //
 
 #import "HXDetailCaseContentCell.h"
+#import "UIConstants.h"
 
 @implementation HXDetailCaseContentCell
 
+#pragma mark - Init Methods
 - (void)awakeFromNib {
-    // Initialization code
+    [self initConfig];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+#pragma mark - Config Methods
+- (void)initConfig {
+    self.contentLabel.preferredMaxLayoutWidth = SCREEN_WIDTH - 30.0f;
 }
 
 @end

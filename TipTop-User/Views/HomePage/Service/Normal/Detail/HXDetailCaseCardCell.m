@@ -7,7 +7,6 @@
 //
 
 #import "HXDetailCaseCardCell.h"
-#import "HXProfileViewModel.h"
 #import "HXCaseCardCollectionViewCell.h"
 #import "UIConstants.h"
 
@@ -16,8 +15,8 @@
 }
 
 #pragma mark - Public Methods
-- (void)displayWithViewModel:(HXProfileViewModel *)viewModel {
-    _cases = viewModel.cases;
+- (void)displayWithCases:(NSArray *)cases {
+    _cases = cases;
     [_collectionView reloadData];
 }
 

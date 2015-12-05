@@ -6,8 +6,15 @@
 //  Copyright © 2015年 Outsourcing. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "UIViewController+HXClass.h"
+#import "HXCategory.h"
 
 @interface HXNormalServiceDetailViewController : UITableViewController
+
+@property (nonatomic, assign) HXCategoryListType  listType;
+@property (nonatomic, copy)             NSString *aid;
+@property (nonatomic, copy)             NSString *cid;
+
+- (IBAction)backButtonPressed;
 
 @end

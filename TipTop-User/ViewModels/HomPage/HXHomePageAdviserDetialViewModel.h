@@ -16,9 +16,9 @@ typedef NS_ENUM(NSUInteger, HXHomePageAdviserDetialCellRow) {
     HXHomePageAdviserDetialCellRowDesigner,
     HXHomePageAdviserDetialCellRowServiceContent,
     HXHomePageAdviserDetialCellRowPersonalIntroduce,
-    HXHomePageAdviserDetialCellRowCaseContent,
-    HXHomePageAdviserDetialCellRowCase,
     HXHomePageAdviserDetialCellRowCaseIntroduce,
+    HXHomePageAdviserDetialCellRowCase,
+    HXHomePageAdviserDetialCellRowCaseContent,
     HXHomePageAdviserDetialCellRowAdvisoryMore,
     HXHomePageAdviserDetialCellRowAdvisoryAdviser,
     HXHomePageAdviserDetialCellRowCommentPrompt,
@@ -27,10 +27,11 @@ typedef NS_ENUM(NSUInteger, HXHomePageAdviserDetialCellRow) {
 
 @interface HXHomePageAdviserDetialViewModel : NSObject
 
+@property (nonatomic, assign, readonly)   CGFloat  designerHeight;
+@property (nonatomic, assign, readonly)   CGFloat  caseCardHeight;
 @property (nonatomic, assign, readonly)   CGFloat  selectedHeight;
 @property (nonatomic, assign, readonly)   CGFloat  editHeight;
 @property (nonatomic, assign, readonly)   CGFloat  nullContentHeight;
-@property (nonatomic, assign, readonly)   CGFloat  cardHeight;
 @property (nonatomic, assign, readonly) NSInteger  rows;
 @property (nonatomic, strong, readonly)   NSArray *rowTypes;
 

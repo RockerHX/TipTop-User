@@ -10,11 +10,11 @@
 
 @interface HXCase : NSObject
 
-@property (nonatomic, assign) NSInteger  createDate;
 @property (nonatomic, strong)  NSString *ID;
 @property (nonatomic, strong)  NSString *image;
 @property (nonatomic, strong)  NSString *title;
 @property (nonatomic, strong)  NSString *content;
 @property (nonatomic, strong)  NSString *introduce;
+@property (nonatomic, assign) NSInteger  createDate;
 
 @end

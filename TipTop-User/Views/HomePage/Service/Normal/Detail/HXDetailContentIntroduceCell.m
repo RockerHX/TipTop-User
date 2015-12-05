@@ -7,15 +7,18 @@
 //
 
 #import "HXDetailContentIntroduceCell.h"
+#import "UIConstants.h"
 
 @implementation HXDetailContentIntroduceCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark - Init Methods
+- (void)awakeFromNib {
+    [self initConfig];
 }
-*/
+
+#pragma mark - Config Methods
+- (void)initConfig {
+    self.contentLabel.preferredMaxLayoutWidth = SCREEN_WIDTH - 40.0f;
+}
 
 @end

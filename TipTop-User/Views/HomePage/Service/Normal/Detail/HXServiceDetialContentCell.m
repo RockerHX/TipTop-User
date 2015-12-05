@@ -7,17 +7,18 @@
 //
 
 #import "HXServiceDetialContentCell.h"
+#import "UIConstants.h"
 
 @implementation HXServiceDetialContentCell
 
+#pragma mark - Init Methods
 - (void)awakeFromNib {
-    // Initialization code
+    [self initConfig];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+#pragma mark - Config Methods
+- (void)initConfig {
+    _contentLabel.preferredMaxLayoutWidth = SCREEN_WIDTH - 98.0f;
 }
 
 @end

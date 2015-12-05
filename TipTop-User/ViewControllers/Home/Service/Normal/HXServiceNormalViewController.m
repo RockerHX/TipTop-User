@@ -13,6 +13,7 @@
 #import "MJRefresh.h"
 #import "HXNormalAdviserCell.h"
 #import "MBProgressHUD.h"
+#import "HXNormalServiceDetailViewController.h"
 
 static NSString *ListApi = @"/agent";
 
@@ -181,6 +182,11 @@ static NSString *ListApi = @"/agent";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
+    detailViewController.listType = self.listType;
+    detailViewController.cid = self.cid;
+    detailViewController.aid = _normalAdvisers[indexPath.row].ID;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end

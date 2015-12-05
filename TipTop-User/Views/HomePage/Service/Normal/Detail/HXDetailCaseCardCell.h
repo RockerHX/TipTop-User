@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class HXProfileViewModel;
-
 @protocol HXDetailCaseCardCellDelegate <NSObject>
 
 @required
@@ -22,6 +20,6 @@
 @property (weak, nonatomic) IBOutlet               id  <HXDetailCaseCardCellDelegate>delegate;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-- (void)displayWithViewModel:(HXProfileViewModel *)viewModel;
+- (void)displayWithCases:(NSArray *)cases;
 
 @end

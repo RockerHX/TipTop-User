@@ -44,7 +44,6 @@
 		485FE8831BF8E1CC00654279 /* HXOnlinePayDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7921BF8E1CC00654279 /* HXOnlinePayDetail.m */; };
 		485FE8841BF8E1CC00654279 /* HXOnlinePayOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7941BF8E1CC00654279 /* HXOnlinePayOrder.m */; };
 		485FE8851BF8E1CC00654279 /* HXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7971BF8E1CC00654279 /* HXUser.m */; };
-		485FE8861BF8E1CC00654279 /* HXCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7991BF8E1CC00654279 /* HXCase.m */; };
 		485FE8871BF8E1CC00654279 /* HXProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE79B1BF8E1CC00654279 /* HXProfile.m */; };
 		485FE8881BF8E1CC00654279 /* HXUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE79D1BF8E1CC00654279 /* HXUserSession.m */; };
 		485FE8891BF8E1CC00654279 /* HXWorkCircuitOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE7A01BF8E1CC00654279 /* HXWorkCircuitOrder.m */; };
@@ -93,14 +92,6 @@
 		485FE8C71BF8E1CC00654279 /* HXOnlinePayDetailClientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8401BF8E1CC00654279 /* HXOnlinePayDetailClientCell.m */; };
 		485FE8C81BF8E1CC00654279 /* HXOnlinePayDetailOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8421BF8E1CC00654279 /* HXOnlinePayDetailOrderCell.m */; };
 		485FE8C91BF8E1CC00654279 /* HXOnlinePayOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8441BF8E1CC00654279 /* HXOnlinePayOrderCell.m */; };
-		485FE8CA1BF8E1CC00654279 /* HXCaseCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8481BF8E1CC00654279 /* HXCaseCardCollectionViewCell.m */; };
-		485FE8CB1BF8E1CC00654279 /* HXCaseCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE84A1BF8E1CC00654279 /* HXCaseCardCell.m */; };
-		485FE8CC1BF8E1CC00654279 /* HXCaseContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE84C1BF8E1CC00654279 /* HXCaseContentCell.m */; };
-		485FE8CD1BF8E1CC00654279 /* HXProfileEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE84E1BF8E1CC00654279 /* HXProfileEditCell.m */; };
-		485FE8CE1BF8E1CC00654279 /* HXProfileHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8501BF8E1CC00654279 /* HXProfileHeaderCell.m */; };
-		485FE8CF1BF8E1CC00654279 /* HXProfileIntroduceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8521BF8E1CC00654279 /* HXProfileIntroduceCell.m */; };
-		485FE8D01BF8E1CC00654279 /* HXProfileNoContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8541BF8E1CC00654279 /* HXProfileNoContentCell.m */; };
-		485FE8D11BF8E1CC00654279 /* HXProfileSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8561BF8E1CC00654279 /* HXProfileSelectedCell.m */; };
 		485FE8D21BF8E1CC00654279 /* HXWorkCircuitOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 485FE8591BF8E1CC00654279 /* HXWorkCircuitOrderCell.m */; };
 		48668C4D1C01C0F300F4F4FC /* HXOnlinePayDetailMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48668C4C1C01C0F300F4F4FC /* HXOnlinePayDetailMoneyCell.m */; };
 		48668C501C02040800F4F4FC /* HXAdviser.m in Sources */ = {isa = PBXBuildFile; fileRef = 48668C4F1C02040800F4F4FC /* HXAdviser.m */; };
@@ -138,6 +129,7 @@
 		48BAC55E1C0F624E00C41CDD /* HXServiceHouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC55D1C0F624E00C41CDD /* HXServiceHouseCell.m */; };
 		48BAC5611C0F62B600C41CDD /* HXServiceCaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BAC5601C0F62B600C41CDD /* HXServiceCaseDetailViewController.m */; };
 		48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BD52741BFA430900613F19 /* HXFeedBackViewController.m */; };
+		48C187BE1C129AE30067B817 /* HXCaseCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C187BD1C129AE30067B817 /* HXCaseCardCollectionViewCell.m */; };
 		48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */; };
 		48D72F781BFB94EF006BA8C3 /* Mall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D72F761BFB94EF006BA8C3 /* Mall.storyboard */; };
 		48D72F7C1BFB952F006BA8C3 /* HXMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F7B1BFB952F006BA8C3 /* HXMallViewController.m */; };
@@ -233,8 +225,6 @@
 		485FE7941BF8E1CC00654279 /* HXOnlinePayOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayOrder.m; sourceTree = "<group>"; };
 		485FE7961BF8E1CC00654279 /* HXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXUser.h; sourceTree = "<group>"; };
 		485FE7971BF8E1CC00654279 /* HXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXUser.m; sourceTree = "<group>"; };
-		485FE7981BF8E1CC00654279 /* HXCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCase.h; sourceTree = "<group>"; };
-		485FE7991BF8E1CC00654279 /* HXCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCase.m; sourceTree = "<group>"; };
 		485FE79A1BF8E1CC00654279 /* HXProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfile.h; sourceTree = "<group>"; };
 		485FE79B1BF8E1CC00654279 /* HXProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfile.m; sourceTree = "<group>"; };
 		485FE79C1BF8E1CC00654279 /* HXUserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXUserSession.h; sourceTree = "<group>"; };
@@ -331,22 +321,6 @@
 		485FE8421BF8E1CC00654279 /* HXOnlinePayDetailOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetailOrderCell.m; sourceTree = "<group>"; };
 		485FE8431BF8E1CC00654279 /* HXOnlinePayOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayOrderCell.h; sourceTree = "<group>"; };
 		485FE8441BF8E1CC00654279 /* HXOnlinePayOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayOrderCell.m; sourceTree = "<group>"; };
-		485FE8471BF8E1CC00654279 /* HXCaseCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCaseCardCollectionViewCell.h; sourceTree = "<group>"; };
-		485FE8481BF8E1CC00654279 /* HXCaseCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCaseCardCollectionViewCell.m; sourceTree = "<group>"; };
-		485FE8491BF8E1CC00654279 /* HXCaseCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCaseCardCell.h; sourceTree = "<group>"; };
-		485FE84A1BF8E1CC00654279 /* HXCaseCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCaseCardCell.m; sourceTree = "<group>"; };
-		485FE84B1BF8E1CC00654279 /* HXCaseContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCaseContentCell.h; sourceTree = "<group>"; };
-		485FE84C1BF8E1CC00654279 /* HXCaseContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCaseContentCell.m; sourceTree = "<group>"; };
-		485FE84D1BF8E1CC00654279 /* HXProfileEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfileEditCell.h; sourceTree = "<group>"; };
-		485FE84E1BF8E1CC00654279 /* HXProfileEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileEditCell.m; sourceTree = "<group>"; };
-		485FE84F1BF8E1CC00654279 /* HXProfileHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfileHeaderCell.h; sourceTree = "<group>"; };
-		485FE8501BF8E1CC00654279 /* HXProfileHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileHeaderCell.m; sourceTree = "<group>"; };
-		485FE8511BF8E1CC00654279 /* HXProfileIntroduceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfileIntroduceCell.h; sourceTree = "<group>"; };
-		485FE8521BF8E1CC00654279 /* HXProfileIntroduceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileIntroduceCell.m; sourceTree = "<group>"; };
-		485FE8531BF8E1CC00654279 /* HXProfileNoContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfileNoContentCell.h; sourceTree = "<group>"; };
-		485FE8541BF8E1CC00654279 /* HXProfileNoContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileNoContentCell.m; sourceTree = "<group>"; };
-		485FE8551BF8E1CC00654279 /* HXProfileSelectedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXProfileSelectedCell.h; sourceTree = "<group>"; };
-		485FE8561BF8E1CC00654279 /* HXProfileSelectedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXProfileSelectedCell.m; sourceTree = "<group>"; };
 		485FE8581BF8E1CC00654279 /* HXWorkCircuitOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXWorkCircuitOrderCell.h; sourceTree = "<group>"; };
 		485FE8591BF8E1CC00654279 /* HXWorkCircuitOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXWorkCircuitOrderCell.m; sourceTree = "<group>"; };
 		48668C4B1C01C0F300F4F4FC /* HXOnlinePayDetailMoneyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayDetailMoneyCell.h; sourceTree = "<group>"; };
@@ -419,6 +393,8 @@
 		48BAC5601C0F62B600C41CDD /* HXServiceCaseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXServiceCaseDetailViewController.m; sourceTree = "<group>"; };
 		48BD52731BFA430900613F19 /* HXFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXFeedBackViewController.h; sourceTree = "<group>"; };
 		48BD52741BFA430900613F19 /* HXFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXFeedBackViewController.m; sourceTree = "<group>"; };
+		48C187BC1C129AE30067B817 /* HXCaseCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCaseCardCollectionViewCell.h; sourceTree = "<group>"; };
+		48C187BD1C129AE30067B817 /* HXCaseCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCaseCardCollectionViewCell.m; sourceTree = "<group>"; };
 		48D72F6F1BFB9154006BA8C3 /* HXRecruitmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRecruitmentViewController.h; sourceTree = "<group>"; };
 		48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRecruitmentViewController.m; sourceTree = "<group>"; };
 		48D72F771BFB94EF006BA8C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Mall.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -711,8 +687,6 @@
 			children = (
 				485FE7961BF8E1CC00654279 /* HXUser.h */,
 				485FE7971BF8E1CC00654279 /* HXUser.m */,
-				485FE7981BF8E1CC00654279 /* HXCase.h */,
-				485FE7991BF8E1CC00654279 /* HXCase.m */,
 				485FE79A1BF8E1CC00654279 /* HXProfile.h */,
 				485FE79B1BF8E1CC00654279 /* HXProfile.m */,
 				485FE79C1BF8E1CC00654279 /* HXUserSession.h */,
@@ -949,7 +923,6 @@
 				485FE8131BF8E1CC00654279 /* Common */,
 				485FE8221BF8E1CC00654279 /* Login */,
 				485FE81A1BF8E1CC00654279 /* HomePage */,
-				485FE8451BF8E1CC00654279 /* Profile */,
 				485FE8311BF8E1CC00654279 /* MyReservation */,
 				485FE83D1BF8E1CC00654279 /* OnlinePay */,
 				485FE8571BF8E1CC00654279 /* WorkCircuit */,
@@ -1071,37 +1044,6 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		485FE8451BF8E1CC00654279 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				485FE8461BF8E1CC00654279 /* CaseCard */,
-				485FE8491BF8E1CC00654279 /* HXCaseCardCell.h */,
-				485FE84A1BF8E1CC00654279 /* HXCaseCardCell.m */,
-				485FE84B1BF8E1CC00654279 /* HXCaseContentCell.h */,
-				485FE84C1BF8E1CC00654279 /* HXCaseContentCell.m */,
-				485FE84D1BF8E1CC00654279 /* HXProfileEditCell.h */,
-				485FE84E1BF8E1CC00654279 /* HXProfileEditCell.m */,
-				485FE84F1BF8E1CC00654279 /* HXProfileHeaderCell.h */,
-				485FE8501BF8E1CC00654279 /* HXProfileHeaderCell.m */,
-				485FE8511BF8E1CC00654279 /* HXProfileIntroduceCell.h */,
-				485FE8521BF8E1CC00654279 /* HXProfileIntroduceCell.m */,
-				485FE8531BF8E1CC00654279 /* HXProfileNoContentCell.h */,
-				485FE8541BF8E1CC00654279 /* HXProfileNoContentCell.m */,
-				485FE8551BF8E1CC00654279 /* HXProfileSelectedCell.h */,
-				485FE8561BF8E1CC00654279 /* HXProfileSelectedCell.m */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		485FE8461BF8E1CC00654279 /* CaseCard */ = {
-			isa = PBXGroup;
-			children = (
-				485FE8471BF8E1CC00654279 /* HXCaseCardCollectionViewCell.h */,
-				485FE8481BF8E1CC00654279 /* HXCaseCardCollectionViewCell.m */,
-			);
-			path = CaseCard;
-			sourceTree = "<group>";
-		};
 		485FE8571BF8E1CC00654279 /* WorkCircuit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1206,6 +1148,7 @@
 		48A2E61B1C10940900483FD6 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				48C187BB1C129AE30067B817 /* CaseCard */,
 				48A2E6221C10944A00483FD6 /* HXNormalDetailAdviserCell.h */,
 				48A2E6231C10944A00483FD6 /* HXNormalDetailAdviserCell.m */,
 				48A2E6251C10945900483FD6 /* HXServiceDetailDesingerCell.h */,
@@ -1313,6 +1256,15 @@
 				48BAC55D1C0F624E00C41CDD /* HXServiceHouseCell.m */,
 			);
 			path = House;
+			sourceTree = "<group>";
+		};
+		48C187BB1C129AE30067B817 /* CaseCard */ = {
+			isa = PBXGroup;
+			children = (
+				48C187BC1C129AE30067B817 /* HXCaseCardCollectionViewCell.h */,
+				48C187BD1C129AE30067B817 /* HXCaseCardCollectionViewCell.m */,
+			);
+			path = CaseCard;
 			sourceTree = "<group>";
 		};
 		48D72F6E1BFB9154006BA8C3 /* Recruitment */ = {
@@ -1513,10 +1465,8 @@
 				487D7AEC1C08A07E00B11A35 /* HXSubServiceCell.m in Sources */,
 				485FE8C41BF8E1CC00654279 /* HXReservationDetailPromptCell.m in Sources */,
 				485FE8C21BF8E1CC00654279 /* HXReservationDetailClientCell.m in Sources */,
-				485FE8CD1BF8E1CC00654279 /* HXProfileEditCell.m in Sources */,
 				485FE8A41BF8E1CC00654279 /* HXReservationAddRemarkViewController.m in Sources */,
 				482B1CA91C060BAC00D65D5D /* HXHomePageCategoryView.m in Sources */,
-				485FE8861BF8E1CC00654279 /* HXCase.m in Sources */,
 				485FE8BD1BF8E1CC00654279 /* HXMessageCell.m in Sources */,
 				485FE8971BF8E1CC00654279 /* UIViewController+HXClass.m in Sources */,
 				48A2E64A1C10A53B00483FD6 /* HXCase.m in Sources */,
@@ -1525,7 +1475,6 @@
 				485FE8A71BF8E1CC00654279 /* HXOnlinePayDetailViewController.m in Sources */,
 				487D7AEB1C08A07E00B11A35 /* HXServiceCell.m in Sources */,
 				48BAC55E1C0F624E00C41CDD /* HXServiceHouseCell.m in Sources */,
-				485FE8CC1BF8E1CC00654279 /* HXCaseContentCell.m in Sources */,
 				485FE88F1BF8E1CC00654279 /* HXHomeViewController.m in Sources */,
 				485FE8AE1BF8E1CC00654279 /* HXSettingViewController.m in Sources */,
 				48BAC5521C0F591800C41CDD /* HXServiceCaseViewController.m in Sources */,
@@ -1535,14 +1484,12 @@
 				485FE8AB1BF8E1CC00654279 /* HXProfileViewController.m in Sources */,
 				485FE86A1BF8E1CC00654279 /* UINavigationController+StatusBarStyle.m in Sources */,
 				485FE86D1BF8E1CC00654279 /* UILabel+HXIBnsepectable.m in Sources */,
-				485FE8D11BF8E1CC00654279 /* HXProfileSelectedCell.m in Sources */,
 				485FE8841BF8E1CC00654279 /* HXOnlinePayOrder.m in Sources */,
 				485FE88C1BF8E1CC00654279 /* HXAppApiRequest.m in Sources */,
 				485FE8901BF8E1CC00654279 /* HXListViewController.m in Sources */,
 				488D0E401BFA3C170068D47C /* HXForgotPWViewController.m in Sources */,
 				48A2E6271C10945900483FD6 /* HXServiceDetailDesingerCell.m in Sources */,
 				485FE8831BF8E1CC00654279 /* HXOnlinePayDetail.m in Sources */,
-				485FE8D01BF8E1CC00654279 /* HXProfileNoContentCell.m in Sources */,
 				485FE86C1BF8E1CC00654279 /* UIButton+HXIBnspectable.m in Sources */,
 				485FE8751BF8E1CC00654279 /* HXStoryBoardManager.m in Sources */,
 				485FE8781BF8E1CC00654279 /* HXVersion.m in Sources */,
@@ -1555,7 +1502,6 @@
 				48BAC54E1C0F52F200C41CDD /* HXHouseDetailViewController.m in Sources */,
 				485FE8BC1BF8E1CC00654279 /* HXSecurityCodeButton.m in Sources */,
 				485FE8B31BF8E1CC00654279 /* HXOnlinePayDetailViewModel.m in Sources */,
-				485FE8CB1BF8E1CC00654279 /* HXCaseCardCell.m in Sources */,
 				487D7AE51C08A04100B11A35 /* HXServiceViewController.m in Sources */,
 				48A2E6211C10940900483FD6 /* HXServiceDesingerCell.m in Sources */,
 				485FE8961BF8E1CC00654279 /* HXLoginViewController.m in Sources */,
@@ -1572,7 +1518,7 @@
 				48BAC5611C0F62B600C41CDD /* HXServiceCaseDetailViewController.m in Sources */,
 				488D0E411BFA3C170068D47C /* HXRegisterViewController.m in Sources */,
 				485FE8801BF8E1CC00654279 /* HXMessageList.m in Sources */,
-				485FE8CE1BF8E1CC00654279 /* HXProfileHeaderCell.m in Sources */,
+				48C187BE1C129AE30067B817 /* HXCaseCardCollectionViewCell.m in Sources */,
 				485FE85A1BF8E1CC00654279 /* AppDelegate.mm in Sources */,
 				485FE8881BF8E1CC00654279 /* HXUserSession.m in Sources */,
 				48A2E6301C10966700483FD6 /* HXDetailPersonalIntroduceCell.m in Sources */,
@@ -1621,7 +1567,6 @@
 				485FE8AC1BF8E1CC00654279 /* HXAboutViewController.m in Sources */,
 				485FE8931BF8E1CC00654279 /* HXPanGestureViewController.m in Sources */,
 				485FE8C81BF8E1CC00654279 /* HXOnlinePayDetailOrderCell.m in Sources */,
-				485FE8CA1BF8E1CC00654279 /* HXCaseCardCollectionViewCell.m in Sources */,
 				485FE8B11BF8E1CC00654279 /* HXWorkCircuitListViewController.m in Sources */,
 				485FE8721BF8E1CC00654279 /* HXIBView.m in Sources */,
 				485FE8AF1BF8E1CC00654279 /* HXUseExplanationViewController.m in Sources */,
@@ -1632,7 +1577,6 @@
 				485FE8811BF8E1CC00654279 /* HXReservationDetail.m in Sources */,
 				48A2E6431C109A1D00483FD6 /* HXDetailCommentCell.m in Sources */,
 				485FE87F1BF8E1CC00654279 /* HXMessage.m in Sources */,
-				485FE8CF1BF8E1CC00654279 /* HXProfileIntroduceCell.m in Sources */,
 				CDDF2F571C0FEF1E0011B109 /* HXServiceDesignerViewController.m in Sources */,
 				485FE88A1BF8E1CC00654279 /* HXApi.m in Sources */,
 				485FE8731BF8E1CC00654279 /* HXIBnsepectableManager.m in Sources */,

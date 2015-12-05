@@ -37,6 +37,10 @@ static NSString *DetailApi = @"/agent/view";
 }
 
 #pragma mark - Setter And Getter
+- (CGFloat)designerHeight {
+    return 110.0f;
+}
+
 - (CGFloat)selectedHeight {
     return 0.0f;
 }
@@ -49,13 +53,12 @@ static NSString *DetailApi = @"/agent/view";
     return 0.0f;
 }
 
-- (CGFloat)cardHeight {
-    return 0.0f;
+- (CGFloat)caseCardHeight {
+    return 200.0f;
 }
 
-static NSInteger RegularRow = 3;
 - (NSInteger)rows {
-    return RegularRow;
+    return _rowTypes.count;
 }
 
 - (HXCase *)selectedCase {
@@ -84,18 +87,24 @@ static NSInteger RegularRow = 3;
     
     NSMutableArray *rowTypes = [NSMutableArray arrayWithArray:_rowTypes];
     if (_cases.count) {
-        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowCaseContent)];
-        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowCase)];
         [rowTypes addObject:@(HXHomePageAdviserDetialCellRowCaseIntroduce)];
+        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowCase)];
+        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowCaseContent)];
     }
-    if (_advisoryAdvisers.count) {
-        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowAdvisoryMore)];
-        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowAdvisoryAdviser)];
-    }
-    if (_comment.count) {
-        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowCommentPrompt)];
-        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowComment)];
-    }
+//    if (_advisoryAdvisers.count) {
+//        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowAdvisoryMore)];
+//        [_advisoryAdvisers enumerateObjectsUsingBlock:
+//         ^(HXNormalAdviser * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//             [rowTypes addObject:@(HXHomePageAdviserDetialCellRowAdvisoryAdviser)];
+//         }];
+//    }
+//    if (_comment.count) {
+//        [rowTypes addObject:@(HXHomePageAdviserDetialCellRowCommentPrompt)];
+//        [_comment enumerateObjectsUsingBlock:
+//         ^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//             [rowTypes addObject:@(HXHomePageAdviserDetialCellRowComment)];
+//        }];
+//    }
     _rowTypes = [rowTypes copy];
 }
 
@@ -116,7 +125,7 @@ static NSInteger RegularRow = 3;
     if (data) {
         _adviser = [HXNormalAdviser mj_objectWithKeyValues:data[@"agent"]];
         
-        NSArray *cases = data[@"case"][@"list"];
+        NSArray *cases = data[@"cases"];
         NSMutableArray *array = [NSMutableArray arrayWithCapacity:cases.count];
         for (NSDictionary *dic in cases) {
             HXCase *detailCase = [HXCase mj_objectWithKeyValues:dic];

@@ -14,6 +14,7 @@
 #import "HXServiceDesingerCell.h"
 #import "MBProgressHUD.h"
 #import "HXHouseDetailViewController.h"
+#import "HXNormalServiceDetailViewController.h"
 
 static NSString *ListApi = @"/agent/recommend";
 
@@ -188,6 +189,11 @@ static NSString *ListApi = @"/agent/recommend";
 #pragma mark - Table View Delegete Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
+    detailViewController.listType = self.listType;
+    detailViewController.cid = self.cid;
+    detailViewController.aid = _normalAdvisers[indexPath.row].ID;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end
