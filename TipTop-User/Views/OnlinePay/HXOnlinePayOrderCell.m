@@ -43,7 +43,7 @@
     _order = order;
     
     _dateLabel.text = [[NSDate dateWithTimeIntervalSince1970:order.createTime] formattedDateWithFormat:@"yyyy-MM-dd hh:mm"];
-    _orderNumberLabel.text = order.displayID;
+    _orderNumberLabel.text = [NSString stringWithFormat:@"订单编号：%@", order.displayID];
     _orderNameLabel.text = [NSString stringWithFormat:@"%@（%@）", order.cate, order.subCate];
     _nameLabel.text = order.agentName;
     [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:order.agentAvatar]];
