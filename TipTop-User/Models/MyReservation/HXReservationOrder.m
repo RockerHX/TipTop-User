@@ -12,6 +12,7 @@
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID": @"id",
+        @"agentID": @"agent_id",
       @"displayID": @"display_id",
         @"subCate": @"sub_cate",
       @"agentName": @"agent_name",

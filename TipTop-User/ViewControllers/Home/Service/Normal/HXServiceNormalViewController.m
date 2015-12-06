@@ -186,6 +186,7 @@ static NSString *ListApi = @"/agent";
     detailViewController.listType = self.listType;
     detailViewController.cid = self.cid;
     detailViewController.aid = _normalAdvisers[indexPath.row].ID;
+    detailViewController.canReserve = YES;
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

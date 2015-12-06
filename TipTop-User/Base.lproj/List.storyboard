@@ -3002,6 +3002,9 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="reserveButton" destination="6Z8-RH-nWl" id="Wtc-Cb-ULW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKQ-8T-e9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

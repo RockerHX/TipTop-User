@@ -9,8 +9,8 @@
 #import "HXMyReservationListViewController.h"
 #import "HXMyReservationCell.h"
 #import "UIAlertView+BlocksKit.h"
-#import "HXReservationDetailViewController.h"
 #import "MBProgressHUD.h"
+#import "HXNormalServiceDetailViewController.h"
 
 
 static NSString *OrderListApi   = @"/Order";
@@ -125,8 +125,9 @@ static NSString *SendOrderApi   = @"/order/confirm";
 #pragma mark - Table View Delegete Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HXReservationOrder *order = self.dataList[indexPath.row];
-    HXReservationDetailViewController *detailViewController = [HXReservationDetailViewController instance];
-    detailViewController.orderID = order.ID;
+    HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
+    detailViewController.cid = order.cid;
+    detailViewController.aid = order.agentID;
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

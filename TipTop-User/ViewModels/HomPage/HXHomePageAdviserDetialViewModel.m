@@ -123,6 +123,7 @@ static NSString *CommentsApi = @"/agent/review";
             [strongSelf handleDetailData:responseObject[@"data"]];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        ;
     }];
 }
 
@@ -135,6 +136,7 @@ static NSString *CommentsApi = @"/agent/review";
             [strongSelf handleCommentsData:responseObject[@"data"][@"list"]];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        ;
     }];
 }
 

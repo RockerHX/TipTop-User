@@ -13,6 +13,8 @@
 @property (nonatomic, assign)      BOOL  isComplete;
 @property (nonatomic, assign) NSInteger  createDate;
 @property (nonatomic, strong)  NSString *ID;
+@property (nonatomic, strong)  NSString *agentID;
+@property (nonatomic, strong)  NSString *cid;
 @property (nonatomic, strong)  NSString *displayID;
 @property (nonatomic, strong)  NSString *cate;
 @property (nonatomic, strong)  NSString *subCate;

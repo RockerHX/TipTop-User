@@ -52,6 +52,7 @@ static NSString *ReserveApi = @"/order/create";
 }
 
 - (void)viewConfig {
+    _reserveButton.hidden = !_canReserve;
 }
 
 #pragma mark - Setter And Getter
