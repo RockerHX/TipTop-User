@@ -132,6 +132,7 @@
 		48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F701BFB9154006BA8C3 /* HXRecruitmentViewController.m */; };
 		48D72F781BFB94EF006BA8C3 /* Mall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D72F761BFB94EF006BA8C3 /* Mall.storyboard */; };
 		48D72F7C1BFB952F006BA8C3 /* HXMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F7B1BFB952F006BA8C3 /* HXMallViewController.m */; };
+		48D92BD71C149F79004F889F /* HXTransfersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D92BD61C149F79004F889F /* HXTransfersViewController.m */; };
 		48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54111BF8E88A00CFD7AD /* Login.storyboard */; };
 		48EE54161BF8E8D000CFD7AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54141BF8E8D000CFD7AD /* Home.storyboard */; };
 		48EE542B1BF8E8DC00CFD7AD /* MessageCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */; };
@@ -398,6 +399,8 @@
 		48D72F7A1BFB952F006BA8C3 /* HXMallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMallViewController.h; sourceTree = "<group>"; };
 		48D72F7B1BFB952F006BA8C3 /* HXMallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMallViewController.m; sourceTree = "<group>"; };
 		48D74F721BC4CA100000863D /* TipTop-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TipTop-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D92BD51C149F79004F889F /* HXTransfersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTransfersViewController.h; sourceTree = "<group>"; };
+		48D92BD61C149F79004F889F /* HXTransfersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTransfersViewController.m; sourceTree = "<group>"; };
 		48EE54121BF8E88A00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Login.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54151BF8E8D000CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Home.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54181BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MessageCenter.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -831,6 +834,8 @@
 				485FE7ED1BF8E1CC00654279 /* HXOnlinePayListViewController.m */,
 				485FE7EA1BF8E1CC00654279 /* HXOnlinePayDetailViewController.h */,
 				485FE7EB1BF8E1CC00654279 /* HXOnlinePayDetailViewController.m */,
+				48D92BD51C149F79004F889F /* HXTransfersViewController.h */,
+				48D92BD61C149F79004F889F /* HXTransfersViewController.m */,
 			);
 			path = OnlinePay;
 			sourceTree = "<group>";
@@ -1492,6 +1497,7 @@
 				48D72F7C1BFB952F006BA8C3 /* HXMallViewController.m in Sources */,
 				485FE86B1BF8E1CC00654279 /* HXTextView.m in Sources */,
 				485FE8701BF8E1CC00654279 /* HXIBImageView.m in Sources */,
+				48D92BD71C149F79004F889F /* HXTransfersViewController.m in Sources */,
 				485FE86E1BF8E1CC00654279 /* UIView+HXIBnspectable.m in Sources */,
 				48BAC54E1C0F52F200C41CDD /* HXHouseDetailViewController.m in Sources */,
 				485FE8BC1BF8E1CC00654279 /* HXSecurityCodeButton.m in Sources */,

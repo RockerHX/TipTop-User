@@ -10,4 +10,6 @@
 
 @interface HXOnlinePayListViewController : HXListViewController
 
+- (IBAction)TransfersButtonPressed;
+
 @end
