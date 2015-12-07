@@ -1808,7 +1808,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunlinker.dingguaguauser1;
 				PRODUCT_NAME = "TipTop-User";
-				PROVISIONING_PROFILE = "0ae8f0ee-f454-408d-b9ed-d91dfd3d85be";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};

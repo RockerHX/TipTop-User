@@ -423,7 +423,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="忘记密码" id="ezR-ml-AuF">
                         <barButtonItem key="leftBarButtonItem" image="C-BackIcon" id="MVr-Rh-gAV">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.98823529409999999" green="0.5450980392" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButtonPressed" destination="l4S-2w-hat" id="ou2-u3-3dS"/>
                             </connections>
@@ -715,7 +715,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="注册" id="PO7-YX-6KD">
                         <barButtonItem key="leftBarButtonItem" image="C-BackIcon" id="jAN-IE-wlU">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.98823529409999999" green="0.5450980392" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButtonPressed" destination="tTt-ml-uuQ" id="jxQ-aj-MkR"/>
                             </connections>

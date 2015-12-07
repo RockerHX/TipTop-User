@@ -555,7 +555,7 @@
             </objects>
             <point key="canvasLocation" x="1287" y="378"/>
         </scene>
-        <!--About View Controller-->
+        <!--关于我们-->
         <scene sceneID="TLw-H7-P4m">
             <objects>
                 <viewController storyboardIdentifier="HXAboutViewController" id="Db7-gw-nSQ" customClass="HXAboutViewController" sceneMemberID="viewController">
@@ -585,6 +585,7 @@
                             <constraint firstItem="XsP-n0-Hmh" firstAttribute="top" secondItem="VN4-Fl-q1v" secondAttribute="bottom" id="dgJ-ua-bb8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="关于我们" id="9iI-Ih-E8h"/>
                     <connections>
                         <outlet property="webView" destination="XsP-n0-Hmh" id="rFY-Jf-HFG"/>
                     </connections>
@@ -593,7 +594,7 @@
             </objects>
             <point key="canvasLocation" x="425" y="1050"/>
         </scene>
-        <!--Use Explanation View Controller-->
+        <!--使用说明-->
         <scene sceneID="Dpx-Ml-wfe">
             <objects>
                 <viewController storyboardIdentifier="HXUseExplanationViewController" id="Ztc-c5-hTc" customClass="HXUseExplanationViewController" sceneMemberID="viewController">
@@ -623,6 +624,7 @@
                             <constraint firstItem="yVU-5S-hE6" firstAttribute="top" secondItem="1WY-db-Wcl" secondAttribute="bottom" id="sbN-nt-tUw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="使用说明" id="bBO-yV-goA"/>
                     <connections>
                         <outlet property="webView" destination="yVU-5S-hE6" id="e9j-az-1Ei"/>
                     </connections>
