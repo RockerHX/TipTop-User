@@ -133,6 +133,8 @@
 		48D72F781BFB94EF006BA8C3 /* Mall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D72F761BFB94EF006BA8C3 /* Mall.storyboard */; };
 		48D72F7C1BFB952F006BA8C3 /* HXMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F7B1BFB952F006BA8C3 /* HXMallViewController.m */; };
 		48D92BD71C149F79004F889F /* HXTransfersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D92BD61C149F79004F889F /* HXTransfersViewController.m */; };
+		48D92BDC1C15BC57004F889F /* HXGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D92BDA1C15BC57004F889F /* HXGuideView.m */; };
+		48D92BDD1C15BC57004F889F /* HXGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D92BDB1C15BC57004F889F /* HXGuideView.xib */; };
 		48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54111BF8E88A00CFD7AD /* Login.storyboard */; };
 		48EE54161BF8E8D000CFD7AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54141BF8E8D000CFD7AD /* Home.storyboard */; };
 		48EE542B1BF8E8DC00CFD7AD /* MessageCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54171BF8E8DC00CFD7AD /* MessageCenter.storyboard */; };
@@ -401,6 +403,9 @@
 		48D74F721BC4CA100000863D /* TipTop-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TipTop-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D92BD51C149F79004F889F /* HXTransfersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTransfersViewController.h; sourceTree = "<group>"; };
 		48D92BD61C149F79004F889F /* HXTransfersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTransfersViewController.m; sourceTree = "<group>"; };
+		48D92BD91C15BC57004F889F /* HXGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXGuideView.h; sourceTree = "<group>"; };
+		48D92BDA1C15BC57004F889F /* HXGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXGuideView.m; sourceTree = "<group>"; };
+		48D92BDB1C15BC57004F889F /* HXGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXGuideView.xib; sourceTree = "<group>"; };
 		48EE54121BF8E88A00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Login.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54151BF8E8D000CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/Home.storyboard"; sourceTree = SOURCE_ROOT; };
 		48EE54181BF8E8DC00CFD7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "TipTop-User/Base.lproj/MessageCenter.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -916,6 +921,7 @@
 		485FE80F1BF8E1CC00654279 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				48D92BD81C15BC57004F889F /* Guide */,
 				485FE8131BF8E1CC00654279 /* Common */,
 				485FE8221BF8E1CC00654279 /* Login */,
 				485FE81A1BF8E1CC00654279 /* HomePage */,
@@ -1303,6 +1309,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		48D92BD81C15BC57004F889F /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				48D92BD91C15BC57004F889F /* HXGuideView.h */,
+				48D92BDA1C15BC57004F889F /* HXGuideView.m */,
+				48D92BDB1C15BC57004F889F /* HXGuideView.xib */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
 		97AC91F3FFF6719845EA5237 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1398,6 +1414,7 @@
 				485FE85B1BF8E1CC00654279 /* Assets.xcassets in Resources */,
 				48BAC5471C0F50B500C41CDD /* List.storyboard in Resources */,
 				48EE54311BF8E8DC00CFD7AD /* OnlinePay.storyboard in Resources */,
+				48D92BDD1C15BC57004F889F /* HXGuideView.xib in Resources */,
 				484F677E1BF8EA3900B0ABC1 /* LaunchScreen.storyboard in Resources */,
 				48EE54321BF8E8DC00CFD7AD /* Setting.storyboard in Resources */,
 				48EE542F1BF8E8DC00CFD7AD /* MyReservation.storyboard in Resources */,
@@ -1570,6 +1587,7 @@
 				485FE8B11BF8E1CC00654279 /* HXWorkCircuitListViewController.m in Sources */,
 				485FE8721BF8E1CC00654279 /* HXIBView.m in Sources */,
 				485FE8AF1BF8E1CC00654279 /* HXUseExplanationViewController.m in Sources */,
+				48D92BDC1C15BC57004F889F /* HXGuideView.m in Sources */,
 				487D7AF21C08BEE100B11A35 /* HXServiceListViewController.m in Sources */,
 				485FE86F1BF8E1CC00654279 /* HXIBButton.m in Sources */,
 				485FE8C91BF8E1CC00654279 /* HXOnlinePayOrderCell.m in Sources */,

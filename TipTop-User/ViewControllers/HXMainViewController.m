@@ -11,6 +11,7 @@
 #import "HXHomeViewController.h"
 #import "HXUserViewController.h"
 #import "HXLoginViewController.h"
+#import "HXGuideView.h"
 
 @interface HXMainViewController () <HXLoginViewControllerDelegate, HXUserViewControllerDelegate>
 @end
@@ -31,6 +32,20 @@
     [self viewConfig];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    __weak __typeof__(self)weakSelf = self;
+    [HXGuideView showGuide:^{
+        __strong __typeof__(self)strongSelf = weakSelf;
+        if ([HXUserSession share].state == HXUserSessionStateLogout) {
+            [strongSelf showLoginViewController];
+        } else {
+            [strongSelf showHomePageViewController];
+        }
+    }];
+}
+
 #pragma mark - Config Methods
 - (void)initConfig {
     [self setupAppStructure];
@@ -45,17 +60,16 @@
 }
 
 - (void)viewConfig {
-    if ([HXUserSession share].state == HXUserSessionStateLogout) {
-        HXLoginViewController *loginViewController = [HXLoginViewController instance];
-        loginViewController.delegate = self;
-        [self addChildViewController:loginViewController];
-        [self.view addSubview:loginViewController.view];
-    } else {
-        [self showHomePageViewController];
-    }
 }
 
 #pragma mark - Private Methods
+- (void)showLoginViewController {
+    HXLoginViewController *loginViewController = [HXLoginViewController instance];
+    loginViewController.delegate = self;
+    [self addChildViewController:loginViewController];
+    [self.view addSubview:loginViewController.view];
+}
+
 - (void)showHomePageViewController {
 //    HXHomeViewController *homePageViewController = (HXHomeViewController *)self.contentViewController;
 //    [homePageViewController openSocket];
