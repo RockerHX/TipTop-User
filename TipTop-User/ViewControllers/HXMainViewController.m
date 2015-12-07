@@ -71,8 +71,8 @@
 }
 
 - (void)showHomePageViewController {
-//    HXHomeViewController *homePageViewController = (HXHomeViewController *)self.contentViewController;
-//    [homePageViewController openSocket];
+    HXHomeViewController *homePageViewController = [((UINavigationController *)self.contentViewController).viewControllers firstObject];
+    [homePageViewController openSocket];
 }
 
 #pragma mark - HXLoginViewControllerDelegate Methods

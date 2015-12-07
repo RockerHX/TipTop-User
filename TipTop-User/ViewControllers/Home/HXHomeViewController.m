@@ -19,19 +19,15 @@
 #import "HXHomePageSubCategoryView.h"
 
 
-static NSString *AgentNearbyApi       = @"/agent/nearby";
-
-typedef NS_ENUM(NSUInteger, HXHomePageConnectState) {
-    HXHomePageConnectStateOnline,
-    HXHomePageConnectStateOffline,
-};
-
-static NSString *NewOrderEvent = @"new_order";
+static NSString *AgentNearbyApi = @"/agent/nearby";
+static NSString *NewOrderEvent  = @"new_order";
 
 @interface HXHomeViewController () <BMKMapViewDelegate, HXHomePageCategoryViewDelegate, HXHomePageSubCategoryViewDelegate>
 @end
 
 @implementation HXHomeViewController {
+    NSString *_cid;
+    
     CLLocationCoordinate2D _location;
     NSArray *_advisers;
     
@@ -89,22 +85,20 @@ static NSString *NewOrderEvent = @"new_order";
 }
 
 - (void)openSocket {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     __weak __typeof__(self)weakSelf = self;
     [[HXSocketManager manager] openWithURL:[NSURL URLWithString:@"ws://115.29.45.120:8081"] opened:^(HXSocketManager *manager) {
         __strong __typeof__(self)strongSelf = weakSelf;
-        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
-        [strongSelf displayWithConnectSatae:HXHomePageConnectStateOnline];
+        [strongSelf loginAction];
     } receiveData:^(HXSocketManager *manager, id data) {
         __strong __typeof__(self)strongSelf = weakSelf;
         [strongSelf handleData:data];
     } closed:^(HXSocketManager *manager, NSInteger code) {
         __strong __typeof__(self)strongSelf = weakSelf;
-        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
         [manager reConnect];
+        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
     } failed:^(HXSocketManager *manager, NSError *error) {
         __strong __typeof__(self)strongSelf = weakSelf;
-        [strongSelf displayWithConnectSatae:HXHomePageConnectStateOffline];
+        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
     }];
 }
 
@@ -119,6 +113,11 @@ static NSString *NewOrderEvent = @"new_order";
 
 #pragma mark - Event Response
 - (IBAction)callButtonPressed {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary *data = @{@"event": @"order",
+                         @"address": @"sb",
+                             @"cid": _cid};
+    [[HXSocketManager manager] sendData:data];
 }
 
 - (IBAction)avatarButtonPressed {
@@ -137,30 +136,27 @@ static NSString *NewOrderEvent = @"new_order";
 }
 
 - (void)hanleEventWithReceiveData:(NSDictionary *)receiveData {
-//    NSInteger errorCode = [receiveData[@"error"] integerValue];
-//    if (!errorCode) {
-//        NSString *event = receiveData[@"event"];
+    NSInteger errorCode = [receiveData[@"error"] integerValue];
+    if (!errorCode) {
+        NSString *event = receiveData[@"event"];
 //        NSString *extra = receiveData[@"extra"];
-//        if ([event isEqualToString:NewOrderEvent]) {
-//        } else if ([event isEqualToString:@""]) {
-//            
-//        }
-//    } else {
-//    }
+        if ([event isEqualToString:NewOrderEvent]) {
+        } else if ([event isEqualToString:@""]) {
+        }
+    } else {
+    }
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
-- (void)displayWithConnectSatae:(HXHomePageConnectState)state {
-    switch (state) {
-        case HXHomePageConnectStateOnline: {
-            break;
-        }
-        case HXHomePageConnectStateOffline: {
-            break;
-        }
-    }
+- (void)loginAction {
+    NSDictionary *data = @{@"event": @"login",
+                            @"type": @"client",
+                    @"access_token": [HXUserSession share].user.accessToken};
+    [[HXSocketManager manager] sendData:data];
 }
 
 - (void)displayUserLocationWithID:(NSString *)ID {
+    _cid = ID;
     __weak __typeof__(self)weakSelf = self;
     [[HXLocationManager share] getLocationSuccess:
      ^(BMKUserLocation *userLocation, NSString *latitude, NSString *longtitude){
