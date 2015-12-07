@@ -533,6 +533,7 @@
 			children = (
 				485FE74F1BF8E1CC00654279 /* Category */,
 				485FE7521BF8E1CC00654279 /* Component */,
+				485FE76F1BF8E1CC00654279 /* Macros */,
 				485FE7551BF8E1CC00654279 /* HXIBKit */,
 				485FE7691BF8E1CC00654279 /* HXLocationManager.h */,
 				485FE76A1BF8E1CC00654279 /* HXLocationManager.m */,
@@ -540,7 +541,6 @@
 				485FE76C1BF8E1CC00654279 /* HXStoryBoardManager.m */,
 				485FE76D1BF8E1CC00654279 /* HXThemeManager.h */,
 				485FE76E1BF8E1CC00654279 /* HXThemeManager.m */,
-				485FE76F1BF8E1CC00654279 /* Macros */,
 			);
 			path = Common;
 			sourceTree = "<group>";
