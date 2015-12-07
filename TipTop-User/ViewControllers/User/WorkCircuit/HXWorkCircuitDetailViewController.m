@@ -17,7 +17,7 @@
 
 #pragma mark - View Controller Life Cycle
 - (void)viewDidLoad {
-    self.loadURL = [DoMain stringByAppendingFormat:@"/h5/client/order/view?access_token=%@&id=%@", [HXUserSession share].user.accessToken, _ID];
+    self.loadURL = [HXApi webViewURLWithURL:[NSString stringWithFormat:@"/h5/client/order/view?access_token=%@&id=%@", [HXUserSession share].user.accessToken, _ID]];
     
     [super viewDidLoad];
 }

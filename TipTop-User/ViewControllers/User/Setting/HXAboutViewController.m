@@ -16,7 +16,7 @@
 
 #pragma mark - View Controller Life Cycle
 - (void)viewDidLoad {
-    self.loadURL = [DoMain stringByAppendingFormat:@"/h5/page?key=agent_about"];
+    self.loadURL = [HXApi webViewURLWithURL:@"/h5/page?key=agent_about"];
     
     [super viewDidLoad];
 }

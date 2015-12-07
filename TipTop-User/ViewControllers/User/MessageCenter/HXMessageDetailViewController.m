@@ -13,7 +13,7 @@
 
 #pragma mark - View Controller Life Cycle
 - (void)viewDidLoad {
-    self.loadURL = [DoMain stringByAppendingFormat:@"/h5/notification?id=%@", _cid];
+    self.loadURL = [HXApi webViewURLWithURL:[NSString stringWithFormat:@"/h5/notification?id=%@", _cid]];
     
     [super viewDidLoad];
 }
