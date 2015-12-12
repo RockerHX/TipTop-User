@@ -22,7 +22,6 @@
     
     [HXThemeManager share].themeStyle = HXThemeStyleDefault;
     
-    
 #pragma mark - Baidu Map SDK
     // 要使用百度地图，请先启动BaiduMapManager
     _mapManager = [[BMKMapManager alloc] init];
