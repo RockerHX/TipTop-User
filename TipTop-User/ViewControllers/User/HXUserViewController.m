@@ -60,15 +60,13 @@ typedef NS_ENUM(NSUInteger, HXMenuRow) {
 #pragma mark - Event Response
 - (IBAction)settingButtonPressed {
     if (_delegate && [_delegate respondsToSelector:@selector(userCenterShouldHiddenAndShowViewController:)]) {
-        UINavigationController *settingNavigationController = [HXSettingViewController navigationControllerInstance];
-        [_delegate userCenterShouldHiddenAndShowViewController:settingNavigationController];
+        [_delegate userCenterShouldHiddenAndShowViewController:[HXSettingViewController instance]];
     }
 }
 
 - (IBAction)editButtonPressed {
     if (_delegate && [_delegate respondsToSelector:@selector(userCenterShouldHiddenAndShowViewController:)]) {
-        UINavigationController *profileViewController = [HXProfileViewController navigationControllerInstance];
-        [_delegate userCenterShouldHiddenAndShowViewController:profileViewController];
+        [_delegate userCenterShouldHiddenAndShowViewController:[HXProfileViewController instance]];
     }
 }
 

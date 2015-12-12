@@ -89,10 +89,10 @@
 
 #pragma mark - HXUserViewControllerDelegate Methods
 - (void)userCenterShouldHiddenAndShowViewController:(UIViewController *)viewController {
-    [self hideMenuViewController];
     UINavigationController *contentNavigationController = (UINavigationController *)self.contentViewController;
     HXHomeViewController *homeViewController = [contentNavigationController.viewControllers firstObject];
     [homeViewController.navigationController pushViewController:viewController animated:YES];
+    [self hideMenuViewController];
 }
 
 @end
