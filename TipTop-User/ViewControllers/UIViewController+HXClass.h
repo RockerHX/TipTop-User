@@ -13,7 +13,6 @@
 
 @property (nonatomic, copy, readonly)           NSString *navigationControllerIdentifier;
 @property (nonatomic, assign, readonly) HXStoryBoardName  storyBoardName;
-@property (nonatomic, assign)                       BOOL  canPan;
 
 + (UINavigationController *)navigationControllerInstance;
 + (instancetype)instance;

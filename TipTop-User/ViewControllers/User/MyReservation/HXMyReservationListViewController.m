@@ -22,25 +22,11 @@ static NSString *SendOrderApi   = @"/order/confirm";
 @implementation HXMyReservationListViewController
 
 #pragma mark - View Controller Life Cycle
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    self.navigationController.canPan = YES;
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    self.navigationController.canPan = NO;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 
 #pragma mark - Setter And Getter
-- (NSString *)navigationControllerIdentifier {
-    return @"HXMyReservationNavigationController";
-}
-
 - (HXStoryBoardName)storyBoardName {
     return HXStoryBoardNameMyReservation;
 }

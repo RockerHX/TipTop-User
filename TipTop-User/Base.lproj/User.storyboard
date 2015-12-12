@@ -455,30 +455,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1h1-Gc-pa7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="394"/>
-        </scene>
-        <!--Pan Gesture Navgaition Controller-->
-        <scene sceneID="f26-22-Av2">
-            <objects>
-                <navigationController storyboardIdentifier="HXProfileNavigationController" id="tAN-Yw-bSm" customClass="HXPanGestureNavgaitionController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="UK6-Rf-ssU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="IHM-WD-cDL" kind="relationship" relationship="rootViewController" id="mK4-Vs-caW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hek-Tg-pVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="567" y="394"/>
+            <point key="canvasLocation" x="-1011" y="382"/>
         </scene>
         <!--个人中心-->
         <scene sceneID="tng-wy-Ofz">
             <objects>
                 <tableViewController storyboardIdentifier="HXProfileViewController" id="IHM-WD-cDL" customClass="HXProfileViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EkD-EB-AqJ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -816,7 +800,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bs9-cs-mVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989" y="394"/>
+            <point key="canvasLocation" x="-579" y="382"/>
         </scene>
     </scenes>
     <resources>

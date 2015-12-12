@@ -82,35 +82,35 @@ typedef NS_ENUM(NSUInteger, HXMenuRow) {
 
 #pragma mark - Table View Delegate Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UINavigationController *navigationController = nil;
+    UIViewController *viewController = nil;
     if (_delegate && [_delegate respondsToSelector:@selector(userCenterShouldHiddenAndShowViewController:)]) {
         switch (indexPath.row) {
             case HXMenuRowMyReservation: {
-                navigationController = [HXMyReservationListViewController navigationControllerInstance];
+                viewController = [HXMyReservationListViewController instance];
                 break;
             }
             case HXMenuRowOnlinePay: {
-                navigationController = [HXOnlinePayListViewController navigationControllerInstance];
+                viewController = [HXOnlinePayListViewController instance];
                 break;
             }
             case HXMenuRowWorkCircuit: {
-                navigationController = [HXWorkCircuitListViewController navigationControllerInstance];
+                viewController = [HXWorkCircuitListViewController instance];
                 break;
             }
             case HXMenuRowMall: {
-                navigationController = [HXMallViewController navigationControllerInstance];
+                viewController = [HXMallViewController instance];
                 break;
             }
             case HXMenuRowRecruitment: {
-                navigationController = [HXRecruitmentViewController navigationControllerInstance];
+                viewController = [HXRecruitmentViewController instance];
                 break;
             }
             case HXMenuRowFeedBack: {
-                navigationController = [HXFeedBackViewController navigationControllerInstance];
+                viewController = [HXFeedBackViewController instance];
                 break;
             }
             case HXMenuRowMessageCenter: {
-                navigationController = [HXMessageCenterViewController navigationControllerInstance];
+                viewController = [HXMessageCenterViewController instance];
                 break;
             }
             case HXMenuRowServicePhone: {
@@ -128,7 +128,7 @@ typedef NS_ENUM(NSUInteger, HXMenuRow) {
                 break;
             }
         }
-        [_delegate userCenterShouldHiddenAndShowViewController:navigationController];
+        [_delegate userCenterShouldHiddenAndShowViewController:viewController];
     }
 }
 

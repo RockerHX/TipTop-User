@@ -20,25 +20,11 @@ static NSString *OrderListApi = @"/Order";
 @implementation HXWorkCircuitListViewController
 
 #pragma mark - View Controller Life Cycle
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    self.navigationController.canPan = YES;
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    self.navigationController.canPan = NO;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 
 #pragma mark - Setter And Getter
-- (NSString *)navigationControllerIdentifier {
-    return @"HXWorkCircuitNavigationController";
-}
-
 - (HXStoryBoardName)storyBoardName {
     return HXStoryBoardNameWorkCircuit;
 }

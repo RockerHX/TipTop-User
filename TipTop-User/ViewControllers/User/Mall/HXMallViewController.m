@@ -19,10 +19,6 @@
 }
 
 #pragma mark - Setter And Getter
-- (NSString *)navigationControllerIdentifier {
-    return @"HXMallNavigationController";
-}
-
 - (HXStoryBoardName)storyBoardName {
     return HXStoryBoardNameMall;
 }

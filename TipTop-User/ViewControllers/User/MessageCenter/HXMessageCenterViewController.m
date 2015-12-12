@@ -17,19 +17,8 @@ static NSString *MessageListApi = @"/notification/category";
 @implementation HXMessageCenterViewController
 
 #pragma mark - View Controller Life Cycle
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    self.navigationController.canPan = YES;
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    self.navigationController.canPan = NO;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 #pragma mark - Config Methods
@@ -42,10 +31,6 @@ static NSString *MessageListApi = @"/notification/category";
 }
 
 #pragma mark - Setter And Getter
-- (NSString *)navigationControllerIdentifier {
-    return @"HXMessageCenterNavigationController";
-}
-
 - (HXStoryBoardName)storyBoardName {
     return HXStoryBoardNameMessageCenter;
 }

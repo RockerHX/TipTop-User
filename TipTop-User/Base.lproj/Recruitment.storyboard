@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="S1Y-BV-d5K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AhU-dY-74J">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAO-nx-bvt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="Dgr-xF-6qf" id="BBO-mz-4PT"/>
@@ -41,22 +41,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uX5-Bp-nXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="289" y="415"/>
-        </scene>
-        <!--Pan Gesture Navgaition Controller-->
-        <scene sceneID="yK0-n6-yAj">
-            <objects>
-                <navigationController storyboardIdentifier="HXRecruitmentNavigationController" id="gUi-Qn-v4c" customClass="HXPanGestureNavgaitionController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hdo-57-e9a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Dgr-xF-6qf" kind="relationship" relationship="rootViewController" id="QSd-bF-W3s"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qqx-n2-HO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-140" y="415"/>
         </scene>
     </scenes>
 </document>
