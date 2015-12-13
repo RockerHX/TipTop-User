@@ -7,6 +7,7 @@
 //
 
 #import "UIViewController+HXClass.h"
+#import "UIAlertView+BlocksKit.h"
 
 @implementation UIViewController (HXClass)
 
@@ -38,5 +39,13 @@
     }
 }
 
+#pragma mark - Public Methods
+- (void)showAlertWithMessage:(NSString *)message {
+    [UIAlertView bk_showAlertViewWithTitle:@"温馨提示"
+                                   message:message
+                         cancelButtonTitle:@"确定"
+                         otherButtonTitles:nil
+                                   handler:nil];
+}
 
 @end

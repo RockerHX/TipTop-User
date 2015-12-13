@@ -72,6 +72,8 @@
             if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(loginViewControllerLoginSuccess:)]) {
                 [strongSelf.delegate loginViewControllerLoginSuccess:strongSelf];
             }
+        } else {
+            [self showAlertWithMessage:response.message];
         }
     } failure:^(HXApiResponse *response) {
         __strong __typeof__(self)strongSelf = weakSelf;

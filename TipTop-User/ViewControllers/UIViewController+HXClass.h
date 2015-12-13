@@ -17,4 +17,6 @@
 + (UINavigationController *)navigationControllerInstance;
 + (instancetype)instance;
 
+- (void)showAlertWithMessage:(NSString *)message;
+
 @end
