@@ -86,4 +86,10 @@ typedef void(^BLOCK)(void);
     }
 }
 
+#pragma mark - UIScrollViewDelegate Methods
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat page = scrollView.contentOffset.x/scrollView.frame.size.width;
+    _pageControl.currentPage = page;
+}
+
 @end

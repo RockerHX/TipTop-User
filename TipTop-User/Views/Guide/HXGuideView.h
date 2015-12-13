@@ -7,7 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HXGuideView : UIView
+@interface HXGuideView : UIView <UIScrollViewDelegate>
+
+@property (weak, nonatomic) IBOutlet  UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 - (IBAction)startButtonPressed;
 

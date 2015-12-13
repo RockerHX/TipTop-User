@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -23,10 +23,8 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="G-Guide-1" translatesAutoresizingMaskIntoConstraints="NO" id="tgd-JD-15N">
                                             <rect key="frame" x="0.0" y="0.0" width="320.5" height="568"/>
-                                            <animations/>
                                         </imageView>
                                     </subviews>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="tgd-JD-15N" secondAttribute="bottom" id="EsT-we-fzJ"/>
@@ -40,10 +38,8 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="G-Guide-2" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-yX-TdU">
                                             <rect key="frame" x="0.0" y="0.0" width="320.5" height="568"/>
-                                            <animations/>
                                         </imageView>
                                     </subviews>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="ruO-yX-TdU" firstAttribute="top" secondItem="lx7-Yl-r1s" secondAttribute="top" id="3Pt-Xz-4Yi"/>
@@ -57,11 +53,9 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="G-Guide-3" translatesAutoresizingMaskIntoConstraints="NO" id="WXX-tf-2L7">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                            <animations/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2G-mm-5WB" customClass="HXIBButton">
                                             <rect key="frame" x="70" y="484" width="180" height="40"/>
-                                            <animations/>
                                             <color key="backgroundColor" red="0.094117647058823528" green="0.74901960784313726" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="OY4-b7-3T1"/>
@@ -81,7 +75,6 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="WXX-tf-2L7" firstAttribute="top" secondItem="bH9-Yi-eun" secondAttribute="top" id="6LO-tu-uLJ"/>
@@ -93,7 +86,6 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="bH9-Yi-eun" secondAttribute="trailing" id="1Iu-a1-Rxo"/>
@@ -111,25 +103,35 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <animations/>
                     <constraints>
                         <constraint firstItem="x9m-Aj-fdL" firstAttribute="leading" secondItem="eAM-qS-peZ" secondAttribute="leading" id="0Tz-dH-R2G"/>
                         <constraint firstAttribute="trailing" secondItem="x9m-Aj-fdL" secondAttribute="trailing" id="G6H-j8-UtU"/>
                         <constraint firstAttribute="bottom" secondItem="x9m-Aj-fdL" secondAttribute="bottom" id="R90-jq-X5l"/>
                         <constraint firstItem="x9m-Aj-fdL" firstAttribute="top" secondItem="eAM-qS-peZ" secondAttribute="top" id="vC5-3D-whO"/>
                     </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="HWM-b5-ACP"/>
+                    </connections>
                 </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ura-u0-5C8">
+                    <rect key="frame" x="140" y="516" width="39" height="37"/>
+                </pageControl>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="eAM-qS-peZ" secondAttribute="trailing" id="5Rm-dL-ZBw"/>
+                <constraint firstAttribute="bottom" secondItem="Ura-u0-5C8" secondAttribute="bottom" constant="15" id="A8z-Tz-0S8"/>
+                <constraint firstItem="Ura-u0-5C8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OLi-qd-i1O"/>
                 <constraint firstItem="eAM-qS-peZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W3C-42-Wu5"/>
                 <constraint firstItem="x9m-Aj-fdL" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="enA-tj-xLB"/>
                 <constraint firstItem="x9m-Aj-fdL" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="3" id="hj0-86-Tm9"/>
                 <constraint firstAttribute="bottom" secondItem="eAM-qS-peZ" secondAttribute="bottom" id="ifS-9r-cFD"/>
                 <constraint firstItem="eAM-qS-peZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rPS-1V-3CQ"/>
             </constraints>
+            <connections>
+                <outlet property="pageControl" destination="Ura-u0-5C8" id="40Y-Wd-jEN"/>
+                <outlet property="scrollView" destination="eAM-qS-peZ" id="wnw-wF-BiN"/>
+            </connections>
             <point key="canvasLocation" x="-645" y="274"/>
         </view>
     </objects>
