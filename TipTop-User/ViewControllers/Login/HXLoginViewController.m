@@ -66,13 +66,13 @@
                                @"password": _passwordTextField.text};
     [HXUser loginWithParameters:parameters success:^(HXApiResponse *response, HXUser *user) {
         __strong __typeof__(self)strongSelf = weakSelf;
+        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
         if (response.errorCode == HXAppApiRequestErrorCodeNoError) {
             [[HXUserSession share] updateUser:user];
             if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(loginViewControllerLoginSuccess:)]) {
                 [strongSelf.delegate loginViewControllerLoginSuccess:strongSelf];
             }
         }
-        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
     } failure:^(HXApiResponse *response) {
         __strong __typeof__(self)strongSelf = weakSelf;
         [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];

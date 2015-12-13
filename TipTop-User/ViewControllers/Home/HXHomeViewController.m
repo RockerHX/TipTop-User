@@ -93,12 +93,8 @@ static NSString *NewOrderEvent  = @"new_order";
         __strong __typeof__(self)strongSelf = weakSelf;
         [strongSelf handleData:data];
     } closed:^(HXSocketManager *manager, NSInteger code) {
-        __strong __typeof__(self)strongSelf = weakSelf;
         [manager reConnect];
-        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
     } failed:^(HXSocketManager *manager, NSError *error) {
-        __strong __typeof__(self)strongSelf = weakSelf;
-        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
     }];
 }
 

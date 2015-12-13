@@ -66,8 +66,8 @@
 - (void)showLoginViewController {
     HXLoginViewController *loginViewController = [HXLoginViewController instance];
     loginViewController.delegate = self;
-    [self addChildViewController:loginViewController];
-    [self.view addSubview:loginViewController.view];
+    loginViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:loginViewController animated:NO completion:nil];
 }
 
 - (void)showHomePageViewController {
@@ -77,12 +77,9 @@
 
 #pragma mark - HXLoginViewControllerDelegate Methods
 - (void)loginViewControllerLoginSuccess:(HXLoginViewController *)loginViewController {
-    UIView *view = nil;
     __weak __typeof__(self)weakSelf = self;
-    [UIView transitionFromView:loginViewController.view toView:view duration:1.0f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+    [self dismissViewControllerAnimated:YES completion:^{
         __strong __typeof__(self)strongSelf = weakSelf;
-        [loginViewController.view removeFromSuperview];
-        [loginViewController removeFromParentViewController];
         [strongSelf showHomePageViewController];
     }];
 }
