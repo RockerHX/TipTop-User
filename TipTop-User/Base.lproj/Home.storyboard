@@ -226,10 +226,21 @@
                     <navigationItem key="navigationItem" id="byo-JL-pn2">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" id="amn-pu-sp4">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="r47-uN-emx">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="r47-uN-emx" customClass="HXIBButton">
                                 <rect key="frame" x="16" y="9" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="HP-HeaderIcon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="avatarButtonPressed" destination="yfA-hU-glS" eventType="touchUpInside" id="oHF-9z-mIJ"/>
                                 </connections>
@@ -266,6 +277,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="avatarButton" destination="r47-uN-emx" id="uFL-QN-OQi"/>
                         <outlet property="categoryView" destination="hOR-0Q-YJR" id="3Hj-pP-umq"/>
                         <outlet property="mapView" destination="392-ZY-cNd" id="chY-vr-p39"/>
                         <outlet property="subCategoryView" destination="zWf-Yd-Z2t" id="j5Q-pX-FGZ"/>

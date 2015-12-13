@@ -17,6 +17,7 @@
 #import "HXCategoryManager.h"
 #import "HXHomePageCategoryView.h"
 #import "HXHomePageSubCategoryView.h"
+#import "UIButton+WebCache.h"
 
 
 static NSString *AgentNearbyApi = @"/agent/nearby";
@@ -74,6 +75,7 @@ static NSString *NewOrderEvent  = @"new_order";
 
 - (void)viewConfig {
     [self configMap];
+    [self display];
 }
 
 - (void)configMap {
@@ -84,6 +86,7 @@ static NSString *NewOrderEvent  = @"new_order";
     _mapView.zoomLevel         = 15.0f;                     // 500米比例尺
 }
 
+#pragma mark - Public Methods
 - (void)openSocket {
     __weak __typeof__(self)weakSelf = self;
     [[HXSocketManager manager] openWithURL:[NSURL URLWithString:@"ws://115.29.45.120:8081"] opened:^(HXSocketManager *manager) {
@@ -96,6 +99,10 @@ static NSString *NewOrderEvent  = @"new_order";
         [manager reConnect];
     } failed:^(HXSocketManager *manager, NSError *error) {
     }];
+}
+
+- (void)display {
+    [_avatarButton sd_setImageWithURL:[NSURL URLWithString:[HXUserSession share].user.avatar] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"HP-HeaderIcon"]];
 }
 
 #pragma mark - Setter And Getter

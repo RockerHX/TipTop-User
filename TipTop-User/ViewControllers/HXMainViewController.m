@@ -71,12 +71,20 @@
 }
 
 - (void)showHomePageViewController {
-    HXHomeViewController *homePageViewController = [((UINavigationController *)self.contentViewController).viewControllers firstObject];
-    [homePageViewController openSocket];
+    HXHomeViewController *homeViewController = [self homePageViewController];
+    [homeViewController openSocket];
+}
+
+- (HXHomeViewController *)homePageViewController {
+    UINavigationController *contentNavigationController = (UINavigationController *)self.contentViewController;
+    HXHomeViewController *homeViewController = [contentNavigationController.viewControllers firstObject];
+    return homeViewController;
 }
 
 #pragma mark - HXLoginViewControllerDelegate Methods
 - (void)loginViewControllerLoginSuccess:(HXLoginViewController *)loginViewController {
+    HXHomeViewController *homeViewController = [self homePageViewController];
+    [homeViewController display];
     __weak __typeof__(self)weakSelf = self;
     [self dismissViewControllerAnimated:YES completion:^{
         __strong __typeof__(self)strongSelf = weakSelf;
@@ -86,8 +94,7 @@
 
 #pragma mark - HXUserViewControllerDelegate Methods
 - (void)userCenterShouldHiddenAndShowViewController:(UIViewController *)viewController {
-    UINavigationController *contentNavigationController = (UINavigationController *)self.contentViewController;
-    HXHomeViewController *homeViewController = [contentNavigationController.viewControllers firstObject];
+    HXHomeViewController *homeViewController = [self homePageViewController];
     [homeViewController.navigationController pushViewController:viewController animated:YES];
     [self hideMenuViewController];
 }
