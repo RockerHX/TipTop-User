@@ -13,7 +13,7 @@
 @implementation HXServiceCell
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    _icon.selected = selected;
+    _icon.tintColor = selected ? [UIColor orangeColor] : [UIColor lightGrayColor];
     _nameLabel.textColor = selected ? [UIColor orangeColor] : [UIColor darkGrayColor];
     self.backgroundColor = selected ? [UIColor whiteColor] : UIColorWithRGBA(246.0f, 246.0f, 246.0f, 1.0f);
 }
