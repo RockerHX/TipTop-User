@@ -22,7 +22,7 @@
 
 @property (weak, nonatomic) IBOutlet          id  <HXLoginViewControllerDelegate>delegate;
 
-@property (weak, nonatomic) IBOutlet UITextField *staffIDTextField;
+@property (weak, nonatomic) IBOutlet UITextField *mobileTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 - (IBAction)loginButtonPressed;

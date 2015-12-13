@@ -37,6 +37,9 @@
                                         <rect key="frame" x="44" y="0.0" width="206" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="xYY-96-KqN" id="yNH-bP-XAu"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,6 +78,9 @@
                                         <rect key="frame" x="44" y="0.0" width="206" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="xYY-96-KqN" id="kbM-gP-1V9"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -182,8 +188,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mobileTextField" destination="3hp-5i-1Sp" id="Pua-OE-hWn"/>
                         <outlet property="passwordTextField" destination="AaD-Cc-lPb" id="3qJ-bt-Ecl"/>
-                        <outlet property="staffIDTextField" destination="3hp-5i-1Sp" id="0rD-BE-4d5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGk-gj-Lnn" userLabel="First Responder" sceneMemberID="firstResponder"/>

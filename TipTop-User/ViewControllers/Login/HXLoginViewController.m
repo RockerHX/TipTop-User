@@ -22,8 +22,6 @@
 
 #pragma mark - Config Methods
 - (void)initConfig {
-    _staffIDTextField.delegate = self;
-    _passwordTextField.delegate = self;
 }
 
 - (void)viewConfig {
@@ -45,10 +43,10 @@
 
 #pragma mark - Private Methods
 - (void)startLogin {
-    if (!_staffIDTextField.text.length) {
-        
+    if (_mobileTextField.text.length != 11) {
+        [self showAlertWithMessage:@"请输入正确手机号！"];
     } else if (!_passwordTextField.text.length) {
-        
+        [self showAlertWithMessage:@"请输入密码！"];
     } else {
         [self startLoginRequest];
     }
@@ -62,7 +60,7 @@
 - (void)startLoginRequest {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     __weak __typeof__(self)weakSelf = self;
-    NSDictionary *parameters = @{@"mobile": _staffIDTextField.text,
+    NSDictionary *parameters = @{@"mobile": _mobileTextField.text,
                                @"password": _passwordTextField.text};
     [HXUser loginWithParameters:parameters success:^(HXApiResponse *response, HXUser *user) {
         __strong __typeof__(self)strongSelf = weakSelf;
