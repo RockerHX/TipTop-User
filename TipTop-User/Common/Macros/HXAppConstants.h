@@ -14,6 +14,7 @@ FOUNDATION_EXPORT NSString *const WeiXinKEY;                // 微信SDK对应�
 #pragma mark - Notification Name
 FOUNDATION_EXPORT NSString *const kUserNeedLoginNotification;       // 需要用户的通知，收到此通知，会跳转到登录页面
 FOUNDATION_EXPORT NSString *const kUserLoginSuccessNotification;    // 用户登录成功的通知，用于登录成功之后通知对应页面刷新数据
+FOUNDATION_EXPORT NSString *const kUserLogoutNotification;          // 注销通知
 FOUNDATION_EXPORT NSString *const kWeiXinPaySuccessNotification;    // 微信支付成功的通知
 FOUNDATION_EXPORT NSString *const kWeiXinPayFailureNotification;    // 微信支付失败的通知
 

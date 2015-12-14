@@ -77,6 +77,11 @@ typedef void(^FailedBlock)(HXSocketManager *manager, NSError *error);
     }
 }
 
+- (void)close {
+    [_timer fire];
+    [_socket close];
+}
+
 #pragma mark - Private Methods
 - (void)sendPing {
     if (_socket.readyState == SR_OPEN) {

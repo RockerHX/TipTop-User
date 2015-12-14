@@ -25,5 +25,6 @@
 
 - (void)reConnect;
 - (void)sendData:(id)data;
+- (void)close;
 
 @end

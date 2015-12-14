@@ -12,11 +12,15 @@
 #import "HXUserViewController.h"
 #import "HXLoginViewController.h"
 #import "HXGuideView.h"
+#import "HXAppConstants.h"
+#import "HXSocketManager.h"
 
 @interface HXMainViewController () <HXLoginViewControllerDelegate, HXUserViewControllerDelegate>
 @end
 
-@implementation HXMainViewController
+@implementation HXMainViewController {
+    __block BOOL _logined;
+}
 
 #pragma mark - Init Methods
 - (void)awakeFromNib {
@@ -41,13 +45,16 @@
         if ([HXUserSession share].state == HXUserSessionStateLogout) {
             [strongSelf showLoginViewController];
         } else {
-            [strongSelf showHomePageViewController];
+            if (!_logined) {
+                [strongSelf showHomePageViewController];
+            }
         }
     }];
 }
 
 #pragma mark - Config Methods
 - (void)initConfig {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLogout) name:kUserLogoutNotification object:nil];
     [self setupAppStructure];
 }
 
@@ -81,12 +88,18 @@
     return homeViewController;
 }
 
+- (void)userLogout {
+    [[HXSocketManager manager] close];
+    [self showLoginViewController];
+}
+
 #pragma mark - HXLoginViewControllerDelegate Methods
 - (void)loginViewControllerLoginSuccess:(HXLoginViewController *)loginViewController {
+    _logined = YES;
     HXHomeViewController *homeViewController = [self homePageViewController];
     [homeViewController display];
     __weak __typeof__(self)weakSelf = self;
-    [self dismissViewControllerAnimated:YES completion:^{
+    [loginViewController dismissViewControllerAnimated:YES completion:^{
         __strong __typeof__(self)strongSelf = weakSelf;
         [strongSelf showHomePageViewController];
     }];

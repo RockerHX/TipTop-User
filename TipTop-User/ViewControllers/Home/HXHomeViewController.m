@@ -96,7 +96,6 @@ static NSString *NewOrderEvent  = @"new_order";
         __strong __typeof__(self)strongSelf = weakSelf;
         [strongSelf handleData:data];
     } closed:^(HXSocketManager *manager, NSInteger code) {
-        [manager reConnect];
     } failed:^(HXSocketManager *manager, NSError *error) {
     }];
 }

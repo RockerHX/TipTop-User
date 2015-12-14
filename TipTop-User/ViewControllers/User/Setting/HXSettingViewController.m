@@ -16,6 +16,7 @@
 #import "HXUserSession.h"
 #import "SDImageCache.h"
 #import "MBProgressHUD.h"
+#import "HXAppConstants.h"
 
 @interface HXSettingViewController ()
 @end
@@ -76,6 +77,8 @@
     } else if ((3 == indexPath.section) && (0 == indexPath.row)) {
         [[HXUserSession share] logout];
         [tableView reloadData];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kUserLogoutNotification object:nil];
     }
 }
 
