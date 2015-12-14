@@ -32,12 +32,16 @@ static NSString *OrderListApi = @"/profile/password";
     NSString *passWord = _passWordTextFiled.text;
     NSString *confirmPassWord = _confirmPassWordTextFiled.text;
     
-    if (oldPassWord.length && passWord.length && confirmPassWord.length) {
-        if ([passWord isEqualToString:confirmPassWord]) {
-            [self startChangePassWordRequest:@{@"access_token": [HXUserSession share].user.accessToken,
-                                               @"old_password": oldPassWord,
-                                                   @"password": confirmPassWord}];
-        }
+    if (!oldPassWord.length) {
+        [self showAlertWithMessage:@"请输入密码！"];
+    } else if (!passWord.length) {
+        [self showAlertWithMessage:@"请输入新密码！"];
+    } else if (![passWord isEqualToString:confirmPassWord]) {
+        [self showAlertWithMessage:@"亲，您输入的两次密码不相同噢！"];
+    } else {
+        [self startChangePassWordRequest:@{@"access_token": [HXUserSession share].user.accessToken,
+                                           @"old_password": oldPassWord,
+                                           @"password": confirmPassWord}];
     }
 }
 
@@ -47,17 +51,13 @@ static NSString *OrderListApi = @"/profile/password";
     __weak __typeof__(self)weakSelf = self;
     [HXAppApiRequest requestPOSTMethodsWithAPI:[HXApi apiURLWithApi:OrderListApi] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         __strong __typeof__(self)strongSelf = weakSelf;
+        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
         NSInteger errorCode = [responseObject[@"error_code"] integerValue];
         NSString *message = responseObject[@"tip"];
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
             message = @"密码修改成功";
         }
-        [UIAlertView bk_showAlertViewWithTitle:@"温馨提示"
-                                       message:message
-                             cancelButtonTitle:@"确定"
-                             otherButtonTitles:nil
-                                       handler:nil];
-        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+        [self showAlertWithMessage:message];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         __strong __typeof__(self)strongSelf = weakSelf;
         [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
