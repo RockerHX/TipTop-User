@@ -9,15 +9,18 @@
 #import "HXServiceNormalViewController.h"
 #import "HXFilterListManager.h"
 #import "REMenu.h"
+#import "HXPickerView.h"
+#import "HXCategoryManager.h"
 #import "HXAppApiRequest.h"
 #import "MJRefresh.h"
 #import "HXNormalAdviserCell.h"
 #import "MBProgressHUD.h"
 #import "HXNormalServiceDetailViewController.h"
+#import "HXCategory.h"
 
 static NSString *ListApi = @"/agent";
 
-@interface HXServiceNormalViewController ()
+@interface HXServiceNormalViewController () <HXPickerViewDelegate>
 @end
 
 @implementation HXServiceNormalViewController {
@@ -25,6 +28,7 @@ static NSString *ListApi = @"/agent";
     
     HXFilterItem *_firstFilter;
     HXFilterItem *_secondFilter;
+    HXFilterItem *_thirdFilter;
     
     REMenu *_filterMenu;
 }
@@ -45,6 +49,7 @@ static NSString *ListApi = @"/agent";
     
     _firstFilter = [[HXFilterItem alloc] init];
     _secondFilter = [[HXFilterItem alloc] init];
+    _thirdFilter = [[HXFilterItem alloc] init];
     [[HXFilterListManager share] fetchFilterList:nil];
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     [_tableView.mj_header beginRefreshing];
@@ -72,6 +77,12 @@ static NSString *ListApi = @"/agent";
     [_filterMenu closeWithCompletion:^{
         __strong __typeof__(self)strongSelf = weakSelf;
         [strongSelf showFilterMenuWithItem:[[HXFilterListManager share].filterList.normal firstObject]];
+    }];
+}
+
+- (IBAction)centerButtonPressed {
+    [_filterMenu closeWithCompletion:^{
+        [HXPickerView showWithItems:[HXCategoryManager share].categories delegate:self];
     }];
 }
 
@@ -113,10 +124,16 @@ static NSString *ListApi = @"/agent";
     } else if (!_secondFilter.key || [_secondFilter.key isEqualToString:key]) {
         _secondFilter.key = key;
         _secondFilter.value = value;
+    } else if (!_thirdFilter.key || [_thirdFilter.key isEqualToString:key]) {
+        _thirdFilter.key = key;
+        _thirdFilter.value = value;
     }
     NSMutableDictionary *parameters =@{@"cid": self.cid}.mutableCopy;
     if (_firstFilter.key.length) {
         [parameters setValue:_firstFilter.value forKey:_firstFilter.key];
+    }
+    if (_thirdFilter.key.length) {
+        [parameters setValue:_thirdFilter.value forKey:_thirdFilter.key];
     }
     if (_secondFilter.key.length) {
         [parameters setValue:_secondFilter.value forKey:_secondFilter.key];
@@ -188,6 +205,12 @@ static NSString *ListApi = @"/agent";
     detailViewController.aid = _normalAdvisers[indexPath.row].ID;
     detailViewController.canReserve = YES;
     [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+#pragma mark - HXPickerViewDelegate Methods
+- (void)pickerView:(HXPickerView *)pickerView item:(id)item {
+    HXCategoryItem *categoryItem = item;
+    [self filterDidSelectedWithKey:@"cid" value:categoryItem.ID];
 }
 
 @end

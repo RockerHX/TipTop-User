@@ -30,12 +30,13 @@ static HXCategoryManager *manager = nil;
     return manager;
 }
 
-#pragma mark - Private Methods
+#pragma mark - Public Methods
 - (void)fetchCategories:(nullable void(^)(NSArray<HXCategory *> * _Nullable categories, BOOL compeleted))compeleted {
     _block = compeleted;
     [self startCategoriesRequest];
 }
 
+#pragma mark - Private Methods
 - (void)startCategoriesRequest {
     __weak __typeof__(self)weakSelf = self;
     [HXAppApiRequest requestGETMethodsWithAPI:[HXApi commonApiURLWithApi:CategoryApi] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {

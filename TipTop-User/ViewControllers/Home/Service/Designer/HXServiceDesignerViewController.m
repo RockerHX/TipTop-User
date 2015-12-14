@@ -74,7 +74,7 @@ static NSString *ListApi = @"/agent/recommend";
     __weak __typeof__(self)weakSelf = self;
     [_filterMenu closeWithCompletion:^{
         __strong __typeof__(self)strongSelf = weakSelf;
-        [strongSelf showFilterMenuWithItem:[HXFilterListManager share].filterList.house[0]];
+        [strongSelf showFilterMenuWithItem:[HXFilterListManager share].filterList.designer[0]];
     }];
 }
 
@@ -82,7 +82,7 @@ static NSString *ListApi = @"/agent/recommend";
     __weak __typeof__(self)weakSelf = self;
     [_filterMenu closeWithCompletion:^{
         __strong __typeof__(self)strongSelf = weakSelf;
-        [strongSelf showFilterMenuWithItem:[HXFilterListManager share].filterList.house[1]];
+        [strongSelf showFilterMenuWithItem:[HXFilterListManager share].filterList.designer[1]];
     }];
 }
 
@@ -90,7 +90,7 @@ static NSString *ListApi = @"/agent/recommend";
     __weak __typeof__(self)weakSelf = self;
     [_filterMenu closeWithCompletion:^{
         __strong __typeof__(self)strongSelf = weakSelf;
-        [strongSelf showFilterMenuWithItem:[HXFilterListManager share].filterList.house[2]];
+        [strongSelf showFilterMenuWithItem:[HXFilterListManager share].filterList.designer[2]];
     }];
 }
 
