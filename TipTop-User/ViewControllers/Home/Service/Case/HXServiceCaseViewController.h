@@ -13,4 +13,8 @@
 @property (weak, nonatomic) IBOutlet           UIView *listContentView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+- (IBAction)leftButtonPressed;
+- (IBAction)centerButtonPressed;
+- (IBAction)rightButtonPressed;
+
 @end

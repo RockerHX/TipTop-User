@@ -43,6 +43,25 @@ static NSString *ListApi = @"/agent/houseDesign";
     [super viewConfig];
 }
 
+#pragma mark - Event Response
+- (IBAction)leftButtonPressed {
+    NSDictionary *parameters = @{@"cid": self.cid,
+                                @"type": @"bgs"};
+    [self startFilterRequestWithParameters:parameters];
+}
+
+- (IBAction)centerButtonPressed {
+    NSDictionary *parameters = @{@"cid": self.cid,
+                                @"type": @"sy"};
+    [self startFilterRequestWithParameters:parameters];
+}
+
+- (IBAction)rightButtonPressed {
+    NSDictionary *parameters = @{@"cid": self.cid,
+                                @"type": @"zz"};
+    [self startFilterRequestWithParameters:parameters];
+}
+
 #pragma mark - Private Methods
 - (void)loadNewData {
     [self startFilterRequestWithParameters:@{@"cid": self.cid}];
@@ -53,6 +72,7 @@ static NSString *ListApi = @"/agent/houseDesign";
 }
 
 - (void)startFilterRequestWithParameters:(NSDictionary *)parameter {
+    [_collectionView.mj_header beginRefreshing];
     __weak __typeof__(self)weakSelf = self;
     [HXAppApiRequest requestGETMethodsWithAPI:[HXApi apiURLWithApi:ListApi] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
         __strong __typeof__(self)strongSelf = weakSelf;
