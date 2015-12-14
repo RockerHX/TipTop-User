@@ -7,7 +7,6 @@
 //
 
 #import "HXPanGestureNavgaitionController.h"
-#import <REFrostedViewController/REFrostedViewController.h>
 
 @interface HXPanGestureNavgaitionController () <UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 @end
@@ -24,31 +23,6 @@
 #pragma mark - Config Methods
 - (void)initConfig {
     self.delegate = self;
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognized:)];
-    panGesture.delegate = self;
-    [self.view addGestureRecognizer:panGesture];
-}
-
-#pragma mark - Gesture recognizer
-- (void)panGestureRecognized:(UIPanGestureRecognizer *)sender {
-    [self.view endEditing:YES];
-    [self.frostedViewController.view endEditing:YES];
-    
-    [self.frostedViewController panGestureRecognized:sender];
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    if ([[otherGestureRecognizer.view class] isSubclassOfClass:[UITableView class]] ||
-        [[otherGestureRecognizer.view class] isSubclassOfClass:[UICollectionView class]]) {
-        return NO;
-    }
-    if ([[otherGestureRecognizer.view class] isSubclassOfClass:[UITableViewCell class]] ||
-       [NSStringFromClass([otherGestureRecognizer.view class]) isEqualToString:@"UITableViewCellScrollView"] ||
-       [NSStringFromClass([otherGestureRecognizer.view class]) isEqualToString:@"UITableViewWrapperView"]) {
-        
-        return YES;
-    }
-    return YES;
 }
 
 #pragma mark - Navigation Controller Delegate Methods
@@ -61,11 +35,6 @@
         [button addTarget:self action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     }
-}
-
-#pragma mark - Private Methods
-- (void)showMenuButtonPressed {
-    [self.frostedViewController presentMenuViewController];
 }
 
 @end
