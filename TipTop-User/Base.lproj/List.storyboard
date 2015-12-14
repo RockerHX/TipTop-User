@@ -1658,10 +1658,10 @@
             </objects>
             <point key="canvasLocation" x="726" y="383"/>
         </scene>
-        <!--详情-->
+        <!--顾问详情-->
         <scene sceneID="Qa8-Nb-0Ml">
             <objects>
-                <viewController storyboardIdentifier="HXNormalServiceDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WgG-LX-hJg" customClass="HXNormalServiceDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HXNormalServiceDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WgG-LX-hJg" userLabel="顾问详情" customClass="HXNormalServiceDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e4B-Zp-6VR"/>
                         <viewControllerLayoutGuide type="bottom" id="nsZ-sp-aFH"/>
@@ -1872,6 +1872,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatar" destination="FRY-S8-5YY" id="8Is-Kw-Lda"/>
+                                            <outlet property="delegate" destination="WgG-LX-hJg" id="VbQ-eH-qgx"/>
                                             <outlet property="goodCountLabel" destination="i2c-ac-xII" id="nLh-9V-WS3"/>
                                             <outlet property="moblieLabel" destination="Jwe-TR-ewZ" id="4hJ-gd-P09"/>
                                             <outlet property="nameLabel" destination="ms6-7n-UsK" id="2Q9-ST-I0e"/>
@@ -2070,6 +2071,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatar" destination="Ng4-0w-SgE" id="rdH-Ui-6zp"/>
+                                            <outlet property="delegate" destination="WgG-LX-hJg" id="44E-fe-7Ct"/>
                                             <outlet property="goodCountLabel" destination="Xhn-Lq-Tzl" id="8QH-Zy-c8E"/>
                                             <outlet property="moblieLabel" destination="Yjv-Na-2Gg" id="IbK-Xv-svC"/>
                                             <outlet property="nameLabel" destination="r6z-Me-q3L" id="NsV-Ty-00S"/>
