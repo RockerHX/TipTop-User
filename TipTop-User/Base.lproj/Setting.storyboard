@@ -218,6 +218,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="设置" id="4ni-zJ-Tp7"/>
+                    <connections>
+                        <outlet property="cacheLabel" destination="z0b-xf-cJf" id="3GL-cQ-Ont"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEq-OA-6tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

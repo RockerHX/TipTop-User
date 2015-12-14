@@ -10,4 +10,6 @@
 
 @interface HXSettingViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *cacheLabel;
+
 @end
