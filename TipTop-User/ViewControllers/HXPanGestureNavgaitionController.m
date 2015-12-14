@@ -42,7 +42,7 @@
         [[otherGestureRecognizer.view class] isSubclassOfClass:[UICollectionView class]]) {
         return NO;
     }
-    if( [[otherGestureRecognizer.view class] isSubclassOfClass:[UITableViewCell class]] ||
+    if ([[otherGestureRecognizer.view class] isSubclassOfClass:[UITableViewCell class]] ||
        [NSStringFromClass([otherGestureRecognizer.view class]) isEqualToString:@"UITableViewCellScrollView"] ||
        [NSStringFromClass([otherGestureRecognizer.view class]) isEqualToString:@"UITableViewWrapperView"]) {
         
@@ -52,16 +52,15 @@
 }
 
 #pragma mark - Navigation Controller Delegate Methods
-- (void)navigationController:(UINavigationController *)navigationController
-      willShowViewController:(UIViewController *)viewController
-                    animated:(BOOL)animated {
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0.0f, 0.0f, 36.0f, 36.0f);
-    button.imageEdgeInsets = UIEdgeInsetsMake(0.0f, -16.0f, 0.0f, 0.0f);
-    [button setImage:[UIImage imageNamed:@"C-BackIcon"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
-    viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (navigationController.viewControllers.count > 2) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(0.0f, 0.0f, 36.0f, 36.0f);
+        button.imageEdgeInsets = UIEdgeInsetsMake(0.0f, -16.0f, 0.0f, 0.0f);
+        [button setImage:[UIImage imageNamed:@"C-BackIcon"] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    }
 }
 
 #pragma mark - Private Methods

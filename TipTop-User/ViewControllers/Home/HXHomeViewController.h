@@ -14,9 +14,9 @@
 
 @interface HXHomeViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet   UIButton *avatarButton;
-@property (weak, nonatomic) IBOutlet BMKMapView *mapView;
-@property (weak, nonatomic) IBOutlet HXHomePageCategoryView *categoryView;
+@property (weak, nonatomic) IBOutlet                  UIButton *avatarButton;
+@property (weak, nonatomic) IBOutlet                BMKMapView *mapView;
+@property (weak, nonatomic) IBOutlet    HXHomePageCategoryView *categoryView;
 @property (weak, nonatomic) IBOutlet HXHomePageSubCategoryView *subCategoryView;
 
 - (IBAction)callButtonPressed;
