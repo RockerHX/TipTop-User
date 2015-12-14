@@ -14,6 +14,8 @@
 #import "HXFeedBackViewController.h"
 #import "HXAboutViewController.h"
 #import "HXUserSession.h"
+#import "SDImageCache.h"
+#import "MBProgressHUD.h"
 
 @interface HXSettingViewController ()
 @end
@@ -33,11 +35,17 @@
 }
 
 - (void)viewConfig {
+    [self displayView];
 }
 
 #pragma mark - Setter And Getter
 - (HXStoryBoardName)storyBoardName {
     return HXStoryBoardNameSetting;
+}
+
+#pragma mark - Private Methods
+- (void)displayView {
+    _cacheLabel.text = [NSString stringWithFormat:@"%.2fMB", [SDImageCache sharedImageCache].getSize/1024.0f/1024.0f];
 }
 
 #pragma mark - Table View Delegate Methods
@@ -48,7 +56,15 @@
 #pragma mark - Table View Data Source Methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if ((1 == indexPath.section) && (1 == indexPath.row)) {
+    if ((1 == indexPath.section) && (0 == indexPath.row)) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        __weak __typeof__(self)weakSelf = self;
+        [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+            __strong __typeof__(self)strongSelf = weakSelf;
+            [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
+            [strongSelf displayView];
+        }];
+    } else if ((1 == indexPath.section) && (1 == indexPath.row)) {
         HXUseExplanationViewController *useExplanationViewController = [HXUseExplanationViewController instance];
         [self.navigationController pushViewController:useExplanationViewController animated:YES];
     } else if ((1 == indexPath.section) && (2 == indexPath.row)) {
