@@ -25,6 +25,7 @@
 #import "HXAppApiRequest.h"
 #import "MBProgressHUD.h"
 #import "HXUserSession.h"
+#import "UIImageView+WebCache.h"
 
 
 static NSString *ReserveApi = @"/order/create";
@@ -52,6 +53,7 @@ static NSString *ReserveApi = @"/order/create";
 }
 
 - (void)viewConfig {
+    _bottomBar.hidden = YES;
     _reserveButton.hidden = !_canReserve;
 }
 
@@ -61,14 +63,25 @@ static NSString *ReserveApi = @"/order/create";
 }
 
 #pragma mark - Event Response
-- (IBAction)backButtonPressed {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (IBAction)reserveButtonPressed {
     [self startReserveRequestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
                                                   @"agent_id": _aid,
                                                        @"cid": _cid}];
+}
+
+- (IBAction)callButtonPressed {
+    NSString *phoneNumber = _viewModel.adviser.mobile;
+    [UIAlertView bk_showAlertViewWithTitle:@"确定拨打"
+                                   message:phoneNumber
+                         cancelButtonTitle:@"确定"
+                         otherButtonTitles:@[@"取消"]
+                                   handler:
+     ^(UIAlertView *alertView, NSInteger buttonIndex) {
+         if (buttonIndex == alertView.cancelButtonIndex) {
+             NSString *mobile = [[NSString alloc] initWithFormat:@"tel:%@", phoneNumber];
+             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mobile]];
+         }
+     }];
 }
 
 #pragma mark - Private Methods
@@ -78,7 +91,15 @@ static NSString *ReserveApi = @"/order/create";
         __strong __typeof__(self)strongSelf = weakSelf;
         [strongSelf.tableView reloadData];
         [strongSelf.tableView.mj_header endRefreshing];
+        [strongSelf displayBottomBar];
     }];
+}
+
+- (void)displayBottomBar {
+    _bottomBar.hidden = NO;
+    [_avatar sd_setImageWithURL:[NSURL URLWithString:_viewModel.adviser.avatar]];
+    _nameLabel.text = _viewModel.adviser.realName;
+    _mobileLabel.text = _viewModel.adviser.mobile;
 }
 
 - (void)startReserveRequestWithParameters:(NSDictionary *)parameters {
@@ -258,18 +279,7 @@ static NSString *ReserveApi = @"/order/create";
 
 #pragma mark - HXNormalAdviserCellDelegate Methods
 - (void)normalAdviserCellTakeCall:(HXNormalAdviserCell *)cell {
-    NSString *phoneNumber = _viewModel.adviser.mobile;
-    [UIAlertView bk_showAlertViewWithTitle:@"确定拨打"
-                                   message:phoneNumber
-                         cancelButtonTitle:@"确定"
-                         otherButtonTitles:@[@"取消"]
-                                   handler:
-     ^(UIAlertView *alertView, NSInteger buttonIndex) {
-         if (buttonIndex == alertView.cancelButtonIndex) {
-             NSString *mobile = [[NSString alloc] initWithFormat:@"tel:%@", phoneNumber];
-             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mobile]];
-         }
-     }];
+    [self callButtonPressed];
 }
 
 #pragma mark - HXDetailCaseCardCellDelegate Methods
