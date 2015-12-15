@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet     UILabel *integralLabel;
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 @property (weak, nonatomic) IBOutlet UITextField *industryTextField;
-@property (weak, nonatomic) IBOutlet UITextField *moblieTextField;
+@property (weak, nonatomic) IBOutlet UITextField *realNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *weiChatTextField;
 
 - (IBAction)saveButtonPressed;

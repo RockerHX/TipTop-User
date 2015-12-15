@@ -519,7 +519,6 @@
 		485FE72E1BF8E1CC00654279 /* TipTop-User */ = {
 			isa = PBXGroup;
 			children = (
-				485FE8D41BF8E24200654279 /* Resources */,
 				485FE74E1BF8E1CC00654279 /* Common */,
 				485FE7A11BF8E1CC00654279 /* Networking */,
 				485FE77A1BF8E1CC00654279 /* Models */,
@@ -528,6 +527,7 @@
 				485FE7AF1BF8E1CC00654279 /* ViewControllers */,
 				485FE72F1BF8E1CC00654279 /* AppDelegate.h */,
 				485FE7301BF8E1CC00654279 /* AppDelegate.mm */,
+				485FE8D41BF8E24200654279 /* Resources */,
 				485FE8D31BF8E1E000654279 /* Supporting Files */,
 			);
 			path = "TipTop-User";

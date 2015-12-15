@@ -63,8 +63,8 @@ static NSString *UploadImageApi   = @"/upload";
     if (_industryTextField.text.length) {
         [parameters setValue:_industryTextField.text forKey:@"industry"];
     }
-    if (_moblieTextField.text.length) {
-        [parameters setValue:_moblieTextField.text forKey:@"mobile"];
+    if (_realNameTextField.text.length) {
+        [parameters setValue:_realNameTextField.text forKey:@"real_name"];
     }
     if (_weiChatTextField.text.length) {
         [parameters setValue:_weiChatTextField.text forKey:@"wechat"];
@@ -149,7 +149,7 @@ static NSString *UploadImageApi   = @"/upload";
     _integralLabel.text = @(profile.credit).stringValue;
     _companyTextField.text = profile.company;
     _industryTextField.text = profile.industry;
-    _moblieTextField.text = profile.mobile;
+    _realNameTextField.text = profile.realName;
     _weiChatTextField.text = profile.wechat;
 }
 

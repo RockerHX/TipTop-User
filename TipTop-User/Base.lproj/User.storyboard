@@ -659,8 +659,48 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="F3M-ZE-FFH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="ooE-7U-lSc">
                                         <rect key="frame" x="0.0" y="240" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ooE-7U-lSc" id="hZv-Y9-7EC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0US-fP-Hk0">
+                                                    <rect key="frame" x="15" y="16" width="32" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写姓名" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-dT-pek">
+                                                    <rect key="frame" x="55" y="0.0" width="257" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvf-RP-NDB">
+                                                    <rect key="frame" x="15" y="49" width="305" height="0.5"/>
+                                                    <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="K0J-De-idH"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NRh-dT-pek" firstAttribute="top" secondItem="hZv-Y9-7EC" secondAttribute="top" id="2br-An-bOi"/>
+                                                <constraint firstItem="NRh-dT-pek" firstAttribute="leading" secondItem="0US-fP-Hk0" secondAttribute="trailing" constant="8" id="Kmb-o1-w3e"/>
+                                                <constraint firstAttribute="bottom" secondItem="jvf-RP-NDB" secondAttribute="bottom" id="Lxa-ts-aDu"/>
+                                                <constraint firstItem="0US-fP-Hk0" firstAttribute="leading" secondItem="hZv-Y9-7EC" secondAttribute="leading" constant="15" id="NmH-bI-ZMe"/>
+                                                <constraint firstAttribute="bottom" secondItem="NRh-dT-pek" secondAttribute="bottom" id="Ufw-u7-5Sw"/>
+                                                <constraint firstItem="jvf-RP-NDB" firstAttribute="leading" secondItem="hZv-Y9-7EC" secondAttribute="leading" constant="15" id="gZS-IQ-E8c"/>
+                                                <constraint firstAttribute="trailing" secondItem="NRh-dT-pek" secondAttribute="trailing" constant="8" id="js1-dn-S9p"/>
+                                                <constraint firstAttribute="trailing" secondItem="jvf-RP-NDB" secondAttribute="trailing" id="rfr-wy-fMM"/>
+                                                <constraint firstItem="NRh-dT-pek" firstAttribute="centerY" secondItem="hZv-Y9-7EC" secondAttribute="centerY" id="tJ6-5P-B2O"/>
+                                                <constraint firstItem="0US-fP-Hk0" firstAttribute="centerY" secondItem="hZv-Y9-7EC" secondAttribute="centerY" id="tWR-8H-Wh4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="F3M-ZE-FFH">
+                                        <rect key="frame" x="0.0" y="290" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F3M-ZE-FFH" id="nSB-U0-0DG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -696,46 +736,6 @@
                                                 <constraint firstItem="lYA-w3-qNX" firstAttribute="centerY" secondItem="nSB-U0-0DG" secondAttribute="centerY" id="s3A-JE-qTz"/>
                                                 <constraint firstItem="8F5-K7-SqI" firstAttribute="centerY" secondItem="nSB-U0-0DG" secondAttribute="centerY" id="sbf-kN-eer"/>
                                                 <constraint firstItem="lYA-w3-qNX" firstAttribute="leading" secondItem="8F5-K7-SqI" secondAttribute="trailing" constant="8" id="uGy-Wa-dLf"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="ooE-7U-lSc">
-                                        <rect key="frame" x="0.0" y="290" width="320" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ooE-7U-lSc" id="hZv-Y9-7EC">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0US-fP-Hk0">
-                                                    <rect key="frame" x="15" y="15.5" width="48" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写手机号" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-dT-pek">
-                                                    <rect key="frame" x="71" y="0.0" width="241" height="50"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvf-RP-NDB">
-                                                    <rect key="frame" x="15" y="49.5" width="305" height="0.5"/>
-                                                    <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="0.5" id="K0J-De-idH"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="NRh-dT-pek" firstAttribute="top" secondItem="hZv-Y9-7EC" secondAttribute="top" id="2br-An-bOi"/>
-                                                <constraint firstItem="NRh-dT-pek" firstAttribute="leading" secondItem="0US-fP-Hk0" secondAttribute="trailing" constant="8" id="Kmb-o1-w3e"/>
-                                                <constraint firstAttribute="bottom" secondItem="jvf-RP-NDB" secondAttribute="bottom" id="Lxa-ts-aDu"/>
-                                                <constraint firstItem="0US-fP-Hk0" firstAttribute="leading" secondItem="hZv-Y9-7EC" secondAttribute="leading" constant="15" id="NmH-bI-ZMe"/>
-                                                <constraint firstAttribute="bottom" secondItem="NRh-dT-pek" secondAttribute="bottom" id="Ufw-u7-5Sw"/>
-                                                <constraint firstItem="jvf-RP-NDB" firstAttribute="leading" secondItem="hZv-Y9-7EC" secondAttribute="leading" constant="15" id="gZS-IQ-E8c"/>
-                                                <constraint firstAttribute="trailing" secondItem="NRh-dT-pek" secondAttribute="trailing" constant="8" id="js1-dn-S9p"/>
-                                                <constraint firstAttribute="trailing" secondItem="jvf-RP-NDB" secondAttribute="trailing" id="rfr-wy-fMM"/>
-                                                <constraint firstItem="NRh-dT-pek" firstAttribute="centerY" secondItem="hZv-Y9-7EC" secondAttribute="centerY" id="tJ6-5P-B2O"/>
-                                                <constraint firstItem="0US-fP-Hk0" firstAttribute="centerY" secondItem="hZv-Y9-7EC" secondAttribute="centerY" id="tWR-8H-Wh4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -793,8 +793,8 @@
                         <outlet property="companyTextField" destination="BBo-yu-fOh" id="OMq-Ae-LCl"/>
                         <outlet property="industryTextField" destination="lYA-w3-qNX" id="dFY-GS-P8W"/>
                         <outlet property="integralLabel" destination="VG5-if-9AQ" id="k7O-iO-gBK"/>
-                        <outlet property="moblieTextField" destination="NRh-dT-pek" id="26s-uF-kDj"/>
                         <outlet property="numberLabel" destination="a2c-5T-cDL" id="4yb-jd-ugz"/>
+                        <outlet property="realNameTextField" destination="NRh-dT-pek" id="2jK-So-PRf"/>
                         <outlet property="weiChatTextField" destination="Vqr-67-U5u" id="Mgv-2w-fjz"/>
                     </connections>
                 </tableViewController>
