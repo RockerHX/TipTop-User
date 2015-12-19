@@ -717,7 +717,6 @@
         <!--Pan Gesture Navgaition Controller-->
         <scene sceneID="XzH-Vi-SKI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wzC-T9-Cvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="HXMyReservationNavigationController" id="0Bd-UE-niF" customClass="HXPanGestureNavgaitionController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="K18-aj-X0H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -727,6 +726,7 @@
                         <segue destination="S0v-yu-w5y" kind="relationship" relationship="rootViewController" id="PuV-yu-6Y2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzC-T9-Cvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16" y="398.54666666666668"/>
         </scene>

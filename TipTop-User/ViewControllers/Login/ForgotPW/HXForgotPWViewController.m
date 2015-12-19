@@ -53,7 +53,7 @@ static NSString *ForgotPassWordApi = @"/session/forgotPwd";
     } else if (_captchaTextField.text.length != 4) {
         [self showAlertWithMessage:@"请输入正确验证码！"];
     } else if (!_passWordTextField.text.length) {
-        [self showAlertWithMessage:@"请输入注册密码！"];
+        [self showAlertWithMessage:@"请输入新密码！"];
     } else if (![_passWordTextField.text isEqualToString:_confirmTextField.text]) {
         [self showAlertWithMessage:@"亲，您输入的两次密码不相同噢！"];
     } else {
