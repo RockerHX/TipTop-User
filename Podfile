@@ -7,7 +7,7 @@ pod 'Aspects'
 pod 'MJExtension'
 pod 'Masonry'
 
-pod 'AFNetworking'
+pod 'AFNetworking', 2.6.3
 pod 'AFNetworkActivityLogger'
 pod 'SDWebImage'
 pod 'SocketRocket'
