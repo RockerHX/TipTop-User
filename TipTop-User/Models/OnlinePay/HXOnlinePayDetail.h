@@ -11,6 +11,7 @@
 @interface HXOnlinePayDetailOrder : NSObject
 
 @property (nonatomic, assign)      BOOL  isComplete;
+@property (nonatomic, assign)      BOOL  hasRemark;
 @property (nonatomic, assign) NSInteger  completeTime;
 @property (nonatomic, assign) NSInteger  createTime;
 @property (nonatomic, assign) NSInteger  money;

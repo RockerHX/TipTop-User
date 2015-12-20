@@ -19,6 +19,7 @@
     @"agentMobile": @"agent_mobile",
       @"agentStar": @"agent_star",
      @"isComplete": @"is_complete",
+      @"hasRemark": @"has_remark",
    @"completeTime": @"complete_time",
      @"createTime": @"create_time"};
 }

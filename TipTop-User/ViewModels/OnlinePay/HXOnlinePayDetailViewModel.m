@@ -50,9 +50,21 @@ static NSString *OrderDetailApi = @"/order/view";
     return _detail ? 44.0f : 0.0f;
 }
 
+- (CGFloat)remarkHeight {
+    return _detail ? 50.0f : 0.0f;
+}
+
+- (CGFloat)alipayHeight {
+    return _detail ? 90.0f : 0.0f;
+}
+
+- (CGFloat)payHeight {
+    return _detail ? 60.0f : 0.0f;
+}
+
 static NSInteger RegularRow = 2;
 - (NSInteger)rows {
-    return _detail ? 3 : 0;
+    return _detail ? _rowTypes.count : 0;
 }
 
 - (NSInteger)regularRow {
@@ -82,7 +94,11 @@ static NSInteger RegularRow = 2;
 - (void)setupRowTypes {
     _rowTypes = @[@(HXDetailCellRowOrder),
                   @(HXDetailCellRowClient),
-                  @(HXDetailCellRowMoeny)];
+                  @(HXDetailCellRowMoeny),
+                  @(HXDetailCellRowRemark),
+                  @(HXDetailCellRowAliPay),
+                  @(HXDetailCellRowWeiXin),
+                  @(HXDetailCellRowPay)];
 }
 
 - (void)startOrderDetailReuqestWithParameters:(NSDictionary *)parameters {

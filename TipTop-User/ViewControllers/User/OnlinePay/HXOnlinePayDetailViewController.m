@@ -12,7 +12,14 @@
 #import "HXOnlinePayDetailOrderCell.h"
 #import "HXOnlinePayDetailClientCell.h"
 #import "HXOnlinePayDetailMoneyCell.h"
+#import "HXOnlinePayDetailRemarkCell.h"
+#import "HXOnlinePayDetailAliPayCell.h"
+#import "HXOnlinePayDetailWeiXinCell.h"
+#import "HXOnlinePayDetailPayCell.h"
 #import "UIAlertView+BlocksKit.h"
+#import "HXRemarkDetailViewController.h"
+#import "HXApi.h"
+#import "HXUserSession.h"
 
 @interface HXOnlinePayDetailViewController ()
 
@@ -60,6 +67,16 @@
      }];
 }
 
+- (IBAction)remarkButonPressed {
+    HXRemarkDetailViewController *remarkDetailViewController = [HXRemarkDetailViewController instance];
+    remarkDetailViewController.loadURL = [HXApi webViewURLWithURL:[NSString stringWithFormat:@"/h5/agent/order/remark?id=%@&access_token=%@", _viewModel.detail.order.ID, [HXUserSession share].user.accessToken]];
+    [self.navigationController pushViewController:remarkDetailViewController animated:YES];
+}
+
+- (IBAction)payButonPressed {
+    ;
+}
+
 #pragma mark - Private Methods
 - (void)loadData {
     __weak __typeof__(self)weakSelf = self;
@@ -99,6 +116,24 @@
             break;
             break;
         }
+        case HXDetailCellRowRemark: {
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXOnlinePayDetailRemarkCell class]) forIndexPath:indexPath];
+            [(HXOnlinePayDetailRemarkCell *)cell displayWithDetailOrder:_viewModel.detail.order];
+            break;
+        }
+        case HXDetailCellRowAliPay: {
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXOnlinePayDetailAliPayCell class]) forIndexPath:indexPath];
+            break;
+        }
+        case HXDetailCellRowWeiXin: {
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXOnlinePayDetailWeiXinCell class]) forIndexPath:indexPath];
+            break;
+        }
+        case HXDetailCellRowPay: {
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HXOnlinePayDetailPayCell class]) forIndexPath:indexPath];
+            [(HXOnlinePayDetailPayCell *)cell displayWithDetailOrder:_viewModel.detail.order];
+            break;
+        }
     }
     return cell;
 }
@@ -118,6 +153,19 @@
         }
         case HXDetailCellRowMoeny: {
             height = _viewModel.moneyHeight;
+            break;
+        }
+        case HXDetailCellRowRemark: {
+            height = _viewModel.remarkHeight;
+            break;
+        }
+        case HXDetailCellRowAliPay: {
+            height = _viewModel.alipayHeight;
+            break;
+        }
+        case HXDetailCellRowWeiXin:
+        case HXDetailCellRowPay: {
+            height = _viewModel.payHeight;
             break;
         }
     }

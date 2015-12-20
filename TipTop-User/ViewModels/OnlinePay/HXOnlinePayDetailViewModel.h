@@ -12,7 +12,11 @@
 typedef NS_ENUM(NSUInteger, HXDetailCellRow) {
     HXDetailCellRowOrder,
     HXDetailCellRowClient,
-    HXDetailCellRowMoeny
+    HXDetailCellRowMoeny,
+    HXDetailCellRowRemark,
+    HXDetailCellRowAliPay,
+    HXDetailCellRowWeiXin,
+    HXDetailCellRowPay,
 };
 
 
@@ -21,6 +25,9 @@ typedef NS_ENUM(NSUInteger, HXDetailCellRow) {
 @property (nonatomic, assign, readonly)   CGFloat  orderHeight;
 @property (nonatomic, assign, readonly)   CGFloat  adviserHeight;
 @property (nonatomic, assign, readonly)   CGFloat  moneyHeight;
+@property (nonatomic, assign, readonly)   CGFloat  remarkHeight;
+@property (nonatomic, assign, readonly)   CGFloat  alipayHeight;
+@property (nonatomic, assign, readonly)   CGFloat  payHeight;
 @property (nonatomic, assign, readonly) NSInteger  rows;
 @property (nonatomic, assign, readonly) NSInteger  regularRow;
 @property (nonatomic, copy, readonly)    NSString *orderID;

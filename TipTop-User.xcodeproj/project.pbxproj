@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4822CD371C26D051002FB637 /* HXOnlinePayDetailRemarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4822CD361C26D051002FB637 /* HXOnlinePayDetailRemarkCell.m */; };
+		4822CD3A1C26D067002FB637 /* HXOnlinePayDetailAliPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4822CD391C26D067002FB637 /* HXOnlinePayDetailAliPayCell.m */; };
+		4822CD3D1C26D074002FB637 /* HXOnlinePayDetailWeiXinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4822CD3C1C26D074002FB637 /* HXOnlinePayDetailWeiXinCell.m */; };
+		4822CD401C26D082002FB637 /* HXOnlinePayDetailPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4822CD3F1C26D082002FB637 /* HXOnlinePayDetailPayCell.m */; };
+		4822CD431C26F39A002FB637 /* HXRemarkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4822CD421C26F39A002FB637 /* HXRemarkDetailViewController.m */; };
 		482B1CA31C05F59900D65D5D /* HXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CA21C05F59900D65D5D /* HXCategory.m */; };
 		482B1CA61C05F8BA00D65D5D /* HXCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CA51C05F8BA00D65D5D /* HXCategoryManager.m */; };
 		482B1CA91C060BAC00D65D5D /* HXHomePageCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482B1CA81C060BAC00D65D5D /* HXHomePageCategoryView.m */; };
@@ -134,7 +139,6 @@
 		48D72F7C1BFB952F006BA8C3 /* HXMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D72F7B1BFB952F006BA8C3 /* HXMallViewController.m */; };
 		48D788E31C1DE11C00A45A70 /* HXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D788E11C1DE11C00A45A70 /* HXPickerView.m */; };
 		48D788E41C1DE11C00A45A70 /* HXPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D788E21C1DE11C00A45A70 /* HXPickerView.xib */; };
-		48D92BD71C149F79004F889F /* HXTransfersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D92BD61C149F79004F889F /* HXTransfersViewController.m */; };
 		48D92BDC1C15BC57004F889F /* HXGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D92BDA1C15BC57004F889F /* HXGuideView.m */; };
 		48D92BDD1C15BC57004F889F /* HXGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D92BDB1C15BC57004F889F /* HXGuideView.xib */; };
 		48EE54131BF8E88A00CFD7AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EE54111BF8E88A00CFD7AD /* Login.storyboard */; };
@@ -154,6 +158,16 @@
 /* Begin PBXFileReference section */
 		3803C0C663CA56A618B7F012 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		44B5E3197A35822D8DB4F522 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4822CD351C26D051002FB637 /* HXOnlinePayDetailRemarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayDetailRemarkCell.h; sourceTree = "<group>"; };
+		4822CD361C26D051002FB637 /* HXOnlinePayDetailRemarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetailRemarkCell.m; sourceTree = "<group>"; };
+		4822CD381C26D067002FB637 /* HXOnlinePayDetailAliPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayDetailAliPayCell.h; sourceTree = "<group>"; };
+		4822CD391C26D067002FB637 /* HXOnlinePayDetailAliPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetailAliPayCell.m; sourceTree = "<group>"; };
+		4822CD3B1C26D074002FB637 /* HXOnlinePayDetailWeiXinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayDetailWeiXinCell.h; sourceTree = "<group>"; };
+		4822CD3C1C26D074002FB637 /* HXOnlinePayDetailWeiXinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetailWeiXinCell.m; sourceTree = "<group>"; };
+		4822CD3E1C26D082002FB637 /* HXOnlinePayDetailPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXOnlinePayDetailPayCell.h; sourceTree = "<group>"; };
+		4822CD3F1C26D082002FB637 /* HXOnlinePayDetailPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXOnlinePayDetailPayCell.m; sourceTree = "<group>"; };
+		4822CD411C26F39A002FB637 /* HXRemarkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRemarkDetailViewController.h; sourceTree = "<group>"; };
+		4822CD421C26F39A002FB637 /* HXRemarkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRemarkDetailViewController.m; sourceTree = "<group>"; };
 		482B1CA11C05F59900D65D5D /* HXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCategory.h; sourceTree = "<group>"; };
 		482B1CA21C05F59900D65D5D /* HXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCategory.m; sourceTree = "<group>"; };
 		482B1CA41C05F8BA00D65D5D /* HXCategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCategoryManager.h; sourceTree = "<group>"; };
@@ -406,8 +420,6 @@
 		48D788E01C1DE11C00A45A70 /* HXPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPickerView.h; sourceTree = "<group>"; };
 		48D788E11C1DE11C00A45A70 /* HXPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPickerView.m; sourceTree = "<group>"; };
 		48D788E21C1DE11C00A45A70 /* HXPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXPickerView.xib; sourceTree = "<group>"; };
-		48D92BD51C149F79004F889F /* HXTransfersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTransfersViewController.h; sourceTree = "<group>"; };
-		48D92BD61C149F79004F889F /* HXTransfersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTransfersViewController.m; sourceTree = "<group>"; };
 		48D92BD91C15BC57004F889F /* HXGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXGuideView.h; sourceTree = "<group>"; };
 		48D92BDA1C15BC57004F889F /* HXGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXGuideView.m; sourceTree = "<group>"; };
 		48D92BDB1C15BC57004F889F /* HXGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXGuideView.xib; sourceTree = "<group>"; };
@@ -844,8 +856,8 @@
 				485FE7ED1BF8E1CC00654279 /* HXOnlinePayListViewController.m */,
 				485FE7EA1BF8E1CC00654279 /* HXOnlinePayDetailViewController.h */,
 				485FE7EB1BF8E1CC00654279 /* HXOnlinePayDetailViewController.m */,
-				48D92BD51C149F79004F889F /* HXTransfersViewController.h */,
-				48D92BD61C149F79004F889F /* HXTransfersViewController.m */,
+				4822CD411C26F39A002FB637 /* HXRemarkDetailViewController.h */,
+				4822CD421C26F39A002FB637 /* HXRemarkDetailViewController.m */,
 			);
 			path = OnlinePay;
 			sourceTree = "<group>";
@@ -1048,6 +1060,14 @@
 				485FE8401BF8E1CC00654279 /* HXOnlinePayDetailClientCell.m */,
 				48668C4B1C01C0F300F4F4FC /* HXOnlinePayDetailMoneyCell.h */,
 				48668C4C1C01C0F300F4F4FC /* HXOnlinePayDetailMoneyCell.m */,
+				4822CD351C26D051002FB637 /* HXOnlinePayDetailRemarkCell.h */,
+				4822CD361C26D051002FB637 /* HXOnlinePayDetailRemarkCell.m */,
+				4822CD381C26D067002FB637 /* HXOnlinePayDetailAliPayCell.h */,
+				4822CD391C26D067002FB637 /* HXOnlinePayDetailAliPayCell.m */,
+				4822CD3B1C26D074002FB637 /* HXOnlinePayDetailWeiXinCell.h */,
+				4822CD3C1C26D074002FB637 /* HXOnlinePayDetailWeiXinCell.m */,
+				4822CD3E1C26D082002FB637 /* HXOnlinePayDetailPayCell.h */,
+				4822CD3F1C26D082002FB637 /* HXOnlinePayDetailPayCell.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -1532,7 +1552,6 @@
 				48D72F7C1BFB952F006BA8C3 /* HXMallViewController.m in Sources */,
 				485FE86B1BF8E1CC00654279 /* HXTextView.m in Sources */,
 				485FE8701BF8E1CC00654279 /* HXIBImageView.m in Sources */,
-				48D92BD71C149F79004F889F /* HXTransfersViewController.m in Sources */,
 				485FE86E1BF8E1CC00654279 /* UIView+HXIBnspectable.m in Sources */,
 				48BAC54E1C0F52F200C41CDD /* HXHouseDetailViewController.m in Sources */,
 				485FE8BC1BF8E1CC00654279 /* HXSecurityCodeButton.m in Sources */,
@@ -1544,7 +1563,9 @@
 				482B1CA31C05F59900D65D5D /* HXCategory.m in Sources */,
 				485FE8851BF8E1CC00654279 /* HXUser.m in Sources */,
 				48A2E62A1C10949200483FD6 /* HXServiceDetialContentCell.m in Sources */,
+				4822CD401C26D082002FB637 /* HXOnlinePayDetailPayCell.m in Sources */,
 				485FE8911BF8E1CC00654279 /* HXMainViewController.m in Sources */,
+				4822CD3D1C26D074002FB637 /* HXOnlinePayDetailWeiXinCell.m in Sources */,
 				485FE88E1BF8E1CC00654279 /* HXLoginRequset.m in Sources */,
 				485FE8741BF8E1CC00654279 /* HXLocationManager.m in Sources */,
 				485FE8871BF8E1CC00654279 /* HXProfile.m in Sources */,
@@ -1557,9 +1578,11 @@
 				485FE85A1BF8E1CC00654279 /* AppDelegate.mm in Sources */,
 				485FE8881BF8E1CC00654279 /* HXUserSession.m in Sources */,
 				48A2E6301C10966700483FD6 /* HXDetailPersonalIntroduceCell.m in Sources */,
+				4822CD371C26D051002FB637 /* HXOnlinePayDetailRemarkCell.m in Sources */,
 				485FE87A1BF8E1CC00654279 /* main.m in Sources */,
 				485FE8771BF8E1CC00654279 /* HXAppConstants.m in Sources */,
 				48BAC54B1C0F52BE00C41CDD /* HXServiceHouseViewController.m in Sources */,
+				4822CD3A1C26D067002FB637 /* HXOnlinePayDetailAliPayCell.m in Sources */,
 				485FE8A81BF8E1CC00654279 /* HXOnlinePayListViewController.m in Sources */,
 				485FE88D1BF8E1CC00654279 /* HXSocketManager.m in Sources */,
 				482B1CAF1C0613AF00D65D5D /* HXHomePageCategoryCell.m in Sources */,
@@ -1570,6 +1593,7 @@
 				485FE8BE1BF8E1CC00654279 /* HXMessageListCell.m in Sources */,
 				48D72F711BFB9154006BA8C3 /* HXRecruitmentViewController.m in Sources */,
 				48C187C11C12B9170067B817 /* HXComment.m in Sources */,
+				4822CD431C26F39A002FB637 /* HXRemarkDetailViewController.m in Sources */,
 				482B1CA61C05F8BA00D65D5D /* HXCategoryManager.m in Sources */,
 				485FE8B71BF8E1CC00654279 /* BRPlaceholderTextView.m in Sources */,
 				48BD52751BFA430900613F19 /* HXFeedBackViewController.m in Sources */,

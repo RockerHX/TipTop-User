@@ -10,10 +10,10 @@
 
 @interface HXOnlinePayDetailViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet UIView *payInfoView;
-
 @property (nonatomic, copy) NSString *orderID;
 
 - (IBAction)phoneButonPressed;
+- (IBAction)remarkButonPressed;
+- (IBAction)payButonPressed;
 
 @end

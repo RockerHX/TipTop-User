@@ -10,7 +10,6 @@
 #import "HXOnlinePayOrderCell.h"
 #import "UIAlertView+BlocksKit.h"
 #import "HXOnlinePayDetailViewController.h"
-#import "HXTransfersViewController.h"
 
 
 static NSString *OrderListApi = @"/Order";
@@ -37,11 +36,6 @@ static NSString *OrderListApi = @"/Order";
 
 - (void)viewConfig {
     [super viewConfig];
-}
-
-#pragma mark - Event Response
-- (IBAction)TransfersButtonPressed {
-    [self.navigationController pushViewController:[HXTransfersViewController instance] animated:YES];
 }
 
 #pragma mark - Public Methods
