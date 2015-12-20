@@ -8,7 +8,7 @@
 
 #pragma mark - Third SDK Key
 NSString *const UMengAPPKEY                                = @"";
-NSString *const BaiDuMapKEY                                = @"ssdieNAVGaYPBzEmWKk2yuRb";
+NSString *const BaiDuMapKEY                                = @"YFXkHB825crlrrmChDQBDn9j";
 NSString *const WeiXinKEY                                  = @"";
 
 #pragma mark - Notification Name
