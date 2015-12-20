@@ -20,9 +20,17 @@
 #import "HXRemarkDetailViewController.h"
 #import "HXApi.h"
 #import "HXUserSession.h"
+#import <iOS-AlipaySDK/AlipaySDK/AlipaySDK.h>
+
+typedef NS_ENUM(NSInteger, HXAliPayCode) {
+    HXAliPayCodePaySuccess    = 9000,
+    HXAliPayCodePayProcessing = 8000,
+    HXAliPayCodePayFailure    = 4000,
+    HXAliPayCodeUserCancel    = 6001,
+    HXAliPayCodeNetworkError  = 6002
+};
 
 @interface HXOnlinePayDetailViewController ()
-
 @end
 
 @implementation HXOnlinePayDetailViewController {
@@ -74,7 +82,11 @@
 }
 
 - (IBAction)payButonPressed {
-    ;
+    __weak __typeof__(self)weakSelf = self;
+    [[AlipaySDK defaultService] payOrder:_viewModel.detail.order.aliPayment fromScheme:@"com.yunlinker.dingguaguauser1" callback:^(NSDictionary *resultDic) {
+        __strong __typeof__(self)strongSelf = weakSelf;
+        [strongSelf alipayResult:resultDic];
+    }];
 }
 
 #pragma mark - Private Methods
@@ -89,6 +101,32 @@
 - (void)endLoad {
     [self.tableView reloadData];
     [self.tableView.mj_header endRefreshing];
+}
+
+- (void)alipayResult:(NSDictionary *)reslut {
+    HXAliPayCode code = [reslut[@"resultStatus"] integerValue];
+    switch (code) {
+        case HXAliPayCodePaySuccess: {
+            [self showAlertWithMessage:@"支付成功"];
+            break;
+        }
+        case HXAliPayCodePayProcessing: {
+            [self showAlertWithMessage:@"交易进行中"];
+            break;
+        }
+        case HXAliPayCodePayFailure: {
+            [self showAlertWithMessage:@"支付失败"];
+            break;
+        }
+        case HXAliPayCodeUserCancel: {
+            [self showAlertWithMessage:@"用户取消"];
+            break;
+        }
+        case HXAliPayCodeNetworkError: {
+            [self showAlertWithMessage:@"网络错误"];
+            break;
+        }
+    }
 }
 
 #pragma mark - Table View Data Source Methods

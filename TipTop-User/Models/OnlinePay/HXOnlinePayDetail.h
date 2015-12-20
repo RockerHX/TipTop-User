@@ -24,6 +24,8 @@
 @property (nonatomic, strong)  NSString *agentAvatar;
 @property (nonatomic, assign) NSInteger  agentStar;
 @property (nonatomic, strong)  NSString *address;
+@property (nonatomic, strong)  NSString *aliPayment;
+@property (nonatomic, strong)  NSString *wxPayment;
 
 @end
 

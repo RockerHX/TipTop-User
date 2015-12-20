@@ -21,7 +21,9 @@
      @"isComplete": @"is_complete",
       @"hasRemark": @"has_remark",
    @"completeTime": @"complete_time",
-     @"createTime": @"create_time"};
+     @"createTime": @"create_time",
+     @"aliPayment": @"ali_payment_string",
+      @"wxPayment": @"wx_payment_string"};
 }
 
 @end

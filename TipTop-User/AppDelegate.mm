@@ -10,6 +10,7 @@
 #import "HXThemeManager.h"
 #import <BaiduMapAPI_Base/BMKMapManager.h>
 #import <BaiduMapAPI_Map/BMKMapView.h>
+#import <iOS-AlipaySDK/AlipaySDK/AlipaySDK.h>
 #import "HXAppConstants.h"
 
 @interface AppDelegate ()
@@ -41,6 +42,13 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [BMKMapView didForeGround];     //当应用恢复前台状态时调用，回复地图的渲染和opengl相关的操作
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+        NSLog(@"result = %@", resultDic);
+    }];
+    return YES;
 }
 
 @end
