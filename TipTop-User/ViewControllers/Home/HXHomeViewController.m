@@ -18,6 +18,7 @@
 #import "HXHomePageCategoryView.h"
 #import "HXHomePageSubCategoryView.h"
 #import "UIButton+WebCache.h"
+#import "HXNormalServiceDetailViewController.h"
 
 
 static NSString *AgentNearbyApi = @"/agent/nearby";
@@ -257,6 +258,14 @@ static NSString *annotationIdentifier = @"annotationIdentifier";
         _selectedAnnotationView = view;
         [self displayAnnotationView:view];
     }
+}
+
+- (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view {
+    HXAdviser *adviser = [self adviserWithAnnotation:view.annotation];
+    HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
+    detailViewController.cid = _cid;
+    detailViewController.aid = adviser.ID;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 #pragma mark - HXHomePageCategoryViewDelegate Methods
