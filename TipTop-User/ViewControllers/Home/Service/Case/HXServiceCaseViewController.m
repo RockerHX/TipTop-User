@@ -19,6 +19,7 @@ static NSString *ListApi = @"/agent/houseDesign";
 @end
 
 @implementation HXServiceCaseViewController {
+    NSMutableArray *_parameters;
     NSMutableArray<HXServiceCase *> *_cases;
 }
 
@@ -35,6 +36,7 @@ static NSString *ListApi = @"/agent/houseDesign";
     [super initConfig];
     
     _cases = @[].mutableCopy;
+    _parameters = @{@"cid": self.cid}.mutableCopy;
     _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     [_collectionView.mj_header beginRefreshing];
 }
@@ -45,26 +47,23 @@ static NSString *ListApi = @"/agent/houseDesign";
 
 #pragma mark - Event Response
 - (IBAction)leftButtonPressed {
-    NSDictionary *parameters = @{@"cid": self.cid,
-                                @"type": @"bgs"};
-    [self startFilterRequestWithParameters:parameters];
+    [_parameters setValue:@"bgs" forKey:@"type"];
+    [_collectionView.mj_header beginRefreshing];
 }
 
 - (IBAction)centerButtonPressed {
-    NSDictionary *parameters = @{@"cid": self.cid,
-                                @"type": @"sy"};
-    [self startFilterRequestWithParameters:parameters];
+    [_parameters setValue:@"sy" forKey:@"type"];
+    [_collectionView.mj_header beginRefreshing];
 }
 
 - (IBAction)rightButtonPressed {
-    NSDictionary *parameters = @{@"cid": self.cid,
-                                @"type": @"zz"};
-    [self startFilterRequestWithParameters:parameters];
+    [_parameters setValue:@"zz" forKey:@"type"];
+    [_collectionView.mj_header beginRefreshing];
 }
 
 #pragma mark - Private Methods
 - (void)loadNewData {
-    [self startFilterRequestWithParameters:@{@"cid": self.cid}];
+    [self startFilterRequestWithParameters:_parameters.copy];
 }
 
 - (void)endLoad {
@@ -72,7 +71,6 @@ static NSString *ListApi = @"/agent/houseDesign";
 }
 
 - (void)startFilterRequestWithParameters:(NSDictionary *)parameter {
-    [_collectionView.mj_header beginRefreshing];
     __weak __typeof__(self)weakSelf = self;
     [HXAppApiRequest requestGETMethodsWithAPI:[HXApi apiURLWithApi:ListApi] parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
         __strong __typeof__(self)strongSelf = weakSelf;
