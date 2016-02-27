@@ -27,7 +27,6 @@
 }
 
 - (void)viewConfig {
-    
 }
 
 #pragma mark - Public Methods

@@ -10,8 +10,8 @@
 #import "HXProfile.h"
 
 typedef NS_ENUM(BOOL, HXUserSessionState) {
-    HXUserSessionStateLogout = NO,
-    HXUserSessionStateLogin = YES
+    HXUserSessionStateLogout,
+    HXUserSessionStateLogin
 };
 
 @interface HXUserSession : NSObject

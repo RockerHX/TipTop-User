@@ -38,14 +38,7 @@ static HXUserSession *session = nil;
 #pragma mark - Setter And Getter
 - (HXUserSessionState)state {
     if (_user.uid && _user.accessToken) {
-        NSDate *expired = [NSDate dateWithTimeIntervalSince1970:_user.tokenExpired];
-        NSDate *now = [NSDate date];
-        NSTimeInterval interval = [now timeIntervalSinceDate:expired];
-        if (interval > 0) {
-            return HXUserSessionStateLogout;
-        } else {
-            return HXUserSessionStateLogin;
-        }
+        return HXUserSessionStateLogin;
     } else {
         return HXUserSessionStateLogout;
     }
