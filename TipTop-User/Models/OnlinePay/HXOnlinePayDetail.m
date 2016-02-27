@@ -26,6 +26,10 @@
       @"wxPayment": @"wx_payment_string"};
 }
 
+- (void)mj_keyValuesDidFinishConvertingToObject {
+    _money = _money/100;
+}
+
 @end
 
 @implementation HXOnlinePayDetailRemark

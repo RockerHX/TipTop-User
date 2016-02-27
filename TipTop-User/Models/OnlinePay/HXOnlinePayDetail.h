@@ -12,9 +12,10 @@
 
 @property (nonatomic, assign)      BOOL  isComplete;
 @property (nonatomic, assign)      BOOL  hasRemark;
+@property (nonatomic, assign)    double  money;
 @property (nonatomic, assign) NSInteger  completeTime;
 @property (nonatomic, assign) NSInteger  createTime;
-@property (nonatomic, assign) NSInteger  money;
+@property (nonatomic, assign) NSInteger  agentStar;
 @property (nonatomic, strong)  NSString *ID;
 @property (nonatomic, strong)  NSString *displayID;
 @property (nonatomic, strong)  NSString *cate;
@@ -22,7 +23,6 @@
 @property (nonatomic, strong)  NSString *agentName;
 @property (nonatomic, strong)  NSString *agentMobile;
 @property (nonatomic, strong)  NSString *agentAvatar;
-@property (nonatomic, assign) NSInteger  agentStar;
 @property (nonatomic, strong)  NSString *address;
 @property (nonatomic, strong)  NSString *aliPayment;
 @property (nonatomic, strong)  NSString *wxPayment;
@@ -40,7 +40,7 @@
 
 @interface HXOnlinePayDetail : NSObject
 
-@property (nonatomic, strong) HXOnlinePayDetailOrder *order;
-@property (nonatomic, strong)                  NSArray *remarks;
+@property (nonatomic, strong)             HXOnlinePayDetailOrder *order;
+@property (nonatomic, strong) NSArray<HXOnlinePayDetailRemark *> *remarks;
 
 @end
