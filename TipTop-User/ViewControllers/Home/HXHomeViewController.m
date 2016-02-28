@@ -32,6 +32,7 @@ static NSString *NewOrderEvent  = @"new_order";
     
     CLLocationCoordinate2D _location;
     NSArray *_advisers;
+    NSMutableArray *_annotations;
     
     BMKAnnotationView *_selectedAnnotationView;
 }
@@ -201,7 +202,9 @@ static NSString *NewOrderEvent  = @"new_order";
 
 
 - (void)handleAnnotationWithAdvisers:(NSArray *)advisers {
-    NSMutableArray *annotations = [NSMutableArray arrayWithCapacity:advisers.count];
+    [_mapView removeAnnotations:_annotations];
+    
+    _annotations = [NSMutableArray arrayWithCapacity:advisers.count];
     for (HXAdviser *adviser in advisers) {
         BMKPointAnnotation *annotation = [[BMKPointAnnotation alloc] init];
         CLLocationCoordinate2D coor;
@@ -209,9 +212,9 @@ static NSString *NewOrderEvent  = @"new_order";
         coor.longitude = [adviser.longtitude doubleValue];
         annotation.coordinate = coor;
         annotation.title = adviser.realName;
-        [annotations addObject:annotation];
+        [_annotations addObject:annotation];
     }
-    [self showAnnotationWithAnnotation:[annotations copy]];
+    [self showAnnotationWithAnnotation:[_annotations copy]];
 }
 
 - (void)showAnnotationWithAnnotation:(NSArray *)annotations {
