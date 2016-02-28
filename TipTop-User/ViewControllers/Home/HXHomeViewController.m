@@ -261,11 +261,13 @@ static NSString *annotationIdentifier = @"annotationIdentifier";
 }
 
 - (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view {
-    HXAdviser *adviser = [self adviserWithAnnotation:view.annotation];
-    HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
-    detailViewController.cid = _cid;
-    detailViewController.aid = adviser.ID;
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    if ([view.annotation isKindOfClass:[BMKPointAnnotation class]]) {
+        HXAdviser *adviser = [self adviserWithAnnotation:view.annotation];
+        HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
+        detailViewController.cid = _cid;
+        detailViewController.aid = adviser.ID;
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }
 }
 
 #pragma mark - HXHomePageCategoryViewDelegate Methods
