@@ -19,6 +19,10 @@
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
 #import "UIAlertView+BlocksKit.h"
+#import "HXAppApiRequest.h"
+
+
+static NSString *MessageNotificationApi = @"/badge";
 
 typedef NS_ENUM(NSUInteger, HXMenuRow) {
     HXMenuRowMyReservation = 0,
@@ -76,6 +80,27 @@ typedef NS_ENUM(NSUInteger, HXMenuRow) {
     [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:user.avatar]];
     _nameLabel.text = user.realName;
     _mobileLabel.text = user.mobile;
+    
+    [self checkMessageNotification];
+}
+
+#pragma mark - Public Methods
+- (void)checkMessageNotification {
+    [self startMessageNotificationReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
+                                                                  @"type": @"client"}];
+}
+
+#pragma mark - Private Methods
+- (void)startMessageNotificationReuqestWithParameters:(NSDictionary *)parameters {
+    [HXAppApiRequest requestGETMethodsWithAPI:[HXApi apiURLWithApi:MessageNotificationApi] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSInteger errorCode = [responseObject[@"error_code"] integerValue];
+        if (HXAppApiRequestErrorCodeNoError == errorCode) {
+            BOOL hasMessage = [responseObject[@"data"][@"notification"] boolValue];
+            _messageIcon.hidden = !hasMessage;
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        ;
+    }];
 }
 
 #pragma mark - Table View Delegate Methods

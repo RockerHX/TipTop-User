@@ -35,32 +35,58 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网站建设" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APC-f7-FpE">
-                                            <rect key="frame" x="89.5" y="10" width="68" height="20.5"/>
+                                            <rect key="frame" x="89" y="10" width="68" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-07-08 12:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtg-4e-GVH">
-                                            <rect key="frame" x="208.5" y="10" width="101.5" height="14.5"/>
+                                            <rect key="frame" x="208" y="10" width="101.5" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国最大的一站式企业服务平台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOJ-mk-RoV">
-                                            <rect key="frame" x="89.5" y="41.5" width="220.5" height="18"/>
+                                            <rect key="frame" x="89" y="41" width="220.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pd8-Dt-hI5" customClass="HXIBView">
+                                            <rect key="frame" x="57" y="6" width="16.5" height="16"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdg-VR-BsI">
+                                                    <rect key="frame" x="5" y="2" width="6.5" height="12"/>
+                                                    <color key="backgroundColor" red="0.6470588235294118" green="0.792156862745098" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.64705882349999999" green="0.79215686269999996" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Hdg-VR-BsI" secondAttribute="trailing" constant="5" id="ZFz-eJ-iMw"/>
+                                                <constraint firstItem="Hdg-VR-BsI" firstAttribute="leading" secondItem="Pd8-Dt-hI5" secondAttribute="leading" constant="5" id="hVY-Ii-3MU"/>
+                                                <constraint firstItem="Hdg-VR-BsI" firstAttribute="top" secondItem="Pd8-Dt-hI5" secondAttribute="top" constant="2" id="k88-kI-RZE"/>
+                                                <constraint firstAttribute="bottom" secondItem="Hdg-VR-BsI" secondAttribute="bottom" constant="2" id="kgF-2q-DOv"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="MOJ-mk-RoV" firstAttribute="leading" secondItem="APC-f7-FpE" secondAttribute="leading" id="5mn-CQ-7Hq"/>
                                         <constraint firstItem="eoC-yl-2JD" firstAttribute="leading" secondItem="gT5-W3-qlt" secondAttribute="leading" constant="20" id="Dta-sj-PK2"/>
                                         <constraint firstItem="Jtg-4e-GVH" firstAttribute="top" secondItem="eoC-yl-2JD" secondAttribute="top" id="YkE-B5-UiA"/>
+                                        <constraint firstItem="Pd8-Dt-hI5" firstAttribute="trailing" secondItem="eoC-yl-2JD" secondAttribute="trailing" constant="4" id="h1o-DK-CxY"/>
                                         <constraint firstItem="MOJ-mk-RoV" firstAttribute="bottom" secondItem="eoC-yl-2JD" secondAttribute="bottom" id="iaX-QX-2aD"/>
                                         <constraint firstItem="APC-f7-FpE" firstAttribute="leading" secondItem="eoC-yl-2JD" secondAttribute="trailing" constant="20" id="iob-gl-j3T"/>
                                         <constraint firstItem="eoC-yl-2JD" firstAttribute="top" secondItem="gT5-W3-qlt" secondAttribute="top" constant="10" id="mju-MN-RSo"/>
                                         <constraint firstItem="MOJ-mk-RoV" firstAttribute="trailing" secondItem="Jtg-4e-GVH" secondAttribute="trailing" id="nQc-io-h3v"/>
+                                        <constraint firstItem="Pd8-Dt-hI5" firstAttribute="top" secondItem="eoC-yl-2JD" secondAttribute="top" constant="-4" id="nv1-zQ-n5F"/>
                                         <constraint firstAttribute="bottom" secondItem="eoC-yl-2JD" secondAttribute="bottom" constant="10" id="qcs-DR-q7A"/>
                                         <constraint firstItem="APC-f7-FpE" firstAttribute="top" secondItem="eoC-yl-2JD" secondAttribute="top" id="vKv-SV-8P2"/>
                                         <constraint firstAttribute="trailing" secondItem="Jtg-4e-GVH" secondAttribute="trailing" constant="10" id="yGH-Su-04r"/>
@@ -69,6 +95,8 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="Jtg-4e-GVH" id="8Xp-g4-mdO"/>
                                     <outlet property="logoImageView" destination="eoC-yl-2JD" id="RBE-wT-FwA"/>
+                                    <outlet property="messageCountLabel" destination="Hdg-VR-BsI" id="eMq-Q7-eWA"/>
+                                    <outlet property="messageCountView" destination="Pd8-Dt-hI5" id="m6F-dT-rMW"/>
                                     <outlet property="subTitleLabel" destination="MOJ-mk-RoV" id="0uV-L4-VKX"/>
                                     <outlet property="titleLabel" destination="APC-f7-FpE" id="WKj-HO-gCO"/>
                                 </connections>

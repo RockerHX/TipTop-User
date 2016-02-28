@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet     UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet     UILabel *subTitleLabel;
 @property (weak, nonatomic) IBOutlet     UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet      UIView *messageCountView;
+@property (weak, nonatomic) IBOutlet     UILabel *messageCountLabel;
 
 - (void)displayWithMessage:(HXMessage *)message;
 

@@ -10,6 +10,7 @@
 #import "HXMessageCell.h"
 #import "HXMessageListViewController.h"
 #import "HXMessageList.h"
+#import "MJRefresh.h"
 
 
 static NSString *MessageListApi = @"/notification/category";
@@ -17,6 +18,12 @@ static NSString *MessageListApi = @"/notification/category";
 @implementation HXMessageCenterViewController
 
 #pragma mark - View Controller Life Cycle
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView.mj_header beginRefreshing];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }

@@ -832,10 +832,10 @@
 			children = (
 				485FE7C81BF8E1CC00654279 /* HXMessageCenterViewController.h */,
 				485FE7C91BF8E1CC00654279 /* HXMessageCenterViewController.m */,
-				485FE7CA1BF8E1CC00654279 /* HXMessageDetailViewController.h */,
-				485FE7CB1BF8E1CC00654279 /* HXMessageDetailViewController.m */,
 				485FE7CC1BF8E1CC00654279 /* HXMessageListViewController.h */,
 				485FE7CD1BF8E1CC00654279 /* HXMessageListViewController.m */,
+				485FE7CA1BF8E1CC00654279 /* HXMessageDetailViewController.h */,
+				485FE7CB1BF8E1CC00654279 /* HXMessageDetailViewController.m */,
 			);
 			path = MessageCenter;
 			sourceTree = "<group>";

@@ -19,6 +19,9 @@
     _titleLabel.text = message.name;
     _subTitleLabel.text = message.title;
     _dateLabel.text = [[NSDate dateWithTimeIntervalSince1970:message.createDate] formattedDateWithFormat:@"yyyy-MM-dd hh:mm"];
+    
+    _messageCountView.hidden = ![message.badge integerValue];
+    _messageCountLabel.text = message.badge;
 }
 
 @end
