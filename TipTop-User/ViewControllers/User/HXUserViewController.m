@@ -84,13 +84,12 @@ typedef NS_ENUM(NSUInteger, HXMenuRow) {
     [self checkMessageNotification];
 }
 
-#pragma mark - Public Methods
+#pragma mark - Private Methods
 - (void)checkMessageNotification {
     [self startMessageNotificationReuqestWithParameters:@{@"access_token": [HXUserSession share].user.accessToken,
-                                                                  @"type": @"client"}];
+                                                          @"type": @"client"}];
 }
 
-#pragma mark - Private Methods
 - (void)startMessageNotificationReuqestWithParameters:(NSDictionary *)parameters {
     [HXAppApiRequest requestGETMethodsWithAPI:[HXApi apiURLWithApi:MessageNotificationApi] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSInteger errorCode = [responseObject[@"error_code"] integerValue];
