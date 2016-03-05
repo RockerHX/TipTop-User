@@ -10,11 +10,14 @@
 #import "HXOnlinePayOrderCell.h"
 #import "UIAlertView+BlocksKit.h"
 #import "HXOnlinePayDetailViewController.h"
+#import "HXWorkCircuitDetailViewController.h"
 
 
 static NSString *OrderListApi = @"/Order";
 
-@interface HXOnlinePayListViewController ()
+@interface HXOnlinePayListViewController () <
+HXOnlinePayDetailViewControllerDelegate
+>
 @end
 
 @implementation HXOnlinePayListViewController
@@ -85,6 +88,7 @@ static NSString *OrderListApi = @"/Order";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HXOnlinePayOrder *order = self.dataList[indexPath.row];
     HXOnlinePayDetailViewController *detailViewController = [HXOnlinePayDetailViewController instance];
+    detailViewController.delegate = self;
     detailViewController.orderID = order.ID;
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
@@ -103,5 +107,11 @@ static NSString *OrderListApi = @"/Order";
      }];
 }
 
+#pragma mark - HXOnlinePayDetailViewControllerDelegate Methods
+- (void)detailViewController:(HXOnlinePayDetailViewController *)controller paySuccessWithID:(NSString *)orderID {
+    HXWorkCircuitDetailViewController *detailViewController = [HXWorkCircuitDetailViewController instance];
+    detailViewController.ID = orderID;
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
 
 @end

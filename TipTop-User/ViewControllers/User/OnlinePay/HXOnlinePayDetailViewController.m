@@ -107,7 +107,11 @@ typedef NS_ENUM(NSInteger, HXAliPayCode) {
     HXAliPayCode code = [reslut[@"resultStatus"] integerValue];
     switch (code) {
         case HXAliPayCodePaySuccess: {
-            [self showAlertWithMessage:@"支付成功"];
+//            [self showAlertWithMessage:@"支付成功"];
+            [self.navigationController popViewControllerAnimated:NO];
+            if (_delegate && [_delegate respondsToSelector:@selector(detailViewController:paySuccessWithID:)]) {
+                [_delegate detailViewController:self paySuccessWithID:_orderID];
+            }
             break;
         }
         case HXAliPayCodePayProcessing: {
@@ -119,7 +123,7 @@ typedef NS_ENUM(NSInteger, HXAliPayCode) {
             break;
         }
         case HXAliPayCodeUserCancel: {
-            [self showAlertWithMessage:@"用户取消"];
+//            [self showAlertWithMessage:@"用户取消"];
             break;
         }
         case HXAliPayCodeNetworkError: {

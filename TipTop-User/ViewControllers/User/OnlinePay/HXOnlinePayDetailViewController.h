@@ -8,7 +8,18 @@
 
 #import "UIViewController+HXClass.h"
 
+@class HXOnlinePayDetailViewController;
+
+@protocol HXOnlinePayDetailViewControllerDelegate <NSObject>
+
+@required
+- (void)detailViewController:(HXOnlinePayDetailViewController *)controller paySuccessWithID:(NSString *)orderID;
+
+@end
+
 @interface HXOnlinePayDetailViewController : UITableViewController
+
+@property (weak, nonatomic) IBOutlet id  <HXOnlinePayDetailViewControllerDelegate>delegate;
 
 @property (nonatomic, copy) NSString *orderID;
 
