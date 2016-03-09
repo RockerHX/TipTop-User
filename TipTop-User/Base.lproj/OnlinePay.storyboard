@@ -481,7 +481,7 @@
                                     <outlet property="moneyLabel" destination="dva-vH-gFR" id="U30-2u-w8C"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HXOnlinePayDetailRemarkCell" rowHeight="50" id="32g-yh-Egb" customClass="HXOnlinePayDetailRemarkCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HXOnlinePayDetailRemarkCell" rowHeight="50" id="32g-yh-Egb" customClass="HXOnlinePayDetailRemarkCell">
                                 <rect key="frame" x="0.0" y="298" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="32g-yh-Egb" id="ifN-uT-Jx0">

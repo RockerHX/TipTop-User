@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, HXAliPayCode) {
 
 - (IBAction)remarkButonPressed {
     HXRemarkDetailViewController *remarkDetailViewController = [HXRemarkDetailViewController instance];
-    remarkDetailViewController.loadURL = [HXApi webViewURLWithURL:[NSString stringWithFormat:@"/h5/agent/order/remark?id=%@&access_token=%@", _viewModel.detail.order.ID, [HXUserSession share].user.accessToken]];
+    remarkDetailViewController.loadURL = [HXApi webViewURLWithURL:[NSString stringWithFormat:@"/h5/client/order/remark?id=%@&access_token=%@", _viewModel.detail.order.ID, [HXUserSession share].user.accessToken]];
     [self.navigationController pushViewController:remarkDetailViewController animated:YES];
 }
 
