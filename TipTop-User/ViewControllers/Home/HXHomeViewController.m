@@ -19,16 +19,23 @@
 #import "HXHomePageSubCategoryView.h"
 #import "UIButton+WebCache.h"
 #import "HXNormalServiceDetailViewController.h"
+#import <BaiduMapAPI_Search/BMKGeocodeSearch.h>
 
 
 static NSString *AgentNearbyApi = @"/agent/nearby";
 static NSString *NewOrderEvent  = @"new_order";
 
-@interface HXHomeViewController () <BMKMapViewDelegate, HXHomePageCategoryViewDelegate, HXHomePageSubCategoryViewDelegate>
+@interface HXHomeViewController () <
+BMKMapViewDelegate,
+BMKGeoCodeSearchDelegate,
+HXHomePageCategoryViewDelegate,
+HXHomePageSubCategoryViewDelegate
+>
 @end
 
 @implementation HXHomeViewController {
     NSString *_cid;
+    NSString *_address;
     
     CLLocationCoordinate2D _location;
     NSArray *_advisers;
@@ -78,6 +85,7 @@ static NSString *NewOrderEvent  = @"new_order";
 - (void)viewConfig {
     [self configMap];
     [self display];
+    [self displayUserLocation];
 }
 
 - (void)configMap {
@@ -119,7 +127,7 @@ static NSString *NewOrderEvent  = @"new_order";
 - (IBAction)callButtonPressed {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSDictionary *data = @{@"event": @"order",
-                         @"address": @"sb",
+                         @"address": (_address ?: @""),
                              @"cid": _cid};
     [[HXSocketManager manager] sendData:data];
 }
@@ -241,6 +249,28 @@ static NSString *NewOrderEvent  = @"new_order";
         }
     }
     return adviser;
+}
+
+- (void)displayUserLocation {
+    __weak __typeof__(self)weakSelf = self;
+    [[HXLocationManager share] getLocationSuccess:^(BMKUserLocation *userLocation, NSString *latitude, NSString *longitude) {
+        __strong __typeof__(self)self = weakSelf;
+        [self getStartAddressWithLocation:userLocation.location];
+    } failure:^(NSString *latitude, NSString *longitude, NSError *error) {
+    }];
+}
+
+- (void)getStartAddressWithLocation:(CLLocation *)location {
+    BMKReverseGeoCodeOption *option = [[BMKReverseGeoCodeOption alloc] init];
+    option.reverseGeoPoint = location.coordinate;
+    BMKGeoCodeSearch *search = [[BMKGeoCodeSearch alloc] init];
+    search.delegate = self;
+    [search reverseGeoCode:option];
+}
+
+#pragma mark - BMKGeoCodeSearchDelegate Methods
+- (void)onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKReverseGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error {
+    _address = result.address;
 }
 
 #pragma mark - Baidu MapView Delegate Methods
