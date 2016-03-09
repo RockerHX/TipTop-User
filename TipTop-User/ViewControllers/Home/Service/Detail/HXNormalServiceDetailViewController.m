@@ -104,9 +104,7 @@ static NSString *ReserveApi = @"/order/create";
 
 - (void)startReserveRequestWithParameters:(NSDictionary *)parameters {
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    __weak __typeof__(self)weakSelf = self;
     [HXAppApiRequest requestPOSTMethodsWithAPI:[HXApi apiURLWithApi:ReserveApi] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        __strong __typeof__(self)strongSelf = weakSelf;
         NSInteger errorCode = [responseObject[@"error_code"] integerValue];
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
             [UIAlertView bk_showAlertViewWithTitle:@"预约成功，售后顾问会和您联系！"
@@ -115,10 +113,11 @@ static NSString *ReserveApi = @"/order/create";
                                  otherButtonTitles:nil
                                            handler:nil];
         }
-        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        [self showAlertWithMessage:responseObject[@"tip"]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        __strong __typeof__(self)strongSelf = weakSelf;
-        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        [self showAlertWithMessage:@"网络错误！"];
     }];
 }
 
