@@ -66,19 +66,22 @@ HXHomePageSubCategoryViewDelegate
     [self viewConfig];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
 #pragma mark - Config Methods
 - (void)initConfig {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openSocket) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
     [self displayUserLocationWithID:@"0"];
     
-    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    __weak __typeof__(self)weakSelf = self;
-    HXCategoryManager *categoryManager = [HXCategoryManager share];
-    [categoryManager fetchCategories:^(NSArray<HXCategory *> * _Nullable categories, BOOL compeleted) {
-        __strong __typeof__(self)strongSelf = weakSelf;
+    [self showHUD];
+    [[HXCategoryManager share] fetchCategories:^(NSArray<HXCategory *> * _Nullable categories, BOOL compeleted) {
         if (compeleted) {
-            strongSelf.categoryView.items = categories;
+            _categoryView.items = categories;
         }
-        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+        [self hiddenHUD];
     }];
 }
 
@@ -98,16 +101,21 @@ HXHomePageSubCategoryViewDelegate
 
 #pragma mark - Public Methods
 - (void)openSocket {
-    __weak __typeof__(self)weakSelf = self;
-    [[HXSocketManager manager] openWithURL:[NSURL URLWithString:@"ws://115.29.45.120:8081"] opened:^(HXSocketManager *manager) {
-        __strong __typeof__(self)strongSelf = weakSelf;
-        [strongSelf loginAction];
-    } receiveData:^(HXSocketManager *manager, id data) {
-        __strong __typeof__(self)strongSelf = weakSelf;
-        [strongSelf handleData:data];
-    } closed:^(HXSocketManager *manager, NSInteger code) {
-    } failed:^(HXSocketManager *manager, NSError *error) {
-    }];
+    HXSocketManager *manager = [HXSocketManager manager];
+    if (manager.socket.readyState != SR_OPEN) {
+        [self showHUD];
+        [manager openWithURL:[NSURL URLWithString:@"ws://115.29.45.120:8081"] opened:^(HXSocketManager *manager) {
+            [self loginAction];
+        } receiveData:^(HXSocketManager *manager, id data) {
+            [self handleData:data];
+        } closed:^(HXSocketManager *manager, NSInteger code) {
+            [self hiddenHUD];
+            [self openSocket];
+        } failed:^(HXSocketManager *manager, NSError *error) {
+            [self hiddenHUD];
+            [self openSocket];
+        }];
+    }
 }
 
 - (void)display {
@@ -125,7 +133,7 @@ HXHomePageSubCategoryViewDelegate
 
 #pragma mark - Event Response
 - (IBAction)callButtonPressed {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self showHUD];
     NSDictionary *data = @{@"event": @"order",
                          @"address": (_address ?: @""),
                              @"cid": _cid};
@@ -141,6 +149,14 @@ HXHomePageSubCategoryViewDelegate
 }
 
 #pragma mark - Private Methods
+- (void)showHUD {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+}
+
+- (void)hiddenHUD {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
 - (void)handleData:(NSString *)data {
     NSData *jsonData = [data dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *receiveData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
@@ -162,9 +178,7 @@ HXHomePageSubCategoryViewDelegate
         [self showAlertWithMessage:message];
     }
     
-    
-    
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [self hiddenHUD];
 }
 
 - (void)loginAction {
@@ -197,10 +211,10 @@ HXHomePageSubCategoryViewDelegate
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
             [strongSelf handleAdvisersWithDatas:responseObject[@"data"]];
         }
-        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
     } failure:^(AFHTTPRequestOperation *operation,NSError *error) {
         __strong __typeof__(self)strongSelf = weakSelf;
-        [MBProgressHUD hideHUDForView:strongSelf.navigationController.view animated:YES];
+        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
     }];
 }
 
