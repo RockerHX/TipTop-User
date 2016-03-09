@@ -148,15 +148,22 @@ HXHomePageSubCategoryViewDelegate
 }
 
 - (void)hanleEventWithReceiveData:(NSDictionary *)receiveData {
-    NSInteger errorCode = [receiveData[@"error"] integerValue];
-    if (!errorCode) {
+    BOOL error = [receiveData[@"error"] boolValue];
+    if (!error) {
         NSString *event = receiveData[@"event"];
 //        NSString *extra = receiveData[@"extra"];
         if ([event isEqualToString:NewOrderEvent]) {
-        } else if ([event isEqualToString:@""]) {
+            [self showAlertWithMessage:@"订单预约成功！"];
+        } else if ([event isEqualToString:@"grab"]) {
+            ;
         }
     } else {
+        NSString *message = receiveData[@"msg"];
+        [self showAlertWithMessage:message];
     }
+    
+    
+    
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
