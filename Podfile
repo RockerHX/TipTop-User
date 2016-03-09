@@ -6,6 +6,7 @@ pod 'BlocksKit'
 pod 'Aspects'
 pod 'MJExtension'
 pod 'Masonry'
+pod 'WebViewJavascriptBridge', '4.1.5'
 
 pod 'AFNetworking', '2.6.3'
 pod 'AFNetworkActivityLogger'
