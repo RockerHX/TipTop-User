@@ -175,7 +175,7 @@
                                                 <rect key="frame" x="10" y="5" width="300" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="一键咨询" backgroundImage="HP-CallButtonIcon">
+                                                <state key="normal" title="一键预约" backgroundImage="HP-CallButtonIcon">
                                                     <color key="titleColor" red="0.32156862749999998" green="0.64705882349999999" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
