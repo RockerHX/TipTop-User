@@ -101,20 +101,22 @@ HXHomePageSubCategoryViewDelegate
 
 #pragma mark - Public Methods
 - (void)openSocket {
-    HXSocketManager *manager = [HXSocketManager manager];
-    if (manager.socket.readyState != SR_OPEN) {
-        [self showHUD];
-        [manager openWithURL:[NSURL URLWithString:@"ws://115.29.45.120:8081"] opened:^(HXSocketManager *manager) {
-            [self loginAction];
-        } receiveData:^(HXSocketManager *manager, id data) {
-            [self handleData:data];
-        } closed:^(HXSocketManager *manager, NSInteger code) {
-            [self hiddenHUD];
-            [self openSocket];
-        } failed:^(HXSocketManager *manager, NSError *error) {
-            [self hiddenHUD];
-            [self openSocket];
-        }];
+    if ([HXUserSession share].state) {
+        HXSocketManager *manager = [HXSocketManager manager];
+        if (manager.socket.readyState != SR_OPEN) {
+            [self showHUD];
+            [manager openWithURL:[NSURL URLWithString:@"ws://115.29.45.120:8081"] opened:^(HXSocketManager *manager) {
+                [self loginAction];
+            } receiveData:^(HXSocketManager *manager, id data) {
+                [self handleData:data];
+            } closed:^(HXSocketManager *manager, NSInteger code) {
+                [self hiddenHUD];
+                [self openSocket];
+            } failed:^(HXSocketManager *manager, NSError *error) {
+                [self hiddenHUD];
+                [self openSocket];
+            }];
+        }
     }
 }
 
