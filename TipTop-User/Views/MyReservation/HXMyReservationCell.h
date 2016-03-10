@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "HXReservationOrder.h"
 
+@class HXStarView;
 
 @interface HXMyReservationCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet     UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet  HXStarView *starView;
 @property (weak, nonatomic) IBOutlet     UILabel *moblieLabel;
 @property (weak, nonatomic) IBOutlet     UILabel *serviceNameLabel;
 @property (weak, nonatomic) IBOutlet     UILabel *gootCountLabel;

@@ -9,6 +9,7 @@
 #import "HXMyReservationCell.h"
 #import "UIImageView+WebCache.h"
 #import "DateTools.h"
+#import "HXStarView.h"
 
 @implementation HXMyReservationCell
 
@@ -31,6 +32,7 @@
 - (void)displayWithOrder:(HXReservationOrder *)order {
     [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:order.agentAvatar]];
     _nameLabel.text = order.agentName;
+    _starView.value = order.star;
     _moblieLabel.text = order.agentMobile;
     _serviceNameLabel.text = order.cate;
 //    _gootCountLabel.text = order.;
