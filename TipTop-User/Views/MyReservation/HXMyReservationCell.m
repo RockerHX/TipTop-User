@@ -34,7 +34,7 @@
     _nameLabel.text = order.agentName;
     _starView.value = order.star;
     _moblieLabel.text = order.agentMobile;
-    _serviceNameLabel.text = order.cate;
+    _serviceNameLabel.text = [order.cate stringByAppendingFormat:@"（%@）", order.subCate];
     _gootCountLabel.text = @(order.good).stringValue;
 }
 
