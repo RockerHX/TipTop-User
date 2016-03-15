@@ -322,6 +322,7 @@ static NSString *annotationIdentifier = @"annotationIdentifier";
         HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
         detailViewController.cid = _cid;
         detailViewController.aid = adviser.ID;
+        detailViewController.canReserve = YES;
         [self.navigationController pushViewController:detailViewController animated:YES];
     }
 }

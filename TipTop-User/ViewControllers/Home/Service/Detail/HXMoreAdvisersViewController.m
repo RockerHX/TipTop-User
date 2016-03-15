@@ -104,6 +104,7 @@ static NSString *AdviserListApi = @"/agent/recommend";
     HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
     detailViewController.cid = self.cid;
     detailViewController.aid = _advisers[indexPath.row].ID;
+    detailViewController.canReserve = YES;
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

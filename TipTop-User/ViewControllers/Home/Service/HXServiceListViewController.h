@@ -17,6 +17,7 @@
 
 @property (nonatomic, assign) HXCategoryListType  listType;
 @property (nonatomic, copy)             NSString *cid;
+@property (nonatomic, copy)             NSString *subCid;
 
 - (IBAction)mapBackButtonPressed;
 

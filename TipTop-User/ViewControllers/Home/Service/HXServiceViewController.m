@@ -122,6 +122,7 @@
         }
         viewController.listType = listType;
         viewController.cid = category.ID;
+        viewController.subCid = category.subItems[indexPath.row].ID;
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

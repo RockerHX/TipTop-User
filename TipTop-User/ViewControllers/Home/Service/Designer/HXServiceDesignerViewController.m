@@ -191,7 +191,7 @@ static NSString *ListApi = @"/agent/recommend";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
     detailViewController.listType = self.listType;
-    detailViewController.cid = self.cid;
+    detailViewController.cid = self.subCid;
     detailViewController.aid = _normalAdvisers[indexPath.row].ID;
     detailViewController.canReserve = YES;
     [self.navigationController pushViewController:detailViewController animated:YES];
