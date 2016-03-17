@@ -199,6 +199,7 @@
                                     <outlet property="moblieLabel" destination="8Ie-IA-c5a" id="ucF-04-bM4"/>
                                     <outlet property="nameLabel" destination="Ct7-6V-wAT" id="k6G-vJ-H6z"/>
                                     <outlet property="serviceNameLabel" destination="b6Q-gj-nwj" id="gBb-bI-Dpy"/>
+                                    <outlet property="starView" destination="rr6-15-5AO" id="O8S-xb-7Qq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
