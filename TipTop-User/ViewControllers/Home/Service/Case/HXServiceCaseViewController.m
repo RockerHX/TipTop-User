@@ -36,7 +36,7 @@ static NSString *ListApi = @"/agent/houseDesign";
     [super initConfig];
     
     _cases = @[].mutableCopy;
-    _parameters = @{@"cid": self.cid}.mutableCopy;
+    _parameters = @{@"cid": self.subCid}.mutableCopy;
     _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     [_collectionView.mj_header beginRefreshing];
 }
