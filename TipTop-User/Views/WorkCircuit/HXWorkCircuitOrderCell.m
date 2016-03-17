@@ -44,7 +44,7 @@
     
     _dateLabel.text = [[NSDate dateWithTimeIntervalSince1970:order.createTime] formattedDateWithFormat:@"yyyy-MM-dd hh:mm"];
     _orderNumberLabel.text = order.displayID;
-    _orderNameLabel.text = order.cate;
+    _orderNameLabel.text = [order.cate stringByAppendingFormat:@"（%@）", order.subCate];
     _nameLabel.text = order.agentName;
     _finishedIcon.hidden = !order.isComplete;
     [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:order.agentAvatar]];
