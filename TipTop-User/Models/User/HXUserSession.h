@@ -16,6 +16,11 @@ typedef NS_ENUM(BOOL, HXUserSessionState) {
 
 @interface HXUserSession : NSObject
 
+
+@property (nonnull, nonatomic, strong, readonly) NSString *avatar;
+@property (nonnull, nonatomic, strong, readonly) NSString *nickName;
+@property (nonnull, nonatomic, strong, readonly) NSString *mobile;
+
 @property (nonnull, nonatomic, strong, readonly)    HXUser *user;
 @property (nonnull, nonatomic, strong, readonly) HXProfile *profile;
 @property (nonatomic, assign, readonly) HXUserSessionState  state;

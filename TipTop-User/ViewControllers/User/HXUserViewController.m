@@ -76,10 +76,10 @@ typedef NS_ENUM(NSUInteger, HXMenuRow) {
 
 #pragma mark - Private Methods
 - (void)updateUserInfo {
-    HXUser *user = [HXUserSession share].user;
-    [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:user.avatar]];
-    _nameLabel.text = user.realName;
-    _mobileLabel.text = user.mobile;
+    HXUserSession *session = [HXUserSession share];
+    [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:session.avatar]];
+    _nameLabel.text = session.nickName;
+    _mobileLabel.text = session.mobile;
     
     [self checkMessageNotification];
 }

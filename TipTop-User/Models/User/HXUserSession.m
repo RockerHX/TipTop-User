@@ -36,6 +36,18 @@ static HXUserSession *session = nil;
 }
 
 #pragma mark - Setter And Getter
+- (NSString *)avatar {
+    return (([_user.avatar isEqualToString:_profile.avatar] && _profile.avatar) ? _user.avatar : _profile.avatar);
+}
+
+- (NSString *)nickName {
+    return (([_user.realName isEqualToString:_profile.realName] && _profile.realName) ? _user.realName : _profile.realName);
+}
+
+- (NSString *)mobile {
+    return (([_user.mobile isEqualToString:_profile.mobile] && _profile.mobile) ? _user.mobile : _profile.mobile);
+}
+
 - (HXUserSessionState)state {
     if (_user.uid && _user.accessToken) {
         return HXUserSessionStateLogin;
