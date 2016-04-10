@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet    HXHomePageCategoryView *categoryView;
 @property (weak, nonatomic) IBOutlet HXHomePageSubCategoryView *subCategoryView;
 
+- (IBAction)locationButtonPressed;
 - (IBAction)callButtonPressed;
 - (IBAction)avatarButtonPressed;
 - (IBAction)categoryButtonPressed;

@@ -134,6 +134,10 @@ HXHomePageSubCategoryViewDelegate
 }
 
 #pragma mark - Event Response
+- (IBAction)locationButtonPressed {
+    [self displayUserLocationWithID:@"0"];
+}
+
 - (IBAction)callButtonPressed {
     [self showHUD];
     NSDictionary *data = @{@"event": @"order",
