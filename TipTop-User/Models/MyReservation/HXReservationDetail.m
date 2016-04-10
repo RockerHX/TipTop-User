@@ -22,6 +22,10 @@
      @"createTime": @"create_time"};
 }
 
+- (void)mj_keyValuesDidFinishConvertingToObject {
+    _money /= 100;
+}
+
 @end
 
 @implementation HXReservationDetailRemark

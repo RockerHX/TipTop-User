@@ -15,4 +15,8 @@
         @"agentID": @"agent_id"};
 }
 
+- (void)mj_keyValuesDidFinishConvertingToObject {
+    _money /= 100;
+}
+
 @end
