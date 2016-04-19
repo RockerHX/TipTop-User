@@ -50,6 +50,8 @@ HXHomePageSubCategoryViewDelegate
     
     [_mapView viewWillAppear];
     _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+    
+    [self display];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -121,7 +123,7 @@ HXHomePageSubCategoryViewDelegate
 }
 
 - (void)display {
-    [_avatarButton sd_setImageWithURL:[NSURL URLWithString:[HXUserSession share].user.avatar] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"HP-HeaderIcon"]];
+    [_avatarButton sd_setImageWithURL:[NSURL URLWithString:[HXUserSession share].avatar] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"HP-HeaderIcon"]];
 }
 
 #pragma mark - Setter And Getter
