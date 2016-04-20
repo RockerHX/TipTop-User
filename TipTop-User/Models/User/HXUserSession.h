@@ -29,7 +29,6 @@ typedef NS_ENUM(BOOL, HXUserSessionState) {
 
 - (void)updateUser:(nullable HXUser *)user;
 - (void)updateProfile:(nullable HXProfile *)profile;
-- (void)updateUserAvatar:(nullable NSString *)avatarURL;
 - (void)logout;
 
 @end

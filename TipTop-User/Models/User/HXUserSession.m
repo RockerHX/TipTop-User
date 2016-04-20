@@ -37,15 +37,15 @@ static HXUserSession *session = nil;
 
 #pragma mark - Setter And Getter
 - (NSString *)avatar {
-    return (([_user.avatar isEqualToString:_profile.avatar] && _profile.avatar) ? _user.avatar : _profile.avatar);
+    return _user.avatar;
 }
 
 - (NSString *)nickName {
-    return (([_user.realName isEqualToString:_profile.realName] && _profile.realName) ? _user.realName : _profile.realName);
+    return _user.realName;
 }
 
 - (NSString *)mobile {
-    return (([_user.mobile isEqualToString:_profile.mobile] && _profile.mobile) ? _user.mobile : _profile.mobile);
+    return _user.mobile;
 }
 
 - (HXUserSessionState)state {
@@ -65,13 +65,10 @@ static HXUserSession *session = nil;
 - (void)updateProfile:(nullable HXProfile *)profile {
     _profile = profile;
     [self archiveProfile];
-}
-
-- (void)updateUserAvatar:(nullable NSString *)avatarURL {
-    _user.avatar = avatarURL;
-    _profile.avatar = avatarURL;
+    
+    _user.avatar = profile.avatar;
+    _user.realName = profile.realName;
     [self archiveUser];
-    [self archiveProfile];
 }
 
 - (void)logout {

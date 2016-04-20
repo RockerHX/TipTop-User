@@ -126,7 +126,7 @@ static NSString *UploadImageApi   = @"/upload";
         __strong __typeof__(self)strongSelf = weakSelf;
         NSInteger errorCode = [responseObject[@"error_code"] integerValue];
         if (HXAppApiRequestErrorCodeNoError == errorCode) {
-            [[HXUserSession share] updateUserAvatar:responseObject[@"data"][@"avatar"]];
+            [[HXUserSession share] updateProfile:[HXProfile mj_objectWithKeyValues:responseObject[@"data"]]];
             [UIAlertView bk_showAlertViewWithTitle:@"保存成功！"
                                            message:nil
                                  cancelButtonTitle:@"确定"
