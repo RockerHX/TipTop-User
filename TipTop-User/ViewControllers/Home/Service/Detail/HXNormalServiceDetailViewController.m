@@ -266,7 +266,7 @@ static NSString *ReserveApi = @"/order/create";
         case HXHomePageAdviserDetialCellRowAdvisoryAdviser: {
             HXNormalServiceDetailViewController *detailViewController = [HXNormalServiceDetailViewController instance];
             detailViewController.cid = _cid;
-            detailViewController.aid = _aid;
+            detailViewController.aid = _viewModel.advisoryAdvisers[indexPath.row - _viewModel.regularRow].ID;
             [self.navigationController pushViewController:detailViewController animated:YES];
             break;
         }
