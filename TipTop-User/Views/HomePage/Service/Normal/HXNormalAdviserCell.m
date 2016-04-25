@@ -42,7 +42,7 @@
     _nameLabel.text = adviser.realName;
     _starView.value = adviser.star;
     _goodCountLabel.text = @(adviser.good).stringValue;
-    _serviceLabel.text = [NSString stringWithFormat:@"擅长领域：%@", adviser.services];
+    _serviceLabel.text = [NSString stringWithFormat:@"擅长领域：%@", adviser.goodAt];
     _moblieLabel.text = adviser.mobile;
 
 }
